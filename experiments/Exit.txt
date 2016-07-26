@@ -1,0 +1,30 @@
+namespace StateMachine_TestSuite::Exit;
+
+private import StateMachine_TestSuite::Util::Architecture::SemanticTestSuite;
+private import StateMachine_TestSuite::Util::Architecture::SemanticTest;
+
+private import '001'::Exit001_SemanticTest;
+private import '002'::Exit002_SemanticTest;
+private import '003'::Exit003_SemanticTest;
+
+activity ExitTests() {
+	let name : String = "Exit"; 
+	let tests : SemanticTest = new SemanticTest[]{};
+	/*Exit001*/
+	e001 = new 'Exit001_SemanticTest'();
+	e001.name = "Exit 001";
+	e001.expectedResult ="S1.1.1(exit)::S1.1(exit)::T1.2(effect)::S1(exit)::T3(effect)";
+	tests->add(e001);
+	/*Exit002*/
+	e002 = new 'Exit002_SemanticTest'();
+	e002.name = "Exit 002";
+	e002.expectedResult ="T1.2(effect)::T2.2(effect)";
+	tests->add(e002);
+	/*Exit003*/
+	e003 = new 'Exit003_SemanticTest'();
+	e003.name = "Exit 003";
+	e003.expectedResult ="T1.2(effect)::S1(exit)::T3(effect)";
+	tests->add(e003);
+	/*Test suite*/
+	suite = new SemanticTestSuite(tests, name);
+}

@@ -1,0 +1,50 @@
+namespace StateMachine_TestSuite::Behavior;
+
+private import StateMachine_TestSuite::Util::Architecture::SemanticTestSuite;
+private import StateMachine_TestSuite::Util::Architecture::SemanticTest;
+
+private import '001'::'Behavior001_SemanticTest';
+private import '002'::'Behavior002_SemanticTest';
+private import '003-A'::'Behavior003_SemanticTest_A';
+private import '003-B'::'Behavior003_SemanticTest_B';
+//private import '003-C'::'Behaviors003_SemanticTest_C';				
+private import '004'::'Behavior004_SemanticTest';		
+		
+private import Alf::Library::PrimitiveBehaviors::IntegerFunctions::ToString;
+	
+activity BehaviorTests() {
+	let name : String = "Behavior"; 
+	let tests : SemanticTest = new SemanticTest[]{};
+	/*Test behavior 001 */
+	b001 = new 'Behavior001_SemanticTest'();
+	b001.name = "Behavior 001";
+	b001.expectedResult ="S1(entry)";
+	tests->add(b001);
+	/*Test behavior 002 */
+	b002 = new 'Behavior002_SemanticTest'();
+	b002.name = "Behavior 002";
+	b002.expectedResult = "S1(exit)";
+	tests->add(b002);
+	/*Test behavior 003 A */
+	b003_A = new 'Behavior003_SemanticTest_A'();
+	b003_A.name = "Behavior 003 A";
+	b003_A.expectedResult = "S1(entry)::S1(doActivityPartI)";
+	tests->add(b003_A);
+	/*Test behavior 003 B*/
+	b003_B = new 'Behavior003_SemanticTest_B'();
+	b003_B.name = "Behavior 003 B";
+	b003_B.expectedResult = "S1(entry)::S1(doActivityPartI)::S1(doActivityPartII)";
+	tests->add(b003_B);
+	/*Test behavior 003 C*/
+	/*b003ter = new 'SemanticTest Behaviors003-ter'();
+	b003ter.name = "Behaviors003-ter";
+	b003ter.expectedResult = "S1-DoActivity(entry)::S1-DoActivity(exit)::T2-DoActivity(effect)::T4(effect)";
+	tests->add(b003ter);*/
+	/*Test behavior 004 */
+	b004 = new 'Behavior004_SemanticTest'();
+	b004.name = "Behavior 004";
+	b004.expectedResult = "S1(entry)::S1(doActivityPartI)::T3(effect)::S1(doActivityPartII)";
+	tests->add(b004);
+	/*Start test suite */
+	suite = new SemanticTestSuite(tests, name);
+}

@@ -1,0 +1,42 @@
+namespace StateMachine_TestSuite::Exiting;
+
+private import StateMachine_TestSuite::Util::Architecture::SemanticTestSuite;
+private import StateMachine_TestSuite::Util::Architecture::SemanticTest;
+	
+private import '001'::'Exiting001_SemanticTest';
+private import '002'::'Exiting002_SemanticTest';
+private import '003'::'Exiting003_SemanticTest';
+private import '004'::'Exiting004_SemanticTest';
+private import '005'::'Exiting005_SemanticTest';
+
+activity ExitingTests() {
+	let name : String = "Exiting"; 
+	let tests : SemanticTest = new SemanticTest[]{};
+	/*Exiting001*/
+	e001 = new 'Exiting001_SemanticTest'();
+	e001.name = "Exiting 001";
+	e001.expectedResult ="S1.1.1(exit)::S1.1(exit)::S2.1(exit)::S1(exit)";
+	tests->add(e001);
+	/*Exiting002*/
+	e002 = new 'Exiting002_SemanticTest'();
+	e002.name = "Exiting 002";
+	e002.expectedResult ="S1(doActivityPartI)::S1(exit)";
+	tests->add(e002);
+	/*Exiting003*/
+	e003 = new 'Exiting003_SemanticTest'();
+	e003.name = "Exiting 003";
+	e003.expectedResult ="S1.1.1(exit)::S1.2.1(exit)::S1.1(exit)::S1(exit)";
+	tests->add(e003);
+	/*Exiting004*/
+	e004 = new 'Exiting004_SemanticTest'();
+	e004.name = "Exiting 004";
+	e004.expectedResult ="S1.1(exit)::T1.2(effect)::S1(exit)";
+	tests->add(e004);
+		/*Exiting005*/
+	e005 = new 'Exiting005_SemanticTest'();
+	e005.name = "Exiting 005";
+	e005.expectedResult ="S1.1(exit)::S2.1(exit)::S1(exit)";
+	tests->add(e005);
+	/*Test suite*/
+	suite = new SemanticTestSuite(tests, name);
+}

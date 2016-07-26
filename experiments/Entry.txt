@@ -1,0 +1,42 @@
+namespace StateMachine_TestSuite::Entry;
+
+private import StateMachine_TestSuite::Util::Architecture::SemanticTestSuite;
+private import StateMachine_TestSuite::Util::Architecture::SemanticTest;
+
+private import '002-A'::'Entry002_SemanticTest_A';
+private import '002-B'::'Entry002_SemanticTest_B';
+private import '002-C'::'Entry002_SemanticTest_C';
+private import '002-D'::'Entry002_SemanticTest_D';
+private import '002-E'::'Entry002_SemanticTest_E';
+
+activity EntryTests() {
+	let name : String = "Entry"; 
+	let tests : SemanticTest = new SemanticTest[]{};
+	/*Entry002 A*/
+	e002a = new 'Entry002_SemanticTest_A'();
+	e002a.name = "Entry 002 A";
+	e002a.expectedResult ="S1.1(entry)::S2.1(entry)";
+	tests->add(e002a);
+	/*Entry002 B*/
+	e002b = new 'Entry002_SemanticTest_B'();
+	e002b.name = "Entry 002 B";
+	e002b.expectedResult ="S2.1(entry)::S1.2(entry)";
+	tests->add(e002b);
+	/*Entry002 C*/
+	e002c = new 'Entry002_SemanticTest_C'();
+	e002c.name = "Entry 002 C";
+	e002c.expectedResult ="T2(effect)::S1(entry)::T1.1(effect)";
+	tests->add(e002c);
+	/*Entry002 D*/
+	e002d = new 'Entry002_SemanticTest_D'();
+	e002d.name = "Entry 002 D";
+	e002d.expectedResult ="T2(effect)::S1(entry)::T1.1(effect)::T1.2(effect)";
+	tests->add(e002d);
+	/*Entry002-quinquies*/
+	e002e = new 'Entry002_SemanticTest_E'();
+	e002e.name = "Entry 002 E";
+	e002e.expectedResult ="S1(entry)::S1.1(entry)";
+	tests->add(e002e);
+	/*Test suite*/
+	suite = new SemanticTestSuite(tests, name);
+}

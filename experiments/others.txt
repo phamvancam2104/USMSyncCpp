@@ -1,0 +1,18 @@
+namespace StateMachine_TestSuite::Other;
+
+private import StateMachine_TestSuite::Util::Architecture::SemanticTestSuite;
+private import StateMachine_TestSuite::Util::Architecture::SemanticTest;
+
+private import TransitionExecutionAlgorithm::'TransitionExecutionAlgorithm_SemanticTest';
+
+activity OtherTests() {
+	let name : String = "OtherTests"; 
+	let tests : SemanticTest = new SemanticTest[]{};
+	/*Other test*/
+	test = new 'TransitionExecutionAlgorithm_SemanticTest'();
+	test.name = "TransitionExecutionAlgorithm";
+	test.expectedResult ="S1.1(exit)::T1.2(effect)::S1(exit)::T2(effect)::S2(entry)::S2.1(entry)::T2.1(effect)";
+	tests->add(test);
+	/*Run the test suite*/
+	suite = new SemanticTestSuite(tests, name);
+}

@@ -1,0 +1,18 @@
+namespace StateMachine_TestSuite::Final;
+
+private import StateMachine_TestSuite::Util::Architecture::SemanticTestSuite;
+private import StateMachine_TestSuite::Util::Architecture::SemanticTest;
+
+private import Final::'001'::'Final001_SemanticTest';
+
+activity FinalTests() {
+	let name : String = "Final"; 
+	let tests : SemanticTest = new SemanticTest[]{};
+	/*Final001*/
+	f001 = new 'Final001_SemanticTest'();
+	f001.name = "Final001";
+	f001.expectedResult ="S1.1.1(exit)::T1.1.2(effect)::S1.1(exit)::T1.2(effect)::S2.1(exit)";
+	tests->add(f001);
+	// Create test suite
+	new SemanticTestSuite(tests, name);
+}

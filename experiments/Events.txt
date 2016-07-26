@@ -1,0 +1,66 @@
+namespace StateMachine_TestSuite::Event;
+
+private import StateMachine_TestSuite::Util::Architecture::SemanticTestSuite;
+private import StateMachine_TestSuite::Util::Architecture::SemanticTest;
+
+private import '001'::'Event001_SemanticTest';
+private import '002'::'Event002_SemanticTest';
+private import '008'::'Event008_SemanticTest';
+private import '009'::'Event009_SemanticTest';
+private import '010'::'Event010_SemanticTest';
+private import '015'::'Event015_SemanticTest';
+private import '016-A'::'Event016_SemanticTest_A';
+private import '016-B'::'Event016_SemanticTest_B';
+private import '018'::'Event018_SemanticTest';
+
+activity EventTests() {
+	let name : String = "Events"; 
+	let tests : SemanticTest = new SemanticTest[]{};
+	/*Event001*/
+	e001 = new 'Event001_SemanticTest'();
+	e001.name = "Event 001";
+	e001.expectedResult ="wait(exit)";
+	tests->add(e001);
+	/*Event002*/
+	e002 = new 'Event002_SemanticTest'();
+	e002.name = "Event 002";
+	e002.expectedResult ="S1(entry)::S1.1(entry)::S1(exit)";
+	tests->add(e002);
+	/*Event008*/
+	e008 = new 'Event008_SemanticTest'();
+	e008.name = "Event 008";
+	e008.expectedResult ="T2(effect)::T3(effect)";
+	tests->add(e008);
+	/*Event009*/
+	e009 = new 'Event009_SemanticTest'();
+	e009.name = "Event 009";
+	e009.expectedResult ="T1.2(effect)::T2.2(effect)";
+	tests->add(e009);
+	/*Event010*/
+	e010 = new 'Event010_SemanticTest'();
+	e010.name = "Event 010";
+	e010.expectedResult ="T2(effect)::S1(entry)::S1.1(entry)::T1.2(effect)::S1.2(entry)";
+	tests->add(e010);
+	/*Event015*/
+	e015 = new 'Event015_SemanticTest'();
+	e015.name = "Event 015";
+	e015.expectedResult ="T1.2(effect)";
+	tests->add(e015);
+	/*Event016 A*/
+	e016a = new 'Event016_SemanticTest_A'();
+	e016a.name = "Event 016 A";
+	e016a.expectedResult ="T1.2(effect)::T3(effect)";
+	tests->add(e016a);
+	/*Event016 B*/
+	e016b = new 'Event016_SemanticTest_B'();
+	e016b.name = "Event 016 B";
+	e016b.expectedResult ="S1.1(exit)::T1.2(effect)::S2.1.1(exit)::T2.1.2(effect)::S2.2.1(exit)::T2.2.2(effect)::S2.1(exit)::T2.2(effect)::S1.2(exit)::S1(exit)";
+	tests->add(e016b);
+	/*Event018*/
+	e018 = new 'Event018_SemanticTest'();
+	e018.name = "Event 018";
+	e018.expectedResult ="S1.1.1(exit)::S1.1(exit)::S1(exit)::T3(effect)::S2(entry)::S1.2(entry)";
+	tests->add(e018);
+	/*Test suite*/
+	suite = new SemanticTestSuite(tests, name);
+}

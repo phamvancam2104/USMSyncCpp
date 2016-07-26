@@ -1,0 +1,30 @@
+namespace StateMachine_TestSuite::Choice;	
+
+private import StateMachine_TestSuite::Util::Architecture::SemanticTestSuite;
+private import StateMachine_TestSuite::Util::Architecture::SemanticTest;
+
+private import '001'::'Choice001_SemanticTest';
+private import '002'::'Choice002_SemanticTest';
+private import '003'::'Choice003_SemanticTest';
+
+activity ChoiceTests() {
+	let name : String = "Choice"; 
+	let tests : SemanticTest = new SemanticTest[]{};
+	// Choice001
+	c001 = new 'Choice001_SemanticTest'();
+	c001.name = "Choice 001";
+	c001.expectedResult ="T4(effect)::T4(effect)::T4(effect)::T4(effect)";
+	tests->add(c001);
+	// Choice002
+	c002 = new 'Choice002_SemanticTest'();
+	c002.name = "Choice 002";
+	c002.expectedResult ="T4(effect)";
+	tests->add(c002);
+	// Choice003
+	c003 = new 'Choice003_SemanticTest'();
+	c003.name = "Choice 003";
+	c003.expectedResult ="T4(effect)";
+	tests->add(c003);
+	// Test suite
+	suite = new SemanticTestSuite(tests, name);
+}

@@ -1,0 +1,24 @@
+namespace StateMachine_TestSuite::Join;
+
+private import StateMachine_TestSuite::Util::Architecture::SemanticTestSuite;
+private import StateMachine_TestSuite::Util::Architecture::SemanticTest;
+
+private import StateMachine_TestSuite::Join::'001'::'Join001_SemanticTest';
+private import StateMachine_TestSuite::Join::'002'::'Join002_SemanticTest';
+
+activity JoinTests() {
+	let name : String = "Join"; 
+	let tests : SemanticTest = new SemanticTest[]{};
+	// Join001
+	j001 = new 'Join001_SemanticTest'();
+	j001.name = "Join001";
+	j001.expectedResult ="S1.1(exit)::T2.3(effect)::S2.1(exit)::S1(exit)::T2.4(effect)";
+	tests->add(j001);
+	// Join002
+	j002 = new 'Join002_SemanticTest'();
+	j002.name = "Join002";
+	j002.expectedResult ="T2.2(effect)::T1.2(effect)::S1(exit)::T3(effect)::S2(entry)";
+	tests->add(j002);
+	// Create test suite
+	new SemanticTestSuite(tests, name);
+}

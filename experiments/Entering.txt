@@ -1,0 +1,42 @@
+namespace StateMachine_TestSuite::Entering;
+
+private import StateMachine_TestSuite::Util::Architecture::SemanticTestSuite;
+private import StateMachine_TestSuite::Util::Architecture::SemanticTest;
+	
+private import '004'::'Entering004_SemanticTest';
+private import '005'::'Entering005_SemanticTest';
+private import '009'::'Entering009_SemanticTest';
+private import '010'::'Entering010_SemanticTest';
+private import '011'::'Entering011_SemanticTest';
+
+activity EnteringTests() {
+	let name : String = "Entering"; 
+	let tests : SemanticTest = new SemanticTest[]{};
+	/*Entering004*/
+	e004 = new 'Entering004_SemanticTest'();
+	e004.name = "Entering 004";
+	e004.expectedResult ="S1(entry)::S1(exit)";
+	tests->add(e004);
+	/*Entering005*/
+	e005 = new 'Entering005_SemanticTest'();
+	e005.name = "Entering 005";
+	e005.expectedResult ="T2(effect)::S1(entry)::S1.1(entry)::S1.1.1(entry)";
+	tests->add(e005);
+	/*Entering009*/
+	e009 = new 'Entering009_SemanticTest'();
+	e009.name = "Entering 009";
+	e009.expectedResult ="T2(effect)::S1(entry)::T1.1(effect)::S1.1(entry)";
+	tests->add(e009);
+	/*Entering010*/
+	e010 = new 'Entering010_SemanticTest'();
+	e010.name = "Entering 010";
+	e010.expectedResult ="S1(entry)::T2.1(effect)::S2.1(entry)::S1.1(entry)";
+	tests->add(e010);
+	/*Entering011*/
+	e011 = new 'Entering011_SemanticTest'();
+	e011.name = "Entering 011";
+	e011.expectedResult = "S1(entry)::T2.1(effect)::S1.2(entry)::T1.1(effect)::S1.1(entry)";
+	tests->add(e011);
+	/*Test suite*/
+	suite = new SemanticTestSuite(tests, name);
+}

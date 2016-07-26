@@ -1,0 +1,381 @@
+\section{Background definition}
+\label{subsec:background}
+
+%\begin{definition}A directed graph $G = \{V, Ed\}$ consists of a finite set $V$ of vertexes, and a set $Ed$ of edges. An edge connects a source vertex to a target vertex. The source and target vertexes of an edge ed are obtained by $src(ed)$ and $tgt(ed)$.
+%\end{definition}
+
+\begin{definition}A UML vertex $v \in V$ has a kind $v.kind \in$  \ti{\{initial, final, state, comp, conc, join, fork, choice, junction, enpoint, expoint, history\}}. 
+\end{definition} 
+
+\begin{definition}A region $r \in \mathcal{R}$ is composed of one or several vertexes, and contained by a state $s$. We write $owner(r) = s$ and $vertices(r)$ is its sub-vertices set. 
+\end{definition}	
+
+\begin{definition} A vertex is either a UML state or a pseudo-state. A UML state $s$ is a vertex and $s.kind$ $\in$ \{state, comp, conc\}. $s$ has an $entry$, an $exit$ and a $doActivity$ action. A composite state $cs$ contains one or more vertexes. We write $vertices(cs)$ is a set of vertexes contained by $cs$ and, inversely, $owner(v)$ refers to the containing state of the vertex $v$. %A concurrent state contains more than one region.
+\end{definition}		
+
+\begin{definition} An action $act$ $\in$ $ActLang$ is a set of statements written in an object-oriented programming language $ActLang$. A guard is a boolean expression written in $ActLang$.
+\end{definition}
+
+\begin{definition} A transition $t \in T$ is an edge connecting two vertexes. 
+	The source and target vertexes of an edge ed are obtained by $src(t)$ and $tgt(t)$. 
+	A transition has a guard $guard(t)$, an effect $effect(t)$, and is associated with a set of events $\subset$ E. We write $events(t)$ as the associated set of events. A transition has a type $t.type$ $\in \{trig, tless, gdless, triggdless\}$ and a kind $t.kind \in {external, local, internal}$.
+\end{definition}
+
+\begin{definition} An event is one of the followings:
+	\begin{itemize}
+		\item A \ti{TimeEvent} $te$ specifies the time of occurrence $d$ relative to a starting time. The latter is specified when a state, which accepts the time event, is entered.
+		
+		\item A \ti{SignalEvent} $se$ is associated with a signal $sig$, whose data are described by its attributes and is occurred if $sig$ is received by a component, which is an active UML class.
+		
+		\item A \ti{ChangeEvent} $che$ is associated with a boolean expression $ex(che)$ written in $ActLang$. $che$ is emitted if $ex(che)$ changes from true (false) to false (true).
+		
+		\item A \ti{CallEvent} $ce$ is associated with an operation $op(ce)$. $ce$ is emitted if there is a call to $op(ce)$.
+	\end{itemize}
+\end{definition}
+
+\begin{comment}
+\begin{definition} A \ti{TimeEvent} $te$ an internal event and specifies the time of occurrence $d$ relative to a starting time. The latter is specified when a state, which accepts the time event, is entered. 
+\end{definition}
+
+\begin{definition} A \ti{Signal} $sig$ is data described by its attributes. 
+\end{definition}
+
+\begin{definition} A \ti{SignalEvent} $se$ is associated with a signal $sig$ and is occurred if $sig$ is received by a component, which is an active UML class. 
+\end{definition}	
+
+\begin{definition}
+	A \ti{ChangeEvent} $che$ is associated with a boolean expression $ex(che)$ written in $ActLang$. $che$ is emitted if $ex(che)$ changes from true (false) to false (true).
+\end{definition}
+
+\begin{definition}
+	A \ti{CallEvent} $ce$ is associated with an operation $op(ce)$. $ce$ is emitted if there is a call to $op(ce)$.
+\end{definition}
+\end{comment}
+
+Suppose that for each vertex \ti{v} $\in$ $V$, its incoming and outgoing transition lists are extracted by $T_{ins}(v)$ and $T_{outs}(v)$, respectively. %For a list $l$, the function $head$ is used to get the first element of the list. 
+If $v.kind = conc$, suppose $regions(v)$ is the region set contained by $v$. %Given a transition t:
+%\begin{itemize}
+%	\item $t.type = trig$ if $\#events(t) > 0$.
+%	\item $t.type = tless$ if $\#events(t) = 0$.
+%	\item $t.type = gdless$ if $(guard(t) = true \vee \nexists guard(t)$.
+%	\item $t.type = triggdless$ if $\#events(t) = 0 \wedge (guard(t) = true \vee \nexists guard(t))$.
+%\end{itemize}
+
+The behavior of an active class $C$ is described by using a state machine whose definition is as following:	
+
+\begin{definition} A state machine sm is a graph specified by $\{V, T\}$ associated with a set of events $E$. A state machine is a special composite state which has no incoming and no outgoing transitions. A root vertex $v$ is a direct sub-vertex of the state machine, $owner(v) = sm$. The set of regions contained by $sm$ is written $\mathcal{R}$.
+\end{definition}	
+
+%For each vertex $v$ $\in$ $V$, we write the following sets $T_{ins} (v) = incomings(v), T_{outs}(v) = outgoings(v)$, $t_{first} = head(t_{outs})$; transitive transition sets $T_{ins}^{+}(v)$ and $T_{outs}^{+}(v)$ are sets of transitions incoming to and outgoing from, respectively, $v$ or direct or indirect sub-vertexes of $v$.
+
+\begin{comment}
+\begin{strip}
+	\begin{equation}
+	T_{ins}^{+} (v) =    \left\{
+	\begin{array}{ll}
+	T_{ins}(v) & v.kind \notin \{comp, conc\}  \\
+	T_{ins}(v) \cup \bigcup\limits_{sub \in subvertexes(v)} T_{ins}^{+} (sub) & v.kind \in \{comp, conc\} \\
+	\end{array} 
+	\right.
+	\end{equation}
+	
+	\begin{equation}
+	T_{outs}^{+} (v) =    \left\{
+	\begin{array}{ll}
+	T_{outs}(v) & v.kind \notin \{comp, conc\}  \\
+	T_{outs}(v) \cup \bigcup\limits_{sub \in subvertexes(v)} T_{outs}^{+} (sub) & v.kind \in \{comp, conc\} \\
+	\end{array} 
+	\right. 
+	\end{equation}
+\end{strip}
+\end{comment}
+
+\begin{definition} Transitive container $owner^+(v)$ of a vertex $v$ of a state machine $sm$ is defined as following:
+	\begin{equation}
+	owner^+(v) =    \left\{
+	\begin{array}{ll}
+	sm & owner(v) = sm \\
+	owner(v) \cup owner^+(owner(v)) & otherwise\\
+	\end{array} 
+	\right.
+	\end{equation}	
+\end{definition}
+
+Likewise, $vertices^+(v)$ is a set of transitive sub-vertexes.
+
+\begin{comment}
+In the example in Fig. \ref{fig:example}, we have:
+\begin{IEEEeqnarray*}{lCr}	
+	owner^+(Idle) = \{StateMachine\}, \\
+	owner^+(Choice1) = \{Verifying, StateMachine\}.
+\end{IEEEeqnarray*}
+\end{comment}
+
+%A state machine $sm = \{V, T\}$ is validated if an associated set of constraints is validated. 
+%The set is not presented here due to space limitation.
+%is validated if, for each $v \in V$, the constraints listed in Table \ref{table:constraint} are hold. %These are evaluated before the generation phase is taken into account. 
+
+\begin{comment}
+\begin{table*}
+	\caption{State machine constraints}
+	\label{table:constraint}
+	\centering
+	\begin{tabular}{|p{2.1\columnwidth}|}
+	\hline	
+	\tabitem If $v.kind = initial$ then $\#T_{outs}(v) = 1 \wedge \#T_{ins}(v) = 0 \wedge t_{first}.type = triggdless$. \\ 
+	
+	\tabitem If $v.kind = final$ then $\#T_{outs}(v) = 0$. \\
+	
+	\tabitem If $v.kind \notin \{state, comp, conc\}$ then $\forall t \in T_{outs}(v): src(t) \lnot= tgt(t)$. \\
+	
+	\tabitem If $T_{auto} = \{t \in T_{outs} | \#events(t) = 0\}$, $T_{ng} = \{t \in T_{auto} | guard(t) = true \vee \nexists guard(t)\}$ then $\#T_{ng} <= 1$. \\
+	
+	\tabitem $\#T_{ins}^+(v) > 0 \vee \#T_{outs}(v)^+ > 0$. \\
+	
+	\tabitem If $v.kind = comp$ then $\#subvertexes(v) > 0$. \\
+	
+	\tabitem If $v.kind = conc$ then $\#regions(v) > 0 \wedge (\forall r \in regions(v): \#subvertexes(r) > 0)$. \\
+	
+	\tabitem $\#regions(sm) = 1$. \\
+	
+	\tabitem If $v.kind = fork$ then $\#T_{ins}(v) > 0 \wedge \#T_{outs}(v) > 1 \wedge (\forall t \in T_{outs}(v): t.type = triggdless \wedge owner(tgt(t)).kind = conc)$. \\
+	
+	\tabitem If $v.kind = join$ then $\#T_{ins} > 1 \wedge \#T_{outs}(v) = 1 \wedge (\forall t \in T_{ins}(v): t.type = triggdless \wedge (\exists s \in owner^+(src(t)), s.kind=conc)) \wedge head(T_{outs}).type = triggdless$. \\
+	
+	\tabitem If $v.kind \in {choice, junction}$, then $\#T_{ins}(v) > 0 \wedge \#T_{outs}(v) > 1 \wedge (\exists! out \in T_{outs}(v): out.type = gdless)$. \\
+	
+	\tabitem If $v.kind \in {enpoint, expoint}$, then $owner(v).kind \in \{comp, conc\} \wedge \#T_{ins}(v) > 0 \wedge \#T_{outs}(v) = 1 \wedge head(T_{outs}(v).type = triggdless)$. \\
+	
+	\tabitem If $v.kind = history$ then $owner(v).kind \in \{comp, conc\} \wedge (if v.kind = comp$ then $\exists! v \in owner(v).subvertexes | v.kind = history) \wedge \#T_{ins} > 0$. \\ \hline
+\end{tabular}
+\end{table*}	
+\end{comment}
+
+\begin{comment}
+	\begin{itemize}
+		\item If $v.kind = initial$ then $\#T_{outs}(v) = 1 \wedge \#T_{ins}(v) = 0 \wedge t_{first}.type = triggerguardless$. 
+		
+		\item If $v.kind = final$ then $\#T_{outs}(v) = 0$.
+		
+		\item If $v.kind \notin \{state, comp, conc\}$ then $\forall t \in T_{outs}(v): src(t) \lnot= tgt(t)$. 
+		
+		\item If $T_{auto} = \{t \in T_{outs} | \#events(t) = 0\}$, $T_{ng} = \{t \in T_{auto} | guard(t) = true \vee \nexists guard(t)\}$ then $\#T_{ng} <= 1$.
+		
+		\item $\#T_{ins}^+(v) > 0 \vee \#T_{outs}(v)^+ > 0$.
+		
+		\item If $v.kind = comp$ then $\#subvertexes(v) > 0$. 
+		
+		\item If $v.kind = conc$ then $\#regions(v) > 0 \wedge (\forall r \in regions(v): \#subvertexes(r) > 0)$. 
+		
+		\item $\#regions(sm) = 1$.
+		
+		\item If $v.kind = fork$ then $\#T_{ins}(v) > 0 \wedge \#T_{outs}(v) > 1 \wedge (\forall t \in T_{outs}(v): t.type = triggerguardless \wedge owner(tgt(t)).kind = conc)$.
+		
+		\item If $v.kind = join$ then $\#T_{ins} > 1 \wedge \#T_{outs}(v) = 1 \wedge (\forall t \in T_{ins}(v): t.type = triggerguardless \wedge (\exists s \in owner^+(src(t)), s.kind=conc)) \wedge head(T_{outs}).type = triggerguardless$.
+		
+		\item If $v.kind \in {choice, junction}$, then $\#T_{ins}(v) > 0 \wedge \#T_{outs}(v) > 1 \wedge (\exists! out \in T_{outs}(v): out.type = guardless)$.
+		
+		\item If $v.kind \in {enpoint, expoint}$, then $owner(v).kind \in \{comp, conc\} \wedge \#T_{ins}(v) > 0 \wedge \#T_{outs}(v) = 1 \wedge head(T_{outs}(v).type = triggerguardless)$.
+		
+		\item If $v.kind = history$ then $owner(v).kind \in \{comp, conc\} \wedge (if v.kind = comp then \exists! v \in owner(v).subvertexes | v.kind = history) \wedge \#T_{ins} > 0$.
+	\end{itemize}	
+\end{comment}
+\begin{comment}
+\begin{definition} A transition graph $\tau$ is an acyclic directed graph ($\mathcal{T}$, $\mathcal{P}$, $\mathcal{T}$) where $\mathcal{S}, \mathcal{L}, \mathcal{P}$ are sets of vertexes and $\mathcal{T}$ is a set of transitions whose source and target vertexes belong to $\mathcal{S} \cup \mathcal{L} \cup \mathcal{P}$. And following conditions are satisfied:
+\begin{itemize}
+	\item $\forall s \in \mathcal{S} \cup \mathcal{L}$:
+		\begin{itemize}
+			\item If $s \in \mathcal{S}$ then $s$ is a state.
+			\item Otherwise $s$ is a state or $s.kind = final$.
+		\end{itemize}
+	\item $\forall p \in \mathcal{P}, p.kind \notin \{state, comp, conc\}$.	
+\end{itemize}	
+$\mathcal{S}$ and $\mathcal{L}$ are sets of source and reachable target states of $\tau$, respectively.  
+\end{definition}
+
+A transition graph is composed of one or multiple compound transitions, each of which consists of one/multiple transitions starting from states/pseudo states/pseudo states to pseudo states/states/pseudo states. A state machine can contain multiple transition graphs. Fig. \ref{fig:transitionGraph} (a) and (b) show two transition graphs $\tau_{1}$ and $\tau_{2}$ of the ATM state machine, respectively, in which 
+\begin{IEEEeqnarray*}{lCr}
+	\tau_{1} &=& (\mathcal{S}_1, \mathcal{L}_1, \mathcal{P}_1, \mathcal{T}_1) = (\{Idle\}, \{VerifyingCard, \\ 
+	&& {} VerifyingPIN\}, \{Fork1\}, \{t2, t3, t4\})
+\end{IEEEeqnarray*}
+and
+\begin{IEEEeqnarray*}{lCr}	
+	\tau_{2} &=& (\mathcal{S}_2, \mathcal{L}_2, \mathcal{P}_2, \mathcal{T}_2) = (\{CardValid, PINIncorrect\}, \\ 
+	&& {} \{Idle\}, \{Join2, Choice3\}, \{t11, t13, t19, t16, t17\}).
+\end{IEEEeqnarray*}
+
+
+
+\begin{figure}
+	\centering
+	\includegraphics[clip, trim=2.0cm 6cm 17.5cm 3cm, width=\columnwidth]{figures/transitionGraph.pdf}
+	\caption{Transition graphs} 
+	\label{fig:transitionGraph}
+\end{figure}
+
+
+\begin{definition} A compound transition $t_{cp}$ is a virtual path which starts from one or multiple UML state and ends on one or multiple UML state. A compound transition is specified by a triple \{srcs($t_{cp}$), trc($t_{cp}$), tgts($t_{cp}$)\}, in which source part srcs($t_{cp}$) consists of one or multiple states, transition part trc($t_{cp}$) consists of multiple transitions, and target part tgts($t_{cp}$) consists of one or multiple states. 
+\end{definition}
+
+
+Given a state, Algorithm \ref{alg:cptransition} presents how to calculate transition graphs whose source $t_{cp}$ whose source part contains only a state $s$. 
+
+\begin{algorithm}[]
+	\caption{Transition graphs calculation
+		\label{alg:cptransition}}
+	\begin{algorithmic}[1]
+		\Require{A state $s$ of a state machine}
+		\Ensure{A set of transition graphs $\mathcal{GT}$}
+		\Procedure{calculateTransGraphs}{$s$}
+		\Let{$\mathcal{GT}$}{$\emptyset$} 
+		\For {$out \in T_{outs}(s)$}
+			\If {$tgt(out)$ is not a state}
+				\Let{$\tau$}{($\mathcal{S}$, $\mathcal{L}$, $\mathcal{P}$, $\mathcal{T}$) $=\{\emptyset,\emptyset, \emptyset, \emptyset\}$}
+				\Let{$\mathcal{P}$}{$\mathcal{P} \cup {tgt(out)}$}
+				\Let{$\mathcal{S}$}{$\mathcal{S} \cup \{s\}$}
+				\Let{$\mathcal{T}$}{$\mathcal{T} \cup {out}$}
+				\If {$tgt(out).kind = join$}
+					\Let{$ins$}{\\$\{i \in T_{ins}(tgt(out))| owner(src(i)) = owner(s)\}$}
+					\Let{$\mathcal{S}$}{$\mathcal{S} \cup \{src(i)|i \in ins\}$}
+					\Let{$\mathcal{T}$}{$\mathcal{T} \cup ins$}
+				\EndIf
+				\Let{$nexts$}{$FINDTRANS(tgt(out))$}
+				\Let{$\mathcal{T}$}{$\mathcal{T} \cup nexts$}
+				\Let{H}{\\$\{tgt(t)|t \in nexts \wedge tgt(t).kind = history\}$}
+				\Let{$\mathcal{P}$}{$\mathcal{P} \cup \{src(t)|t \in nexts\} \cup H$}
+				\Let{$\mathcal{L}$}{$\mathcal{L} \cup \{tgt(t)|t \in nexts \wedge tgt(t)$ is state $\}$}
+								
+				\Let{$\mathcal{GT}$}{$\mathcal{GT} \cup \{\tau\}$} 
+			\EndIf
+		\EndFor
+		\EndProcedure
+		
+		\Require{A vertex $v$}
+		\Ensure{Transition paths starting from $v$ and ending on a state}
+		\Procedure{FindTrans}{$v$}
+		\Let{$nextTrans$}{$T_{outs}(v)$}
+		\For {$out \in T_{outs}(v)$}
+			\If {$tgt(out)$ is not a state}
+				\Let {$nextTrans$}{\\$nextTrans \cup FINDTRANS(tgt(out))$}
+			\EndIf
+		\EndFor	 			 	
+		\Return {$nextTrans$} 
+		\EndProcedure	
+	\end{algorithmic}
+\end{algorithm}
+
+For example, applying this algorithm to all states of the state machine example in \ref{fig:example}, we can calculate other transition graphs which are:
+\begin{IEEEeqnarray*}{lCr}
+	\tau_{3} &=& (\mathcal{S}_3, \mathcal{L}_3, \mathcal{P}_3, \mathcal{T}_3) = (\{VerifyingCard\}, \{Idle, \\ 
+	&& {} CardValid\}, \{Choice1\}, \{t5, t6, t7\}),
+\end{IEEEeqnarray*}
+\begin{IEEEeqnarray*}{lCr}	
+	\tau_{4} &=& (\{VerifyingPIN\}, \{PINIncorrect, \\
+	&& {} PINCorrect\}, \{Choice2\}, \{t8, t9, t10\}),
+\end{IEEEeqnarray*} 
+and
+\begin{IEEEeqnarray*}{lCr}	
+	\tau_{5} &=& (\{CardValid, PINCorrect\}, \{DispenseMoney\}, \\ 
+	&& {} \{Join2\}, \{t12, t14, t15\}).
+\end{IEEEeqnarray*} 
+
+\end{comment}
+
+\begin{comment}
+\begin{definition} A transition graph $\tau$ is an acyclic directed graph ($\mathcal{T}_r$, $\mathcal{P}$, $\mathcal{T}$) where $\mathcal{P}$ is a set of vertexes, and $\mathcal{T}_{r}$ and $\mathcal{T}$ are sets of transitions. $\mathcal{T}_{r}$ is called the set of root transitions of the graph. Following conditions are satisfied:
+	\begin{itemize}
+		\item $\forall t \in \mathcal{T}_r, src(t)$ is a state.
+		
+		\item $\forall p \in \mathcal{P}, p.kind \notin \{state, comp, conc\}$.	
+		
+		\item $\forall t \in \mathcal{T}, src(t)$ is a pseudo state.
+	\end{itemize}	
+\end{definition}
+
+A traversal from the root transitions of a transition graph to a stable state configuration is a compound transition. A state machine can contain multiple transition graphs. Fig. \ref{fig:transitionGraph} (a) and (b) show two transition graphs $\tau_{1}$ and $\tau_{2}$ of the ATM state machine, respectively, in which 
+\begin{IEEEeqnarray*}{lCr}
+	\tau_{1} &=& (\mathcal{T}_r, \mathcal{P}, \mathcal{T}) = (\{t2\}, \{Fork1\}, \{t3, t4\} )
+\end{IEEEeqnarray*}
+and
+\begin{IEEEeqnarray*}{lCr}	
+	\tau_{2} &=& (\{t11, t13\}, \{Join2, Choice3\}, \{t19, t16, t17\}).
+\end{IEEEeqnarray*}
+
+
+
+\begin{figure}
+	\centering
+	\includegraphics[clip, trim=2.0cm 6cm 17.5cm 3cm, width=\columnwidth]{figures/transitionGraph.pdf}
+	\caption{Transition graphs} 
+	\label{fig:transitionGraph}
+\end{figure}
+
+
+
+Given a state, Algorithm \ref{alg:cptransition} presents how to calculate transition graph set whose root transitions outgo from $s$. 
+
+\begin{algorithm}[]
+	\caption{Transition graphs calculation
+		\label{alg:cptransition}}
+	\begin{algorithmic}[1]
+		\Require{A state $s$ of a state machine}
+		\Ensure{A set of transition graphs $\mathcal{GT}$}
+		\Procedure{calculateTransGraphs}{$s$}
+		\Let{$\mathcal{GT}$}{$\emptyset$} 
+		\For {$out \in T_{outs}(s)$}
+			\If {$tgt(out)$ is not a state}
+				\Let{$\tau$}{($\mathcal{T}_r$, $\mathcal{P}$, $\mathcal{T}$) $=\{\emptyset,\emptyset, \emptyset\}$}
+				\Let{$\mathcal{P}$}{$\mathcal{P} \cup {tgt(out)}$}
+				\Let{$\mathcal{T}_r$}{$\mathcal{T}_r \cup {out}$}
+			\If {$tgt(out).kind = join$} 
+				\Let{$\mathcal{T}_r$}{$\mathcal{T}_r \cup T_{ins}(tgt(out))$}
+			\EndIf
+				\Let{$nexts$}{$FINDTRS(tgt(out))$}
+				\Let{$\mathcal{T}$}{$\mathcal{T} \cup nexts$}
+			
+				\Let{$\mathcal{GT}$}{$\mathcal{GT} \cup \{\tau\}$} 
+			\EndIf
+		\EndFor
+		\EndProcedure
+		
+		\Require{A vertex $v$}
+		\Ensure{Transition paths starting from $v$ to atomic  states}
+		\Procedure{FINDTRS}{$v$}
+		\Let{$outs$}{$T_{outs}(v)$}
+		\For {$out \in T_{outs}(v)$}
+			\If {$tgt(out)$ is not a state}
+				\Let {$outs$}{\\$outs \cup FINDTRS(tgt(out))$}
+			\ElsIf $tgt(out).kind \in {comp, conc}$
+				\For {$sub \in subvertexes(tgt(out)), sub.kind=initial$}
+					\Let {$outs$}{$outs \cup FINDTRS(sub)$}
+				\EndFor
+			\EndIf 
+		\EndFor	 			 	
+		\Return {$outs$} 
+		\EndProcedure	
+	\end{algorithmic}
+\end{algorithm}
+
+For example, applying this algorithm to all states of the state machine example in \ref{fig:example}, we can calculate other transition graphs which are:
+\begin{IEEEeqnarray*}{lCr}
+	\tau_{3} &=& (\mathcal{S}_3, \mathcal{L}_3, \mathcal{P}_3, \mathcal{T}_3) = (\{VerifyingCard\}, \{Idle, \\ 
+	&& {} CardValid\}, \{Choice1\}, \{t5, t6, t7\}),
+\end{IEEEeqnarray*}
+\begin{IEEEeqnarray*}{lCr}	
+	\tau_{4} &=& (\{VerifyingPIN\}, \{PINIncorrect, \\
+	&& {} PINCorrect\}, \{Choice2\}, \{t8, t9, t10\}),
+\end{IEEEeqnarray*} 
+and
+\begin{IEEEeqnarray*}{lCr}	
+	\tau_{5} &=& (\{CardValid, PINCorrect\}, \{DispenseMoney\}, \\ 
+	&& {} \{Join2\}, \{t12, t14, t15\}).
+\end{IEEEeqnarray*} 
+
+\end{comment}
+\begin{definition} Current active configuration $Cfg$ of a UML state machine sm is a set of candidate UML states which are able to process an incoming event. 
+\end{definition}
+
+
+
+
+

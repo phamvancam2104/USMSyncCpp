@@ -1,0 +1,24 @@
+namespace StateMachine_TestSuite::Fork;
+
+private import StateMachine_TestSuite::Util::Architecture::SemanticTestSuite;
+private import StateMachine_TestSuite::Util::Architecture::SemanticTest;
+
+private import StateMachine_TestSuite::Fork::'001'::'Fork001_SemanticTest';
+private import StateMachine_TestSuite::Fork::'002'::'Fork002_SemanticTest';
+
+activity ForkTests() {
+	let name : String = "Fork"; 
+	let tests : SemanticTest = new SemanticTest[]{};
+	// Fork001
+	f001 = new 'Fork001_SemanticTest'();
+	f001.name = "Fork 001";
+	f001.expectedResult ="T3(effect)::S1(entry)::T3.1(effect)::S1.3(entry)::S1.1(entry)::T4(effect)::S1.2(entry)";
+	tests->add(f001);
+	// Fork002
+	f002 = new 'Fork002_SemanticTest'();
+	f002.name = "Fork 002";
+	f002.expectedResult ="T2(effect)::S1(entry)::T2.1(effect)::S1.1(entry)::T2.2(effect)";
+	tests->add(f002);
+	// Create test suite
+	new SemanticTestSuite(tests, name);
+}

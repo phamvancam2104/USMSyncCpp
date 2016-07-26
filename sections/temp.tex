@@ -1,0 +1,107 @@
+
+Given $sm$ is a flat state machine, whose vertex kinds are not in $\{comp, conc\}$, $\#Cfg (sm) = 1$ when the system (active class C) is running. 
+$Cfg$ is also defined for composite/concurrent states. For each active composite/concurrent state $cs$, we write $subactives(cs)$ as a set of active sub-states of cs. If $cs.kind = comp$ then $\#subactives(cs) = 1$, otherwise $\#subactives(cs) > 1$. A transitive active set  $subactives^+$ of an active state $s$ is defined as following:
+
+\begin{figure*}
+	% ensure that we have normalsize text
+	\normalsize
+	% Store the current equation number.
+	\setcounter{mytempeqncnt}{\value{equation}}
+	% Set the equation number to one less than the one
+	% desired for the first equation here.
+	% The value here will have to changed if equations
+	% are added or removed prior to the place these
+	% equations are referenced in the main text.
+	
+	\begin{equation}
+	subactives^+ (s) =    \left\{
+	\begin{array}{ll}
+	s & s.kind \notin \{comp, conc\}  \\
+	\bigcup\limits_{sub \in subactives(s)} subactives^{+} (sub) & s.kind \in \{comp, conc\} \\
+	\end{array} 
+	\right. 
+	\end{equation}
+	% Restore the current equation number.
+	\setcounter{equation}{\value{mytempeqncnt}}
+	% IEEE uses as a separator
+	%\hrulefill
+	% The spacer can be tweaked to stop underfull vboxes.
+	%\vspace*{4pt}
+\end{figure*}
+
+	
+
+
+Therefore, we write:
+\begin{equation}
+	Cfg(sm) = subactives^+(subactives(sm))
+\end{equation}
+
+\subsection{Event dispatching}
+An external event incoming to the system or an internal event emitted by the system is dispatched by checking whether the innermost active states accept the event or not. Algorithm \ref{alg:event-processing}, in which $isAccepted(s, e)$ is $true$ if the event $e$ is accepted by the state $s$, shows how an event should be dispatched by the system.  
+
+\begin{algorithm}[]
+	\caption{Event dispatching
+		\label{alg:event-processing}}
+	\begin{algorithmic}[1]
+		\Require{An incomming event e, active state s\_active of the running state machine sm}
+		\Ensure{Event is processed}
+		\Procedure{dispatchEvent}{$s\_active$, $e$}
+		\Let{$ret$}{$false$}
+		\If {$s\_active.kind \in {comp, conc}$}
+			\For {$sub \in subactives(s_active)$}
+				\State{@concExec \\ $(ret = DISPATCHEVENT(sub, e) \vee ret)$}
+			\EndFor	 			 
+		\EndIf
+		\State{\ti{Wait for all cocurrent executions terminate}}
+		\If {$(s\_active.kind = state) \vee !ret$}
+			\If {$isAccepted(s\_active)$}
+				\Let{$ret$}{$true$}
+				\State $processEvent(s\_active, e)$
+			\EndIf
+		\EndIf
+		\Return{ret} 
+		\EndProcedure	
+	\end{algorithmic}
+\end{algorithm}
+
+In Algorithm \ref{alg:event-processing}, if the active state of the state machine $sm$ is atomic, a $processEvent$ procedure is executed to transition the active state to another state. Otherwise said, the active state delegates the event processing to its active sub-state. If the event is not consumed by the active sub-state, the processing of the former is delegated back to the parent state of the latter. In the following section, we show how to change the active state of the state machine.
+
+
+\subsection{Event processing semantics}
+There are three ways of transitioning from one state to another state including (1) direct transitioning in which the source state is directly connected to the target state by a transition, and (2) indirect transitioning in which multiple transitions and pseudo states in a transition graph are involved.
+
+\subsubsection{Direct transition}
+An active state can be changed from a source state to a target state either within the same region or not. In the first case, the transition $t$ connecting the two states is in the same region. This case is simply that the source state ends its activity and all of its active sub-states. In the second case, given a source state $s_{src}$, a target state $s_{tgt}$, and the transition $t$ connecting the two states, the following sub-cases are differentiated:
+\begin{itemize}
+	\item $s_{src} = ctner(s_{tgt}) \vee s_{src} \in ctner^+(s_{tgt})$
+	
+	\item $s_{tgt} = ctner(s_{src}) \vee s_{tgt} \in ctner^+(s_{src})$
+	
+	\item $s_{src} = s_{tgt}$
+	
+%	\item $ctner(s_{src}) \in ctner^+(s_{tgt})$
+	
+%	\item $ctner(s_{tgt}) \in ctner^+(s_{src})$
+	
+	\item $\exists s_{src}^* \in ctner^+(s_{src}) \wedge \exists s_{tgt}^* \in ctner^+(s_{tgt}): ctner(s_{src}^*) = ctner(s_{tgt}^*)$.
+\end{itemize}  
+
+The first and second sub-cases are occurred when the transition lies between a composite state and one of its transitive sub-states. The transition execution depends on the kind of $t$ which is either local or external. The third sub-case is a special case in which only the transition effect is executed. Algorithm \ref{alg:transition1} shows the execution order of these three sub-cases. 
+
+\begin{algorithm}[]
+	\caption{Transition Execution 1
+		\label{alg:transition1}}
+	\begin{algorithmic}[1]
+		\Require{A transition $t$ with its source and target states as $s_{src}$ and $s_{tgt}$}
+		\Ensure{Transition is correctly executed}
+		\Procedure{executeTrans}{$t$, $s_{src}$, $s_{tgt}$}
+
+		\EndProcedure	
+	\end{algorithmic}
+\end{algorithm}
+
+\subsubsection{Indirect transition}
+Indirect transition is executed by a compound transition, which traverses different transitions from several source to target states sequentially. The compound transition enters and exits one or multiple states in order designed by state machine designers with respect to the specification. Often, transitioning from one or multiple vertexes vertex (in case of $join$) can pass and execute the effect of one or multiple transitions concurrently (in case of $fork$). 
+
+For example, transitioning from $Idle$ to $Fork1$ and eventually $VerifyingCard$ and $VerifyingPIN$ is indirect. It executes $effect(t2)$ first, before concurrently starting $effect(t3)$ and $effect(t4)$. $Idle$, $Verifying$, $VerifyingCard$, and $VerifyingPIN$ are involved in the transitioning, in which $Idle$ is exited and these others entered. Subsection \ref{subsec:event} presents how the code is generated for indirect transitons.

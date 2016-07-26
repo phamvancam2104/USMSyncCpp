@@ -1,0 +1,30 @@
+namespace StateMachine_TestSuite::Terminate;
+
+private import StateMachine_TestSuite::Util::Architecture::SemanticTestSuite;
+private import StateMachine_TestSuite::Util::Architecture::SemanticTest;
+
+private import Terminate::'001'::'Terminate001_SemanticTest';
+private import Terminate::'002'::'Terminate002_SemanticTest';
+private import Terminate::'003'::'Terminate003_SemanticTest';
+
+activity TerminateTests() {
+	let name : String = "Terminate"; 
+	let tests : SemanticTest = new SemanticTest[]{};
+	// Terminate001
+	t001 = new 'Terminate001_SemanticTest'();
+	t001.name = "Terminate 001";
+	t001.expectedResult ="S1(entry)::S1.1(entry)::S2.1(entry)::S2.1(exit)";
+	tests->add(t001);
+	// Terminate002
+	t002 = new 'Terminate002_SemanticTest'();
+	t002.name = "Terminate 002";
+	t002.expectedResult ="S1(entry)::S1.1(entry)::S2.1(entry)::S3.1(entry)";
+	tests->add(t002);
+	// Terminate003
+	t003 = new 'Terminate003_SemanticTest'();
+	t003.name = "Terminate 003";
+	t003.expectedResult ="T2(effect)";
+	tests->add(t003);
+	// Create test suite
+	new SemanticTestSuite(tests, name);
+}

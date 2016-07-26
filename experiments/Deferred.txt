@@ -1,0 +1,48 @@
+namespace StateMachine_TestSuite::Deferred;
+
+private import StateMachine_TestSuite::Util::Architecture::SemanticTestSuite;
+private import StateMachine_TestSuite::Util::Architecture::SemanticTest;
+
+private import '001'::'Deferred001_SemanticTest';
+private import '002'::'Deferred002_SemanticTest';
+private import '003'::'Deferred003_SemanticTest';
+private import '004-A'::'Deferred004_SemanticTest_A';
+private import '004-B'::'Deferred004_SemanticTest_B';
+private import '005'::'Deferred005_SemanticTest';
+	
+activity DeferredTests() {
+	let name : String = "Deferred"; 
+	let tests : SemanticTest = new SemanticTest[]{};
+	/*Deferred001*/
+	d001 = new 'Deferred001_SemanticTest'();
+	d001.name = "Deferred 001";
+	d001.expectedResult ="S1(exit)::S2(entry)::T4(effect)::S3(entry)";
+	tests->add(d001);
+	/*Deferred002*/
+	d002 = new 'Deferred002_SemanticTest'();
+	d002.name = "Deferred 002";
+	d002.expectedResult ="S1(exit)::T4(effect)::S2(entry)::T6(effect)::S3(entry)";
+	tests->add(d002);
+	/*Deferred003*/
+	d003 = new 'Deferred003_SemanticTest'();
+	d003.name = "Deferred 003";
+	d003.expectedResult ="S1.1.1(exit)::T1.1.2(effect)::S1.1(exit)::T1.2(effect)::S1.2(exit)::T1.3(effect)";
+	tests->add(d003);
+	/*Deferred004*/
+	d004a = new 'Deferred004_SemanticTest_A'();
+	d004a.name = "Deferred 004 A";
+	d004a.expectedResult ="S1.1(exit)::T1.2(effect)::S2.1(exit)::T2.2(effect)::S1(exit)::T4(effect)";
+	tests->add(d004a);
+	/*Deferred004-bis*/
+	d004b = new 'Deferred004_SemanticTest_B'();
+	d004b.name = "Deferred 004 B";
+	d004b.expectedResult ="S1.1.1(exit)::T1.1.2(effect)::S1.1(exit)::S2.1(exit)::T2.2(effect)::S1(exit)";
+	tests->add(d004b);
+	/*Deferred005*/
+	d005 = new 'Deferred005_SemanticTest'();
+	d005.name = "Deferred 005";
+	d005.expectedResult ="T3(effect)::S2(entry)::T4(effect)::S2(entry)::T5(effect)::S2(entry)";
+	tests->add(d005);
+	// Create test suite
+	new SemanticTestSuite(tests, name);
+}
