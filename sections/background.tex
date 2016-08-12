@@ -1,37 +1,72 @@
 \section{Background definition}
-\label{subsec:background}
+\label{sec:background}
+This section reminds the background definitions of UML State Machine (see \ref{subsec:usmbackground}) and Model-Driven Round-Trip Engineering (see \ref{subsec:mdrtebackground}) in a formal way.
 
+
+\subsection{UML State Machine}
+\label{subsec:usmbackground}
 %\begin{definition}A directed graph $G = \{V, Ed\}$ consists of a finite set $V$ of vertexes, and a set $Ed$ of edges. An edge connects a source vertex to a target vertex. The source and target vertexes of an edge ed are obtained by $src(ed)$ and $tgt(ed)$.
 %\end{definition}
 
-\begin{definition}A UML vertex $v \in V$ has a kind $v.kind \in$  \ti{\{initial, final, state, comp, conc, join, fork, choice, junction, enpoint, expoint, history\}}. 
-\end{definition} 
+This section presents the background of UML State Machine.
+Fig. \ref{fig:smmetamodel} shows the state machine meta-model used in this paper.
+The latter covers the full concepts defined by UML State Machine and adapts some features dedicated to our development method.
+Specifically, the behavior of an \ttt{ActiveClass} is described by a state machine\footnote{It is possible to have multiple state machines in the same active class. However, for simplification, this papers assumes an active class only holds a state machine}.
+Furthermore, instead of using the \ttt{Behavior} UML meta-element, we introduce \ttt{Action} to define actions of state and transition, which actually are user-code.
 
-\begin{definition}A region $r \in \mathcal{R}$ is composed of one or several vertexes, and contained by a state $s$. We write $owner(r) = s$ and $vertices(r)$ is its sub-vertices set. 
-\end{definition}	
+%\begin{definition}A UML vertex $v \in V$ has a kind $v.kind \in$  \ti{\{initial, final, state, comp, conc, join, fork, choice, junction, enpoint, expoint, history\}}. 
+%\end{definition} 
 
-\begin{definition} A vertex is either a UML state or a pseudo-state. A UML state $s$ is a vertex and $s.kind$ $\in$ \{state, comp, conc\}. $s$ has an $entry$, an $exit$ and a $doActivity$ action. A composite state $cs$ contains one or more vertexes. We write $vertices(cs)$ is a set of vertexes contained by $cs$ and, inversely, $owner(v)$ refers to the containing state of the vertex $v$. %A concurrent state contains more than one region.
+%\begin{definition}A region $r \in \mathcal{R}$ is composed of one or several vertexes, and contained by a state $s$. We write $owner(r) = s$ and $vertices(r)$ is its sub-vertices set. 
+%\end{definition}	
+
+\begin{definition} A vertex is either a UML state or a pseudo-state. 
+	A UML state $s$ is a vertex and $s.kind \in \{state, comp, conc\}$. 
+	$s$ can have an $entry$, an $exit$ and a $doActivity$ action. 
+	A composite state $cs$ contains one or more vertexes. We write $vertices(cs)$ is a set of vertexes contained by $cs$ and, inversely, $owner(v)$ refers to the containing state of the vertex $v$. 
+	A connection point $v$ is a vertex and $v.kind \in \{enpoint, expoint\}$.%A concurrent state contains more than one region.
 \end{definition}		
 
-\begin{definition} An action $act$ $\in$ $ActLang$ is a set of statements written in an object-oriented programming language $ActLang$. A guard is a boolean expression written in $ActLang$.
-\end{definition}
+%\begin{definition} An action $act$ $\in$ $ActLang$ is a set of statements written in an object-oriented programming language $ActLang$. A guard is a boolean expression written in $ActLang$.
+%\end{definition}
 
 \begin{definition} A transition $t \in T$ is an edge connecting two vertexes. 
 	The source and target vertexes of an edge ed are obtained by $src(t)$ and $tgt(t)$. 
 	A transition has a guard $guard(t)$, an effect $effect(t)$, and is associated with a set of events $\subset$ E. We write $events(t)$ as the associated set of events. A transition has a type $t.type$ $\in \{trig, tless, gdless, triggdless\}$ and a kind $t.kind \in {external, local, internal}$.
 \end{definition}
 
+\begin{figure}
+	\centering
+	\includegraphics[clip, trim=0.2cm 0.8cm 0.2cm 0.2cm, width=1.0\columnwidth]{figures/smmetamodel.pdf}
+	\caption{State machine meta-model} 
+	\label{fig:smmetamodel}
+\end{figure}
+
+Fig. \ref{fig:eventmetamodel} shows the meta-model of event types defined by UML.
+There five event types whose definitions are followings.
+
 \begin{definition} An event is one of the followings:
 	\begin{itemize}
-		\item A \ti{TimeEvent} $te$ specifies the time of occurrence $d$ relative to a starting time. The latter is specified when a state, which accepts the time event, is entered.
+		\item A \ttt{TimeEvent} $te$ specifies the time of occurrence $d$ relative to a starting time. The latter is specified when a state, which accepts the time event, is entered.
 		
-		\item A \ti{SignalEvent} $se$ is associated with a signal $sig$, whose data are described by its attributes and is occurred if $sig$ is received by a component, which is an active UML class.
+		\item A \ttt{SignalEvent} $se$ is associated with a signal $sig$, whose data are described by its attributes and is occurred if $sig$ is received by a component, which is an active UML class.
 		
-		\item A \ti{ChangeEvent} $che$ is associated with a boolean expression $ex(che)$ written in $ActLang$. $che$ is emitted if $ex(che)$ changes from true (false) to false (true).
+		\item A \ttt{ChangeEvent} $che$ is associated with a boolean expression $ex(che)$ written in C++. $che$ is emitted if $ex(che)$ changes from true (false) to false (true).
 		
-		\item A \ti{CallEvent} $ce$ is associated with an operation $op(ce)$. $ce$ is emitted if there is a call to $op(ce)$.
+		\item A \ttt{CallEvent} $ce$ is associated with an operation $op(ce)$. $ce$ is emitted if there is a call to $op(ce)$.
+		
+		\item An \ttt{Any} event is any of the above events.
 	\end{itemize}
 \end{definition}
+
+
+\begin{figure}
+	\centering
+	\includegraphics[clip, trim=0.2cm 0.2cm 0.2cm 0.2cm, width=1.0\columnwidth]{figures/eventmetamodel.pdf}
+	\caption{State machine event meta-model} 
+	\label{fig:eventmetamodel}
+\end{figure}
+
 
 \begin{comment}
 \begin{definition} A \ti{TimeEvent} $te$ an internal event and specifies the time of occurrence $d$ relative to a starting time. The latter is specified when a state, which accepts the time event, is entered. 
@@ -52,8 +87,8 @@
 \end{definition}
 \end{comment}
 
-Suppose that for each vertex \ti{v} $\in$ $V$, its incoming and outgoing transition lists are extracted by $T_{ins}(v)$ and $T_{outs}(v)$, respectively. %For a list $l$, the function $head$ is used to get the first element of the list. 
-If $v.kind = conc$, suppose $regions(v)$ is the region set contained by $v$. %Given a transition t:
+%Suppose that for each vertex \ti{v} $\in$ $V$, its incoming and outgoing transition lists are extracted by $T_{ins}(v)$ and $T_{outs}(v)$, respectively. %For a list $l$, the function $head$ is used to get the first element of the list. 
+%If $v.kind = conc$, suppose $regions(v)$ is the region set contained by $v$. %Given a transition t:
 %\begin{itemize}
 %	\item $t.type = trig$ if $\#events(t) > 0$.
 %	\item $t.type = tless$ if $\#events(t) = 0$.
@@ -63,7 +98,9 @@ If $v.kind = conc$, suppose $regions(v)$ is the region set contained by $v$. %Gi
 
 The behavior of an active class $C$ is described by using a state machine whose definition is as following:	
 
-\begin{definition} A state machine sm is a graph specified by $\{V, T\}$ associated with a set of events $E$. A state machine is a special composite state which has no incoming and no outgoing transitions. A root vertex $v$ is a direct sub-vertex of the state machine, $owner(v) = sm$. The set of regions contained by $sm$ is written $\mathcal{R}$.
+\begin{definition} A state machine sm is a graph specified by $\{V, T, E\}$ with $E$ as a set of events. 
+	A state machine is a special composite state which has no incoming and no outgoing transitions. 
+	A root vertex $v$ is a direct sub-vertex of the state machine, $owner(v) = sm$. The set of regions contained by $sm$ is written $\mathcal{R}$.
 \end{definition}	
 
 %For each vertex $v$ $\in$ $V$, we write the following sets $T_{ins} (v) = incomings(v), T_{outs}(v) = outgoings(v)$, $t_{first} = head(t_{outs})$; transitive transition sets $T_{ins}^{+}(v)$ and $T_{outs}^{+}(v)$ are sets of transitions incoming to and outgoing from, respectively, $v$ or direct or indirect sub-vertexes of $v$.
@@ -90,6 +127,7 @@ The behavior of an active class $C$ is described by using a state machine whose 
 \end{strip}
 \end{comment}
 
+\begin{comment}
 \begin{definition} Transitive container $owner^+(v)$ of a vertex $v$ of a state machine $sm$ is defined as following:
 	\begin{equation}
 	owner^+(v) =    \left\{
@@ -103,7 +141,7 @@ The behavior of an active class $C$ is described by using a state machine whose 
 
 Likewise, $vertices^+(v)$ is a set of transitive sub-vertexes.
 
-\begin{comment}
+
 In the example in Fig. \ref{fig:example}, we have:
 \begin{IEEEeqnarray*}{lCr}	
 	owner^+(Idle) = \{StateMachine\}, \\
@@ -371,10 +409,12 @@ and
 	&& {} \{Join2\}, \{t12, t14, t15\}).
 \end{IEEEeqnarray*} 
 
-\end{comment}
+
 \begin{definition} Current active configuration $Cfg$ of a UML state machine sm is a set of candidate UML states which are able to process an incoming event. 
 \end{definition}
+\end{comment}
 
+\input{sections/rtebackground}
 
 
 

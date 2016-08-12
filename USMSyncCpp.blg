@@ -1,0 +1,31 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: USMSyncCpp.aux
+Case mismatch error between cite keys QM and qm
+---line 111 of file USMSyncCpp.aux
+ : \citation{QM
+ :             }
+I'm skipping whatever remains of this command
+The style file: IEEEtran.bst
+Database file #1: refs.bib
+Repeated entry---line 1262 of file refs.bib
+ : @misc{_papyrus/designer/code-generation_????
+ :                                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1555 of file refs.bib
+ : @misc{moka
+ :           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2857 of file refs.bib
+ : @article{OMG2015
+ :                 ,
+I'm skipping whatever remains of this entry
+-- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--missing publisher in Booch1998
+Warning--missing publisher in Douglass1999
+Warning--empty journal in Sendall
+Warning--empty year in Sendall
+Warning--empty journal in OMG2015
+
+Done.
+(There were 4 error messages)

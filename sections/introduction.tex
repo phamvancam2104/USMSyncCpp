@@ -1,68 +1,70 @@
 \section{Introduction}
 \label{sec:intro}
-%1. Say the complexity, CPS .. UML SM is ...
-%2. MDE ..., OMG defines powerful specification for USM..
-%3. To blur the boundaries between... => need to have code generation
-%4. Problem: 1. most of existing... focus only on sequency aspect..., many pseudo states are not supported while these pseudo states are widely used as powerful means to describe the dynamic behavior of system. 2. Concurrency is not taken into account. 3. Generated code is dependent on library of generation tools => not portable. Speed + executable size + runtime execution memory consumptio (for IoT)n + semantic conformance.
-%To.... => this paper address the analysis for multithread-based concurrency code genration and the code generation for full UML state machine with respect to the specification...
-%Contribution: Concurrency, systematic approach for code generation, evaluation conforming to UML precise semantics...
-%Structure
+%Unified Modeling Language (UML) State Machines (USMs) and their visualizations are suitable to model and design event-driven architecture-based embedded systems.
+%The latter are usually resource-constrained.
+%USMs can be used by the code generation technology in Model-Driven Engineering (MDE).
+%The latter is considered as an efficient methodology to deal with system complexity.
 
-%Internet of Things \cite{Li2015} drives the complexity of embedded systems today rapidly increases. 
-%Today embedded systems directly interacting with running environment does not run in standalone mode but also react to the system environment changes. 
-%Event-driven architecture \cite{Michelson2006} is an useful way to design such systems, in which events come to the system either from outside (data) or inside the system itself (time event or internal changes). 
-The Unified Modeling Language State Machine (USM) \cite{specification_uml_2007} and its visualization, standardized by the OMG \cite{omg}, are a powerful means to model the logical behavior of system complexity.   
-%USM defines how systems behave in case of changes. 
-%The rise in use of the Model-Driven Engineering (MDE) approach promotes the automation in software development. 
-The so-called Model-Driven Engineering methodology relies on two paradigms, abstraction and automation \cite{Mussbacher2014}.%, which are recognized as very efficient for dealing with system complexity. 
-Automation is to reduce the gap between the modeling world
-%, which consists of software architects, who prefer using graphical languages such as USM, 
-and the implementation world
-%, which involves programmers 
-by bringing the ability to automatically generating code from diagram-based modeling languages such as USM to executable code.  
-%The gap between the modeling world, which consists of software architects, who prefer using graphical languages such as USM, and the implementation world, which involves programmers, is therefore reduced. 
 
-However, on the one hand, the usefulness of UML State Machine is raised by providing more concepts supporting software architects for modeling and designing complex systems. 
-On the other hand, existing code generation approaches have some issues regarding completeness and efficiency of generated code. 
-%is language-dependent and still limited to simple cases, especially when considering concurrency of \ti{doActivity} and orthogonal regions, pseudo states such as history, and different events. 
-%This again enlarges the gap between the USM semantics and the actual generated code.
-Specifically, the following lists some issues of current approaches: 
-\begin{itemize}
-	\setlength\itemsep{0em}
-	\item Existing tools and approaches mainly focus on the sequential aspect while the concurrency of \ti{doActivity} states and orthogonal regions is not taken into account. We investigated on industrial leading tools. Rhapsody does not support \ti{doActivity}, junctions, and truly concurrent execution of orthogonal regions
-	\cite{ibmdiff} (see \ref{subsec:background} for formal definitions). 
-	The concurrency of the orthogonal regions is often implemented sequentially. 
-	%Sinelabore \cite{sinelabore} does not support fork, join, junction and concurrent states. 
-	Rhapsody and Enterprise Architect \cite{EA} only support \ti{CallEvent} and \ti{TimeEvent} while \ti{SignalEvent} and \ti{ChangeEvent} are missing. 
-	
-	\item The support for pseudo states such as history, choice and junction is poor \cite{EA, sinelabore} while these are very helpful in modeling.
-	
-	\item Code generated from tools such as \cite{ibm_rhapsody} and FXU \cite{Pilitowski2007} is heavily dependent on their own libraries, which make the generated code not portable.
-	
-	\item Issues of event processing speed, executable file size, and UML semantic-conformance defined by a recent work on the Precise Semantics of State Machine (PSSM) \cite{OMG2015}. 
-\end{itemize}
+%The so-called Model-Driven Engineering (MDE) approach relies on two paradigms, abstraction and automation \cite{Mussbacher2014}. It is recognized as very efficient for dealing with complexity of today's systems. 
+%Abstraction is the ability to provide simplified and focused view of a system and requires adequate modeling language. 
+%Unified Modeling Language (UML) \cite{Specification2007} is nowadays the most used, educated, and documented modeling language. 
+%Even, if a graphical language such as Unified Modeling Language (UML) \cite{Specification2007} is not the silver bullet for all software related concerns, it provides hence better support than text-based solutions for some concerns such as architecture and logical behavior of application development. 
+%Abstraction provides simplified and focused views of a system and requires adequate graphical modeling languages such as Unified Modeling Language (UML). %Even, if the latter is not the silver bullet for all software related concerns, 
+%The latter provides better support than text-based solutions for some concerns such as architecture and logical behavior of application development. 
 
-In order for wider integrating MDE into software development today, one task is to seamlessly make the behavior of the code generated from UML State Machine complied with the semantics specified by PSSM. 
-The objective of this paper is to clean the above issues by offering an efficient, complete, and UML-compliant code generation solution for UML State Machine.   
+Event-driven architecture is used for designing memory-constrained embedded systems \cite{Dunkels:2006:PSE:1182807.1182811}. 
+UML state machines (USMs) and their visual representations are an efficient means to describing, analyzing and implementing high level logic behaviors of event-driven systems. 
+A number of code generation approaches and industrial tools have been proposed in the context of Model-Driven Engineering (MDE) \cite{kent2002model} to automate the process of translating USMs into implementation \cite{Booch1998, Douglass1999,Shalyto2006,Douglass1999, ibm_rhapsody, sinelabore, qm}.  
 
-Our approach combines the IF-ELSE constructions and an extension of state pattern \cite{niaz_mapping_2004} with our support for concurrency. 
-Code generated by our approach is tested under the PSSM.
-Although supporting multi-thread-based concurrency, binary files compiled from and the event processing speed of runtime execution of code generated by our approach are dramatically smaller than some manual implementation approaches and code generation tools.
-  
-%Abstraction provides simplified and focused views of a system and requires adequate graphical modeling languages such as Uni. Even, if the latter is not the silver bullet for all software related concerns, it provides better support than text-based solutions for some concerns such as architecture and logical behavior of application development. UML state machines (USMs) and their visual representations are much more suitable to describe logical behaviors of system entities than any equivalent text based descriptions. The gap from USMs to system implementation is reduced by the ability of automatically generating code from USMs  \cite{Booch1998, Douglass1999,Shalyto2006,Douglass1999}. 
-
-%Ideally, a full model-centric approach is preferred by MDE community due to its advantages \cite{Selic2012}. However, in industrial practice, there is significant reticence \cite{Hutchinson:2011:MEP:1985793.1985882} to adopt it.
-%On one hand, programmers prefer to
-%use the more familiar textual programming language. 
-%On the other hand, software architects, working at higher levels
-%of abstraction, tend to favor the use of models, and therefore
-%prefer graphical languages for describing the architecture of
-%the system.
+Ideally, a full model-centric approach is preferred by MDE community due to its advantages \cite{Selic2012}. 
+However, in industrial practice, there is significant reticence \cite{Hutchinson:2011:MEP:1985793.1985882} to adopt it.
+On one hand, programmers prefer to
+use the more familiar programming language. 
+On the other hand, software architects, working at higher levels
+of abstraction, favor the use of models, and therefore
+prefer graphical languages for describing the system architecture high level logic behavior.
 %However, on the one hand, maintaining code generated from existing approaches is non-trivial. On the other hand our observation is that it is very difficult to come up with formalizations that yield such elegant code generation solutions \cite{6032552}. In other words, generated code must be manually modified to build fully operational applications. 
 %On one hand there are traditional developers who prefer to implement the system by writing code, while on the other hand there are developers who prefer to use entirely models for the design and implementation of the system. 
-%The code modified by programmers and the model are then inconsistent. Round-trip engineering (RTE) \cite{Hettel2008} is proposed to synchronize different software artifacts, model and code in this case \cite{Sendall}. RTE enables actors (software architect and programmers) to freely move between different representations \cite{Sendall} and stay efficient with their favorite working environment. 
+
+The code modified by programmers and the model are then inconsistent. Round-trip engineering (RTE) \cite{Hettel2008} is proposed to synchronize different software artifacts, model and code in this case \cite{Sendall}. 
+RTE enables actors (software architect and programmers) to freely move between different representations and stay efficient with their favorite working environment. 
+In other words, RTE enables both model and code to be considered as development artifact. 
 
 %After code modifications, round-trip engineering (RTE) is needed to make the model and code consistent, which is a critical aspect to meet quality and performance constraint required from project managers today. 
+
+Approaches proposed for RTE are categorized as \ti{structure} and \ti{behavior} RTE.
+The former refers to synchronization of structural concepts such as those available from class diagrams and code, and is supported by industrial tools such as IBM Rhapsody \cite{ibm_rhapsody} and Enterprise Architect \cite{sparxsystems_enterprise_2014}.
+Some approaches such as \cite{langhammer2013co, kramer2015change} allow the co-evolution of component-based diagram elements and code.
+
+The \ti{behavior} RTE allows programmers to partially modify behavioral code in limited areas by separating the generated and non-generated code \cite{ibm_rhapsody,steinberg2008emf} using some specialized comments such as \ttt{@generated NOT}.
+This is because there is no trivial mapping from behavior model such as USM and code.
+Consequently, it is very difficult to reflect behavior code changes to the original model.
+Approaches and tools in this category use an incremental code generation, which preserves the user-code changes in the areas marked as non-generated.
+However, \ti{current separation mechanisms require the programmers are highly discipline.
+Furthermore, even so, accidental changes are still possible} \cite{zheng2012enhancing}.
+
+\ttt{Deep separation} is proposed by the authors in \cite{zheng2012enhancing} to overcome the limitation of the current separation mechanisms.
+However, as the authors state that, this approach does not allow to modify the system architecture- and behavior-prescribed code in text development environment.  
+
+In this paper, we tackle the problem of synchronization between model and C++ code for developing event-driven systems.
+Specifically, the system architecture is specified via UML class diagrams and the behavior via USMs.
+To support the architects and the programmers at the modeling and programming level, respectively, equivalently, our goal is to allow the synchronization of USMs with full features and code.
+The latter should be efficient (small in size and fast in event processing speed) to be fit into resource-constrained systems. 
+
+Our approach \tf{RAOES} is inspired by \ttt{ArchJava} \cite{aldrich2002archjava} and \ttt{Archface} \cite{ubayashi2010archface} whose goal is to allow the co-evolution of architecture and implementation in Java by introducing additional constructs to Java.
+Our approach adds USM-based constructs to connect C++ to the USMs.
+Instead of directly generating C++ code from models as the existing tools, RAOES produces a C++ front-end code, which contains our added constructs.
+The programmers are free to modify not only the high level logic behavior described by USMs but also the user code by making changes to the C++ front-end code.
+
+The introduction of the front-end is similar to \ttt{MSM} \cite{MSM} and \ttt{EUML} \cite{EUML}.
+However, these front-ends use a lot of C++ templates, which make the code difficult to write and understand.
+Furthermore, they support only a limited subset of USM, especially events defined by UML are not correctly supported.
+
+In RAOES, the C++ front-end is merged into and written in the usual C++ code.
+The front-end is then used for generating a back-end code, which is actually used for compilation to binary files.
+Furthermore, using our strategy defined in this paper, the front-end code is also synchronized with the model when there are concurrent modifications.
+
 %Unfortunately, current industrial tools such as for instance Enterprise Architect \cite{sparxsystems_enterprise_2014} and IBM Rhapsody\cite{ibm_rhapsody} only support structural concepts for RTE such as those available from class diagrams and code. Compared to RTE of class diagrams and code, RTE of USMs and code is non-trivial. It requires a semantical analysis of the source code, code pattern detection and mapping patterns into USM elements. 
 %This is a hard task, since mainstream programming languages such as C++ and JAVA do not have a trivial mapping between USM elements and source code statements.
 
@@ -84,10 +86,25 @@ Although supporting multi-thread-based concurrency, binary files compiled from a
 
 %This paper addresses the RTE of USMs and object-oriented programming languages such as C++ and JAVA. The main idea is to utilize transformation patterns from USMs to source code that aggregates code segments associated with a USM element into source code methods/classes rather than scatters these segments in different places. Therefore, the reverse direction of the RTE can easily statically analyze the generated code by using code pattern detection and maps the code segments back to USM elements. Specifically, in the forward direction, we extend the double dispatch pattern presented in \cite{spinke_object-oriented_2013}. Traceability information is stored during the transformations. We implemented a prototype supporting RTE of state-machine and C++ code, and conducted several experiments on different aspects of the RTE to verify the proposed approach. To the best of our knowledge, our implementation is the first tool supporting RTE of SM and code. 
 
-To sum up, the contributions of this paper are as followings:
+To sum up, our contribution is as followings:
 \begin{itemize}
-	\item A multi-thread-based design and complete code generation approach for concurrent USMs.
-	\item An empirical on the semantic-conformance and efficiency of code generated by the proposed approach.  
+	\item RAOES: A round-trip engineering approach for developing event-driven systems using UML State Machines and C++.
+	\item The implementation of RAOES based on the Eclipse Modeling Framework (EMF) and the Papyrus tool.
+	\item Experimental evaluations of RAOES.
+	%\begin{itemize}
+		%\item An automatic evaluation of the proposed RTE approach with the prototype.% including 300 random generated SM models containing 80 states, more than 230 transitions, more than 250 actions and around 180 events for each.
+		%\item A complexity analysis of the approach and performance evaluation.
+		%\item A comparison and collaboration of two software development practices including working at the model level and at the code level.
+		%\item A lightweight evaluation of the semantic conformance of the runtime execution of generated code.
+	%\end{itemize}
 \end{itemize}
 
-The remaining of this paper is organized as follows: Section \ref{subsec:background} presents preliminary USM concepts in a formal way. Thread-based concurrency is designed in Section \ref{sec:thread}. Based on the design, a code generation approach is proposed Section \ref{sec:codegen}. The implementation and empirical evaluation are reported in Section \ref{sec:exp}. Section \ref{sec:relatedwork} argues related work. The conclusion and future work are presented in Section \ref{sec:conclusion}.
+The remainder of this paper is organized as follows: Section \ref{sec:background} presents the background. 
+Section \ref{sec:motivation} and \ref{sec:overview} describe the motivation and overview of RAOES. 
+The syntax of RAOES's front-end is detailed in Section \ref{sec:syntax}.
+Section \ref{sec:collaboration} shows our synchronization strategy.
+The implementation of RAOES is described in Section \ref{sec:implementation}. 
+Section \ref{sec:exp} reports our results of experimenting with RAOES. 
+Section \ref{sec:relatedwork} shows related work. 
+The conclusion and future work are presented in Section \ref{sec:conclusion}.
+

@@ -1,0 +1,161 @@
+\section{RAOES's language syntax}
+\label{sec:syntax}
+This section presents how USMs can be represented in the front-end language of RAOES.
+A USM in RAOES is defined inside an active class (C++ class).
+It consists of three parts: topology, event definition, and transition table.
+The followings describe the details of these parts.
+\subsection{Topology}
+A topology describes how the hierarchy of a USM is organized.
+As the example in Fig. \ref{fig:frontend-overview}, the root of the topology is define by \ttt{STATE\_MACHINE}.
+Other elements such as \ttt{region}, \ttt{state}, and \ttt{pseudo state} are defined as sub-elements.
+The followings give the syntax of some elements and the semantics of RAOES mapped to the well-defined semantics in the UML specification \cite{OMG2015}.
+
+\subsubsection{State and regions} ~\\
+\tb{Syntax:}
+
+\textit{State machine} $\rightarrow$ \tf{'STATE\_MACHINE('name') \{vertices\};'} 
+
+\ti{state} $\rightarrow$ \tf{'STATE ('name, ent, ex');'} 
+
+\ti{state} $\rightarrow$ \tf{'INITIAL\_STATE ('name, ent, ex, effect');'}
+
+\ti{concurrent state} $\rightarrow$ \tf{'STATE ('name, ent, ex') \{' regions '\};'} 
+
+\ti{regions} $\rightarrow$ \tf{region; regions}
+
+\ti{region} $\rightarrow$ \tf{'REGION (' name ') {' vertices '};'}
+
+\noindent
+\tb{Semantics:}
+\begin{itemize}
+	\item \ttt{name}: the unique identifier of a state machine, a state or a region.
+	
+	\item \ttt{ent/ex}: The name of the entry/exit action method associated with the state. 
+	These methods are implemented in the active class and have no parameter.
+	If a state does not have an entry/exit action, \ttt{ent/ex} becomes \ttt{NULL}.
+	
+	\item \ttt{INITIAL\_STATE}: A state is defined as an initial state, which has an incoming transition outgoing from a pseudo initial state within the same region or composite state. 
+	
+	\item \ttt{effect}: For initial state, this is the transition effect associated with the initial transition.
+	If the latter does not have an effect, \ttt{effect} is specified as \ttt{NULL}.
+	
+	\item \ttt{concurrent state}: The representation of a concurrent state. 
+	The latter is composed of a set of regions.
+	Each region contains a set of vertices, which for each is either a state or a pseudo state.
+\end{itemize}
+
+\noindent
+\tb{Example:}
+Lines 2-10 in Fig. \ref{fig:frontend-overview} (a) represents the state \ttt{S1} of the USM example in Fig. \ref{fig:IllustrationExample1} and its vertices.
+\ttt{S1} is defined as the initial state of the USM, and has \ttt{entry} and \ttt{exit} actions bound to the methods \ttt{S1\_entry} (lines 26-28) and \ttt{S1\_exit} (not shown) implemented in the active class.
+The direct \ttt{S11} and indirect \ttt{S111} sub-state are defined hierarchically (lines 5-7) with the associated actions.
+
+\subsubsection{Pseudo state} ~\\
+\tb{Syntax:}
+
+\ti{enpoint} $\rightarrow$ \tf{'ENTRY\_POINT ('name');'} 
+
+\ti{expoint} $\rightarrow$ \tf{'EXIT\_POINT ('name');'}
+
+\ti{initial} $\rightarrow$ \tf{'INITIAL ('name');'}
+
+\ti{final} $\rightarrow$ \tf{'FINAL\_STATE ('name');'}
+
+\ti{join} $\rightarrow$ \tf{'JOIN ('name');'}
+
+\ti{fork} $\rightarrow$ \tf{'FORK ('name');'}
+
+\ti{choice} $\rightarrow$ \tf{'CHOICE ('name');'}
+
+\ti{junction} $\rightarrow$ \tf{'JUNCTION ('name');'}
+
+\ti{shallow history} $\rightarrow$ \tf{'SHALLOW\_HISTORY ('name');'}
+
+\ti{deep history} $\rightarrow$ \tf{'DEEP\_HISTORY ('name');'}
+
+\noindent
+\tb{Example:}
+
+\ttt{EXIT\_POINT(ex1);} and \ttt{SHALLOW\_HISTORY(h1);} in Fig. \ref{fig:frontend-overview} represent a connection exit point and a shallow history with their respective name.  
+
+\subsection{Events}
+Events represent all USM events a USM can react.
+As defined in Section \ref{sec:background}, there are four USM event types: \ttt{CallEvent}, \ttt{TimeEvent}, \ttt{SignalEvent}, \ttt{ChangeEvent}. %The syntax of each of these events is as followings.
+
+\noindent
+\tb{Syntax:}
+
+\ttt{CallEvent} $\rightarrow$ \tf{'CALL\_EVENT'} \tf{'('name, op');'}
+
+\ttt{TimeEvent} $\rightarrow$ \tf{'TIME\_EVENT'} \tf{'('name, dur');'}
+
+\ttt{SignalEvent} $\rightarrow$ \tf{'SIGNAL\_EVENT'} \tf{'('name, sig');'}
+
+\ttt{ChangeEvent} $\rightarrow$ \tf{'CHANGE\_EVENT'} \tf{'('name, expr');'}
+
+\ttt{SimpleEvent} $\rightarrow$ \tf{'SIMPLE\_EVENT'} \tf{'('name');'}
+
+\noindent
+\tb{Semantics:}
+Essentially, each field in the syntax carries known semantics defined in the UML specification and Section \ref{sec:background}:
+\begin{description}
+	\item[\ttt{name}] The unique identifier for an event.
+	
+	\item[\ttt{op}] The name of the operation associated with a \ttt{CallEvent} and implemented in the active class. 
+	
+	\item[\ttt{dur}] The duration associated with a \ttt{TimeEvent} and specified as millisecond.
+	
+	\item[\ttt{sig}] The name of the signal associated with a \ttt{SignalEvent}.
+	
+	\item[\ttt{expr}] The expression associated with a \ttt{ChangeEvent}. This expression is periodically evaluated to check whether its boolean value is changed.
+\end{description}
+
+\ttt{SimpleEvent} is a specialized \ttt{SignalEvent} without specifying an explicit signal.
+
+\noindent
+\tb{Example:}
+
+\ttt{CALL\_EVENT(CE1, method1)}: A \ttt{CallEvent} occurs if the method \ttt{method1} in the active class is called.
+
+\ttt{SIGNAL\_EVENT(SE, Sig)}: A \ttt{SignalEvent} occurs if an instance of \ttt{Sig} is sent to the active class using its provided method \ttt{sendSig}.
+
+\ttt{TIME\_EVENT(TE5ms, 5)}: A \ttt{TimeEvent} occurs after 5 millisecond since the timer starts by entering some state.
+
+\subsection{Transitions}
+As previously defined, there are three kinds of transitions: \ttt{external}, \ttt{local}, and \ttt{internal}.
+
+\noindent
+\tb{Syntax:}
+
+\noindent
+\ttt{external} $\rightarrow$ \tf{'TRANSITION'} \tf{'('src, tgt, guard, evt, effect');'}
+
+\noindent
+\ttt{local}$\rightarrow$\tf{'LOCAL\_TRANSITION}\tf{('src,tgt,guard,evt,effect');'}
+
+\noindent
+\ttt{internal} $\rightarrow$ \tf{'INT\_TRANSITION}\tf{('src, guard, evt, effect');'}
+
+\noindent
+\tb{Semantics:}
+\begin{description}
+	\item[\ttt{src}] The name of the source vertex of the transition. 
+	This name must be defined in the topology.
+	
+	\item[\ttt{tgt}] The name of the target vertex of the transition. 
+	
+	\item[\ttt{guard}] A boolean expression representing the transition's guard. If the transition is \ttt{gdless}, \ttt{guard} is NULL.
+	
+	\item[\ttt{evt}] The name of the event triggering the transition. 
+	\tf{evt} must be one of the defined events. 
+	If the transition is \ttt{tless}, \ttt{evt} is NULL.
+	
+	\item[\ttt{effect}] The name of the method, which defines the effect of the transition.
+	The method is implemented in the active class.
+	If \ttt{evt} is a \ttt{SignalEvent}, the method has an input parameter typed as the signal associated with the event.
+	If \ttt{evt} is a \ttt{CallEvent}, the method has the same parameters as the operation associated with \ttt{evt}.
+	If the transition has no effect, \ttt{effect} becomes NULL.
+\end{description}
+
+\noindent
+\tb{Example:}

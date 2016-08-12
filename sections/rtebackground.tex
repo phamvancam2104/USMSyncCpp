@@ -1,0 +1,130 @@
+\subsection{Model-Driven Round-trip Engineering}
+\label{subsec:mdrtebackground}
+
+In this section we define the actors who will use our model-code synchronization approach to collaborate during development.
+%Then we define the main capabilities, as use-cases, expected from a generic IDE used by these actors.
+Some basic concepts related to the actors and use-cases are also defined in this section.
+
+
+%\subsection{Collaborating actors and development artifacts}
+
+%In this paper we propose a methodological model-code synchronization pattern for collaboration between software
+%architects and programmers.
+
+%First, we introduce the concepts of \textit{development artifact} and \textit{baseline artifact}.
+
+%\begin{definition}[Development artifact]
+%	A development artifact is an artifact, as defined in \cite{omg_software_2008},
+%	that can be used for the full implementation of the system.
+%\end{definition}
+
+%For example a system can be entirely implemented as code.
+%Implementation code is a development artifact, so may model.
+%It is then not only documentation of specification
+%but part of the implementation.
+%For example a model can be used for implementation by generating code from the model, and compiling the code without the need to edit or complete the code.
+%In our work, we assume that model and code are both development artifacts.
+%A development artifact may be the baseline artifact, defined in this paper as follows:
+
+\begin{comment}
+
+\begin{definition}[Baseline artifact]
+	A baseline artifact is one which may be edited manually.
+	All other artifacts are produced from the baseline artifact
+	through some process, and only through a process. Manual edition
+	of artifacts other than the baseline artifact is forbidden.
+\end{definition}
+\end{comment}
+
+Two primary actors, called \ttt{model-driven developer}
+and \ttt{code-driven developer}, are introduced.
+%The main difference between them
+%is what they consider as the baseline artifact.
+
+\begin{definition}[Model-driven developer]
+	A model-driven developer (MDD) is an actor in a software development process and uses the model as the main working artifact.
+\end{definition}
+
+%In other words, for the model-driven developer only the model should be edited manually. 
+The code must always be produced from the model automatically
+by some process that guarantees that the code is consistent with the model.
+A software architect is a kind of the model-driven developer
+who edits the model to specify the architecture of the system.
+%An architect presumes that the reference for the architecture
+%of the system should be specified as a model.
+
+\begin{definition}[Code-driven developer]
+	Code-driven developer (CDD) is an actor who uses the code as the main working artifact.
+\end{definition}
+
+A programmer is a specialization of the code-driven developer.
+Indeed, programmers may modify our C++ front-end code, such as editing methods, attributes or state machines textually.
+%The code is then the main reference for the implementation of methods.
+
+%There are some use-cases for manual edition of artifacts. The \texttt{Edit Artifact} use-case
+%implies that the IDE must have some tool to let the developer manually edit an artifact.
+%The \texttt{Edit Model} and \texttt{Edit Code} use-cases are specializations of the \texttt{Edit Artifact}
+%use-case where the artifact is the model or code.
+
+%There are also some use-cases related to the synchronization of artifacts. The \texttt{Synchronize Artifact} use-case (1) compares two artifacts, (2) updates each with editions made
+%in the related artifact, and (3) reconciles conflicts when appropriate. The \texttt{Synchronize Model} and \texttt{Synchronize Code}
+%use-cases are specializations where, respectively, the model or the code are the artifacts being synchronized.
+
+\texttt{Generate Code} is a use-case related to forward engineering.
+It is the production of C++ code from a model.
+The developer can either use \texttt{Generate Code (Batch)} or \texttt{Generate Code (Incremental)}.
+%\end{comment}
+
+\begin{definition}[Batch code generation \cite{Giese2006}]
+	Batch code generation is a process of generating code
+	from a model, from scratch.
+	Any existing code is overwritten by the newly generated code.
+\end{definition}
+
+\ttt{Incremental code generation} is a specialization of \ttt{incremental model transformation}, which
+does not generate the whole target model from scratch but only updates the target model by
+propagating editions made to the source model.
+
+%\texttt{Incremental code generation (ICG)} \ti{$gen_{inc}$ is a process of taking as input a changed model m and an existing executable code to make the code synchronized with the changed model: $gen_{inc}(m, c) = c'$. Non-conflicted changes at the code side are kept intact the synchronization. ICG is also defined as a process of taking model changes ch and an existing code c: $gen_{inc}(ch, c) = c'$}.
+
+%Derived from the definition of incremental model transformation, 
+%Incremental code generation
+%is defined in this paper as follows:
+
+\begin{definition}[Incremental code generation]
+	Incremental code generation is the process
+	of taking as input an edited model, and existing code, and then updating the code by propagating
+	editions in the model to the code.
+\end{definition}
+
+%\begin{comment}
+\texttt{Reverse Code} is related to reverse engineering.
+\texttt{Reverse Code} is the production of a model, in a modeling language such as UML, from code, written in a programming language.
+The developer can either use \texttt{Reverse Code (Batch)} or \texttt{Reverse Code (Incremental)}, which are defined in this paper as follows:
+%\end{comment}
+
+\begin{definition}[Batch reverse engineering]
+	Batch reverse engineering is a process of producing a model from code, from scratch.
+	The existing model is overwritten by the newly produced model.
+\end{definition}
+
+\begin{definition}[Incremental reverse engineering]
+	Incremental reverse engineering is the process of taking as
+	input a edited code, and an existing model, and then updating the model by propagating
+	editions in the code to the model.
+\end{definition}
+
+%For readability, in this paper we will sometimes designate batch and incremental as modes
+%of code generation/reverse; e.g. we say that we generate code in batch mode from a model.
+
+%The use-cases are generic. They do not depend
+%on any particular approach or tool. Therefore the software developers
+%can choose the approach or tool that suits better his/her
+%development preferences best.
+
+In Section \ref{sec:collaboration}, the use-cases of the IDE are integrated into
+our process, which covers model-code synchronization and is detailed in Section \ref{sec:collaboration}.
+%The scenarios correspond to behaviors performed by both kinds of actors,
+%i.e. model-driven developers and code-driven developers.
+
+%Model-driven engineering has been established as a potential approach to gain software quality and productivity \cite{Mussbacher2014}. 

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_FVjP4CEkEeaycv_dRWs-Ow" name="EnteringExample">
+  <packagedElement xmi:type="uml:Class" xmi:id="_9dL9UCGjEeaSdKcVYrO8_A" name="System">
+    <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_FV2K0CEkEeaycv_dRWs-Ow" name="Machine">
+      <region xmi:type="uml:Region" xmi:id="_FV_70CEkEeaycv_dRWs-Ow" name="Region1">
+        <transition xmi:type="uml:Transition" xmi:id="_lyHB0CEkEeaycv_dRWs-Ow" name="t1" source="_KTKZYCEkEeaycv_dRWs-Ow" target="_L6x3cCEkEeaycv_dRWs-Ow"/>
+        <transition xmi:type="uml:Transition" xmi:id="_oFfZsCEkEeaycv_dRWs-Ow" name="t2" source="_KTKZYCEkEeaycv_dRWs-Ow" target="_hWAp8CEkEeaycv_dRWs-Ow"/>
+        <transition xmi:type="uml:Transition" xmi:id="_vFbnUCEkEeaycv_dRWs-Ow" name="t3" source="_KTKZYCEkEeaycv_dRWs-Ow" target="_b4QAwSEkEeaycv_dRWs-Ow"/>
+        <transition xmi:type="uml:Transition" xmi:id="__UnywCEkEeaycv_dRWs-Ow" source="_JBRTsCEkEeaycv_dRWs-Ow" target="_KTKZYCEkEeaycv_dRWs-Ow"/>
+        <transition xmi:type="uml:Transition" xmi:id="_Iyn-QCElEeaycv_dRWs-Ow" name="t5" source="_KTKZYCEkEeaycv_dRWs-Ow" target="_R8N1cCEkEeaycv_dRWs-Ow"/>
+        <transition xmi:type="uml:Transition" xmi:id="_qnISkCPuEeaDA_v6poZE3Q" name="t6" source="_KTKZYCEkEeaycv_dRWs-Ow" target="_ntCgACPuEeaDA_v6poZE3Q"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_JBRTsCEkEeaycv_dRWs-Ow" name="Initial1"/>
+        <subvertex xmi:type="uml:State" xmi:id="_KTKZYCEkEeaycv_dRWs-Ow" name="S0"/>
+        <subvertex xmi:type="uml:State" xmi:id="_L6x3cCEkEeaycv_dRWs-Ow" name="S1">
+          <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_ntCgACPuEeaDA_v6poZE3Q" name="EnP" kind="entryPoint"/>
+          <region xmi:type="uml:Region" xmi:id="_OqXqMiEkEeaycv_dRWs-Ow" name="Region1">
+            <transition xmi:type="uml:Transition" xmi:id="_qLAUsCEkEeaycv_dRWs-Ow" name="t4" source="_hWAp8CEkEeaycv_dRWs-Ow" target="_R8N1cCEkEeaycv_dRWs-Ow"/>
+            <transition xmi:type="uml:Transition" xmi:id="_2pcyYCEkEeaycv_dRWs-Ow" name="t8" source="_OqhbNiEkEeaycv_dRWs-Ow" target="_T4OPICEkEeaycv_dRWs-Ow"/>
+            <transition xmi:type="uml:Transition" xmi:id="_rOVcgCPuEeaDA_v6poZE3Q" name="t7" source="_ntCgACPuEeaDA_v6poZE3Q" target="_WlkowCPuEeaDA_v6poZE3Q"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_OqhbNiEkEeaycv_dRWs-Ow" name="Initial1"/>
+            <subvertex xmi:type="uml:State" xmi:id="_R8N1cCEkEeaycv_dRWs-Ow" name="S2"/>
+            <subvertex xmi:type="uml:State" xmi:id="_T4OPICEkEeaycv_dRWs-Ow" name="S3">
+              <region xmi:type="uml:Region" xmi:id="_b4G20iEkEeaycv_dRWs-Ow" name="Region1">
+                <subvertex xmi:type="uml:State" xmi:id="_b4QAwSEkEeaycv_dRWs-Ow" name="S4"/>
+              </region>
+            </subvertex>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_hWAp8CEkEeaycv_dRWs-Ow" name="SH" kind="shallowHistory"/>
+            <subvertex xmi:type="uml:State" xmi:id="_WlkowCPuEeaDA_v6poZE3Q" name="S5"/>
+          </region>
+        </subvertex>
+      </region>
+    </ownedBehavior>
+  </packagedElement>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_CzZNACGkEeaSdKcVYrO8_A">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_CzvyUCGkEeaSdKcVYrO8_A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/C_Cpp/1#/"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://PapyrusC_Cpp_PROFILES/C_Cpp.profile.uml#_j9REUByGEduN1bTiWJ0lyw"/>
+  </profileApplication>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_DT21wCGkEeaSdKcVYrO8_A">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_DUOCICGkEeaSdKcVYrO8_A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/FCM/1#/"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://FCM_PROFILES/FCM.profile.uml#_5mvT0MtjEd2H_o0jIC6qDQ"/>
+  </profileApplication>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_D5B_YCGkEeaSdKcVYrO8_A">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_D5Qo4CGkEeaSdKcVYrO8_A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+  </profileApplication>
+</uml:Model>
