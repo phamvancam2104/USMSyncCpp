@@ -17,7 +17,7 @@ The implementation of these modules is presented in the followings.
 \subsection{C++ front-end implementation}
 The purpose of introducing the front-end is to ease and reduce the programmers' effort in modifying the topology of USMs, including all features.
 This front-end is then used by a source-to-source (C++-to-C++) transformation to generate a C++ back-end code.
-Therefore, the front-end should be easily parsed by inspecting the Abstract Syntax Tree (AST) of C++.
+Therefore, the front-end should be easily parsed by inspecting the \ttt{Abstract Syntax Tree (AST)} of C++.
 The front-end is presented in a hierarchical way.
 Hence, we use the class hierarchy in C++ to represent the underlying.
 This is of course not the only one way to define the front-end.
@@ -25,7 +25,7 @@ This is of course not the only one way to define the front-end.
 The underlying of some concepts in our implementation is shown in Listing \ref{lst:underlying}.
 To easily recognize the state machine element types in RAOES, we use specialized names to embedded in the macro definitions of RAOES. 
 
-In this implementation, hierarchical elements such as \ti{State Machine}, \ti{State}, \ti{Region} in concurrent states, and events are implemented as classes.
+In this implementation, hierarchical elements such as \ttt{State Machine}, \ttt{State}, \ttt{Region} in concurrent states, and events are implemented as classes.
 Pseudo states, which are contained by either a region or state (e.g. connection points), are implemented as class attributes.
 Each transition is associated with a statement in a method representing the transition table.
 By using this implementation, the front-end is compilable with C++ compilers such as GCC.

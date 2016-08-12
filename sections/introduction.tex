@@ -45,14 +45,14 @@ However, \ti{current separation mechanisms require the programmers are highly di
 Furthermore, even so, accidental changes are still possible} \cite{zheng2012enhancing}.
 
 \ttt{Deep separation} is proposed by the authors in \cite{zheng2012enhancing} to overcome the limitation of the current separation mechanisms.
-However, as the authors state that, this approach does not allow to modify the system architecture- and behavior-prescribed code in text development environment.  
+However, as the authors state that, this approach does not allow to modify the system architecture- and behavior-prescribed code in text-based development environment.  
 
-In this paper, we tackle the problem of synchronization between model and C++ code for developing event-driven systems.
+In this paper, we tackle the problem of synchronization between model, which includes both structural and behavioral elements, and C++ code for developing event-driven systems.
 Specifically, the system architecture is specified via UML class diagrams and the behavior via USMs.
 To support the architects and the programmers at the modeling and programming level, respectively, equivalently, our goal is to allow the synchronization of USMs with full features and code.
 The latter should be efficient (small in size and fast in event processing speed) to be fit into resource-constrained systems. 
 
-Our approach \tf{RAOES} is inspired by \ttt{ArchJava} \cite{aldrich2002archjava} and \ttt{Archface} \cite{ubayashi2010archface} whose goal is to allow the co-evolution of architecture and implementation in Java by introducing additional constructs to Java.
+Our proposed technique \tf{RAOES} is inspired by \ttt{ArchJava} \cite{aldrich2002archjava} and \ttt{Archface} \cite{ubayashi2010archface} whose goal is to allow the co-evolution of architecture and implementation in Java by introducing additional constructs to Java.
 Our approach adds USM-based constructs to connect C++ to the USMs.
 Instead of directly generating C++ code from models as the existing tools, RAOES produces a C++ front-end code, which contains our added constructs.
 The programmers are free to modify not only the high level logic behavior described by USMs but also the user code by making changes to the C++ front-end code.

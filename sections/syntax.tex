@@ -144,11 +144,11 @@ As previously defined, there are three kinds of transitions: \ttt{external}, \tt
 	
 	\item[\ttt{tgt}] The name of the target vertex of the transition. 
 	
-	\item[\ttt{guard}] A boolean expression representing the transition's guard. If the transition is \ttt{gdless}, \ttt{guard} is NULL.
+	\item[\ttt{guard}] A boolean expression representing the transition's guard. If the transition is not guarded, \ttt{guard} is NULL.
 	
 	\item[\ttt{evt}] The name of the event triggering the transition. 
 	\tf{evt} must be one of the defined events. 
-	If the transition is \ttt{tless}, \ttt{evt} is NULL.
+	If the transition is not associated with any event, \ttt{evt} is NULL.
 	
 	\item[\ttt{effect}] The name of the method, which defines the effect of the transition.
 	The method is implemented in the active class.

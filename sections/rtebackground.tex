@@ -1,9 +1,9 @@
 \subsection{Model-Driven Round-trip Engineering}
 \label{subsec:mdrtebackground}
 
-In this section we define the actors who will use our model-code synchronization approach to collaborate during development.
+This section defines the actors in software development process who will use our model-code RTE technique to collaborate during development.
 %Then we define the main capabilities, as use-cases, expected from a generic IDE used by these actors.
-Some basic concepts related to the actors and use-cases are also defined in this section.
+Some basic concepts related to the actors and use-cases, which will be offered by RAOES, are also defined in this section.
 
 
 %\subsection{Collaborating actors and development artifacts}
@@ -41,21 +41,18 @@ and \ttt{code-driven developer}, are introduced.
 %The main difference between them
 %is what they consider as the baseline artifact.
 
-\begin{definition}[Model-driven developer]
-	A model-driven developer (MDD) is an actor in a software development process and uses the model as the main working artifact.
+\begin{definition}
+	A model-driven developer (MDD) is an actor who uses the model as the main working artifact. Code-driven developer (CDD) is an actor who uses the code as the main working artifact.
 \end{definition}
 
 %In other words, for the model-driven developer only the model should be edited manually. 
-The code must always be produced from the model automatically
-by some process that guarantees that the code is consistent with the model.
+The code, produced from the model automatically, is consistent with the model.
 A software architect is a kind of the model-driven developer
-who edits the model to specify the architecture of the system.
+who edits the model to specify the system architecture.
 %An architect presumes that the reference for the architecture
 %of the system should be specified as a model.
 
-\begin{definition}[Code-driven developer]
-	Code-driven developer (CDD) is an actor who uses the code as the main working artifact.
-\end{definition}
+
 
 A programmer is a specialization of the code-driven developer.
 Indeed, programmers may modify our C++ front-end code, such as editing methods, attributes or state machines textually.
@@ -81,9 +78,9 @@ The developer can either use \texttt{Generate Code (Batch)} or \texttt{Generate 
 	Any existing code is overwritten by the newly generated code.
 \end{definition}
 
-\ttt{Incremental code generation} is a specialization of \ttt{incremental model transformation}, which
-does not generate the whole target model from scratch but only updates the target model by
-propagating editions made to the source model.
+%\ttt{Incremental code generation} is a specialization of \ttt{incremental model transformation}, which
+%does not generate the whole target model from scratch but only updates the target model by
+%propagating editions made to the source model.
 
 %\texttt{Incremental code generation (ICG)} \ti{$gen_{inc}$ is a process of taking as input a changed model m and an existing executable code to make the code synchronized with the changed model: $gen_{inc}(m, c) = c'$. Non-conflicted changes at the code side are kept intact the synchronization. ICG is also defined as a process of taking model changes ch and an existing code c: $gen_{inc}(ch, c) = c'$}.
 
@@ -93,7 +90,7 @@ propagating editions made to the source model.
 
 \begin{definition}[Incremental code generation]
 	Incremental code generation is the process
-	of taking as input an edited model, and existing code, and then updating the code by propagating
+	of taking as input an edited model and existing code to update the code by propagating
 	editions in the model to the code.
 \end{definition}
 
@@ -122,7 +119,7 @@ The developer can either use \texttt{Reverse Code (Batch)} or \texttt{Reverse Co
 %can choose the approach or tool that suits better his/her
 %development preferences best.
 
-In Section \ref{sec:collaboration}, the use-cases of the IDE are integrated into
+In Section \ref{sec:collaboration}, the use-cases are integrated into
 our process, which covers model-code synchronization and is detailed in Section \ref{sec:collaboration}.
 %The scenarios correspond to behaviors performed by both kinds of actors,
 %i.e. model-driven developers and code-driven developers.

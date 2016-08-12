@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.1)  12 AUG 2016 19:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.1)  12 AUG 2016 22:04
 entering extended mode
 **USMSyncCpp.tex
 (USMSyncCpp.tex
@@ -1199,37 +1199,32 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 91.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
 (sections/background.tex
-Underfull \hbox (badness 1466) in paragraph at lines 23--28
-[]\T1/ptm/b/n/10 Definition II.1. []\T1/ptm/m/n/10 A ver-tex is ei-ther a UML s
-tate or a
- []
-
 <figures/smmetamodel.pdf, id=14, 533.995pt x 386.44376pt>
 File: figures/smmetamodel.pdf Graphic file (type pdf)
 
 <use figures/smmetamodel.pdf>
-Package pdftex.def Info: figures/smmetamodel.pdf used on input line 40.
+Package pdftex.def Info: figures/smmetamodel.pdf used on input line 53.
 (pdftex.def)             Requested size: 252.0pt x 172.62033pt.
 
 <figures/eventmetamodel.pdf, id=16, 426.59375pt x 132.495pt>
 File: figures/eventmetamodel.pdf Graphic file (type pdf)
 
 <use figures/eventmetamodel.pdf>
-Package pdftex.def Info: figures/eventmetamodel.pdf used on input line 65.
+Package pdftex.def Info: figures/eventmetamodel.pdf used on input line 81.
 (pdftex.def)             Requested size: 252.0pt x 73.50616pt.
- [2 <./figures/smmetamodel.pdf> <./figures/eventmetamodel.pdf>] (sections/rteba
-ckground.tex
-Underfull \hbox (badness 4181) in paragraph at lines 84--87
-[]\T1/pcr/m/n/10 Incremental code generation \T1/ptm/m/n/10 is a spe-cial-iza-
- []
+ (sections/rtebackground.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 101--105
+ [2 <./figures/smmetamodel.pdf> <./figures/eventmetamodel.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 98--102
 []\T1/pcr/m/n/10 Reverse Code \T1/ptm/m/n/10 is re-lated to re-verse en-gi-neer
 -ing.
  []
 
 )) (sections/motivation.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 <figures/IllustrationExample1.png, id=77, 453.94594pt x 164.86594pt>
 File: figures/IllustrationExample1.png Graphic file (type png)
 
@@ -1252,18 +1247,22 @@ File: figures/generatedcode.pdf Graphic file (type pdf)
 <use figures/generatedcode.pdf>
 Package pdftex.def Info: figures/generatedcode.pdf used on input line 33.
 (pdftex.def)             Requested size: 516.0pt x 198.83789pt.
- [3 <./figures/IllustrationExample1.png>])
-(sections/overview.tex <figures/frontend.pdf, id=89, 963.6pt x 542.025pt>
-File: figures/frontend.pdf Graphic file (type pdf)
+ [3 <./figures/IllustrationExample1.png> <./figures/IllustrationExample2.png>])
+ (sections/overview.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-<use figures/frontend.pdf>
+
+<figures/frontend.pdf, id=91, 963.6pt x 542.025pt>
+File: figures/frontend.pdf Graphic file (type pdf)
+ <use figures/frontend.pdf>
 Package pdftex.def Info: figures/frontend.pdf used on input line 18.
 (pdftex.def)             Requested size: 252.0pt x 124.54582pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/frontendoverview.pdf, id=91, 963.6pt x 542.025pt>
+[4 <./figures/generatedcode.pdf>]
+<figures/frontendoverview.pdf, id=113, 963.6pt x 542.025pt>
 File: figures/frontendoverview.pdf Graphic file (type pdf)
 
 <use figures/frontendoverview.pdf>
@@ -1274,14 +1273,8 @@ Overfull \hbox (20.16046pt too wide) in paragraph at lines 41--42
  [][] 
  []
 
-) (sections/syntax.tex [4 <./figures/IllustrationExample2.png>]
-Underfull \vbox (badness 1242) has occurred while \output is active []
-
-
-Underfull \vbox (badness 2564) has occurred while \output is active []
-
- [5 <./figures/generatedcode.pdf> <./figures/frontend.pdf> <./figures/frontendo
-verview.pdf>]
+) (sections/syntax.tex [5 <./figures/frontend.pdf> <./figures/frontendoverview.
+pdf>]
 Underfull \hbox (badness 4391) in paragraph at lines 82--84
 []\T1/ptm/m/n/10 Events rep-re-sent all USM events a USM can re-
  []
@@ -1307,20 +1300,28 @@ Overfull \hbox (2.91737pt too wide) in paragraph at lines 133--135
 gt,guard,evt,effect');' 
  []
 
-) (sections/synchronization.tex [6]
-<figures/scenario3_seq.pdf, id=154, 654.44273pt x 420.76974pt>
+) (sections/synchronization.tex
+<figures/scenario3_seq.pdf, id=151, 654.44273pt x 420.76974pt>
 File: figures/scenario3_seq.pdf Graphic file (type pdf)
 
 <use figures/scenario3_seq.pdf>
 Package pdftex.def Info: figures/scenario3_seq.pdf used on input line 46.
 (pdftex.def)             Requested size: 252.0pt x 162.01932pt.
-) (sections/implementation.tex
+ [6]) (sections/implementation.tex
 <figures/architecture.pdf, id=155, 963.6pt x 542.025pt>
 File: figures/architecture.pdf Graphic file (type pdf)
 
 <use figures/architecture.pdf>
 Package pdftex.def Info: figures/architecture.pdf used on input line 12.
 (pdftex.def)             Requested size: 252.0pt x 23.20265pt.
+
+Underfull \vbox (badness 2088) has occurred while \output is active []
+
+
+Underfull \hbox (badness 1783) in paragraph at lines 28--32
+[]\T1/ptm/m/n/10 In this im-ple-men-ta-tion, hi-er-ar-chi-cal el-e-ments such a
+s
+ []
 
 (C:\Users\VP242103\Downloads\tex\latex\listings\lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
@@ -1394,7 +1395,7 @@ File: experiments/box-plot-mine.pdf Graphic file (type pdf)
 <use experiments/box-plot-mine.pdf>
 Package pdftex.def Info: experiments/box-plot-mine.pdf used on input line 170.
 (pdftex.def)             Requested size: 252.0pt x 109.7072pt.
- [10 <./figures/semanticconformance.pdf> <./experiments/box-plot-mine.pdf>]
+
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 220.
@@ -1403,13 +1404,11 @@ LaTeX Warning: No positions in optional float specifier.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 235.
 
-) (sections/relatedwork.tex) (sections/discussion.tex) (sections/conclusion.tex
-) (USMSyncCpp.bbl
+) (sections/relatedwork.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Package balance Warning: You have called \balance in second column
-(balance)                Columns might not be balanced.
-
-[11]
+ [10 <./figures/semanticconformance.pdf> <./experiments/box-plot-mine.pdf>])
+(sections/discussion.tex) (sections/conclusion.tex [11]) (USMSyncCpp.bbl
 ** WARNING: IEEEtran.bst: No hyphenation pattern has been
 ** loaded for the language `en'. Using the pattern for
 ** the default language instead.
@@ -1458,10 +1457,6 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-
-Overfull \vbox (17.48293pt too high) has occurred while \output is active []
-
-
 [12] (USMSyncCpp.aux)
 
 LaTeX Warning: There were undefined references.
@@ -1489,7 +1484,7 @@ sfonts/cm/cmsy8.pfb><C:/Users/VP242103/Downloads/fonts/type1/urw/courier/ucrr8a
 ds/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/VP242103/Downloads/fonts/type1/u
 rw/times/utmr8a.pfb><C:/Users/VP242103/Downloads/fonts/type1/urw/times/utmri8a.
 pfb>
-Output written on USMSyncCpp.pdf (12 pages, 1561868 bytes).
+Output written on USMSyncCpp.pdf (12 pages, 1556905 bytes).
 PDF statistics:
  1774 PDF objects out of 2073 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
