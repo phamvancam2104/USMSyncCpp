@@ -1,23 +1,30 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: USMSyncCpp.aux
 Case mismatch error between cite keys QM and qm
----line 111 of file USMSyncCpp.aux
+---line 115 of file USMSyncCpp.aux
  : \citation{QM
  :             }
 I'm skipping whatever remains of this command
 The style file: IEEEtran.bst
 Database file #1: refs.bib
-Repeated entry---line 1262 of file refs.bib
+Repeated entry---line 1280 of file refs.bib
  : @misc{_papyrus/designer/code-generation_????
  :                                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1555 of file refs.bib
+Repeated entry---line 1573 of file refs.bib
  : @misc{moka
  :           ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 2857 of file refs.bib
+Repeated entry---line 2875 of file refs.bib
  : @article{OMG2015
  :                 ,
 I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "ibm_rational_2016"
+Warning--I didn't find a database entry for "umlgen"
+Warning--I didn't find a database entry for "czarnecki_multi-level_2006"
+Warning--I didn't find a database entry for "Hermann2012"
+Warning--I didn't find a database entry for "Bergmann2011"
+Warning--I didn't find a database entry for "Matsuda2015"
+Warning--I didn't find a database entry for "xiong_towards_2007"
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.

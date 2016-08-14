@@ -111,6 +111,7 @@ Essentially, each field in the syntax carries known semantics defined in the UML
 \end{description}
 
 \ttt{SimpleEvent} is a specialized \ttt{SignalEvent} without specifying an explicit signal.
+It is not explicitly standardized by UML but provided by tools such as QM \cite{qm} for practical reasons. 
 
 \noindent
 \tb{Example:}
@@ -159,3 +160,7 @@ As previously defined, there are three kinds of transitions: \ttt{external}, \tt
 
 \noindent
 \tb{Example:}
+
+\ttt{TRANSITION(S1,S2,guard1,CE1,effect1)}: A transition from \ttt{S1} to \ttt{S2} which is fired if there is an appeal to the method \ttt{method1} and the value of \ttt{guard1} is true.
+\ttt{method1} is associated with the \ttt{CallEvent CE1} as the example above.
+Furthermore, an action \ttt{effect1} is executed during the transition fire.

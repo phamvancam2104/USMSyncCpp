@@ -4,16 +4,6 @@ Let's consider a collaboration scenario between software architects and programm
 This USM is artificial, and is extracted and customized from the origin in \cite{shuang_formalizing}.
 This USM consists of some simple, composite, and pseudo states such as \ttt{choice}, \ttt{connection point expoint}, and \ttt{junction}.
 
-Although many tools have the ability to generate code from USMs, a few such as IBM Rhapsody \cite{ibm_rhapsody} and ours are able to deal with this example because generating code for pseudo states such as \ttt{expoint} and \ttt{history} is not as simple as states.
-Fig, \ref{fig:generatedcode} (a) and (b) show the code segments generated for the transition outgoing from the state \ttt{S111} of the example by using our tool and Rhapsody, respectively.
-
-In this scenario, we assume that, on one hand, programmers prefer to
-use the more familiar textual programming language. 
-On the other hand, software architects, working at higher levels
-of abstraction, tend to favor the use of models, and therefore
-prefer graphical languages for describing the high-level logic behavior by using modeling tools.
-Assuming that, for some reasons, the USM should be evolved to the next version as in Fig. \ref{fig:IllustrationExample2}.
-
 \begin{figure}
 	\centering
 	\includegraphics[clip, trim=0.2cm 0.2cm 0.2cm 0.2cm, width=1.0\columnwidth]{figures/IllustrationExample1.png}
@@ -28,12 +18,23 @@ Assuming that, for some reasons, the USM should be evolved to the next version a
 	\label{fig:IllustrationExample2}
 \end{figure}
 
+
 \begin{figure*}
 	\centering
 	\includegraphics[clip, trim=0cm 2.6cm 0cm 3.4cm, width=\textwidth]{figures/generatedcode.pdf}
 	\caption{Codes generated from the state machine example in Fig. \ref{fig:IllustrationExample1} by using our tool (a) and Rhapsody (b), and their respective evolved versions} 
 	\label{fig:generatedcode}
 \end{figure*}
+
+Although many tools have the ability to generate code from USMs, a few such as IBM Rhapsody \cite{ibm_rhapsody} and ours are able to deal with this example because generating code for pseudo states such as \ttt{expoint} and \ttt{history} is not as simple as states.
+Fig, \ref{fig:generatedcode} (a) and (b) show the code segments generated for the transition outgoing from the state \ttt{S111} of the example by using our tool and Rhapsody, respectively.
+
+In this scenario, we assume that, on one hand, programmers prefer to
+use the more familiar textual programming language. 
+On the other hand, software architects, working at higher levels
+of abstraction, tend to favor the use of models, and therefore
+prefer graphical languages for describing the high-level logic behavior by using modeling tools.
+Assuming that, for some reasons, the USM should be evolved to the next version as in Fig. \ref{fig:IllustrationExample2}.
 
 
 For simplification, we assume that no effects are associated with the transitions in the examples.

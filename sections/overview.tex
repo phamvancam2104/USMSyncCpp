@@ -2,8 +2,16 @@
 \label{sec:overview}
 The goal of RAOES is to seamlessly support the collaboration of software architects and programmers in event-driven systems' development.
 In the latter, the behavior of active objects is specified by using UML State Machines.
-To do it, RAOES defines a mechanism interface embedded inside the active objects, which are defined by object-oriented classes. 
+As previously described, it is very difficult to reconstruct the original model from the generated code since there is no bijective mapping between these artifacts.
+Therefore, RAOES defines a mechanism interface textually embedded inside the active objects, which are defined by object-oriented classes. 
 This mechanism acts as a role to communicate the C++ programming language to USM so that the traceability between model and code in the reverse direction of the RTE can be eased.
+
+\begin{figure}
+	\centering
+	\includegraphics[clip, trim=0.6cm 2.8cm 1.4cm 0.5cm, width=1.0\columnwidth]{figures/frontend}
+	\caption{From existing approaches to RAOES} 
+	\label{fig:raoes}
+\end{figure}
 
 Specifically, in the code generation process, instead of directly generating C++ code as in Fig. \ref{fig:generatedcode}, RAOES produces a front-end C++ code.
 The latter plays as an intermediate representation, which is C++-conformant.
@@ -13,11 +21,14 @@ In RAOES, the programmers can modify not only structural and user-code parts, wh
 The modification is realized by making changes to the front-end code.
 
 
-\begin{figure}[h]
+
+
+
+\begin{figure}
 	\centering
-	\includegraphics[clip, trim=0.6cm 2.8cm 1.4cm 0.5cm, width=1.0\columnwidth]{figures/frontend}
-	\caption{From existing approaches to RAOES} 
-	\label{fig:raoes}
+	\includegraphics[clip, trim=1.10cm 3.6cm 10.9cm 1.9cm, width=1.08\columnwidth]{figures/frontendoverview.pdf}
+	\caption{Front-code evolution} 
+	\label{fig:frontend-overview}
 \end{figure}
 
 For example, by using RAOES, the generated front-end code for the example in Fig. \ref{fig:IllustrationExample1} and its evolved version are presented in Fig. \ref{fig:frontend-overview}.
@@ -36,9 +47,3 @@ However, the new editor usually does not support the IDE utilities such as synta
 
 
 
-\begin{figure}
-	\centering
-	\includegraphics[clip, trim=1.10cm 3.6cm 10.9cm 1.9cm, width=1.08\columnwidth]{figures/frontendoverview.pdf}
-	\caption{Front-code evolution} 
-	\label{fig:frontend-overview}
-\end{figure}

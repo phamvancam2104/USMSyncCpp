@@ -24,10 +24,20 @@ use the more familiar programming language.
 On the other hand, software architects, working at higher levels
 of abstraction, favor the use of models, and therefore
 prefer graphical languages for describing the system architecture high level logic behavior.
+
+The surveys described in \cite{Hutchinson:2011:MEP:1985793.1985882} and \cite{Hutchinson:2011:EAM:1985793.1985858} polled MDE practitioners. 
+It notes that 70\% of the respondents primarily work
+with models, but still require manually-written code to be integrated.
+Furthermore, 35\% of
+the respondents answered that they spend a lot of time and effort synchronizing
+model and code.
+
 %However, on the one hand, maintaining code generated from existing approaches is non-trivial. On the other hand our observation is that it is very difficult to come up with formalizations that yield such elegant code generation solutions \cite{6032552}. In other words, generated code must be manually modified to build fully operational applications. 
 %On one hand there are traditional developers who prefer to implement the system by writing code, while on the other hand there are developers who prefer to use entirely models for the design and implementation of the system. 
 
-The code modified by programmers and the model are then inconsistent. Round-trip engineering (RTE) \cite{Hettel2008} is proposed to synchronize different software artifacts, model and code in this case \cite{Sendall}. 
+The back-and-forth switching between between model and code raises the consistency and synchronization problem.
+%The code modified by programmers and the model are then inconsistent. 
+Round-trip engineering (RTE) \cite{Hettel2008} is proposed to synchronize different software artifacts, model and code in this case \cite{Sendall}. 
 RTE enables actors (software architect and programmers) to freely move between different representations and stay efficient with their favorite working environment. 
 In other words, RTE enables both model and code to be considered as development artifact. 
 
@@ -37,17 +47,18 @@ Approaches proposed for RTE are categorized as \ti{structure} and \ti{behavior} 
 The former refers to synchronization of structural concepts such as those available from class diagrams and code, and is supported by industrial tools such as IBM Rhapsody \cite{ibm_rhapsody} and Enterprise Architect \cite{sparxsystems_enterprise_2014}.
 Some approaches such as \cite{langhammer2013co, kramer2015change} allow the co-evolution of component-based diagram elements and code.
 
-The \ti{behavior} RTE allows programmers to partially modify behavioral code in limited areas by separating the generated and non-generated code \cite{ibm_rhapsody,steinberg2008emf} using some specialized comments such as \ttt{@generated NOT}.
-This is because there is no trivial mapping from behavior model such as USM and code.
+The \ti{behavior} RTE is usually supported very limitedly. 
+This is because of having no trivial mapping from behavior model such as USM and code.
 Consequently, it is very difficult to reflect behavior code changes to the original model.
+Approaches for the \ti{behavior} RTE often allow programmers to partially modify behavioral code in limited areas by separating the \ttt{generated} and \ttt{non-generated code} \cite{ibm_rhapsody,steinberg2008emf} using some specialized comments such as \ttt{@generated NOT}.
 Approaches and tools in this category use an incremental code generation, which preserves the user-code changes in the areas marked as non-generated.
-However, \ti{current separation mechanisms require the programmers are highly discipline.
-Furthermore, even so, accidental changes are still possible} \cite{zheng2012enhancing}.
+However, "\ti{current separation mechanisms require the programmers are highly discipline.
+Furthermore, even so, accidental changes are still possible}" \cite{zheng2012enhancing}.
 
 \ttt{Deep separation} is proposed by the authors in \cite{zheng2012enhancing} to overcome the limitation of the current separation mechanisms.
 However, as the authors state that, this approach does not allow to modify the system architecture- and behavior-prescribed code in text-based development environment.  
 
-In this paper, we tackle the problem of synchronization between model, which includes both structural and behavioral elements, and C++ code for developing event-driven systems.
+In this paper, we tackle the problem of synchronization between model, which includes both structural and behavioral elements, and \ttt{C++} code for developing event-driven systems.
 Specifically, the system architecture is specified via UML class diagrams and the behavior via USMs.
 To support the architects and the programmers at the modeling and programming level, respectively, equivalently, our goal is to allow the synchronization of USMs with full features and code.
 The latter should be efficient (small in size and fast in event processing speed) to be fit into resource-constrained systems. 

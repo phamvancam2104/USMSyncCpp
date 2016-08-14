@@ -1,16 +1,108 @@
 \section{Related work}
+\subsection{Model-code synchronization}
+Several commercial and open-source tools \cite{EA, ibm_rational_2016, Magicdraw, umlgen} support round-trip engineering between UML models and code.
+Systematic reviews of some of these tools are available in \cite{Cutting2015}.
+%Support for Java round-trip is prominent in most tools.
+%Other languages such as C++ are only available in a few tools \cite{ibm_rational_2016, umlgen, Magicdraw}.
+%Our methodological pattern does not focus on a particular programming language
+%or a particular modeling language. Furthermore, the current implementation of our approach is dedicated
+%to UML and C++, which is less supported by tools than Java.
+Usually these tools only support architectural elements on the model-side.
+The model cannot be used for full implementation and
+dependencies derived from
+method bodies are not considered during the round-trip. In our work, we assume that
+the model can be used for full implementation. Furthermore, our implementation analyzes
+C++ method bodies not only to reverse them to UML, but also to derive dependencies in the UML model.
+Some tools \cite{EA} only allow
+one of the artifacts, model or code, to be edited at a certain time.
+There is then no problem of synchronizing model and code since there are no concurrent changes, which limits their applicability.
+Finally, some tools \cite{umlgen} do not support a real incremental reverse or code generation;
+instead, they treat change (e.g. renaming) as deletion followed by addition.
+
+% RTE restriction
+Some round-trip engineering techniques restrict the development artifact to avoid
+synchronization problems.
+Partial round-trip engineering and protected regions are introduced in \cite{czarnecki_multi-level_2006}.
+Such techniques aim to preserve code editions which cannot be propagated to models.
+This approach separates the code regions that are generated from models
+from regions which are allowed to be edited by developers.
+In contrast to our work,
+this form of round-trip engineering is unidirectional and does not support iterative development \cite{Jorges2013}.
+Furthermore we do not restrict editions on model and code.
+
+%\paragraph{Viewpoint synchronization}
+%
+%% Viewpoint
+%Both models and code can be considered simply as different viewpoints
+%of the same system. Viewpoints enable the partitioning of the model of a system into several representations. 
+%Synchronization between viewpoints is crucial to maintain their consistency.
+%
+%In \cite{eramo_change_2008} the authors improve the modeling of relationships and constraints between
+%elements in different viewpoints in order to better guarantee the consistency of viewpoints.
+%In \cite{goedicke_viewpoint-oriented_2000} the authors argue that inconsistencies will exist
+%in systems developed with different actors, using different viewpoints. They suggest that tools
+%must be able to tolerate inconsistencies. A distributed graph transformation is proposed to deal with the problem of formalizing the integration of multiple viewpoints in software development.
+%Their work focuses on requirements engineering.
+%In contrast, our approach targets specifically both model and code.
+%Code is not usually considered in viewpoint synchronization because code is deemed to be too fine-grained.
+%Furthermore, our approach does not require explicit modeling
+%of relationships between model and code elements.
+
+\subsection{Model synchronization}
+
+%Viewpoints synchronization is generalized by model synchronization for which there is
+%an abundance of techniques presented in the literature. 
+Model synchronization aims
+to maintain consistency between a source model and a target model. 
+
+Many model synchronization techniques require the explicit mapping of source model and target model.
+The authors in \cite{Paesschen2005} propose an injective mapping of elements in the source model to
+the target model. The mapping can be used for synchronization.
+Techniques and technologies, such as Triple Graph Grammar (TGG) \cite{giese_incremental_2006},
+and QVT-Relation \cite{Omg2008},
+allow synchronization between source and target elements that have non-injective mappings.
+The authors in \cite{Hermann2012} formalize TGG for synchronization of models that are concurrently edited.
+All of these techniques require a mapping model to connect the source and target models
+with typed traceability links, which need to be persisted in a model store \cite{Bergmann2011}.
+This means that editing one model requires the presence of the other.
+Our model-code synchronization approach does not require a mapping model and an artifact may be edited
+independently of the presence of the other corresponding artifact.
+
+Other techniques \cite{foster_combinators_2007}
+are based on bi-directional transformations, which comprise a forward transformation of
+source to target model, and a backward transformation of target to source model.
+Bi-directional transformations provides a novel mechanism for synchronization.
+Indeed, some works \cite{Matsuda2015} derive a backward transformation based on forward
+transformation.
+However, such works do not offer any means to synchronize models that are concurrently edited.
+
+A few approaches derive model synchronization from model transformation while allowing concurrent editions
+of both source and target models.
+In \cite{xiong_towards_2007} the authors propose to automatically derive
+model synchronization of a source and a target model related by
+%an ATL \cite{eclipse_foundation_eclipse_2016}
+model transformation.
+The synchronization is based on differentiating source and target model states
+but reflectable addition of an element in the target model is not well handled according to \cite{xiong_towards_2007}.
+Our approach is generic and does not depend on a specific technology. Furthermore, in our implementation
+we propose to use modification events rather than state differences for incremental
+transformations, necessary for synchronization.
+
+\subsection{State machine code generation}
+
 \label{sec:relatedwork}
-Code generation from state machines has been received huge attention in automated software development and many approaches are proposed. 
-This section mentions some usual patterns and how our approach differs. 
-A systematic review of proposals is presented in \cite{Domnguez2012}. 
+%Code generation from state machines has been received huge attention in automated software development and many approaches are proposed. 
+%This section mentions some usual patterns and how our approach differs. 
+%A systematic review of proposals is presented in \cite{Domnguez2012}. 
 %Main approaches including switch/if, state table and state pattern are investigated.
 
 %Switch/if is the most intuitive technique implementing a "flat" state machine. Two types of switch/if are supported. The first one uses a scalar variable representing the current active state \cite{Booch1998}. A method for each event processes the variable as a discriminator in switch/if statement. The second one uses a double nested switch/if and has two variables to represent the current active state and the event to be processed \cite{Douglass1999}. The latter are used as the discriminators of an outer switch statement to select between states and an inner one/if statement to decide how the event should be processed. The behavior code of the two types is put in one file or class. This practice makes code cumbersome, complex, difficult to read and less explicit when the number of states grows or the state machine is hierarchical. Furthermore, the first approach lets the code scatter in different places. Therefore, maintaining or modifying such code of complex systems is very difficult.
 
-Switch/if is the most intuitive technique implementing a "flat" state machine. The latter can be implemented by either
-using a scalar variable \cite{Booch1998} and a method for each event or using two variables as the current active state and the incoming event used as the discriminators of an outer switch statement to select between states and an inner one/if statement, respectively. 
+Switch/if is the most intuitive technique implementing a "flat" state machine \cite{Booch1998}. 
+%The latter can be implemented by either
+%using a scalar variable \cite{Booch1998} and a method for each event or using two variables as the current active state and the incoming event used as the discriminators of an outer switch statement to select between states and an inner one/if statement, respectively. 
 The double dimensional state table approach \cite{Douglass1999} uses one dimension represents states and the other one all possible events. 
-These approaches require a transformation from hierarchical and concurrent USMs to flatten ones. 
+These approaches require a transformation from hierarchical to flatten ones. 
 However, the semantics of USMs containing pseudo states such as histories or join/fork are hardly preserved during the transformation.  
 %Each cell of the table is associated with a function pointer meaning that the state associated with a dimension index of the cell is triggered by the event associated with the other dimension. 
 %The behavior code of these techniques is put in one file or class. This practice makes code cumbersome, complex, difficult to read and less explicit when the number of states grows or the state machine is hierarchical. 
@@ -18,7 +110,7 @@ However, the semantics of USMs containing pseudo states such as histories or joi
 %Furthermore, these approaches requires every transition must be triggered by at least an event. This is obviously only applied to a small sub-set of USMs.  
 
 State pattern \cite{Shalyto2006,Douglass1999} is an object-oriented way to implement flat state machines. Each state is represented as a class and each event as a method. %The event is processed by a delegation from the context class to sub-states. 
-Separation of states in classes makes the code more readable and maintainable. %Unfortunately, this technique only supports flat state machines. 
+%Separation of states in classes makes the code more readable and maintainable. %Unfortunately, this technique only supports flat state machines. 
 This pattern is extended in \cite{niaz_mapping_2004} to support hierarchical-concurrent USMs. 
 Recently, a double-dispatch (DD) pattern presented in \cite{spinke_object-oriented_2013} extends \cite{niaz_mapping_2004} to support maintainability by %as a new technique to implement state machines. 
 representing states and events as classes, and transitions as methods. 
@@ -29,7 +121,7 @@ Tools, such as \cite{ibm_rhapsody, sparxsystems_enterprise_2014}, apply differen
 However, as mentioned in Section \ref{sec:intro}, true concurrency and some pseudo-states are not supported. 
 FXU \cite{Pilitowski2007} is the most complete tool but generated code is heavily dependent on their own library and C\# is generated.
 
-Our approach combines the classical switch/if pattern, to produce small footprint, and the pattern in \cite{niaz_mapping_2004}, to preserve state hierarchy.
+Our source-to-source transformation combines the classical switch/if pattern, to produce small footprint, and the pattern in \cite{niaz_mapping_2004}, to preserve state hierarchy.
 Furthermore, we define pattern to transform all of USM concepts including states, pseudo states, transitions, and events.
 Therefore, users are flexible to create there USM conforming to UML without restrictions.
 
@@ -40,7 +132,7 @@ Therefore, users are flexible to create there USM conforming to UML without rest
 
 
 
-\subsection{Comparison to text-based state machine specification}
+\subsection{Text-based state machine specification}
 -RAOES: Adapt state machine model to existing programming languages while Umple or TextUML does inversely, hence RAOES profits all benefices of IDEs such as intelligent completion and easy to implement. 
 
 -RAOES: programmers write and maintain the USM-based behavior part in the same class/file containing the active class.
@@ -50,3 +142,5 @@ Therefore, users are flexible to create there USM conforming to UML without rest
 -RAOES: automatically synchronize the code with the system model specified by UML.
 
 -RAOES: defines the state machine topology separately from the transition table and event definition.
+
+\subsection{Separation of generated and user code}

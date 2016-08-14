@@ -80,6 +80,15 @@ J.~Hutchinson, M.~Rouncefield, and J.~Whittle, ``Model-driven engineering
   Conference on Software Engineering}, ser. ICSE '11.\hskip 1em plus 0.5em
   minus 0.4em\relax New York, NY, USA: ACM, 2011, pp. 633--642.
 
+\bibitem{Hutchinson:2011:EAM:1985793.1985858}
+\BIBentryALTinterwordspacing
+J.~Hutchinson, J.~Whittle, M.~Rouncefield, and S.~Kristoffersen, ``Empirical
+  assessment of mde in industry,'' in \emph{Proceedings of the 33rd
+  International Conference on Software Engineering}, ser. ICSE '11.\hskip 1em
+  plus 0.5em minus 0.4em\relax New York, NY, USA: ACM, 2011, pp. 471--480.
+  [Online]. Available: \url{http://doi.acm.org/10.1145/1985793.1985858}
+\BIBentrySTDinterwordspacing
+
 \bibitem{Hettel2008}
 T.~Hettel, M.~Lawley, and K.~Raymond, ``{Model synchronisation: Definitions for
   round-trip engineering},'' in \emph{Lecture Notes in Computer Science
@@ -143,6 +152,9 @@ MSM, ``{Meta} {State} {Machine},''
   \url{http://www.boost.org/doc/libs/1_61_0/libs/msm/doc/HTML/ch03s04.html}
 \BIBentrySTDinterwordspacing
 
+\bibitem{OMG2015}
+OMG, ``{Precise Semantics Of UML Composite Structures},'' no. October, 2015.
+
 \bibitem{Giese2006}
 H.~Giese and R.~Wagner, ``{Incremental Model Synchronization with Triple Graph
   Grammars},'' in \emph{Proceedings of the 9th international conference on
@@ -154,9 +166,6 @@ L.~Shuang, ``Formalizing {UML} {State} {Machine} {Semantics} for {Automatic}
   {Verification}–the {PAT} {Approach}.'' [Online]. Available:
   \url{http://www.comp.nus.edu.sg/~pat/uml/techreport/uml \_sm\_semantics.pdf}
 \BIBentrySTDinterwordspacing
-
-\bibitem{OMG2015}
-OMG, ``{Precise Semantics Of UML Composite Structures},'' no. October, 2015.
 
 \bibitem{_papyrus/designer/code-generation_????}
 \BIBentryALTinterwordspacing
@@ -228,6 +237,40 @@ B.~{Library}, ``{The} {Boost} {Statechart} {Library},''
 \BIBentryALTinterwordspacing
 ``{Valgrind} {Massif}.'' [Online]. Available:
   \url{http://valgrind.org/docs/manual/ms-manual.html}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Cutting2015}
+\BIBentryALTinterwordspacing
+D.~Cutting and J.~Noppen, ``{An Extensible Benchmark and Tooling for Comparing
+  Reverse Engineering Approaches},'' \emph{International Journal on Advances in
+  Software}, vol.~8, no.~1, pp. 115--124, 2015. [Online]. Available:
+  \url{https://ueaeprints.uea.ac.uk/53612/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Jorges2013}
+S.~J{\"{o}}rges, ``{Construction and evolution of code generators: A
+  model-driven and service-oriented approach},'' \emph{Lecture Notes in
+  Computer Science (including subseries Lecture Notes in Artificial
+  Intelligence and Lecture Notes in Bioinformatics)}, pp. 1--265, 2013.
+
+\bibitem{Paesschen2005}
+E.~Paesschen, W.~Meuter, and M.~D'Hondt, \emph{Model Driven Engineering
+  Languages and Systems: 8th International Conference, MoDELS 2005, Montego
+  Bay, Jamaica, October 2-7, 2005. Proceedings}.\hskip 1em plus 0.5em minus
+  0.4em\relax Berlin, Heidelberg: Springer Berlin Heidelberg, 2005, ch.
+  SelfSync: A Dynamic Round-Trip Engineering Environment, pp. 633--647.
+
+\bibitem{giese_incremental_2006}
+H.~Giese and R.~Wagner, ``Incremental model synchronization with triple graph
+  grammars,'' in \emph{Model {Driven} {Engineering} {Languages} and
+  {Systems}}.\hskip 1em plus 0.5em minus 0.4em\relax Springer, 2006, pp.
+  543--557.
+
+\bibitem{Omg2008}
+\BIBentryALTinterwordspacing
+Q.~Omg, ``{Meta Object Facility ( MOF ) 2 . 0 Query / View / Transformation
+  Specification},'' \emph{Transformation}, no. January, pp. 1--230, 2008.
+  [Online]. Available: \url{http://www.omg.org/spec/QVT/1.0/PDF/}
 \BIBentrySTDinterwordspacing
 
 \bibitem{Domnguez2012}
