@@ -16,10 +16,21 @@ This mechanism acts as a role to communicate the C++ programming language to USM
 Specifically, in the code generation process, instead of directly generating C++ code as in Fig. \ref{fig:generatedcode}, RAOES produces a front-end C++ code.
 The latter plays as an intermediate representation, which is C++-conformant.
 Fig. \ref{fig:raoes} shows how RAOES is different from the existing approaches.
+RAOES separates codes for the structural and behavioral part.
+The connections between these parts are realized by using simple name binding mechanisms.
+
+For example, by using RAOES, the generated front-end code for the example in Fig. \ref{fig:IllustrationExample1} and its evolved version are presented in Fig. \ref{fig:frontend-overview}.
+The USM defining the behavior of the active class \ti{System} is defined inside the class.
+The USM is written in a description-like language.
+The topology of the USM is explicitly and hierarchically described.
+All USM features can be represented in RAOES's front-end.
+Hence, we allow to fully generate code from USMs.
 
 In RAOES, the programmers can modify not only structural and user-code parts, which are offered by advanced round-trip engineering tools such as Rhapsody and Enterprise Architect, but also the high-level logic behavior specified by USM.
 The modification is realized by making changes to the front-end code.
-
+For example, if the programmers want to modify the high level behavior of the USM, they can modify the hierarchical description of the USM in the class \ttt{System};
+The user-code (\ttt{Action}) can be simply modified as usual C++ method code;
+Other parts such as user-created attributes or methods can be freely modified.
 
 
 
@@ -31,12 +42,7 @@ The modification is realized by making changes to the front-end code.
 	\label{fig:frontend-overview}
 \end{figure}
 
-For example, by using RAOES, the generated front-end code for the example in Fig. \ref{fig:IllustrationExample1} and its evolved version are presented in Fig. \ref{fig:frontend-overview}.
-The USM defining the behavior of the active class \ti{System} is defined inside the class.
-The USM is written in a description-like language.
-The topology of the USM is explicitly and hierarchically described.
-All USM features can be represented in RAOES's front-end.
-Hence, we allow to fully generate code from USMs.
+
 
 The front-end closely connects to the USM concepts to make programmers easy to modify the state machine.
 The front-end merges the USM description into the active class \ti{System} and keeps the class members intact. 

@@ -46,14 +46,11 @@ and \ttt{code-driven developer}, are introduced.
 \end{definition}
 
 %In other words, for the model-driven developer only the model should be edited manually. 
-The code, produced from the model automatically, is consistent with the model.
+%The code, produced from the model automatically, is consistent with the model.
 A software architect is a kind of the model-driven developer
 who edits the model to specify the system architecture.
 %An architect presumes that the reference for the architecture
 %of the system should be specified as a model.
-
-
-
 A programmer is a specialization of the code-driven developer.
 Indeed, programmers may modify our C++ front-end code, such as editing methods, attributes or state machines textually.
 %The code is then the main reference for the implementation of methods.
@@ -67,9 +64,9 @@ Indeed, programmers may modify our C++ front-end code, such as editing methods, 
 %in the related artifact, and (3) reconciles conflicts when appropriate. The \texttt{Synchronize Model} and \texttt{Synchronize Code}
 %use-cases are specializations where, respectively, the model or the code are the artifacts being synchronized.
 
-\texttt{Generate Code} is a use-case related to forward engineering.
-It is the production of C++ code from a model.
-The developer can either use \texttt{Generate Code (Batch)} or \texttt{Generate Code (Incremental)}.
+%\texttt{Generate Code} is a use-case related to forward engineering.
+%It is the production of C++ code from a model.
+A developer (MDD or CDD) can either use \texttt{Generate Code (Batch)} or \texttt{Generate Code (Incremental)} whose definitions are as followings.
 %\end{comment}
 
 \begin{definition}[Batch code generation] \ttt{Batch code generation} \cite{Giese2006} is a process of generating code
@@ -94,9 +91,9 @@ The developer can either use \texttt{Generate Code (Batch)} or \texttt{Generate 
 \end{definition}
 
 %\begin{comment}
-\texttt{Reverse Code} is related to reverse engineering.
-\texttt{Reverse Code} is the production of a model, in a modeling language such as UML, from code, written in a programming language.
-The developer can either use \texttt{Reverse Code (Batch)} or \texttt{Reverse Code (Incremental)}, which are defined in this paper as follows:
+%\texttt{Reverse Code} is related to reverse engineering.
+%\texttt{Reverse Code} is the production of a model, in a modeling language such as UML, from code, written in a programming language.
+In the contrary, the developer can either use \texttt{Reverse Code (Batch)} or \texttt{Reverse Code (Incremental)}, which are related to reverse engineering and defined in this paper as follows:
 %\end{comment}
 
 \begin{definition}[Batch reverse engineering]
