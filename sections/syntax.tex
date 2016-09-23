@@ -12,22 +12,27 @@ The followings give the syntax of some elements and the semantics of RAOES mappe
 
 \subsubsection{State and regions} ~\\
 \tb{Syntax:}
+\begin{itemize}[\footnotesize]
+\item \textit{state machine} $\rightarrow$ \tf{'STATE\_MACHINE('name') \{vertices\};'} 
 
-\textit{State machine} $\rightarrow$ \tf{'STATE\_MACHINE('name') \{vertices\};'} 
+\item \ti{state} $\rightarrow$ \tf{'STATE ('name, ent, ex');'} 
 
-\ti{state} $\rightarrow$ \tf{'STATE ('name, ent, ex');'} 
+\item \ti{state} $\rightarrow$ \tf{'INITIAL\_STATE ('name, ent, ex, effect');'}
 
-\ti{state} $\rightarrow$ \tf{'INITIAL\_STATE ('name, ent, ex, effect');'}
+\item \ti{concurrent state} $\rightarrow$ \tf{'STATE ('name, ent, ex') \{' regions '\};'} 
 
-\ti{concurrent state} $\rightarrow$ \tf{'STATE ('name, ent, ex') \{' regions '\};'} 
+\item \ti{regions} $\rightarrow$ \tf{region; regions}
 
-\ti{regions} $\rightarrow$ \tf{region; regions}
+\item \ti{region} $\rightarrow$ \tf{'REGION (' name ') {' vertices '};'}
 
-\ti{region} $\rightarrow$ \tf{'REGION (' name ') {' vertices '};'}
+\item \ti{deferred event} $\rightarrow$ \tf{'DEFER(' eventId ');'}
+
+\item \ti{event queue size} $\rightarrow$ \tf{'CONFIGURATION('}
+\end{itemize}
 
 \noindent
 \tb{Semantics:}
-\begin{itemize}
+\begin{itemize}[\footnotesize]
 	\item \ttt{name}: the unique identifier of a state machine, a state or a region.
 	
 	\item \ttt{ent/ex}: The name of the entry/exit action method associated with the state. 
@@ -42,36 +47,39 @@ The followings give the syntax of some elements and the semantics of RAOES mappe
 	\item \ttt{concurrent state}: The representation of a concurrent state. 
 	The latter is composed of a set of regions.
 	Each region contains a set of vertices, which for each is either a state or a pseudo state.
+	
+	\item \ttt{eventId}: The identifier of a defined event (see \ref{subsec:events}), which is deferred by the corresponding state. 
 \end{itemize}
 
 \noindent
 \tb{Example:}
-Lines 2-10 in Fig. \ref{fig:frontend-overview} (a) represents the state \ttt{S1} of the USM example in Fig. \ref{fig:IllustrationExample1} and its vertices.
+Lines 2-10 in Fig. \ref{fig:frontend-overview} (a) represents the state \ttt{S1} of the USM example in Fig. \ref{fig:illustration} (a) and its vertices.
 \ttt{S1} is defined as the initial state of the USM, and has \ttt{entry} and \ttt{exit} actions bound to the methods \ttt{S1\_entry} (lines 26-28) and \ttt{S1\_exit} (not shown) implemented in the active class.
 The direct \ttt{S11} and indirect \ttt{S111} sub-state are defined hierarchically (lines 5-7) with the associated actions.
 
 \subsubsection{Pseudo state} ~\\
 \tb{Syntax:}
+\begin{itemize}[\footnotesize]
+\item \ti{enpoint} $\rightarrow$ \tf{'ENTRY\_POINT ('name');'} 
 
-\ti{enpoint} $\rightarrow$ \tf{'ENTRY\_POINT ('name');'} 
+\item \ti{expoint} $\rightarrow$ \tf{'EXIT\_POINT ('name');'}
 
-\ti{expoint} $\rightarrow$ \tf{'EXIT\_POINT ('name');'}
+\item \ti{initial} $\rightarrow$ \tf{'INITIAL ('name');'}
 
-\ti{initial} $\rightarrow$ \tf{'INITIAL ('name');'}
+\item \ti{final} $\rightarrow$ \tf{'FINAL\_STATE ('name');'}
 
-\ti{final} $\rightarrow$ \tf{'FINAL\_STATE ('name');'}
+\item \ti{join} $\rightarrow$ \tf{'JOIN ('name');'}
 
-\ti{join} $\rightarrow$ \tf{'JOIN ('name');'}
+\item \ti{fork} $\rightarrow$ \tf{'FORK ('name');'}
 
-\ti{fork} $\rightarrow$ \tf{'FORK ('name');'}
+\item \ti{choice} $\rightarrow$ \tf{'CHOICE ('name');'}
 
-\ti{choice} $\rightarrow$ \tf{'CHOICE ('name');'}
+\item \ti{junction} $\rightarrow$ \tf{'JUNCTION ('name');'}
 
-\ti{junction} $\rightarrow$ \tf{'JUNCTION ('name');'}
+\item \ti{shallow history} $\rightarrow$ \tf{'SHALLOW\_HISTORY ('name');'}
 
-\ti{shallow history} $\rightarrow$ \tf{'SHALLOW\_HISTORY ('name');'}
-
-\ti{deep history} $\rightarrow$ \tf{'DEEP\_HISTORY ('name');'}
+\item \ti{deep history} $\rightarrow$ \tf{'DEEP\_HISTORY ('name');'}
+\end{itemize}
 
 \noindent
 \tb{Example:}
@@ -79,26 +87,29 @@ The direct \ttt{S11} and indirect \ttt{S111} sub-state are defined hierarchicall
 \ttt{EXIT\_POINT(ex1);} and \ttt{SHALLOW\_HISTORY(h1);} in Fig. \ref{fig:frontend-overview} represent a connection exit point and a shallow history with their respective name.  
 
 \subsection{Events}
+\label{subsec:events}
+
 Events represent all USM events a USM can react.
 As defined in Section \ref{sec:background}, there are four USM event types: \ttt{CallEvent}, \ttt{TimeEvent}, \ttt{SignalEvent}, \ttt{ChangeEvent}. %The syntax of each of these events is as followings.
 
 \noindent
 \tb{Syntax:}
-
-\ttt{CallEvent} $\rightarrow$ \tf{'CALL\_EVENT'} \tf{'('name, op');'}
-
-\ttt{TimeEvent} $\rightarrow$ \tf{'TIME\_EVENT'} \tf{'('name, dur');'}
-
-\ttt{SignalEvent} $\rightarrow$ \tf{'SIGNAL\_EVENT'} \tf{'('name, sig');'}
-
-\ttt{ChangeEvent} $\rightarrow$ \tf{'CHANGE\_EVENT'} \tf{'('name, expr');'}
-
-\ttt{SimpleEvent} $\rightarrow$ \tf{'SIMPLE\_EVENT'} \tf{'('name');'}
+\begin{itemize}[\footnotesize]
+	\item \ttt{CallEvent} $\rightarrow$ \tf{'CALL\_EVENT'} \tf{'('name, op');'}
+	
+	\item \ttt{TimeEvent} $\rightarrow$ \tf{'TIME\_EVENT'} \tf{'('name, dur');'}
+	
+	\item \ttt{SignalEvent} $\rightarrow$ \tf{'SIGNAL\_EVENT'} \tf{'('name, sig');'}
+	
+	\item \ttt{ChangeEvent} $\rightarrow$ \tf{'CHANGE\_EVENT'} \tf{'('name, expr');'}
+	
+	\item \ttt{SimpleEvent} $\rightarrow$ \tf{'SIMPLE\_EVENT'} \tf{'('name');'}
+\end{itemize}
 
 \noindent
 \tb{Semantics:}
 Essentially, each field in the syntax carries known semantics defined in the UML specification and Section \ref{sec:background}:
-\begin{description}
+\begin{description}[\footnotesize]
 	\item[\ttt{name}] The unique identifier for an event.
 	
 	\item[\ttt{op}] The name of the operation associated with a \ttt{CallEvent} and implemented in the active class. 
@@ -116,30 +127,33 @@ It is not explicitly standardized by UML but provided by tools such as QM \cite{
 \noindent
 \tb{Example:}
 
-\ttt{CALL\_EVENT(CE1, method1)}: A \ttt{CallEvent} occurs if the method \ttt{method1} in the active class is called.
+\begin{itemize}[\footnotesize]
+\item \ttt{CALL\_EVENT(CE1, method1)}: A \ttt{CallEvent} occurs if the method \ttt{method1} in the active class is called.
 
-\ttt{SIGNAL\_EVENT(SE, Sig)}: A \ttt{SignalEvent} occurs if an instance of \ttt{Sig} is sent to the active class using its provided method \ttt{sendSig}.
+\item \ttt{SIGNAL\_EVENT(SE, Sig)}: A \ttt{SignalEvent} occurs if an instance of \ttt{Sig} is sent to the active class using its provided method \ttt{sendSig}.
 
-\ttt{TIME\_EVENT(TE5ms, 5)}: A \ttt{TimeEvent} occurs after 5 millisecond since the timer starts by entering some state.
+\item \ttt{TIME\_EVENT(TE5ms, 5)}: A \ttt{TimeEvent} occurs after 5 millisecond from the moment the timer starts by entering some state.
+\end{itemize}
 
 \subsection{Transitions}
 As previously defined, there are three kinds of transitions: \ttt{external}, \ttt{local}, and \ttt{internal}.
 
 \noindent
 \tb{Syntax:}
+\begin{itemize}[\footnotesize]
+%\noindent
+\item \ttt{external} $\rightarrow$ \tf{'TRANSITION'} \tf{'('src, tgt, guard, evt, eff');'}
 
-\noindent
-\ttt{external} $\rightarrow$ \tf{'TRANSITION'} \tf{'('src, tgt, guard, evt, effect');'}
+%\noindent
+\item \ttt{local}$\rightarrow$\tf{'LOCAL\_TRANSITION}\tf{('src,tgt,guard,evt,eff');'}
 
-\noindent
-\ttt{local}$\rightarrow$\tf{'LOCAL\_TRANSITION}\tf{('src,tgt,guard,evt,effect');'}
-
-\noindent
-\ttt{internal} $\rightarrow$ \tf{'INT\_TRANSITION}\tf{('src, guard, evt, effect');'}
+%\noindent
+\item \ttt{internal} $\rightarrow$ \tf{'INT\_TRANSITION}\tf{('src, guard, evt, eff');'}
+\end{itemize}
 
 \noindent
 \tb{Semantics:}
-\begin{description}
+\begin{description}[\footnotesize]
 	\item[\ttt{src}] The name of the source vertex of the transition. 
 	This name must be defined in the topology.
 	
@@ -151,16 +165,35 @@ As previously defined, there are three kinds of transitions: \ttt{external}, \tt
 	\tf{evt} must be one of the defined events. 
 	If the transition is not associated with any event, \ttt{evt} is NULL.
 	
-	\item[\ttt{effect}] The name of the method, which defines the effect of the transition.
+	\item[\ttt{eff}] The name of the method, which defines the effect of the transition.
 	The method is implemented in the active class.
 	If \ttt{evt} is a \ttt{SignalEvent}, the method has an input parameter typed as the signal associated with the event.
 	If \ttt{evt} is a \ttt{CallEvent}, the method has the same parameters as the operation associated with \ttt{evt}.
-	If the transition has no effect, \ttt{effect} becomes NULL.
+	If the transition has no effect, \ttt{eff} becomes NULL.
 \end{description}
 
 \noindent
 \tb{Example:}
-
-\ttt{TRANSITION(S1,S2,guard1,CE1,effect1)}: A transition from \ttt{S1} to \ttt{S2} which is fired if there is an appeal to the method \ttt{method1} and the value of \ttt{guard1} is true.
+\begin{itemize}[\footnotesize]
+\item \ttt{TRANSITION(S1,S2,guard1,CE1,effect1)}: A transition from \ttt{S1} to \ttt{S2} which is fired if there is an appeal to the method \ttt{method1} and the value of \ttt{guard1} is true.
 \ttt{method1} is associated with the \ttt{CallEvent CE1} as the example above.
 Furthermore, an action \ttt{effect1} is executed during the transition fire.
+Listing \ref{lst:effect-segment} shows how to write \ttt{effect1} (lines 4-6) corresponding to the signature of \ttt{method1} (line 1-3) following the above semantics.
+
+\item \ttt{TRANSITION(S11,S2,NULL,SE,effect2)}: A transition, triggered by the signal event \ttt{SE}, and executes an effect \ttt{effect2}.
+\ttt{effect2} in Listing \ref{lst:effect-segment} has a parameter typed by the signal \ttt{Sig} associated with the event \ttt{SE}.
+\end{itemize}
+
+\begin{minipage}{1.05\columnwidth}
+\begin{lstlisting}[language=C++, caption=A segment of C++ front-end code, label=lst:effect-segment,frame=f]
+void method1(int p1, int p2) {
+	//method1 body
+}
+void effect1(int p1, int p2) {
+	//effect1 body
+}
+void effect2(Sig& s) {
+	//effect2 body
+}
+\end{lstlisting}
+\end{minipage}

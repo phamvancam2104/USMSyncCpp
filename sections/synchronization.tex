@@ -1,21 +1,22 @@
 \section{Process for synchronization}
 \label{sec:collaboration}
-This section describes our generic artifact synchronization methodology pattern to synchronize a model with USMs and front-end code.
-We assume that an IDE used by software architects and programmers offers the set of use-cases defined in Section \ref{subsec:mdrtebackground}. 
+This section describes RAOES's process to synchronize a model with USMs and front-end code in case that these artifacts concurrently evolve.
+We assume that a used integrated development environment (IDE) %used by software architects and programmers 
+offers the use-cases defined in Section \ref{subsec:mdrtebackground}. 
 %Although, the pattern is presented in a model-code synchronization-oriented way, it is flexibly extensible to any artifacts. 
 %For the sake of generality, we postulate that the architect and programmer are actors with starkly opposite development practices.
-Our methodology allows concurrent modifications made to the model
-and front-end code so that both can be used for the full implementation of a system,
-rather than just architectural design for the former,
-and code implementation for the latter.
+The process allows concurrent modifications made to the model
+and front-end code so that both can be used for the full implementation of a system.
+%rather than just architectural design for the former,
+%and code implementation for the latter.
 
 
-We propose two synchronization strategies for this scenario.
-The general approach behind our strategies
+We propose two synchronization strategies.
+The rationale behind our strategies
 is to represent one artifact (model/code) in the language of its corresponding other artifact (code/model).
 %These two can then be compared. 
 For this, we define a
-concept of a \ttt{synchronization artifact}:
+concept of \ttt{synchronization artifact}:
 
 \begin{definition}[Synchronization artifact]
 	An artifact used to synchronize a model and its corresponding front-end code
@@ -31,7 +32,8 @@ In that case, it is code that represents an image of the edited model (being ima
 Using the concept of SA, two strategies are
 proposed: one in which the SA is code,
 and the other in which the SA is a model.
-The developer can choose to either use these two use-cases of the IDE. The choice may be determined by
+The developer can choose to either use these two use-cases of the IDE. 
+The choice may be determined by
 preferred development practices or the availability of suitable tools (e.g. the programmer
 may prefer to synchronize two artifacts, both represented
 in the same programming language, since he prefers to
@@ -44,11 +46,11 @@ The general steps of the process shown in Figure \ref{fig:scenario3} are describ
 \begin{figure}
 	\centering
 	\includegraphics[width = \columnwidth]{figures/scenario3_seq}
-	\caption{Synchronization process, in which the model and the code are concurrently edited with code as the SA (CDD = Code-Driven Developer, MDD = Model-Driven Developer, Code = C++ front-end code). The API calls for Model and Code are represented generically as "Read" and "Write".}
+	\caption{Synchronization process, in which the model and the code are concurrently edited with code as the SA (CDD = Code-Driven Developer = Programmer, MDD = Model-Driven Developer = Software Architect, Code = C++ front-end code). The API calls for Model and Code are represented generically as "Read" and "Write".}
 	\label{fig:scenario3}
 \end{figure}
 
-\begin{description}
+\begin{description}[\footnotesize]
 	\item[Step 1] Both the model and code may be edited concurrently.
 	%(To simplify Figure \ref{fig:scenario3}, we don't show the Read and Write interactions for this step.)
 	%After both artifacts have been edited concurrently, we need to synchronize them.	
@@ -94,6 +96,15 @@ and other parts using the other strategy. %For example, they may choose
 %to synchronize method bodies using strategy 1, where the synchronization artifact is code.
 %Then strategy 2, in which the synchronization artifact is a model, is used to
 %to synchronize architectural elements of the system.
+
+%In reality of collaboration, there are of course conflicts between editions made by developers to their respective baseline artifact.
+%Two approaches are proposed to reconcile these conflicts.
+%In the first approach, we let the developers explicitly determine which edition should be kept in the synchronization process.
+%This is based on the \texttt{Compare and Merge} paradigm proposed by model/code merge tools such as \textbf{EMF Compare} or \textbf{Git}.  
+%The second approach extends the semi-automated conflict resolution presented in \cite{Hermann2012}.
+%Specifically, our approach records editions made to artifacts (see Section \ref{sec:implementation} for more information about edition listening), decides whether editions are \textit{conflict-free} or not, and automatically bi-directionally merges or interactively shows the developers in-conflict editions.
+%For example, if an MDD adds an attribute to a class by using graphical modeling tools and a CDD renames the class.
+%Two editions are detected and asserted as conflict-free. The automated merge therefore is used for reconciliation. 
 
 %In the next section we propose an implementation
 %of an IDE and the proposed synchronization processes.

@@ -13,9 +13,10 @@
 %Abstraction provides simplified and focused views of a system and requires adequate graphical modeling languages such as Unified Modeling Language (UML). %Even, if the latter is not the silver bullet for all software related concerns, 
 %The latter provides better support than text-based solutions for some concerns such as architecture and logical behavior of application development. 
 
-Event-driven architecture is used for designing memory-constrained embedded systems \cite{Dunkels:2006:PSE:1182807.1182811}. 
-UML state machines (USMs) and their visual representations are an efficient means to describing, analyzing and implementing high level logic behaviors of event-driven systems. 
-A number of code generation approaches and industrial tools have been proposed in the context of Model-Driven Engineering (MDE) \cite{kent2002model} to automate the process of translating USMs into implementation \cite{Booch1998, Douglass1999,Shalyto2006,Douglass1999, ibm_rhapsody, sinelabore, qm}.  
+%Event-driven architecture is used for . 
+UML state machines (USMs) and their visual representations are efficient to describe, analyze and implement high level logic behaviors of event-driven %architecture for designing memory-constrained 
+embedded systems \cite{Dunkels:2006:PSE:1182807.1182811}. 
+A number of code generation approaches and industrial tools have been proposed in the context of Model-Driven Engineering (MDE) \cite{kent2002model} to automate the process of translating USMs into implementation \cite{possepapyrusrt, Booch1998, Douglass1999,Shalyto2006,Douglass1999, ibm_rhapsody, sinelabore, qm}.  
 
 Ideally, a full model-centric approach is preferred by MDE community due to its advantages \cite{Selic2012}. 
 However, in industrial practice, there is significant reticence \cite{Hutchinson:2011:MEP:1985793.1985882} to adopt it.
@@ -23,14 +24,11 @@ On one hand, programmers prefer to
 use the more familiar programming language. 
 On the other hand, software architects, working at higher levels
 of abstraction, favor the use of models, and therefore
-prefer graphical languages for describing the system architecture high level logic behavior.
+prefer graphical languages for describing the system architecture high level logic behavior \cite{Hutchinson:2011:MEP:1985793.1985882,Hutchinson:2011:EAM:1985793.1985858}.
 
-The surveys described in \cite{Hutchinson:2011:MEP:1985793.1985882} and \cite{Hutchinson:2011:EAM:1985793.1985858} polled MDE practitioners. 
-It notes that 70\% of the respondents primarily work
-with models, but still require manually-written code to be integrated.
-Furthermore, 35\% of
-the respondents answered that they spend a lot of time and effort synchronizing
-model and code.
+%The surveys described in \cite{Hutchinson:2011:MEP:1985793.1985882} and \cite{Hutchinson:2011:EAM:1985793.12985858} polled MDE practitioners. 
+%It notes that 70\% of the respondents primarily work with models, but still require manually-written code to be integrated.
+%Furthermore, 35\% of the respondents answered that they spend a lot of time and effort synchronizing model and code.
 
 %However, on the one hand, maintaining code generated from existing approaches is non-trivial. On the other hand our observation is that it is very difficult to come up with formalizations that yield such elegant code generation solutions \cite{6032552}. In other words, generated code must be manually modified to build fully operational applications. 
 %On one hand there are traditional developers who prefer to implement the system by writing code, while on the other hand there are developers who prefer to use entirely models for the design and implementation of the system. 
@@ -48,18 +46,17 @@ The former refers to synchronization of structural concepts such as those availa
 Some approaches such as \cite{langhammer2013co, kramer2015change} allow the co-evolution of component-based diagram elements and code.
 
 The \ti{behavior} RTE is usually supported very limitedly. 
-This is because of having no trivial mapping from behavior model such as USM and code.
+This is because there is no trivial mapping from behavior model such as USM and code.
 Consequently, it is very difficult to reflect behavior code changes to the original model.
 Approaches for the \ti{behavior} RTE often allow programmers to partially modify behavioral code in limited areas by separating the \ttt{generated} and \ttt{non-generated code} \cite{ibm_rhapsody,steinberg2008emf} using some specialized comments such as \ttt{@generated NOT}.
 Approaches and tools in this category use an incremental code generation, which preserves the user-code changes in the areas marked as non-generated.
 However, "\ti{current separation mechanisms require the programmers are highly discipline.
 Furthermore, even so, accidental changes are still possible}" \cite{zheng2012enhancing}.
 
-\ttt{Deep separation} is proposed by the authors in \cite{zheng2012enhancing} to overcome the limitation of the current separation mechanisms.
-However, as the authors state that, this approach does not allow to modify the system architecture- and behavior-prescribed code in text-based development environment.  
 
-In this paper, we tackle the problem of synchronization between model, which includes both structural and behavioral elements, and \ttt{C++} code for developing event-driven systems.
+In this paper, we tackle the problem of synchronization between model, which includes both structural and behavioral elements, and \ttt{C++} code, which meets resource-constrained requirements for developing event-driven embedded systems.
 Specifically, the system architecture is specified via UML class diagrams and the behavior via USMs.
+Component and composite structure diagrams for architecture description will be included in future work.
 To support the architects and the programmers at the modeling and programming level, respectively, equivalently, our goal is to allow the synchronization of USMs with full features and code.
 The latter should be efficient (small in size and fast in event processing speed) to be fit into resource-constrained systems. 
 
@@ -101,7 +98,7 @@ To sum up, our contribution is as followings:
 \begin{itemize}
 	\item RAOES: A round-trip engineering approach for developing event-driven systems using UML State Machines and C++.
 	\item The implementation of RAOES based on the Eclipse Modeling Framework (EMF) and the Papyrus tool.
-	\item Experimental evaluations of RAOES.
+	\item Experimental evaluations by experimenting with RAOES and a case study simulation.
 	%\begin{itemize}
 		%\item An automatic evaluation of the proposed RTE approach with the prototype.% including 300 random generated SM models containing 80 states, more than 230 transitions, more than 250 actions and around 180 events for each.
 		%\item A complexity analysis of the approach and performance evaluation.
@@ -110,12 +107,15 @@ To sum up, our contribution is as followings:
 	%\end{itemize}
 \end{itemize}
 
+Even though this presented work is specific to C++ and embedded systems, the general idea can be applied to other object-oriented programming languages such as Java and to other domains.
+
 The remainder of this paper is organized as follows: Section \ref{sec:background} presents the background. 
 Section \ref{sec:motivation} and \ref{sec:overview} describe the motivation and overview of RAOES. 
 The syntax of RAOES's front-end is detailed in Section \ref{sec:syntax}.
-Section \ref{sec:collaboration} shows our synchronization strategy.
+Section \ref{sec:collaboration} shows RAOES's synchronization strategy.
 The implementation of RAOES is described in Section \ref{sec:implementation}. 
-Section \ref{sec:exp} reports our results of experimenting with RAOES. 
+Section \ref{sec:exp} presents our research questions to evaluate RAOES. 
+A simulation case study of a Traffic Light Controller in Section \ref{sec:casestudy} is used to show the practicality of RAOES.  
 Section \ref{sec:relatedwork} shows related work. 
 The conclusion and future work are presented in Section \ref{sec:conclusion}.
 

@@ -36,6 +36,9 @@ S.~Kent, ``Model driven engineering,'' in \emph{International Conference on
   Integrated Formal Methods}.\hskip 1em plus 0.5em minus 0.4em\relax Springer,
   2002, pp. 286--298.
 
+\bibitem{possepapyrusrt}
+E.~Posse, ``Papyrusrt: Modelling and code generation.''
+
 \bibitem{Booch1998}
 \BIBentryALTinterwordspacing
 G.~Booch, J.~Rumbaugh, and I.~Jacobson, \emph{{The Unified Modeling Language
@@ -160,13 +163,6 @@ H.~Giese and R.~Wagner, ``{Incremental Model Synchronization with Triple Graph
   Grammars},'' in \emph{Proceedings of the 9th international conference on
   Model Driven Engineering Languages and Systems}, Genova, Italy, 2006.
 
-\bibitem{shuang_formalizing}
-\BIBentryALTinterwordspacing
-L.~Shuang, ``Formalizing {UML} {State} {Machine} {Semantics} for {Automatic}
-  {Verification}–the {PAT} {Approach}.'' [Online]. Available:
-  \url{http://www.comp.nus.edu.sg/~pat/uml/techreport/uml \_sm\_semantics.pdf}
-\BIBentrySTDinterwordspacing
-
 \bibitem{_papyrus/designer/code-generation_????}
 \BIBentryALTinterwordspacing
 ``Papyrus/{Designer}/code-generation - {Eclipsepedia}.'' [Online]. Available:
@@ -239,39 +235,57 @@ B.~{Library}, ``{The} {Boost} {Statechart} {Library},''
   \url{http://valgrind.org/docs/manual/ms-manual.html}
 \BIBentrySTDinterwordspacing
 
-\bibitem{Cutting2015}
+\bibitem{katz2005contemporary}
+R.~H. Katz and G.~Borriello, ``Contemporary logic design,'' 2005.
+
+\bibitem{trafficlight}
+{Yasmine}, ``{The} {classic} {farmroad} {example},''
+  \url{http://yasmine.seadex.de/The_classic_farmroad_example.html}.
+
+\bibitem{farmroadexample}
 \BIBentryALTinterwordspacing
-D.~Cutting and J.~Noppen, ``{An Extensible Benchmark and Tooling for Comparing
-  Reverse Engineering Approaches},'' \emph{International Journal on Advances in
-  Software}, vol.~8, no.~1, pp. 115--124, 2015. [Online]. Available:
-  \url{https://ueaeprints.uea.ac.uk/53612/}
+``{Farmroad} {Example}.'' [Online]. Available:
+  \url{http://yasmine.seadex.de/The_classic_farmroad_example.html}
 \BIBentrySTDinterwordspacing
 
-\bibitem{Jorges2013}
-S.~J{\"{o}}rges, ``{Construction and evolution of code generators: A
-  model-driven and service-oriented approach},'' \emph{Lecture Notes in
-  Computer Science (including subseries Lecture Notes in Artificial
-  Intelligence and Lecture Notes in Bioinformatics)}, pp. 1--265, 2013.
+\bibitem{czarnecki_multi-level_2006}
+K.~Czarnecki, M.~Antkiewicz, and C.~H.~P. Kim, ``Multi-level customization in
+  application engineering,'' \emph{Communications of the ACM}, vol.~49, no.~12,
+  p.~60, Dec. 2006.
 
-\bibitem{Paesschen2005}
-E.~Paesschen, W.~Meuter, and M.~D'Hondt, \emph{Model Driven Engineering
-  Languages and Systems: 8th International Conference, MoDELS 2005, Montego
-  Bay, Jamaica, October 2-7, 2005. Proceedings}.\hskip 1em plus 0.5em minus
-  0.4em\relax Berlin, Heidelberg: Springer Berlin Heidelberg, 2005, ch.
-  SelfSync: A Dynamic Round-Trip Engineering Environment, pp. 633--647.
+\bibitem{yu2012maintaining}
+Y.~Yu, Y.~Lin, Z.~Hu, S.~Hidaka, H.~Kato, and L.~Montrieux, ``Maintaining
+  invariant traceability through bidirectional transformations,'' in
+  \emph{Proceedings of the 34th International Conference on Software
+  Engineering}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE Press, 2012, pp.
+  540--550.
 
-\bibitem{giese_incremental_2006}
-H.~Giese and R.~Wagner, ``Incremental model synchronization with triple graph
-  grammars,'' in \emph{Model {Driven} {Engineering} {Languages} and
-  {Systems}}.\hskip 1em plus 0.5em minus 0.4em\relax Springer, 2006, pp.
-  543--557.
+\bibitem{christensen2011towards}
+H.~B. Christensen and K.~M. Hansen, ``Towards architectural information in
+  implementation (nier track),'' in \emph{Proceedings of the 33rd International
+  Conference on Software Engineering}.\hskip 1em plus 0.5em minus 0.4em\relax
+  ACM, 2011, pp. 928--931.
 
-\bibitem{Omg2008}
-\BIBentryALTinterwordspacing
-Q.~Omg, ``{Meta Object Facility ( MOF ) 2 . 0 Query / View / Transformation
-  Specification},'' \emph{Transformation}, no. January, pp. 1--230, 2008.
-  [Online]. Available: \url{http://www.omg.org/spec/QVT/1.0/PDF/}
-\BIBentrySTDinterwordspacing
+\bibitem{lethbridge2010umplification}
+T.~C. Lethbridge, A.~Forward, and O.~Badreddin, ``Umplification: Refactoring to
+  incrementally add abstraction to a program,'' in \emph{2010 17th Working
+  Conference on Reverse Engineering}.\hskip 1em plus 0.5em minus 0.4em\relax
+  IEEE, 2010, pp. 220--224.
+
+\bibitem{mazanec2012general}
+M.~Mazanec and O.~Macek, ``On general-purpose textual modeling
+  languages.''\hskip 1em plus 0.5em minus 0.4em\relax Citeseer, 2012.
+
+\bibitem{voelter2012mbeddr}
+M.~Voelter, D.~Ratiu, B.~Schaetz, and B.~Kolb, ``mbeddr: an extensible c-based
+  programming language and ide for embedded systems,'' in \emph{Proceedings of
+  the 3rd annual conference on Systems, programming, and applications: software
+  for humanity}.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2012, pp.
+  121--140.
+
+\bibitem{balz2009embedding}
+M.~Balz, M.~Striewe, and M.~Goedicke, ``Embedding behavioral models into
+  object-oriented source code.''
 
 \bibitem{Domnguez2012}
 E.~Dom\'{i}nguez, B.~P\'{e}rez, A.~L. Rubio, and M.~A. Zapata, ``{A systematic
@@ -282,13 +296,5 @@ E.~Dom\'{i}nguez, B.~P\'{e}rez, A.~L. Rubio, and M.~A. Zapata, ``{A systematic
 V.~Spinke, ``An object-oriented implementation of concurrent and hierarchical
   state machines,'' \emph{Information and Software Technology}, vol.~55,
   no.~10, pp. 1726--1740, Oct. 2013.
-
-\bibitem{Pilitowski2007}
-\BIBentryALTinterwordspacing
-R.~Pilitowski and A.~Derezi{\~{n}}ska, \emph{Code Generation and Execution
-  Framework for UML 2.0 Classes and State Machines}.\hskip 1em plus 0.5em minus
-  0.4em\relax Dordrecht: Springer Netherlands, 2007, pp. 421--427. [Online].
-  Available: \url{http://dx.doi.org/10.1007/978-1-4020-6268-1_75}
-\BIBentrySTDinterwordspacing
 
 \end{thebibliography}

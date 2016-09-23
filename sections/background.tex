@@ -1,4 +1,4 @@
-\section{Background definition}
+\section{Background}
 \label{sec:background}
 This section reminds the background definitions of UML State Machine (see \ref{subsec:usmbackground}) and Model-Driven Round-Trip Engineering (see \ref{subsec:mdrtebackground}) in a formal way.
 
@@ -8,61 +8,63 @@ This section reminds the background definitions of UML State Machine (see \ref{s
 %\begin{definition}A directed graph $G = \{V, Ed\}$ consists of a finite set $V$ of vertexes, and a set $Ed$ of edges. An edge connects a source vertex to a target vertex. The source and target vertexes of an edge ed are obtained by $src(ed)$ and $tgt(ed)$.
 %\end{definition}
 
-This section presents the background of UML State Machine.
-Fig. \ref{fig:smmetamodel} shows the state machine meta-model used in this paper.
-The latter covers the full concepts defined by UML State Machine and adapts some features dedicated to our development method.
-Specifically, the behavior of an \ttt{ActiveClass} is described by a state machine\footnote{It is possible to have multiple state machines in the same active class. However, for simplification, this paper assumes that an active class only holds a state machine}.
+%This section presents the background of UML State Machine whose meta-model is shown in
+ Fig. \ref{fig:smmetamodel} shows the meta-model of UML State Machine whose detailed semantics is clearly defined in the UML specification \cite{OMG2015} and beyond the scope of this paper.
+%Fig. \ref{fig:smmetamodel} shows the state machine meta-model used in this paper.
+The metamodel covers full concepts defined by UML State Machine and adapts some features dedicated to our development method.
+Specifically, the behavior of an \ttt{ActiveClass} is described by a state machine\footnote{%It is possible to have multiple state machines in the same active class. However, 
+	For simplification, this paper assumes that an active class only holds a USM although it can have more}.
 Furthermore, instead of using the \ttt{Behavior} UML meta-element, we introduce \ttt{Action} to define actions of state and transition, which actually are user-code.
-
-In fact, the support of \ttt{Action} is convenient in many modeling tools such as IBM Rhapsody and Enterprise Architect, which allow the developers to write the low level code (user-code) directly at the model level.
-The user-code is then printed in the generated code.
+\ttt{Action} is convenient in many modeling tools such as IBM Rhapsody and Enterprise Architect to allow the developers to write the low level code (user-code) directly at the model level.
+%The user-code is then printed in the generated code.
 %\begin{definition}A UML vertex $v \in V$ has a kind $v.kind \in$  \ti{\{initial, final, state, comp, conc, join, fork, choice, junction, enpoint, expoint, history\}}. 
 %\end{definition} 
 
 %\begin{definition}A region $r \in \mathcal{R}$ is composed of one or several vertexes, and contained by a state $s$. We write $owner(r) = s$ and $vertices(r)$ is its sub-vertices set. 
 %\end{definition}	
 
-%\begin{definition} 
+\begin{comment} 
 	A vertex is either a UML state or a pseudo-state. 
-	A state with is \ttt{composite} if it contains at least one region; \ttt{orthogonal/concurrent} if contains more than one region; otherwise \ttt{simple}. 
+	A state can be either \ttt{simple}, \ttt{composite}, or \ttt{orthogonal/concurrent}. 
+	%if it contains at least one region; \ttt{orthogonal/concurrent} if contains more than one region; otherwise \ttt{simple}. 
 	A state can have an $entry$, an $exit$ and a $doActivity$ action. 
 	%A composite state $cs$ contains one or more vertexes. 
 	%We write $vertices(cs)$ is a set of vertexes contained by $cs$ and, inversely, $owner(v)$ refers to the containing state of the vertex $v$. 
-	A vertex is a pseudo state if it is not a state.
-	A connection point is a vertex, whose kind $\in \{enpoint, expoint\}$, and contained by a composite state.%A concurrent state contains more than one region.
-%\end{definition}		
+	%A vertex is a pseudo state if it is not a state.
+	A connection point is a vertex, whose kind $\in \{enpoint, expoint\}$, and contained by a composite/concurrent state.%A concurrent state contains more than one region.
+\end{comment}		
 
 %A vertex \ttt{v} is either contained by a region, which is in turn contained by a state or a state machine, or a state if it is a \ttt{connection point}, \ttt{v} is called a sub-vertex of the state or state machine.
 
-The detailed semantics of each pseudo state is clearly defined in the UML specification \cite{OMG2015} and beyond the scope of this paper.
+
 
 
 %\begin{definition} An action $act$ $\in$ $ActLang$ is a set of statements written in an object-oriented programming language $ActLang$. A guard is a boolean expression written in $ActLang$.
 %\end{definition}
 
 %\begin{definition} 
-	A transition $t \in T$ is an edge connecting two vertexes, \ttt{source} and \ttt{target}. 
+	A transition connects two vertexes.%, \ttt{source} and \ttt{target}. 
 	%The source and target vertexes of an edge ed are obtained by $src(t)$ and $tgt(t)$. 
-	A transition $t$ can have a guard $guard(t)$, an effect $effect(t)$, and is associated with a set of events. 
+	It can have a $guard$, an $effect$, and is triggered by a set of events. 
 	%We write $events(t)$ as the associated set of events. 
 	A transition 
 	%has a type $t.type$ $\in \{trig, tless, gdless, triggdless\}$ and a 
-	is either \ttt{external}, \ttt{local}, or \ttt{internal} whose semantics is defined by the specification.
+	is either \ttt{external}, \ttt{local}, or \ttt{internal}. %whose semantics is defined by the specification.
 %\end{definition}
 
 \begin{figure}
 	\centering
-	\includegraphics[clip, trim=0.2cm 0.8cm 0.2cm 0.2cm, width=1.0\columnwidth]{figures/smmetamodel.pdf}
+	\includegraphics[clip, trim=0.2cm 1.5cm 0.2cm 0.5cm, width=1.0\columnwidth]{figures/smmetamodel.pdf}
 	\caption{State machine meta-model} 
 	\label{fig:smmetamodel}
 \end{figure}
 
 UML defines five event types. 
-Fig. \ref{fig:eventmetamodel} shows the meta-model of the event types.
+%Fig. \ref{fig:eventmetamodel} shows the meta-model of the event types.
 The description of the events is briefly stated as the following.
 
-\begin{definition} An event is one of the followings:
-	\begin{itemize}
+%\begin{definition} An event is one of the followings:
+	\begin{itemize}[\footnotesize]
 		\item A \ttt{TimeEvent} specifies the time of occurrence \ttt{dur} relative to a starting time. 
 		The latter is specified when a state, which accepts the time event, is entered.
 		
@@ -75,16 +77,16 @@ The description of the events is briefly stated as the following.
 		
 		\item An \ttt{Any} event is any of the above events.
 	\end{itemize}
-\end{definition}
+%\end{definition}
 
-
+\begin{comment}
 \begin{figure}
 	\centering
 	\includegraphics[clip, trim=0.2cm 0.2cm 0.2cm 0.2cm, width=1.0\columnwidth]{figures/eventmetamodel.pdf}
 	\caption{State machine event meta-model} 
 	\label{fig:eventmetamodel}
 \end{figure}
-
+\end{comment}
 
 \begin{comment}
 \begin{definition} A \ti{TimeEvent} $te$ an internal event and specifies the time of occurrence $d$ relative to a starting time. The latter is specified when a state, which accepts the time event, is entered. 

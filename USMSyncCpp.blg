@@ -1,38 +1,36 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: USMSyncCpp.aux
-Case mismatch error between cite keys QM and qm
----line 115 of file USMSyncCpp.aux
- : \citation{QM
- :             }
-I'm skipping whatever remains of this command
 The style file: IEEEtran.bst
 Database file #1: refs.bib
-Repeated entry---line 1280 of file refs.bib
+Repeated entry---line 1366 of file refs.bib
  : @misc{_papyrus/designer/code-generation_????
  :                                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1573 of file refs.bib
+Repeated entry---line 1659 of file refs.bib
  : @misc{moka
  :           ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 2875 of file refs.bib
+Repeated entry---line 2648 of file refs.bib
+ : @inproceedings{mazanec2012general
+ :                                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2968 of file refs.bib
  : @article{OMG2015
  :                 ,
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "ibm_rational_2016"
-Warning--I didn't find a database entry for "umlgen"
-Warning--I didn't find a database entry for "czarnecki_multi-level_2006"
-Warning--I didn't find a database entry for "Hermann2012"
-Warning--I didn't find a database entry for "Bergmann2011"
-Warning--I didn't find a database entry for "Matsuda2015"
-Warning--I didn't find a database entry for "xiong_towards_2007"
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty journal in possepapyrusrt
+Warning--empty year in possepapyrusrt
 Warning--missing publisher in Booch1998
 Warning--missing publisher in Douglass1999
 Warning--empty journal in Sendall
 Warning--empty year in Sendall
 Warning--empty journal in OMG2015
+Warning--empty journal in katz2005contemporary
+Warning--empty booktitle in mazanec2012general
+Warning--empty journal in balz2009embedding
+Warning--empty year in balz2009embedding
 
 Done.
 (There were 4 error messages)

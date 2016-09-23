@@ -1,6 +1,6 @@
 \section{RAOES Overview}
 \label{sec:overview}
-The goal of RAOES is to seamlessly support the collaboration of software architects and programmers in event-driven systems' development.
+The goal of RAOES is to seamlessly support the collaboration of software architects and programmers in developing event-driven systems.
 In the latter, the behavior of active objects is specified by using UML State Machines.
 As previously described, it is very difficult to reconstruct the original model from the generated code since there is no bijective mapping between these artifacts.
 Therefore, RAOES defines a mechanism interface textually embedded inside the active objects, which are defined by object-oriented classes. 
@@ -19,7 +19,7 @@ Fig. \ref{fig:raoes} shows how RAOES is different from the existing approaches.
 RAOES separates codes for the structural and behavioral part.
 The connections between these parts are realized by using simple name binding mechanisms.
 
-For example, by using RAOES, the generated front-end code for the example in Fig. \ref{fig:IllustrationExample1} and its evolved version are presented in Fig. \ref{fig:frontend-overview}.
+For example, by using RAOES, the generated front-end code for the example in Fig. \ref{fig:illustration} (a) and (b) are presented in Fig. \ref{fig:frontend-overview}.
 The USM defining the behavior of the active class \ti{System} is defined inside the class.
 The USM is written in a description-like language.
 The topology of the USM is explicitly and hierarchically described.
@@ -37,7 +37,7 @@ Other parts such as user-created attributes or methods can be freely modified.
 
 \begin{figure}
 	\centering
-	\includegraphics[clip, trim=1.10cm 3.6cm 10.9cm 1.9cm, width=1.08\columnwidth]{figures/frontendoverview.pdf}
+	\includegraphics[clip, trim=0.95cm 3.5cm 12.7cm 2.2cm, width=1.08\columnwidth]{figures/frontendoverview.pdf}
 	\caption{Front-code evolution} 
 	\label{fig:frontend-overview}
 \end{figure}
