@@ -4,11 +4,11 @@ In order to assess the usability and practicality of UML State Machines and RAOE
 TLC controls an intersection of a busy highway and a little-used farm-way.
 
 %\ti{" Detectors are placed along the farmroad to raise the signal C as long as a vehicle is waiting to cross the highway. The traffic light controller should operate as follows. As long as no vehicle is detected on the farmroad, the lights should remain green in the highway direction. If a vehicle is detected on the farmroad, the highway lights should change from yellow to red, allowing the farmroad lights to become green. The farmroad lights stay green only as long as a vehicle is detected on the farmroad and never longer than a set interval to allow the traffic to flow along the highway. If these conditions are met, the farmroad lights change from green to yellow to red, allowing the highway lights to return to green. Even if vehicles are waiting to cross the highway, the highway should remain green for a set interval"}.
-The system is shown in Fig. \ref{fig:casestudy}.
+The system is shown in Fig. \ref{fig:casestudy}.[To be continued]
 
 \begin{figure}
 	\centering
-	\includegraphics[clip, trim=0.6cm 10.4cm 10.9cm 0cm, width=1.0\columnwidth]{figures/casestudy}
+	\includegraphics[clip, trim=0.6cm 12.5cm 10.9cm 1.8cm, width=1.0\columnwidth]{figures/casestudy}
 	\caption{Traffic Light Controller (left) and its class diagram (right).} 
 	\label{fig:casestudy}
 \end{figure}
@@ -49,7 +49,7 @@ The expression associated with the change event changes from false to true once 
 And \ttt{detectFlag} is set by the method \ttt{setDetect} once a \ttt{DetectorOn} event occurs to trigger another internal transition of \ttt{WaitForPreconditions}.
 \begin{figure}
 	\centering
-	\includegraphics[clip, trim=0.0cm 9.3cm 12.7cm 0cm, width=\columnwidth]{figures/highwayopenalternatives}
+	\includegraphics[clip, trim=0.0cm 9.3cm 13.7cm 0cm, width=\columnwidth]{figures/highwayopenalternatives}
 	\caption{Alternative state machine design for the \ttt{HighwayOpen} state} 
 	\label{fig:highwayopenalternatives}
 \end{figure}

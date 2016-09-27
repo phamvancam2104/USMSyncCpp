@@ -188,6 +188,16 @@ J.~N. Foster, M.~B. Greenwald, J.~T. Moore, B.~C. Pierce, and A.~Schmitt,
   {Approach} to the {View}-update {Problem},'' \emph{ACM Trans. Program. Lang.
   Syst.}, vol.~29, no.~3, May 2007.
 
+\bibitem{Xiao:2014:RMG:2671850.2671881}
+\BIBentryALTinterwordspacing
+H.~Xiao, Z.~Tian, M.~Zhiyi, and S.~Weizhong, ``Randomized model generation for
+  performance testing of model transformations,'' in \emph{Proceedings of the
+  2014 IEEE 38th Annual Computer Software and Applications Conference}, ser.
+  COMPSAC '14.\hskip 1em plus 0.5em minus 0.4em\relax Washington, DC, USA: IEEE
+  Computer Society, 2014, pp. 11--20. [Online]. Available:
+  \url{http://dx.doi.org/10.1109/COMPSAC.2014.103}
+\BIBentrySTDinterwordspacing
+
 \bibitem{moka}
 \BIBentryALTinterwordspacing
 ``Moka {Model} {Execution}.'' [Online]. Available:
@@ -266,6 +276,13 @@ H.~B. Christensen and K.~M. Hansen, ``Towards architectural information in
   Conference on Software Engineering}.\hskip 1em plus 0.5em minus 0.4em\relax
   ACM, 2011, pp. 928--931.
 
+\bibitem{angyal_synchronizing_2008}
+L.~Angyal, L.~Lengyel, and H.~Charaf, ``A {Synchronizing} {Technique} for
+  {Syntactic} {Model}-{Code} {Round}-{Trip} {Engineering},'' in
+  \emph{Engineering of {Computer} {Based} {Systems}, 2008. {ECBS} 2008. 15th
+  {Annual} {IEEE} {International} {Conference} and {Workshop} on the}, Mar.
+  2008, pp. 463--472.
+
 \bibitem{lethbridge2010umplification}
 T.~C. Lethbridge, A.~Forward, and O.~Badreddin, ``Umplification: Refactoring to
   incrementally add abstraction to a program,'' in \emph{2010 17th Working
@@ -282,6 +299,17 @@ M.~Voelter, D.~Ratiu, B.~Schaetz, and B.~Kolb, ``mbeddr: an extensible c-based
   the 3rd annual conference on Systems, programming, and applications: software
   for humanity}.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2012, pp.
   121--140.
+
+\bibitem{Maro:2015:IGT:2814251.2814253}
+\BIBentryALTinterwordspacing
+S.~Maro, J.-P. Stegh\"{o}fer, A.~Anjorin, M.~Tichy, and L.~Gelin, ``On
+  integrating graphical and textual editors for a uml profile based domain
+  specific language: An industrial experience,'' in \emph{Proceedings of the
+  2015 ACM SIGPLAN International Conference on Software Language Engineering},
+  ser. SLE 2015.\hskip 1em plus 0.5em minus 0.4em\relax New York, NY, USA: ACM,
+  2015, pp. 1--12. [Online]. Available:
+  \url{http://doi.acm.org/10.1145/2814251.2814253}
+\BIBentrySTDinterwordspacing
 
 \bibitem{balz2009embedding}
 M.~Balz, M.~Striewe, and M.~Goedicke, ``Embedding behavioral models into

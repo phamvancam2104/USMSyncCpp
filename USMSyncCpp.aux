@@ -32,6 +32,7 @@
 \newlabel{sec:intro}{{I}{1}}
 \citation{OMG2015}
 \citation{Giese2006}
+\citation{ibm_rhapsody}
 \@writefile{toc}{\contentsline {section}{\numberline {II}Background}{2}}
 \newlabel{sec:background}{{II}{2}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-A}}UML State Machine}{2}}
@@ -40,9 +41,8 @@
 \newlabel{fig:smmetamodel}{{1}{2}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-B}}Model-Driven Round-trip Engineering}{2}}
 \newlabel{subsec:mdrtebackground}{{\unhbox \voidb@x \hbox {II-B}}{2}}
-\@writefile{toc}{\contentsline {section}{\numberline {III}Motivating example: The impossibility of direct reverse engineering generated code}{2}}
+\@writefile{toc}{\contentsline {section}{\numberline {III}Motivating example}{2}}
 \newlabel{sec:motivation}{{III}{2}}
-\citation{ibm_rhapsody}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces A USM example (a) and its evolved version (b).}}{3}}
 \newlabel{fig:illustration}{{2}{3}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Codes generated from the state machine example in Fig. 2\hbox {} by using our tool (a) and Rhapsody (b), and their respective evolved versions. The \dashuline {dashed underlined code} segment should evolve to the \uline {simple underlined code}.}}{3}}
@@ -59,9 +59,9 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-A}}Topology}{4}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {V-A}1}State and regions}{4}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {V-A}2}Pseudo state}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-B}}Events}{4}}
+\newlabel{subsec:events}{{\unhbox \voidb@x \hbox {V-B}}{4}}
 \citation{qm}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-B}}Events}{5}}
-\newlabel{subsec:events}{{\unhbox \voidb@x \hbox {V-B}}{5}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-C}}Transitions}{5}}
 \newlabel{lst:effect-segment}{{1}{5}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {1}A segment of C++ front-end code}{5}}
@@ -82,23 +82,25 @@
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {VII-B}2}Reverse engineering}{6}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {VII-B}3}Synchronization}{6}}
 \@writefile{toc}{\contentsline {paragraph}{\numberline {\unhbox \voidb@x \hbox {VII-B}3a}Incremental front-end code generator}{6}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\unhbox \voidb@x \hbox {VII-B}3b}Incremental reverse engineering from front-end code to model}{6}}
 \citation{Badreddin2014}
 \citation{niaz_mapping_2004}
 \citation{foster_combinators_2007}
+\citation{Xiao:2014:RMG:2671850.2671881}
 \citation{moka}
 \@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Model change management in incremental generation}}{7}}
 \newlabel{fig:modelchange}{{8}{7}}
-\@writefile{toc}{\contentsline {paragraph}{\numberline {\unhbox \voidb@x \hbox {VII-B}3b}Incremental reverse engineering from front-end code to model}{7}}
-\@writefile{toc}{\contentsline {paragraph}{\numberline {\unhbox \voidb@x \hbox {VII-B}3c}Conflict resolution strategy}{7}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VII-C}}Transformation}{7}}
 \@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Source-to-source transformation via reverse engineering and code generation}}{7}}
 \newlabel{fig:s2stransformation}{{9}{7}}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Evaluation methodology to answer RQ1 (a) and RQ2 (b)}}{7}}
-\newlabel{fig:rq1-2evaluation}{{10}{7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VII-C}}Transformation}{7}}
 \@writefile{toc}{\contentsline {section}{\numberline {VIII}Experiments report}{7}}
 \newlabel{sec:exp}{{VIII}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Evaluation methodology to answer RQ1 (a) and RQ2 (b)}}{7}}
+\newlabel{fig:rq1-2evaluation}{{10}{7}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VIII-A}}Reversing generated code}{7}}
 \newlabel{subsec:exp1}{{\unhbox \voidb@x \hbox {VIII-A}}{7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VIII-B}}Semantic conformance of runtime execution}{7}}
+\newlabel{subsec:exp2}{{\unhbox \voidb@x \hbox {VIII-B}}{7}}
 \citation{boost}
 \citation{benchmark}
 \citation{simpleexample}
@@ -113,27 +115,34 @@
 \citation{Massif}
 \citation{katz2005contemporary}
 \citation{trafficlight}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VIII-B}}Semantic conformance of runtime execution}{8}}
-\newlabel{subsec:exp2}{{\unhbox \voidb@x \hbox {VIII-B}}{8}}
+\citation{farmroadexample}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VIII-C}}Benchmarks}{8}}
 \newlabel{subsec:exp3}{{\unhbox \voidb@x \hbox {VIII-C}}{8}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {VIII-C}1}Speed}{8}}
 \@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Event processing speed for the benchmark}}{8}}
 \newlabel{fig:boxplot}{{11}{8}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {VIII-C}1}Speed}{8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Traffic Light Controller (left) and its class diagram (right).}}{8}}
+\newlabel{fig:casestudy}{{12}{8}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {VIII-C}2}Binary size and runtime memory consumption}{8}}
 \@writefile{toc}{\contentsline {section}{\numberline {IX}Traffic Light Controller simulation}{8}}
 \newlabel{sec:casestudy}{{IX}{8}}
 \citation{farmroadexample}
-\citation{farmroadexample}
 \citation{czarnecki_multi-level_2006}
 \citation{yu2012maintaining}
 \citation{zheng2012enhancing}
+\citation{aldrich2002archjava}
+\citation{ubayashi2010archface}
+\citation{christensen2011towards}
+\citation{langhammer2013co}
+\citation{kramer2015change}
+\citation{angyal_synchronizing_2008}
+\citation{lethbridge2010umplification}
+\citation{mazanec2012general}
+\citation{mazanec2012general}
 \@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Executable size in Kb}}{9}}
 \newlabel{table-size}{{I}{9}}
 \@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces Runtime memory consumption in KB. Columns (1) to (7) are SC, MSM, MSM-Lite, EUML, Sinelabore, QM, and our approach, respectively.}}{9}}
 \newlabel{table:usage}{{II}{9}}
-\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Traffic Light Controller (left) and its class diagram (right).}}{9}}
-\newlabel{fig:casestudy}{{12}{9}}
 \@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces State machines for describing the behavior of Intersection (left) and TrafficLight (right)}}{9}}
 \newlabel{fig:casestudystatemachine}{{13}{9}}
 \@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Alternative state machine design for the \textit  {HighwayOpen} state}}{9}}
@@ -141,13 +150,8 @@
 \@writefile{toc}{\contentsline {section}{\numberline {X}Comparison and Related work}{9}}
 \newlabel{sec:relatedwork}{{X}{9}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {X-A}}Round-trip engineering and co-evolution}{9}}
-\citation{aldrich2002archjava}
-\citation{ubayashi2010archface}
-\citation{christensen2011towards}
-\citation{lethbridge2010umplification}
-\citation{mazanec2012general}
-\citation{mazanec2012general}
 \citation{voelter2012mbeddr}
+\citation{Maro:2015:IGT:2814251.2814253}
 \citation{balz2009embedding}
 \citation{ibm_rhapsody}
 \citation{EA}
@@ -166,15 +170,15 @@
 \bibcite{Douglass1999}{5}
 \bibcite{Shalyto2006}{6}
 \bibcite{ibm_rhapsody}{7}
+\bibcite{sinelabore}{8}
+\bibcite{qm}{9}
+\bibcite{Selic2012}{10}
+\bibcite{Hutchinson:2011:MEP:1985793.1985882}{11}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {X-B}}Language engineering}{10}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {X-C}}Code generation patterns and tools}{10}}
 \@writefile{toc}{\contentsline {section}{\numberline {XI}Conclusion}{10}}
 \newlabel{sec:conclusion}{{XI}{10}}
 \@writefile{toc}{\contentsline {section}{References}{10}}
-\bibcite{sinelabore}{8}
-\bibcite{qm}{9}
-\bibcite{Selic2012}{10}
-\bibcite{Hutchinson:2011:MEP:1985793.1985882}{11}
 \bibcite{Hutchinson:2011:EAM:1985793.1985858}{12}
 \bibcite{Hettel2008}{13}
 \bibcite{Sendall}{14}
@@ -193,24 +197,27 @@
 \bibcite{Badreddin2014}{27}
 \bibcite{niaz_mapping_2004}{28}
 \bibcite{foster_combinators_2007}{29}
-\bibcite{moka}{30}
-\bibcite{boost}{31}
-\bibcite{benchmark}{32}
-\bibcite{simpleexample}{33}
-\bibcite{compositeexample}{34}
-\bibcite{Magicdraw}{35}
-\bibcite{EA}{36}
-\bibcite{Statechart}{37}
-\bibcite{Massif}{38}
-\bibcite{katz2005contemporary}{39}
-\bibcite{trafficlight}{40}
-\bibcite{farmroadexample}{41}
-\bibcite{czarnecki_multi-level_2006}{42}
-\bibcite{yu2012maintaining}{43}
-\bibcite{christensen2011towards}{44}
-\bibcite{lethbridge2010umplification}{45}
-\bibcite{mazanec2012general}{46}
-\bibcite{voelter2012mbeddr}{47}
-\bibcite{balz2009embedding}{48}
-\bibcite{Domnguez2012}{49}
-\bibcite{spinke_object-oriented_2013}{50}
+\bibcite{Xiao:2014:RMG:2671850.2671881}{30}
+\bibcite{moka}{31}
+\bibcite{boost}{32}
+\bibcite{benchmark}{33}
+\bibcite{simpleexample}{34}
+\bibcite{compositeexample}{35}
+\bibcite{Magicdraw}{36}
+\bibcite{EA}{37}
+\bibcite{Statechart}{38}
+\bibcite{Massif}{39}
+\bibcite{katz2005contemporary}{40}
+\bibcite{trafficlight}{41}
+\bibcite{farmroadexample}{42}
+\bibcite{czarnecki_multi-level_2006}{43}
+\bibcite{yu2012maintaining}{44}
+\bibcite{christensen2011towards}{45}
+\bibcite{angyal_synchronizing_2008}{46}
+\bibcite{lethbridge2010umplification}{47}
+\bibcite{mazanec2012general}{48}
+\bibcite{voelter2012mbeddr}{49}
+\bibcite{Maro:2015:IGT:2814251.2814253}{50}
+\bibcite{balz2009embedding}{51}
+\bibcite{Domnguez2012}{52}
+\bibcite{spinke_object-oriented_2013}{53}

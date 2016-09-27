@@ -19,10 +19,22 @@ Furthermore, instead of using the \ttt{Behavior} UML meta-element, we introduce 
 %The user-code is then printed in the generated code.
 %\begin{definition}A UML vertex $v \in V$ has a kind $v.kind \in$  \ti{\{initial, final, state, comp, conc, join, fork, choice, junction, enpoint, expoint, history\}}. 
 %\end{definition} 
+%\begin{definition} 
+A transition connects two vertexes.%, \ttt{source} and \ttt{target}. 
+%The source and target vertexes of an edge ed are obtained by $src(t)$ and $tgt(t)$. 
+It can have a $guard$, an $effect$, and is triggered by a set of events. 
+%We write $events(t)$ as the associated set of events. 
+A transition 
+%has a type $t.type$ $\in \{trig, tless, gdless, triggdless\}$ and a 
+is either \ttt{external}, \ttt{local}, or \ttt{internal}. %whose semantics is defined by the specification.
+%\end{definition}
+UML defines five event types. 
+%Fig. \ref{fig:eventmetamodel} shows the meta-model of the event types.
+The description of the events is briefly stated as the following.
+
 
 %\begin{definition}A region $r \in \mathcal{R}$ is composed of one or several vertexes, and contained by a state $s$. We write $owner(r) = s$ and $vertices(r)$ is its sub-vertices set. 
 %\end{definition}	
-
 \begin{comment} 
 	A vertex is either a UML state or a pseudo-state. 
 	A state can be either \ttt{simple}, \ttt{composite}, or \ttt{orthogonal/concurrent}. 
@@ -33,7 +45,6 @@ Furthermore, instead of using the \ttt{Behavior} UML meta-element, we introduce 
 	%A vertex is a pseudo state if it is not a state.
 	A connection point is a vertex, whose kind $\in \{enpoint, expoint\}$, and contained by a composite/concurrent state.%A concurrent state contains more than one region.
 \end{comment}		
-
 %A vertex \ttt{v} is either contained by a region, which is in turn contained by a state or a state machine, or a state if it is a \ttt{connection point}, \ttt{v} is called a sub-vertex of the state or state machine.
 
 
@@ -42,15 +53,6 @@ Furthermore, instead of using the \ttt{Behavior} UML meta-element, we introduce 
 %\begin{definition} An action $act$ $\in$ $ActLang$ is a set of statements written in an object-oriented programming language $ActLang$. A guard is a boolean expression written in $ActLang$.
 %\end{definition}
 
-%\begin{definition} 
-	A transition connects two vertexes.%, \ttt{source} and \ttt{target}. 
-	%The source and target vertexes of an edge ed are obtained by $src(t)$ and $tgt(t)$. 
-	It can have a $guard$, an $effect$, and is triggered by a set of events. 
-	%We write $events(t)$ as the associated set of events. 
-	A transition 
-	%has a type $t.type$ $\in \{trig, tless, gdless, triggdless\}$ and a 
-	is either \ttt{external}, \ttt{local}, or \ttt{internal}. %whose semantics is defined by the specification.
-%\end{definition}
 
 \begin{figure}
 	\centering
@@ -59,9 +61,7 @@ Furthermore, instead of using the \ttt{Behavior} UML meta-element, we introduce 
 	\label{fig:smmetamodel}
 \end{figure}
 
-UML defines five event types. 
-%Fig. \ref{fig:eventmetamodel} shows the meta-model of the event types.
-The description of the events is briefly stated as the following.
+
 
 %\begin{definition} An event is one of the followings:
 	\begin{itemize}[\footnotesize]

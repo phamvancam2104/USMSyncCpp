@@ -28,8 +28,8 @@ Partial RTE and protected regions are introduced in \cite{czarnecki_multi-level_
 The mechanisms as discussed in Section \ref{sec:intro} are used for the separation of generated and non-generated code. 
 EMF implements these techniques to allow users to embed user-code replacing the default generated code.
 Yu et al. \cite{yu2012maintaining} propose to synchronize user-code and generated code through bidirectional transformation.
-However, the mechanisms does not allow modifications in regions beyond the marked ones and thus prohibit the programmers from changing USMs' topology.
-\ttt{Deep separation} proposed in \cite{zheng2012enhancing} overcomes the limitations of the current separation mechanisms.
+This latter does not, however, allow modifications in regions beyond the marked ones and thus prohibits the programmers from changing USMs' topology.
+\ttt{Deep separation} proposed in \cite{zheng2012enhancing} overcomes the limitations of the separation mechanisms.
 However, %as the authors state that, 
 it does not allow to modify the system architecture- and behavior-prescribed code in text-based development environment.  
 %Furthermore, as discussed in Section \ref{sec:intro}, there is still a possibility for the programmers to produce accidental changes, which cannot be reflected to the model.  
@@ -38,7 +38,11 @@ it does not allow to modify the system architecture- and behavior-prescribed cod
 The underlying idea of RAOES is similar to ArchJava \cite{aldrich2002archjava}, \cite{ubayashi2010archface}, and the approach in \cite{christensen2011towards}.
 The latter utilizes Java annotations to preserve architecture intention in the source code.
 However, these approaches try to embed architectural information into the code, specifically Java, while RAOES embeds the behavior represented by USMs into C++. 
+Regarding the co-evolution of component-based model and code, the authors in \cite{langhammer2013co, kramer2015change} use a super model, from which source code and component model can be derived as views for modifications.
+However, code modifications made outside of their editor and violating their rules are not updated to the super model. The co-evolution is then broken.  
 
+The authors in \cite{angyal_synchronizing_2008} propose to synchronize code with platform specific models by using a three-way merging approaches.
+However, the approach only deals with syntactic synchronization while the code semantics such as state machine in source code is not solved.
 
 %\paragraph{Viewpoint synchronization}
 %
@@ -154,10 +158,12 @@ However, they lack the explicit support for event types definitions used in UML.
 Furthermore, these languages 
 do not allow the programmers to reuse the existing syntax of C++ but redefine it in their own language and IDE. 
 By this way, they need a new complete compiler, which requires a lot of engineering tasks to develop. 
-Contrarily, RAOES integrates the modeling features into C++ and only requires a slight compiler for the modeling features.
+Contrarily, RAOES integrates the modeling features into C++, and only requires a slight compiler for the modeling features and effortless to enable using legacy code in development.
 RAOES allows the programmers stay familiar with their C++ syntax and existing favorite IDEs while familiarity of these TMLs are also questionable in \cite{mazanec2012general}. 
-Followings list differences in comparison between RAOES and the TMLs.
+RAOES automatically synchronizes the code with the system model specified by UML.
+%Followings list differences in comparison between RAOES and the TMLs.
 
+\begin{comment}
 \begin{itemize}[\footnotesize]
 	\item RAOES adapts USM features to existing programming languages while Umple or TextUML does inversely, hence RAOES profits all benefices of IDEs such as intelligent completion and easy to implement. Furthermore, RAOES allows to use all specific C++ features such as function pointers for program efficiency, which are not available in the the TMLs.
 	
@@ -169,13 +175,18 @@ Followings list differences in comparison between RAOES and the TMLs.
 	
 	\item RAOES defines the state machine topology separately from the transition table and event definition.
 \end{itemize}
+\end{comment}
 
 
-\ti{mbeddr} \cite{voelter2012mbeddr} proposes an extensible C-based programming language to support high-level abstractions for embedded system implementation.
+\ti{mbeddr} \cite{voelter2012mbeddr} proposes an extensible C-based programming language.
 The idea of \ti{mbeddr} is similar to Umple's by introducing a new editor to mix high-level and low-level code for effective embedded system development. 
 Furthermore, \ti{mbeddr} is a code-centric approach and UML event types are not explicitly supported whereas RAOES is a model-code hybrid approach focusing on the collaboration between software architects and programmers and the evolution of artifacts.  
 
 %FXU \cite{Pilitowski2007} is the most complete tool but generated code is heavily dependent on their own library and C\# is generated.
+
+In \cite{Maro:2015:IGT:2814251.2814253}, the authors propose to integrate graphical and textual editors for UML profiles.
+The goal is to allow developers to work graphically and textually, which is similar to our goal.
+However, this approach is dependent on Eclipse technologies and embeds all modeling concepts to textual editors while RAOES only introduces partially to allow programmers to be familiar with the syntax of their favorite programming language.
 
 In \cite{balz2009embedding}, the authors embeds behavior models into Java by representing, for example, states as classes, transitions as annotations, guards as methods.
 Although the programmers can modify the code following these patterns, the code size is large because of class explosion.
