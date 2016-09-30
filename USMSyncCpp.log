@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.1)  27 SEP 2016 17:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.1)  30 SEP 2016 15:55
 entering extended mode
 **USMSyncCpp.tex
 (USMSyncCpp.tex
@@ -1289,7 +1289,7 @@ File: figures/modelchange.pdf Graphic file (type pdf)
 
 <use figures/modelchange.pdf>
 Package pdftex.def Info: figures/modelchange.pdf used on input line 122.
-(pdftex.def)             Requested size: 252.0pt x 126.1391pt.
+(pdftex.def)             Requested size: 252.0pt x 100.65646pt.
  [6 <./figures/architecture.pdf> <./figures/scenario3_seq.pdf
 
 pdfTeX warning: pdflatex.exe (file ./figures/scenario3_seq.pdf): PDF inclusion:
@@ -1347,11 +1347,8 @@ File: figures/highwayopenalternatives.pdf Graphic file (type pdf)
 Package pdftex.def Info: figures/highwayopenalternatives.pdf used on input line
  52.
 (pdftex.def)             Requested size: 252.0pt x 121.83408pt.
-) (sections/relatedwork.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [9 <./figures/casestudystatemachine.pdf> <./figures/highwayopenalternatives.pd
-f>])
+) (sections/relatedwork.tex [9 <./figures/casestudystatemachine.pdf> <./figures
+/highwayopenalternatives.pdf>])
 (sections/conclusion.tex) (USMSyncCpp.bbl
 ** WARNING: IEEEtran.bst: No hyphenation pattern has been
 ** loaded for the language `en'. Using the pattern for
@@ -1410,7 +1407,7 @@ Before submitting the final camera ready copy, remember to:
 Here is how much of TeX's memory you used:
  28073 strings out of 493673
  555455 string characters out of 3144029
- 787416 words of memory out of 3000000
+ 785416 words of memory out of 3000000
  30905 multiletter control sequences out of 15000+200000
  128489 words of font info for 138 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
@@ -1425,7 +1422,7 @@ helvetic/uhvr8a.pfb><C:/Users/VP242103/Downloads/fonts/type1/urw/times/utmb8a.p
 fb><C:/Users/VP242103/Downloads/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/VP2
 42103/Downloads/fonts/type1/urw/times/utmr8a.pfb><C:/Users/VP242103/Downloads/f
 onts/type1/urw/times/utmri8a.pfb>
-Output written on USMSyncCpp.pdf (11 pages, 1898723 bytes).
+Output written on USMSyncCpp.pdf (11 pages, 1898799 bytes).
 PDF statistics:
  1779 PDF objects out of 2073 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
