@@ -8,16 +8,20 @@ RAOES introduces a C++ front-end code lying between models and actual executable
 RAOES proposes a framework for synchronizing the models and the front-end code, and generating executable code from the front-end.
 RAOES is implemented as an extension of the Papyrus modeling tool.
 
-We evaluated RAOES by conducting experiments on the round-trip engineering correctness, the semantic-conformance and efficiency of generated code.
+We evaluated RAOES by conducting experiments on the round-trip engineering correctness, the semantic-conformance and efficiency of generated code, and by implementing a case study simulation of a Traffic Light Controller.
 300 random models are tested for the RTE correctness.
-The conformance is tested under PSSM that 62/66 tests passed.
-For efficiency of code, RAOES produces code that runs faster in event processing time and is smaller in executable size than those of other approaches (in the paper scope).
+The conformance is tested under PSSM: 62/66 tests pass.
+The efficiency of back-end code has been evaluated, RAOES produces code that runs faster in event processing time and is smaller in executable size than those of other approaches (in the paper's scope).
+
+Although RAOES does not deal with extraction of information from existing/legacy code, the latter can still be reused by RAOES in two ways: (1) reverse engineering from the legacy code to a model, which can be manipulated further by architects, or (2) directly integrating the legacy code by programmers into front-end code. 
+Furthermore, RAOES allows to work abstractly by using models and in a low-level way by using front-end code concurrently and simultaneously. Hence, RAOES is effective in software development, evolution, collaboration, and maintenance by using our synchronization process.
+
 
 For the moment, RAOES supports the co-evolution of UML class and state machine diagrams and code.
 In the future, we will integrate component-based concepts into C++ to make the front-end more powerful and effective.
 Our wish is to embed component-connector and interaction component information represented in UML composite structure diagrams into C++ to elaborate the application range such as distributed embedded systems.
-
-However, code produced by PSM consumes slightly more memory than the others.
-Furthermore, some PSSM tests are failed.
-Therefore, as a future work, we will fix these issues by making multi-thread part of generated code more concise.  
+A possible direction to this integration is to extend \ttt{nesc} \cite{gay2003nesc} - an extension of the C language dedicated component-based development of networked applications.
+%However, code produced by PSM consumes slightly more memory than the others.
+%Furthermore, some PSSM tests are failed.
+%Therefore, as a future work, we will fix these issues by making multi-thread part of generated code more concise.  
  

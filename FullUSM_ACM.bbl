@@ -1,0 +1,125 @@
+\begin{thebibliography}{10}
+
+\bibitem{EUML}
+{State} {Machine} {Benchmark}.
+
+\bibitem{aldrich2002archjava}
+J.~Aldrich, C.~Chambers, and D.~Notkin.
+\newblock Archjava: connecting software architecture to implementation.
+\newblock In {\em Software Engineering, 2002. ICSE 2002. Proceedings of the
+  24rd International Conference on}, pages 187--197. IEEE, 2002.
+
+\bibitem{Douglass1999}
+B.~P. Douglass.
+\newblock {\em {Real-time UML : developing efficient objects for embedded
+  systems}}.
+\newblock 1999.
+
+\bibitem{Dunkels:2006:PSE:1182807.1182811}
+A.~Dunkels, O.~Schmidt, T.~Voigt, and M.~Ali.
+\newblock Protothreads: Simplifying event-driven programming of
+  memory-constrained embedded systems.
+\newblock In {\em Proceedings of the 4th International Conference on Embedded
+  Networked Sensor Systems}, SenSys '06, pages 29--42, New York, NY, USA, 2006.
+  ACM.
+
+\bibitem{gay2003nesc}
+D.~Gay, P.~Levis, R.~Von~Behren, M.~Welsh, E.~Brewer, and D.~Culler.
+\newblock The nesc language: A holistic approach to networked embedded systems.
+\newblock In {\em Acm Sigplan Notices}, volume~38, pages 1--11. ACM, 2003.
+
+\bibitem{Hettel2008}
+T.~Hettel, M.~Lawley, and K.~Raymond.
+\newblock {Model synchronisation: Definitions for round-trip engineering}.
+\newblock In {\em Lecture Notes in Computer Science (including subseries
+  Lecture Notes in Artificial Intelligence and Lecture Notes in
+  Bioinformatics)}, volume 5063 LNCS, pages 31--45, 2008.
+
+\bibitem{Hutchinson:2011:MEP:1985793.1985882}
+J.~Hutchinson, M.~Rouncefield, and J.~Whittle.
+\newblock Model-driven engineering practices in industry.
+\newblock In {\em Proceedings of the 33rd International Conference on Software
+  Engineering}, ICSE '11, pages 633--642, New York, NY, USA, 2011. ACM.
+
+\bibitem{Hutchinson:2011:EAM:1985793.1985858}
+J.~Hutchinson, J.~Whittle, M.~Rouncefield, and S.~Kristoffersen.
+\newblock Empirical assessment of mde in industry.
+\newblock In {\em Proceedings of the 33rd International Conference on Software
+  Engineering}, ICSE '11, pages 471--480, New York, NY, USA, 2011. ACM.
+
+\bibitem{ibm_rhapsody}
+IBM.
+\newblock Ibm {Rhapsody}.
+
+\bibitem{kent2002model}
+S.~Kent.
+\newblock Model driven engineering.
+\newblock In {\em International Conference on Integrated Formal Methods}, pages
+  286--298. Springer, 2002.
+
+\bibitem{kramer2015change}
+M.~E. Kramer, M.~Langhammer, D.~Messinger, S.~Seifermann, and E.~Burger.
+\newblock Change-driven consistency for component code, architectural models,
+  and contracts.
+\newblock In {\em Proceedings of the 18th International ACM SIGSOFT Symposium
+  on Component-Based Software Engineering}, pages 21--26. ACM, 2015.
+
+\bibitem{langhammer2013co}
+M.~Langhammer.
+\newblock Co-evolution of component-based architecture-model and
+  object-oriented source code.
+\newblock In {\em Proceedings of the 18th international doctoral symposium on
+  Components and architecture}, pages 37--42. ACM, 2013.
+
+\bibitem{MSM}
+MSM.
+\newblock {Meta} {State} {Machine}.
+\newblock
+  \url{http://www.boost.org/doc/libs/1_59_0_b1/libs/msm/doc/HTML/index.html},
+  2016.
+\newblock [Online; accessed 04-July-2016].
+
+\bibitem{possepapyrusrt}
+E.~Posse.
+\newblock Papyrusrt: Modelling and code generation.
+
+\bibitem{Selic2012}
+B.~Selic.
+\newblock What will it take? a view on adoption of model-based methods in
+  practice.
+\newblock {\em Software {\&} Systems Modeling}, 11(4):513--526, 2012.
+
+\bibitem{Sendall}
+S.~Sendall and J.~K\"{u}ster.
+\newblock {Taming Model Round-Trip Engineering}.
+
+\bibitem{Shalyto2006}
+A.~Shalyto and N.~Shamgunov.
+\newblock {State machine design pattern}.
+\newblock {\em Proc. of the 4th International Conference on.NET Technologies},
+  2006.
+
+\bibitem{sparxsystems_enterprise_2014}
+SparxSystems.
+\newblock Enterprise {Architect}, Sept. 2016.
+
+\bibitem{steinberg2008emf}
+D.~Steinberg, F.~Budinsky, E.~Merks, and M.~Paternostro.
+\newblock {\em EMF: eclipse modeling framework}.
+\newblock Pearson Education, 2008.
+
+\bibitem{ubayashi2010archface}
+N.~Ubayashi, J.~Nomura, and T.~Tamai.
+\newblock Archface: a contract place where architectural design and code meet
+  together.
+\newblock In {\em Proceedings of the 32nd ACM/IEEE International Conference on
+  Software Engineering-Volume 1}, pages 75--84. ACM, 2010.
+
+\bibitem{zheng2012enhancing}
+Y.~Zheng and R.~N. Taylor.
+\newblock Enhancing architecture-implementation conformance with change
+  management and support for behavioral mapping.
+\newblock In {\em Proceedings of the 34th International Conference on Software
+  Engineering}, pages 628--638. IEEE Press, 2012.
+
+\end{thebibliography}

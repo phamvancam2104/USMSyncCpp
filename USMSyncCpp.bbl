@@ -39,13 +39,6 @@ S.~Kent, ``Model driven engineering,'' in \emph{International Conference on
 \bibitem{possepapyrusrt}
 E.~Posse, ``Papyrusrt: Modelling and code generation.''
 
-\bibitem{Booch1998}
-\BIBentryALTinterwordspacing
-G.~Booch, J.~Rumbaugh, and I.~Jacobson, \emph{{The Unified Modeling Language
-  User Guide}}, 1998, vol.~3. [Online]. Available:
-  \url{http://portal.acm.org/citation.cfm?id=1088874}
-\BIBentrySTDinterwordspacing
-
 \bibitem{Douglass1999}
 B.~P. Douglass, \emph{{Real-time UML : developing efficient objects for
   embedded systems}}, 1999.
@@ -59,18 +52,6 @@ A.~Shalyto and N.~Shamgunov, ``{State machine design pattern},'' \emph{Proc. of
 IBM, ``\BIBforeignlanguage{en}{Ibm {Rhapsody}}.'' [Online]. Available:
   \url{http://www.ibm.com/developerworks/downloads/r/rhapsodydeveloper/}
 \BIBentrySTDinterwordspacing
-
-\bibitem{sinelabore}
-\BIBentryALTinterwordspacing
-{SinelaboreRT}, ``{Sinelabore} {Manual},''
-  \url{http://www.sinelabore.com/lib/exe/fetch.php?media=wiki:downloads:sinelaborert.pdf}.
-  [Online]. Available:
-  \url{http://www.sinelabore.com/lib/exe/fetch.php?media=wiki:downloads:sinelaborert.pdf}
-\BIBentrySTDinterwordspacing
-
-\bibitem{qm}
-QM, ``Qm,'' \url{http://www.state-machine.com/qm/}, 2016, [Online; accessed
-  14-May-2016].
 
 \bibitem{Selic2012}
 B.~Selic, ``What will it take? a view on adoption of model-based methods in
@@ -163,10 +144,45 @@ H.~Giese and R.~Wagner, ``{Incremental Model Synchronization with Triple Graph
   Grammars},'' in \emph{Proceedings of the 9th international conference on
   Model Driven Engineering Languages and Systems}, Genova, Italy, 2006.
 
+\bibitem{walkinshaw2007reverse}
+N.~Walkinshaw, K.~Bogdanov, M.~Holcombe, and S.~Salahuddin, ``Reverse
+  engineering state machines by interactive grammar inference,'' in \emph{14th
+  Working Conference on Reverse Engineering (WCRE 2007)}.\hskip 1em plus 0.5em
+  minus 0.4em\relax IEEE, 2007, pp. 209--218.
+
+\bibitem{hall2010superstate}
+M.~Hall, P.~McMinn, and N.~Walkinshaw, ``Superstate identification for state
+  machines using search-based clustering,'' in \emph{Proceedings of the 12th
+  annual conference on Genetic and evolutionary computation}.\hskip 1em plus
+  0.5em minus 0.4em\relax ACM, 2010, pp. 1381--1388.
+
+\bibitem{DBLP:conf/kbse/AbadiF12}
+\BIBentryALTinterwordspacing
+M.~Abadi and Y.~A. Feldman, ``Automatic recovery of statecharts from procedural
+  code,'' in \emph{{IEEE/ACM} International Conference on Automated Software
+  Engineering, ASE'12, Essen, Germany, September 3-7, 2012}, 2012, pp.
+  238--241. [Online]. Available:
+  \url{http://doi.acm.org/10.1145/2351676.2351711}
+\BIBentrySTDinterwordspacing
+
+\bibitem{lethbridge2010umplification}
+T.~C. Lethbridge, A.~Forward, and O.~Badreddin, ``Umplification: Refactoring to
+  incrementally add abstraction to a program,'' in \emph{2010 17th Working
+  Conference on Reverse Engineering}.\hskip 1em plus 0.5em minus 0.4em\relax
+  IEEE, 2010, pp. 220--224.
+
+\bibitem{thingml}
+``Thingml,'' \url{http://thingml.org/}.
+
+\bibitem{qm}
+QM, ``Qm,'' \url{http://www.state-machine.com/qm/}, 2016, [Online; accessed
+  14-May-2016].
+
 \bibitem{_papyrus/designer/code-generation_????}
 \BIBentryALTinterwordspacing
-``Papyrus/{Designer}/code-generation - {Eclipsepedia}.'' [Online]. Available:
-  \url{http://wiki.eclipse.org/Papyrus/Designer/code-generation}
+``Papyrus/{Designer}/code-generation - {Eclipsepedia},''
+  \url{http://wiki.eclipse.org/Papyrus/Designer/code-generation}. [Online].
+  Available: \url{http://wiki.eclipse.org/Papyrus/Designer/code-generation}
 \BIBentrySTDinterwordspacing
 
 \bibitem{Badreddin2014}
@@ -188,16 +204,6 @@ J.~N. Foster, M.~B. Greenwald, J.~T. Moore, B.~C. Pierce, and A.~Schmitt,
   {Approach} to the {View}-update {Problem},'' \emph{ACM Trans. Program. Lang.
   Syst.}, vol.~29, no.~3, May 2007.
 
-\bibitem{Xiao:2014:RMG:2671850.2671881}
-\BIBentryALTinterwordspacing
-H.~Xiao, Z.~Tian, M.~Zhiyi, and S.~Weizhong, ``Randomized model generation for
-  performance testing of model transformations,'' in \emph{Proceedings of the
-  2014 IEEE 38th Annual Computer Software and Applications Conference}, ser.
-  COMPSAC '14.\hskip 1em plus 0.5em minus 0.4em\relax Washington, DC, USA: IEEE
-  Computer Society, 2014, pp. 11--20. [Online]. Available:
-  \url{http://dx.doi.org/10.1109/COMPSAC.2014.103}
-\BIBentrySTDinterwordspacing
-
 \bibitem{moka}
 \BIBentryALTinterwordspacing
 ``Moka {Model} {Execution}.'' [Online]. Available:
@@ -213,16 +219,6 @@ boost, ``{Boost} {C++},'' \url{http://www.boost.org/}, 2016, [Online; accessed
 ``{State} {Machine} {Benchmark}.'' [Online]. Available:
   \url{http://boost-experimental.github.io/msm-lite/benchmarks/index.html}
 \BIBentrySTDinterwordspacing
-
-\bibitem{simpleexample}
-{Boost}, ``{Simple} {CDPlayer} {Example},''
-  \url{http://www.boost.org/doc/libs/1_45_0/libs/msm/doc/HTML/ch03s02.html#d0e424},
-  2016, [Online; accessed 14-May-2016].
-
-\bibitem{compositeexample}
-------, ``{Composite} {CDPlayer} {Example},''
-  \url{http://www.boost.org/doc/libs/1_45_0/libs/msm/doc/HTML/ch03s02.html#d0e554},
-  2016, [Online; accessed 14-May-2016].
 
 \bibitem{Magicdraw}
 N.~{Magic}, ``{Magic} {Draw},''
@@ -245,6 +241,11 @@ B.~{Library}, ``{The} {Boost} {Statechart} {Library},''
   \url{http://valgrind.org/docs/manual/ms-manual.html}
 \BIBentrySTDinterwordspacing
 
+\bibitem{nethercote2007valgrind}
+N.~Nethercote and J.~Seward, ``Valgrind: a framework for heavyweight dynamic
+  binary instrumentation,'' in \emph{ACM Sigplan notices}, vol.~42,
+  no.~6.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2007, pp. 89--100.
+
 \bibitem{katz2005contemporary}
 R.~H. Katz and G.~Borriello, ``Contemporary logic design,'' 2005.
 
@@ -254,8 +255,9 @@ R.~H. Katz and G.~Borriello, ``Contemporary logic design,'' 2005.
 
 \bibitem{farmroadexample}
 \BIBentryALTinterwordspacing
-``{Farmroad} {Example}.'' [Online]. Available:
-  \url{http://yasmine.seadex.de/The_classic_farmroad_example.html}
+``{Farmroad} {Example},''
+  \url{http://yasmine.seadex.de/The_classic_farmroad_example.html}. [Online].
+  Available: \url{http://yasmine.seadex.de/The_classic_farmroad_example.html}
 \BIBentrySTDinterwordspacing
 
 \bibitem{czarnecki_multi-level_2006}
@@ -283,11 +285,8 @@ L.~Angyal, L.~Lengyel, and H.~Charaf, ``A {Synchronizing} {Technique} for
   {Annual} {IEEE} {International} {Conference} and {Workshop} on the}, Mar.
   2008, pp. 463--472.
 
-\bibitem{lethbridge2010umplification}
-T.~C. Lethbridge, A.~Forward, and O.~Badreddin, ``Umplification: Refactoring to
-  incrementally add abstraction to a program,'' in \emph{2010 17th Working
-  Conference on Reverse Engineering}.\hskip 1em plus 0.5em minus 0.4em\relax
-  IEEE, 2010, pp. 220--224.
+\bibitem{plantuml}
+``Plantuml,'' \url{http://plantuml.com/}.
 
 \bibitem{mazanec2012general}
 M.~Mazanec and O.~Macek, ``On general-purpose textual modeling
@@ -315,6 +314,14 @@ S.~Maro, J.-P. Stegh\"{o}fer, A.~Anjorin, M.~Tichy, and L.~Gelin, ``On
 M.~Balz, M.~Striewe, and M.~Goedicke, ``Embedding behavioral models into
   object-oriented source code.''
 
+\bibitem{sinelabore}
+\BIBentryALTinterwordspacing
+{SinelaboreRT}, ``{Sinelabore} {Manual},''
+  \url{http://www.sinelabore.com/lib/exe/fetch.php?media=wiki:downloads:sinelaborert.pdf}.
+  [Online]. Available:
+  \url{http://www.sinelabore.com/lib/exe/fetch.php?media=wiki:downloads:sinelaborert.pdf}
+\BIBentrySTDinterwordspacing
+
 \bibitem{Domnguez2012}
 E.~Dom\'{i}nguez, B.~P\'{e}rez, A.~L. Rubio, and M.~A. Zapata, ``{A systematic
   review of code generation proposals from state machine specifications},'' pp.
@@ -324,5 +331,11 @@ E.~Dom\'{i}nguez, B.~P\'{e}rez, A.~L. Rubio, and M.~A. Zapata, ``{A systematic
 V.~Spinke, ``An object-oriented implementation of concurrent and hierarchical
   state machines,'' \emph{Information and Software Technology}, vol.~55,
   no.~10, pp. 1726--1740, Oct. 2013.
+
+\bibitem{gay2003nesc}
+D.~Gay, P.~Levis, R.~Von~Behren, M.~Welsh, E.~Brewer, and D.~Culler, ``The nesc
+  language: A holistic approach to networked embedded systems,'' in \emph{Acm
+  Sigplan Notices}, vol.~38, no.~5.\hskip 1em plus 0.5em minus 0.4em\relax ACM,
+  2003, pp. 1--11.
 
 \end{thebibliography}

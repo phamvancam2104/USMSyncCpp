@@ -9,18 +9,18 @@ This section reminds the background definitions of UML State Machine (see \ref{s
 %\end{definition}
 
 %This section presents the background of UML State Machine whose meta-model is shown in
- Fig. \ref{fig:smmetamodel} shows the meta-model of UML State Machine whose detailed semantics is clearly defined in the UML specification \cite{OMG2015} and beyond the scope of this paper.
+ Fig. \ref{fig:smmetamodel} shows the meta-model of UML State Machine whose detailed semantics is clearly defined in the Precise Semantics for UML State Machine specification \cite{OMG2015} and beyond the scope of this paper.
 %Fig. \ref{fig:smmetamodel} shows the state machine meta-model used in this paper.
-The metamodel covers full concepts defined by UML State Machine and adapts some features dedicated to our development method.
-Specifically, the behavior of an \ttt{ActiveClass} is described by a state machine\footnote{%It is possible to have multiple state machines in the same active class. However, 
+This meta-model covers all concepts defined by UML State Machine.
+The behavior of an \ttt{ActiveClass} is described by a state machine\footnote{%It is possible to have multiple state machines in the same active class. However, 
 	For simplification, this paper assumes that an active class only holds a USM although it can have more}.
-Furthermore, instead of using the \ttt{Behavior} UML meta-element, we introduce \ttt{Action} to define actions of state and transition, which actually are user-code.
-\ttt{Action} is convenient in many modeling tools such as IBM Rhapsody and Enterprise Architect to allow the developers to write the low level code (user-code) directly at the model level.
+%Furthermore, instead of using the \ttt{Behavior} UML meta-element, we introduce \ttt{Action} to define actions of state and transition, which actually are user-code.
+%\ttt{Action} is convenient in many modeling tools such as IBM Rhapsody and Enterprise Architect to allow the developers to write the low level code (user-code) directly at the model level.
 %The user-code is then printed in the generated code.
 %\begin{definition}A UML vertex $v \in V$ has a kind $v.kind \in$  \ti{\{initial, final, state, comp, conc, join, fork, choice, junction, enpoint, expoint, history\}}. 
 %\end{definition} 
 %\begin{definition} 
-A transition connects two vertexes.%, \ttt{source} and \ttt{target}. 
+A transition connects two vertexes. %, \ttt{source} and \ttt{target}. 
 %The source and target vertexes of an edge ed are obtained by $src(t)$ and $tgt(t)$. 
 It can have a $guard$, an $effect$, and is triggered by a set of events. 
 %We write $events(t)$ as the associated set of events. 
@@ -66,11 +66,11 @@ The description of the events is briefly stated as the following.
 %\begin{definition} An event is one of the followings:
 	\begin{itemize}[\footnotesize]
 		\item A \ttt{TimeEvent} specifies the time of occurrence \ttt{dur} relative to a starting time. 
-		The latter is specified when a state, which accepts the time event, is entered.
+		The latter is specified as the time when a state, which accepts the time event, is entered.
 		
 		\item A \ttt{SignalEvent} is associated with a signal \ttt{sig}, whose data are described by its attributes, and occurs if \ttt{sig} is received by a component, which is an active UML class.
 		
-		\item A \ttt{ChangeEvent} is associated with a boolean expression \ttt{expr} written in C++. \ttt{ChangeEvent} is emitted if \ttt{expr} changes from true (false) to false (true).
+		\item A \ttt{ChangeEvent} is associated with a boolean expression \ttt{expr}. \ttt{ChangeEvent} is emitted if the value of \ttt{expr} changes from false to true.
 		
 		\item A \ttt{CallEvent} is associated with an operation \ttt{op}. 
 		\ttt{CallEvent} is emitted if there is an invocation to \ttt{op}.

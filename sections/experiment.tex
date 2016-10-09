@@ -5,7 +5,7 @@ In order to evaluate RAOES, we conducted experiments focusing on different aspec
 Our research questions are as followings:
 \begin{description}[\footnotesize]
 	\item[\tb{RQ1}] %A state machine \ttt{sm} is used for generating the front-end code. The latter is reversed engineered to produce another state machine \ttt{sm'}. Are \ttt{sm} and \ttt{sm'} identical? In other words: 
-	Whether the front-end code generated from a model with USMs can be used for reconstructing the original model. This question is related to the \ti{GETPUT} law defined in \cite{foster_combinators_2007}.
+	Can the front-end code generated from a model with USMs can be used for reconstructing the original model. This question is related to the \ti{GETPUT} law defined in \cite{foster_combinators_2007}.
 	
 	\item[\tb{RQ2}] The back-end code is used for compilation. 
 	Does the runtime execution of the back-end code is semantic-conformant to Precise Semantics for UML State Machines (PSSM)? 
@@ -68,9 +68,9 @@ The \ttt{C++ back-end} is semantics-conformant if \ttt{Trace 1} and \ttt{Trace 2
 PSSM test suite consists of 66 test cases totally for dedicated to different elements.
 %Table \ref{table:semantic-test} shows the test results for each state machine concept provided by PSSM. 
 The results are promising that RAOES passes 62/66 tests including: behavior (5/6), choice (3/3), deferred events (6/6), entering (5/5), exiting (4/5), entry(5/5), exit (3/3), event (9/9), final state (1/1), fork (2/2), join (2/2), transition (11/14), terminate (3/3), others (2/2).  
-In fact, RAOES fails with some wired tests such as transitions from an \ttt{enpoint} to an \ttt{expoint}. 
+In fact, RAOES fails with some wired tests such as transitions from an \ttt{entry point} to an \ttt{exit point}. 
 This is, as our observation, never used in practice. 
-Furthermore, as the UML specification says that transitions outgoing from an \ttt{enpoint} of a composite state should end on one of the sub-vertexes.
+Furthermore, as the UML specification says that transitions outgoing from an \ttt{entry point} of a composite state should end on one of the sub-vertexes.
 
 However, this evaluation methodology has a limitations that it is dependent on PSSM.
 Currently, PSSM is not fully defined.
@@ -111,15 +111,11 @@ Thus, our evaluation result is limited to the current specification of PSSM.
 \label{subsec:exp3}
 In this section, we present the results obtained through the experiments on some efficiency aspects of back-end code to answer \tb{RQ3}. 
 %Specifically, our research question related to memory consumption and runtime performance of generated code is stated as the following. 
-
 %\noindent
 %\tb{RQ3:} \ti{}
-
-
-
 %\noindent
 %\tb{Experimental dataset:} 
-Two state machine examples are obtained by the preferred benchmark used by the Boost C++ libraries \cite{boost} in \cite{benchmark}. One simple example \cite{simpleexample} only consists of atomic states and the other \cite{compositeexample} both atomic and composite states. 
+Two state machine examples are obtained by the preferred benchmark used by the Boost C++ libraries \cite{boost} in \cite{benchmark}. One simple example only consists of atomic states and the other both atomic and composite states. 
 
 Code generation tools such as Sinelabore (which efficiently generates code for Magic Draw \cite{Magicdraw}, Enterprise Architect \cite{EA}) and QM \cite{qm}
 %, which generate code from state machines
@@ -127,9 +123,8 @@ Code generation tools such as Sinelabore (which efficiently generates code for M
 %The tools are Sinelabore, which efficiently generates code from UML State Machines created by various modeling tools such as Magic Draw \cite{Magicdraw}, Enterprise Architect \cite{EA}, and QM \cite{QM}. 
 %C++ libraries are Boost Statechart \cite{Statechart}, Meta State Machine (MSM) \cite{MSM}, MSM-Lite \cite{MSMLite}, and EUML \cite{euml}.
 
-\noindent
-\tb{Experimental procedures:} We use a Ubuntu virtual machine 64 bit (RAM, memory, Ghz??) hosted by a Windows 7 machine. 
-For each tool and library, we created two applications corresponding to the two examples, generated C++ code and compiled it two modes: normal (N), by default GCC compiler, and optimal (O) with options -O2 -s. 
+We used a Ubuntu virtual machine 64 bit hosted by a Windows 7 machine. 
+For each tool and library, we created two applications corresponding to the two examples, generated C++ code and compiled it in two modes: normal (N), by default GCC compiler; and optimal (O) with GCC optimization options -O2 -s. 
 11 millions of events are generated and processed by the simple example and more than 4 millions for the composite example. 
 %More than 4 millions of events are processed by the composite example. 
 Processing time is measured for each case. 
@@ -138,16 +133,18 @@ Processing time is measured for each case.
 Fig. \ref{fig:boxplot} shows the event processing performance of the approaches.
 %Table \ref{table-speed} shows the median of event processing time. 
 In the normal compilation mode (N), Boost Statechart, MSM, MSMLite, EUML are quite slow and not displayed in the box-plot. 
-Only Sinelabore and QM are performantly comparable with our approach. 
-The table also shows that the optimization of GCC is significant. 
-MSM and MSMLite run faster than Sinelabore and QM.   
+%Only Sinelabore and QM are performantly comparable with our approach. 
+The figure also shows that the optimization of GCC is significant.  
 %Boxplots in Fig. \ref{fig:boxplotsimple} and \ref{fig:boxplotcomposite} compare the performance of these approaches to that of our approach for the two examples, respectively. 
 %In both of the simple and composite examples, 
 
-Our approach processes faster around 40 milliseconds than the fastest approach within the scope of the experiment.
-It is seen that, even without GCC optimizations, code generated by our approach significantly runs faster than that of EUML and QM with the optimizations. 
-When compiled with the optimizations, our approach improves the event processing speed. 
-Even, in case of composite, our approach does not produce any slowness compared to the simple example. 
+%Our approach processes faster around 40 milliseconds than the fastest approach within the scope of the experiment.
+%Even without GCC optimizations, code generated by our approach significantly runs faster than that of EUML and QM with the optimizations. 
+%When compiled with the optimizations, our approach improves the event processing speed. 
+In both of the simple and composite benchmarks, in optimization mode MSMLite and RAOES run faster than the others in the scope of the experiment.
+However, in normal mode only the performance of Sinelabore, QM, and RAOES is acceptable. 
+The event processing speed of MSM, MSM\_Lite and EUML is too slow without GCC optimizations. 
+%Even, in case of composite, our approach does not produce any slowness compared to the simple example. 
 
 
 % Please add the following required packages to your document preamble:
@@ -217,21 +214,21 @@ Even, in case of composite, our approach does not produce any slowness compared 
 
 \begin{figure}
 	\centering
-	\includegraphics[clip, trim=2.8cm 18.0cm 1.7cm 2.5cm, width=\columnwidth]{experiments/box-plot-mine.pdf}
-	\caption{Event processing speed for the benchmark} 
+	\includegraphics[clip, trim=2.1cm 16.0cm 1.7cm 2.5cm, width=\columnwidth]{experiments/box-plot-mine.pdf}
+	\caption{Event processing speed for the benchmarks} 
 	\label{fig:boxplot}
 \end{figure}
 
 \subsubsection{Binary size and runtime memory consumption} 
 Table \ref{table-size} shows the executable size for the examples compiled in two modes.
-It is seen that, in GCC normal mode, Sinelabore generates the smallest executable size while our approach takes the second place.
-When using the GCC optimization options, QM and our approach require less static memory than others. 
+In GCC normal mode, Sinelabore generates the smallest executable size while our approach takes the second place.
+In GCC optimization mode, MSMLite, Sinelabore and our approach require less static memory than the others. 
 
-Considering runtime memory consumption, we use the Valgrind Massif profiler\cite{Massif} to measure memory usage. 
-Table \ref{table:usage} shows the measurements for the composite example. 
-Compared to others, code generated by our approach requires a slight overhead runtime memory usage (1KB).
+Considering runtime memory consumption, we use the Valgrind Massif profiler \cite{Massif,nethercote2007valgrind} to measure memory usage. 
+Table \ref{table:usage} shows the memory consumption measurements including stack and heap usage for the composite example. 
+Compared to others, code generated by our approach requires a slight overhead runtime memory usage (0.35KB).
 This is predictable since the major part of the overhead is used for C++ multi-threading using POSIX Threads and resource control using POSIX Mutex and Condition. 
-However, the overhead is small and acceptable (1KB). 
+However, the overhead is small and acceptable (0.35KB). 
 
 
 \begin{comment}
@@ -249,6 +246,8 @@ However, the overhead is small and acceptable (1KB).
 \end{table*}
 \end{comment}
 
+
+%ToDo: test speed with dispatch function
 \begin{table*}[]
 	\centering
 	\caption{Executable size in Kb}
@@ -257,7 +256,7 @@ However, the overhead is small and acceptable (1KB).
 		\hline
 		\multirow{2}{*}{Test} & \multicolumn{2}{c|}{SC} & \multicolumn{2}{c|}{MSM} & \multicolumn{2}{c|}{MSM-Lite} & \multicolumn{2}{c|}{EUML} & \multicolumn{2}{c|}{Sinelabore} & \multicolumn{2}{c|}{QM} & \multicolumn{2}{c|}{RAOES} \\ \cline{2-15} 
 		& N           & O         & N           & O          & N              & O            & N            & O          & N              & O              & N          & O          & N           & O          \\ \hline
-		Simple                & 320         & 63,9      & 414,6       & 22,9       & 107,3          & 10,6         & 2339         & 67,9       & 16,5           & 10,6           & 22,6       & 10,5       & 21,5        & 10,6       \\ \hline
+		Simple                & 320         & 63,9      & 414,6       & 22,9       & 107,3          & 10,6         & 2339         & 67,9       & 16,5           & 10,6           & 22,6       & 16,6       & 21,5        & 10,6       \\ \hline
 		Composite             & 435,8       & 84,4      & 837,4       & 31,1       & 159,2          & 10,9         & 4304,8       & 92,5       & 16,6           & 10,6           & 23,4       & 21,5       & 21,6        & 10,6       \\ \hline
 	\end{tabular}
 \end{table*}
@@ -271,7 +270,7 @@ However, the overhead is small and acceptable (1KB).
 	\begin{tabular}{|l|l|l|l|l|l|l|l|l|}
 		\hline
 		Test      & (1)    & (2)  & (3) & (4) & \begin{tabular}[c]{@{}l@{}}(5)\end{tabular} & (6)    & \begin{tabular}[c]{@{}l@{}}(7)\end{tabular} \\ \hline
-		Composite & 76.03 & 75.5 & 75.8  & 75.5 & 75.8                                                  & 75.7      & 76.5                                                   \\ \hline
+		Composite & 76.03 & 75.5 & 75.8  & 75.5 & 75.8                                                  & 75.7      & 76.38                                                   \\ \hline
 	\end{tabular}
 \end{table}
 

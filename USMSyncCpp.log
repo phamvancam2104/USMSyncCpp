@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.1)  30 SEP 2016 15:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.1)  7 OCT 2016 14:57
 entering extended mode
 **USMSyncCpp.tex
 (USMSyncCpp.tex
@@ -1206,46 +1206,20 @@ File: figures/smmetamodel.pdf Graphic file (type pdf)
 <use figures/smmetamodel.pdf>
 Package pdftex.def Info: figures/smmetamodel.pdf used on input line 59.
 (pdftex.def)             Requested size: 252.0pt x 136.41547pt.
- (sections/rtebackground.tex))
-(sections/motivation.tex
+
+Underfull \hbox (badness 2781) in paragraph at lines 73--74
+[]\T1/ptm/m/n/8 A \T1/ptm/m/it/8 ChangeEvent \T1/ptm/m/n/8 is as-so-ci-ated wit
+h a boolean ex-pres-sion \T1/ptm/m/it/8 expr\T1/ptm/m/n/8 .
+ []
+
+(sections/rtebackground.tex)) (sections/motivation.tex
 <figures/illustration.pdf, id=15, 963.6pt x 542.025pt>
 File: figures/illustration.pdf Graphic file (type pdf)
 
 <use figures/illustration.pdf>
 Package pdftex.def Info: figures/illustration.pdf used on input line 12.
-(pdftex.def)             Requested size: 252.0pt x 135.17197pt.
-
-<figures/highlight.pdf, id=17, 963.6pt x 542.025pt>
-File: figures/highlight.pdf Graphic file (type pdf)
-
-<use figures/highlight.pdf>
-Package pdftex.def Info: figures/highlight.pdf used on input line 37.
-(pdftex.def)             Requested size: 262.07831pt x 207.40097pt.
-
-Overfull \hbox (10.07831pt too wide) in paragraph at lines 37--38
- [][] 
- []
-
-[2 <./figures/smmetamodel.pdf>]) (sections/overview.tex
-<figures/frontend.pdf, id=55, 963.6pt x 542.025pt>
-File: figures/frontend.pdf Graphic file (type pdf)
- <use figures/frontend.pdf>
-Package pdftex.def Info: figures/frontend.pdf used on input line 11.
-(pdftex.def)             Requested size: 252.0pt x 96.07826pt.
-
-[3 <./figures/illustration.pdf> <./figures/highlight.pdf> <./figures/frontend.p
-df>] <figures/frontendoverview.pdf, id=104, 963.6pt x 542.025pt>
-File: figures/frontendoverview.pdf Graphic file (type pdf)
-
-<use figures/frontendoverview.pdf>
-Package pdftex.def Info: figures/frontendoverview.pdf used on input line 40.
-(pdftex.def)             Requested size: 272.16046pt x 179.72665pt.
-
-Overfull \hbox (20.16046pt too wide) in paragraph at lines 40--41
- [][] 
- []
-
-) (sections/syntax.tex [4 <./figures/frontendoverview.pdf>]
+(pdftex.def)             Requested size: 252.0pt x 69.81857pt.
+ [2 <./figures/smmetamodel.pdf>]
 (C:\Users\VP242103\Downloads\tex\latex\listings\lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
@@ -1254,54 +1228,64 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 (C:\Users\VP242103\Downloads\tex\latex\listings\lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-))
-Overfull \hbox (22.60077pt too wide) in paragraph at lines 189--194
+)
+(code/generated1.cpp) (code/generated2.cpp)) (sections/overview.tex
+<figures/frontend.pdf, id=53, 963.6pt x 542.025pt>
+File: figures/frontend.pdf Graphic file (type pdf)
+ <use figures/frontend.pdf>
+Package pdftex.def Info: figures/frontend.pdf used on input line 11.
+(pdftex.def)             Requested size: 252.0pt x 96.07826pt.
+
+[3 <./figures/illustration.pdf> <./figures/frontend.pdf>] (code/front-end1.cpp)
+(code/front-end2.cpp)) (sections/syntax.tex [4])
+Overfull \hbox (22.60077pt too wide) in paragraph at lines 187--194
 []$[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 189--194
+Underfull \hbox (badness 10000) in paragraph at lines 187--194
 
  []
 
 (sections/synchronization.tex
-<figures/scenario3_seq.pdf, id=126, 654.44273pt x 420.76974pt>
+<figures/scenario3_seq.pdf, id=89, 654.44273pt x 420.76974pt>
 File: figures/scenario3_seq.pdf Graphic file (type pdf)
 
 <use figures/scenario3_seq.pdf>
 Package pdftex.def Info: figures/scenario3_seq.pdf used on input line 48.
 (pdftex.def)             Requested size: 252.0pt x 162.01932pt.
+ [5]
 LaTeX Font Info:    Try loading font information for T1+pcr on input line 61.
 
 (C:\Users\VP242103\Downloads\tex\latex\psnfss\t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 ))
-(sections/implementation.tex [5]
-<figures/architecture.pdf, id=131, 963.6pt x 542.025pt>
+(sections/implementation.tex
+<figures/architecture.pdf, id=93, 963.6pt x 542.025pt>
 File: figures/architecture.pdf Graphic file (type pdf)
 
 <use figures/architecture.pdf>
 Package pdftex.def Info: figures/architecture.pdf used on input line 13.
 (pdftex.def)             Requested size: 252.0pt x 23.20265pt.
 
-<figures/modelchange.pdf, id=133, 963.6pt x 542.025pt>
+<figures/modelchange.pdf, id=95, 963.6pt x 542.025pt>
 File: figures/modelchange.pdf Graphic file (type pdf)
 
 <use figures/modelchange.pdf>
-Package pdftex.def Info: figures/modelchange.pdf used on input line 122.
+Package pdftex.def Info: figures/modelchange.pdf used on input line 123.
 (pdftex.def)             Requested size: 252.0pt x 100.65646pt.
  [6 <./figures/architecture.pdf> <./figures/scenario3_seq.pdf
 
 pdfTeX warning: pdflatex.exe (file ./figures/scenario3_seq.pdf): PDF inclusion:
  multiple pdfs with page group included in a single page
->] <figures/s2stransformation.pdf, id=1616, 963.6pt x 542.025pt>
+>] <figures/s2stransformation.pdf, id=1579, 963.6pt x 542.025pt>
 File: figures/s2stransformation.pdf Graphic file (type pdf)
 
 <use figures/s2stransformation.pdf>
-Package pdftex.def Info: figures/s2stransformation.pdf used on input line 161.
+Package pdftex.def Info: figures/s2stransformation.pdf used on input line 162.
 (pdftex.def)             Requested size: 252.0pt x 31.98395pt.
 ) (sections/experiment.tex
-<figures/rq1-2evaluation.pdf, id=1618, 963.6pt x 542.025pt>
+<figures/rq1-2evaluation.pdf, id=1581, 963.6pt x 542.025pt>
 File: figures/rq1-2evaluation.pdf Graphic file (type pdf)
 
 <use figures/rq1-2evaluation.pdf>
@@ -1309,86 +1293,79 @@ Package pdftex.def Info: figures/rq1-2evaluation.pdf used on input line 24.
 (pdftex.def)             Requested size: 252.0pt x 73.53307pt.
  (sections/reverseexpr.tex) [7 <./figures/modelchange.pdf> <./figures/s2stransf
 ormation.pdf> <./figures/rq1-2evaluation.pdf>] <experiments/box-plot-mine.pdf, 
-id=1661, 614.295pt x 794.97pt>
+id=1624, 614.295pt x 794.97pt>
 File: experiments/box-plot-mine.pdf Graphic file (type pdf)
 
 <use experiments/box-plot-mine.pdf>
-Package pdftex.def Info: experiments/box-plot-mine.pdf used on input line 220.
-(pdftex.def)             Requested size: 252.0pt x 109.7072pt.
+Package pdftex.def Info: experiments/box-plot-mine.pdf used on input line 217.
+(pdftex.def)             Requested size: 252.0pt x 133.71881pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 252.
+               Default added (so using `tbp') on input line 251.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 267.
+               Default added (so using `tbp') on input line 266.
 
 ) (sections/casestudy.tex
-<figures/casestudy.pdf, id=1663, 963.6pt x 542.025pt>
+<figures/casestudy.pdf, id=1626, 963.6pt x 542.025pt>
 File: figures/casestudy.pdf Graphic file (type pdf)
 
 <use figures/casestudy.pdf>
 Package pdftex.def Info: figures/casestudy.pdf used on input line 11.
 (pdftex.def)             Requested size: 252.0pt x 53.51688pt.
 
-<figures/casestudystatemachine.pdf, id=1665, 963.6pt x 542.025pt>
+<figures/casestudystatemachine.pdf, id=1628, 963.6pt x 542.025pt>
 File: figures/casestudystatemachine.pdf Graphic file (type pdf)
 
 <use figures/casestudystatemachine.pdf>
 Package pdftex.def Info: figures/casestudystatemachine.pdf used on input line 3
 2.
-(pdftex.def)             Requested size: 252.0pt x 58.11087pt.
+(pdftex.def)             Requested size: 252.0pt x 59.41692pt.
  [8 <./experiments/box-plot-mine.pdf> <./figures/casestudy.pdf>]
-<figures/highwayopenalternatives.pdf, id=1709, 963.6pt x 542.025pt>
+<figures/highwayopenalternatives.pdf, id=1666, 963.6pt x 542.025pt>
 File: figures/highwayopenalternatives.pdf Graphic file (type pdf)
 
 <use figures/highwayopenalternatives.pdf>
 Package pdftex.def Info: figures/highwayopenalternatives.pdf used on input line
  52.
-(pdftex.def)             Requested size: 252.0pt x 121.83408pt.
+(pdftex.def)             Requested size: 252.0pt x 120.6744pt.
 ) (sections/relatedwork.tex [9 <./figures/casestudystatemachine.pdf> <./figures
 /highwayopenalternatives.pdf>])
 (sections/conclusion.tex) (USMSyncCpp.bbl
 ** WARNING: IEEEtran.bst: No hyphenation pattern has been
 ** loaded for the language `en'. Using the pattern for
 ** the default language instead.
-
-Underfull \hbox (badness 2027) in paragraph at lines 65--70
-[]\T1/ptm/m/n/8 SinelaboreRT, ``Sinela-bore Man-ual,'' $http : / / www . sinela
-bore .$
- []
-
-
-Underfull \hbox (badness 1910) in paragraph at lines 65--70
-$\T1/ptm/m/n/8 com / lib / exe / fetch . php ? media = wiki : downloads : sinel
-aborert . pdf$. [On-
- []
-
+** WARNING: IEEEtran.bst: No hyphenation pattern has been
+** loaded for the language `en'. Using the pattern for
+** the default language instead.
 
 Package balance Warning: You have called \balance in second column
 (balance)                Columns might not be balanced.
 
 [10]
-** WARNING: IEEEtran.bst: No hyphenation pattern has been
-** loaded for the language `en'. Using the pattern for
-** the default language instead.
-
-Underfull \hbox (badness 1831) in paragraph at lines 218--221
-$\T1/ptm/m/n/8 45 _ 0 / libs / msm / doc / HTML / ch03s02 . html # d0e424$, 201
-6, [On-line; ac-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 228--231
+Underfull \hbox (badness 10000) in paragraph at lines 224--227
 []\T1/ptm/m/n/8 N. Magic, ``Magic Draw,'' $https : / / www . nomagic . com / pr
 oducts /$
  []
 
 
-Underfull \hbox (badness 1824) in paragraph at lines 233--236
+Underfull \hbox (badness 1824) in paragraph at lines 229--232
 []\T1/ptm/m/n/8 SparxSysemx, ``En-ter-prise Ar-chi-tect,'' $http : / / www . sp
 arxsystems . com /$
+ []
+
+
+Underfull \hbox (badness 2027) in paragraph at lines 319--324
+[]\T1/ptm/m/n/8 SinelaboreRT, ``Sinela-bore Man-ual,'' $http : / / www . sinela
+bore .$
+ []
+
+
+Underfull \hbox (badness 1910) in paragraph at lines 319--324
+$\T1/ptm/m/n/8 com / lib / exe / fetch . php ? media = wiki : downloads : sinel
+aborert . pdf$. [On-
  []
 
 )
@@ -1403,15 +1380,19 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
+
+Overfull \vbox (1.05794pt too high) has occurred while \output is active []
+
+
 [11] (USMSyncCpp.aux) ) 
 Here is how much of TeX's memory you used:
- 28073 strings out of 493673
- 555455 string characters out of 3144029
- 785416 words of memory out of 3000000
- 30905 multiletter control sequences out of 15000+200000
+ 28204 strings out of 493673
+ 556739 string characters out of 3144029
+ 846608 words of memory out of 3000000
+ 31024 multiletter control sequences out of 15000+200000
  128489 words of font info for 138 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 54i,16n,85p,10423b,1193s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 54i,16n,85p,10423b,1141s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/VP242103/Downloads/fonts/enc/dvips/fontname/8r
 .enc}<C:/Users/VP242103/Downloads/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:
 /Users/VP242103/Downloads/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/VP
@@ -1422,9 +1403,9 @@ helvetic/uhvr8a.pfb><C:/Users/VP242103/Downloads/fonts/type1/urw/times/utmb8a.p
 fb><C:/Users/VP242103/Downloads/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/VP2
 42103/Downloads/fonts/type1/urw/times/utmr8a.pfb><C:/Users/VP242103/Downloads/f
 onts/type1/urw/times/utmri8a.pfb>
-Output written on USMSyncCpp.pdf (11 pages, 1898799 bytes).
+Output written on USMSyncCpp.pdf (11 pages, 1484091 bytes).
 PDF statistics:
- 1779 PDF objects out of 2073 (max. 8388607)
+ 1734 PDF objects out of 2073 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 161 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 139 words of extra memory for PDF output out of 10000 (max. 10000000)
 

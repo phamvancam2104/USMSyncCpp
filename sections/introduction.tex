@@ -16,7 +16,7 @@
 %Event-driven architecture is used for . 
 UML state machines (USMs) and their visual representations are efficient to describe, analyze and implement high level logic behaviors of event-driven %architecture for designing memory-constrained 
 embedded systems \cite{Dunkels:2006:PSE:1182807.1182811}. 
-A number of code generation approaches and industrial tools have been proposed in the context of Model-Driven Engineering (MDE) \cite{kent2002model} to automate the process of translating USMs into implementation \cite{possepapyrusrt, Booch1998, Douglass1999,Shalyto2006,Douglass1999, ibm_rhapsody, sinelabore, qm}.  
+A number of code generation approaches and industrial tools have been proposed in the context of Model-Driven Engineering (MDE) \cite{kent2002model} to automate the process of translating USMs into implementation \cite{possepapyrusrt, Douglass1999,Shalyto2006, ibm_rhapsody}.  
 
 Ideally, a full model-centric approach is preferred by MDE community due to its advantages \cite{Selic2012}. 
 However, in industrial practice, there is significant reticence \cite{Hutchinson:2011:MEP:1985793.1985882} to adopt it.
@@ -24,7 +24,7 @@ On one hand, programmers prefer to
 use the more familiar programming language. 
 On the other hand, software architects, working at higher levels
 of abstraction, favor the use of models, and therefore
-prefer graphical languages for describing the system architecture high level logic behavior \cite{Hutchinson:2011:MEP:1985793.1985882,Hutchinson:2011:EAM:1985793.1985858}.
+prefer graphical languages for describing the system architecture and the high level logic behavior \cite{Hutchinson:2011:MEP:1985793.1985882,Hutchinson:2011:EAM:1985793.1985858}.
 
 %The surveys described in \cite{Hutchinson:2011:MEP:1985793.1985882} and \cite{Hutchinson:2011:EAM:1985793.12985858} polled MDE practitioners. 
 %It notes that 70\% of the respondents primarily work with models, but still require manually-written code to be integrated.
@@ -47,8 +47,8 @@ Some approaches such as \cite{langhammer2013co, kramer2015change} allow the co-e
 
 The \ti{behavior} RTE is usually supported very limitedly. 
 This is because there is no trivial mapping from behavior model such as USM and code.
-Consequently, it is very difficult to reflect behavior code changes to the original model.
-Approaches for the \ti{behavior} RTE often allow programmers to partially modify behavioral code in limited areas by separating the \ttt{generated} and \ttt{non-generated code} \cite{ibm_rhapsody,steinberg2008emf} using some specialized comments such as \ttt{@generated NOT}.
+Consequently, it is difficult to reflect behavior code changes to the original model.
+Some approaches support a partial behavior RTE, which often allows programmers to partially modify behavioral code in limited areas by separating the \ttt{generated} and \ttt{non-generated code} \cite{ibm_rhapsody,steinberg2008emf} using some specialized comments such as \ttt{@generated NOT}.
 Approaches and tools in this category use an incremental code generation, which preserves the user-code changes in the areas marked as non-generated.
 However, "\ti{current separation mechanisms require the programmers are highly discipline.
 Furthermore, even so, accidental changes are still possible}" \cite{zheng2012enhancing}.
@@ -57,11 +57,11 @@ Furthermore, even so, accidental changes are still possible}" \cite{zheng2012enh
 In this paper, we tackle the problem of synchronization between model, which includes both structural and behavioral elements, and \ttt{C++} code, which meets resource-constrained requirements for developing event-driven embedded systems.
 Specifically, the system architecture is specified via UML class diagrams and the behavior via USMs.
 Component and composite structure diagrams for architecture description will be included in future work.
-To support the architects and the programmers at the modeling and programming level, respectively, equivalently, our goal is to allow the synchronization of USMs with full features and code.
-The latter should be efficient (small in size and fast in event processing speed) to be fit into resource-constrained systems. 
+To support the architects and the programmers at the modeling and programming level, respectively, our goal is to allow the synchronization of code and USMs with full features.
+Generated code should be efficient (small in size and fast in event processing speed) to be fit into resource-constrained systems. 
 
-Our proposed technique \tf{RAOES} is inspired by \ttt{ArchJava} \cite{aldrich2002archjava} and \ttt{Archface} \cite{ubayashi2010archface} whose goal is to allow the co-evolution of architecture and implementation in Java by introducing additional constructs to Java.
-Our approach adds USM-based constructs to connect C++ to the USMs.
+Our proposed technique \tf{RAOES} - Round-trip engineering for Active Objects-based Embedded System is inspired by \ttt{ArchJava} \cite{aldrich2002archjava} and \ttt{Archface} \cite{ubayashi2010archface} whose goal is to allow the co-evolution of architecture and implementation in Java by introducing additional constructs to Java.
+Our approach adds USM-based constructs to C++ in order to connect it to USMs.
 Instead of directly generating C++ code from models as the existing tools, RAOES produces a C++ front-end code, which contains our added constructs.
 The programmers are free to modify not only the high level logic behavior described by USMs but also the user code by making changes to the C++ front-end code.
 
@@ -96,7 +96,7 @@ Furthermore, using our strategy defined in this paper, the front-end code is als
 
 To sum up, our contribution is as followings:
 \begin{itemize}
-	\item RAOES: A round-trip engineering approach for developing event-driven systems using UML State Machines and C++.
+	\item RAOES: A full round-trip engineering approach for developing event-driven systems using UML State Machines and C++.
 	\item The implementation of RAOES based on the Eclipse Modeling Framework (EMF) and the Papyrus tool.
 	\item Experimental evaluations by experimenting with RAOES and a case study simulation.
 	%\begin{itemize}

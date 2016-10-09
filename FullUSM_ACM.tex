@@ -24,11 +24,13 @@
 \definecolor{LightGray}{gray}{0.95}
 \definecolor{Gray}{gray}{0.85}
 
-
-%\usepackage{enumitem}
+\usepackage{alltt}
+\usepackage{enumitem}
 
 \newcommand{\ti}{\textit}
 \newcommand{\tb}{\textbf}
+\newcommand{\tf}{\textsf}
+\newcommand{\ttt}{\textit}
 
 
 %\let\oldbibliography\thebibliography
@@ -178,25 +180,44 @@ Anonymous Authors\\
 % We no longer use \terms command
 %\terms{Theory}
 
-\keywords{Round-trip engineering, Model-driven engineering, Model code co-evolution, UML, C++, Eclipse Modeling Tools}
+%\keywords{Round-trip engineering, Model-driven engineering, Model code co-evolution, UML, C++, Eclipse Modeling Tools}
 
 
 
 
+
+
+%\input{sections/abstract}
 
 \input{sections/introduction}
 
+\input{sections/background}
+
+\input{sections/motivation}
+
+%\input{sections/motivationtlc}
+
+\input{sections/overview}
+
+\input{sections/syntax}
+
 %\input{sections/example}
 
-\input{sections/formalizerevised}
+\input{sections/synchronization}
 
-\input{sections/concurrency}
+%\input{sections/codegentex}
 
-\input{sections/codegentex}
+\input{sections/implementation}
 
 \input{sections/experiment}
 
+\input{sections/casestudy}
+
+%\input{sections/evaluationplan}
+
 \input{sections/relatedwork}
+
+%\input{sections/discussion}
 
 \input{sections/conclusion}
 %\input{sections/ack}

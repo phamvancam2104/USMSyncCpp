@@ -6,28 +6,26 @@ It consists of three parts: topology, event definition, and transition table.
 The followings describe the details of these parts.
 \subsection{Topology}
 A topology describes how the hierarchy of a USM is organized.
-As the example in Fig. \ref{fig:frontend-overview}, the root of the topology is define by \ttt{state\_machine}.
+As the example in Listing \ref{lst:front-end1}, the root of the topology is define by \ttt{state\_machine}.
 Other elements such as \ttt{region}, \ttt{state}, and \ttt{pseudo state} are defined as sub-elements.
 The followings give the syntax of some elements and the semantics of RAOES mapped to the well-defined semantics in the UML specification \cite{OMG2015}.
 
 \subsubsection{State and regions} ~\\
 \tb{Syntax:}
 \begin{itemize}[\footnotesize]
-\item \textit{state machine} $\rightarrow$ \tf{'state\_machine('name') \{vertices\};'} 
+\item \ti{state machine} $\rightarrow$ \tf{'state\_machine('name') \{vertices\};'} 
 
-\item \ti{state} $\rightarrow$ \tf{'state ('name, ent, ex');'} 
+\item \ti{state} $\rightarrow$ \tf{'state ('name, ent, ex, doAct');'} 
 
-\item \ti{state} $\rightarrow$ \tf{'initial\_state ('name, ent, ex, effect');'}
+\item \ti{state} $\rightarrow$ \tf{'initial\_state ('name, ent, ex, doAct, effect');'}
 
-\item \ti{concurrent state} $\rightarrow$ \tf{'state ('name, ent, ex') \{' regions '\};'} 
+\item \ti{concurrent state} $\rightarrow$ \tf{'state ('name, ent, ex, doAct') \{' regions '\};'} 
 
 \item \ti{regions} $\rightarrow$ \tf{region; regions}
 
 \item \ti{region} $\rightarrow$ \tf{'region (' name ') {' vertices '};'}
 
 \item \ti{deferred event} $\rightarrow$ \tf{'defer(' eventId ');'}
-
-\item \ti{event queue size} $\rightarrow$ \tf{'configuration('}
 \end{itemize}
 
 \noindent
@@ -35,7 +33,7 @@ The followings give the syntax of some elements and the semantics of RAOES mappe
 \begin{itemize}[\footnotesize]
 	\item \ttt{name}: the unique identifier of a state machine, a state or a region.
 	
-	\item \ttt{ent/ex}: The name of the entry/exit action method associated with the state. 
+	\item \ttt{ent/ex/doAct}: The name of the entry/exit/doActivity action method associated with the state. 
 	These methods are implemented in the active class and have no parameter.
 	If a state does not have an entry/exit action, \ttt{ent/ex} becomes \ttt{NULL}.
 	
@@ -53,16 +51,16 @@ The followings give the syntax of some elements and the semantics of RAOES mappe
 
 \noindent
 \tb{Example:}
-Lines 2-10 in Fig. \ref{fig:frontend-overview} (a) represents the state \ttt{S1} of the USM example in Fig. \ref{fig:illustration} (a) and its vertices.
-\ttt{S1} is defined as the initial state of the USM, and has \ttt{entry} and \ttt{exit} actions bound to the methods \ttt{S1\_entry} (lines 26-28) and \ttt{S1\_exit} (not shown) implemented in the active class.
-The direct \ttt{S11} and indirect \ttt{S111} sub-state are defined hierarchically (lines 5-7) with the associated actions.
+Lines 2-23 in Listing \ref{lst:front-end1} (a) represents the USM example in Fig. \ref{fig:illustration} (a) and its vertices.
+\ttt{S11} is defined as the initial state of the USM, and has \ttt{entry} and \ttt{exit} actions bound to the methods \ttt{S11\_entry} (lines 21-23) and \ttt{S11\_exit} (not shown) implemented in the active class \ttt{System}.
+Similarly, the state \ttt{S2} and its sub-vertexes such as \ttt{Enp1}, \ttt{h1}, and \ttt{S21} are defined hierarchically (lines 6-8) with the associated actions.
 
 \subsubsection{Pseudo state} ~\\
 \tb{Syntax:}
 \begin{itemize}[\footnotesize]
-\item \ti{enpoint} $\rightarrow$ \tf{'entry\_point ('name');'} 
+\item \ti{entry point} $\rightarrow$ \tf{'entry\_point ('name');'} 
 
-\item \ti{expoint} $\rightarrow$ \tf{'exit\_point ('name');'}
+\item \ti{exit point} $\rightarrow$ \tf{'exit\_point ('name');'}
 
 \item \ti{initial} $\rightarrow$ \tf{'initial ('name');'}
 
@@ -84,7 +82,7 @@ The direct \ttt{S11} and indirect \ttt{S111} sub-state are defined hierarchicall
 \noindent
 \tb{Example:}
 
-\ttt{exit\_point(ex1);} and \ttt{shallow\_history(h1);} in Fig. \ref{fig:frontend-overview} represent a connection exit point and a shallow history with their respective name.  
+\ttt{entry\_point(Enp1);} and \ttt{shallow\_history(h1);} in Listing \ref{lst:front-end1} represent an entry point and a shallow history with their respective name.  
 
 \subsection{Events}
 \label{subsec:events}
@@ -179,11 +177,11 @@ As previously defined, there are three kinds of transitions: \ttt{external}, \tt
 \begin{itemize}[\footnotesize]
 \item \ttt{transition(S1,S2,guard1,CE1,effect1)}: A transition from \ttt{S1} to \ttt{S2} which is fired if there is an appeal to the method \ttt{method1} and the value of \ttt{guard1} is true.
 \ttt{method1} is associated with the \ttt{CallEvent CE1} as the example above.
-Furthermore, an action \ttt{effect1} is executed during the transition fire.
+Furthermore, an action \ttt{effect1} is executed when the transition fires.
 Listing \ref{lst:effect-segment} shows how to write \ttt{effect1} (lines 4-6) corresponding to the signature of \ttt{method1} (line 1-3) following the above semantics.
 
-\item \ttt{transition(S11,S2,NULL,SE,effect2)}: A transition, triggered by the signal event \ttt{SE}, and executes an effect \ttt{effect2}.
-\ttt{effect2} in Listing \ref{lst:effect-segment} has a parameter typed by the signal \ttt{Sig} associated with the event \ttt{SE}.
+\item \ttt{transition(S11,S2,NULL,SE,effect2)}: A transition, triggered by the signal event \ttt{SE}, executing \ttt{effect2}.
+\ttt{effect2} in Listing \ref{lst:effect-segment} has a parameter typed by signal \ttt{Sig} associated with the event \ttt{SE}.
 \end{itemize}
 
 \begin{minipage}{1.05\columnwidth}
