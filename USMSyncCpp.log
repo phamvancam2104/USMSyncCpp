@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.1)  10 OCT 2016 18:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.1)  11 OCT 2016 18:50
 entering extended mode
 **USMSyncCpp.tex
 (USMSyncCpp.tex
@@ -1099,7 +1099,23 @@ Package: alltt 1997/06/16 v2.0g defines alltt environment
 )
 (C:\Users\VP242103\Downloads\tex\latex\listings\lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
-) (USMSyncCpp.aux)
+) (USMSyncCpp.aux
+
+LaTeX Warning: Label `lst:front-end2' multiply defined.
+
+
+LaTeX Warning: Label `lst:front-end2' multiply defined.
+
+
+LaTeX Warning: Label `lst:front-end2' multiply defined.
+
+
+LaTeX Warning: Label `lst:front-end2' multiply defined.
+
+
+LaTeX Warning: Label `lst:front-end2' multiply defined.
+
+)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 175.
 LaTeX Font Info:    ... okay on input line 175.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 175.
@@ -1115,8 +1131,7 @@ LaTeX Font Info:    ... okay on input line 175.
 LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 175.
 LaTeX Font Info:    Try loading font information for OT4+cmr on input line 175.
 
-
-(C:\Users\VP242103\Downloads\tex\latex\polski\ot4cmr.fd
+ (C:\Users\VP242103\Downloads\tex\latex\polski\ot4cmr.fd
 File: ot4cmr.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
 LaTeX Font Info:    ... okay on input line 175.
@@ -1185,23 +1200,263 @@ LaTeX Font Info:    Try loading font information for T1+phv on input line 63.
 
 (C:\Users\VP242103\Downloads\tex\latex\psnfss\t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
-)
-! I can't write on file `USMSyncCpp.pdf'.
-Please type another file name for output
-! Emergency stop.
-\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
-                                                  
-l.71 
-     
-*** (job aborted, file error in nonstop mode)
+) [1{C:/Users/VP242103/Downloads/pdftex/config/pdftex.map}
 
- 
+
+]
+LaTeX Font Info:    Try loading font information for U+msa on input line 99.
+
+(C:\Users\VP242103\Downloads\tex\latex\amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 99.
+
+(C:\Users\VP242103\Downloads\tex\latex\amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+))
+(sections/background.tex
+<figures/smmetamodel.pdf, id=13, 532.99126pt x 339.2675pt>
+File: figures/smmetamodel.pdf Graphic file (type pdf)
+
+<use figures/smmetamodel.pdf>
+Package pdftex.def Info: figures/smmetamodel.pdf used on input line 59.
+(pdftex.def)             Requested size: 252.0pt x 136.41547pt.
+
+Underfull \hbox (badness 2781) in paragraph at lines 73--74
+[]\T1/ptm/m/n/8 A \T1/ptm/m/it/8 ChangeEvent \T1/ptm/m/n/8 is as-so-ci-ated wit
+h a boolean ex-pres-sion \T1/ptm/m/it/8 expr\T1/ptm/m/n/8 .
+ []
+
+(sections/rtebackground.tex)) (sections/motivation.tex
+<figures/illustration.pdf, id=15, 963.6pt x 542.025pt>
+File: figures/illustration.pdf Graphic file (type pdf)
+
+<use figures/illustration.pdf>
+Package pdftex.def Info: figures/illustration.pdf used on input line 12.
+(pdftex.def)             Requested size: 252.0pt x 69.81857pt.
+ [2 <./figures/smmetamodel.pdf>]
+(C:\Users\VP242103\Downloads\tex\latex\listings\lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+(C:\Users\VP242103\Downloads\tex\latex\listings\lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+(C:\Users\VP242103\Downloads\tex\latex\listings\lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+)
+(code/generated1.cpp) (code/generated2.cpp)) (sections/overview.tex
+<figures/frontend.pdf, id=53, 963.6pt x 542.025pt>
+File: figures/frontend.pdf Graphic file (type pdf)
+ <use figures/frontend.pdf>
+Package pdftex.def Info: figures/frontend.pdf used on input line 11.
+(pdftex.def)             Requested size: 252.0pt x 96.07826pt.
+
+[3 <./figures/illustration.pdf> <./figures/frontend.pdf>] (code/front-end1.cpp)
+(code/front-end2.cpp)) (sections/cbse.tex
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 18.
+
+<figures/architectureexample.pdf, id=86, 963.6pt x 542.025pt>
+File: figures/architectureexample.pdf Graphic file (type pdf)
+
+<use figures/architectureexample.pdf>
+Package pdftex.def Info: figures/architectureexample.pdf used on input line 41.
+
+(pdftex.def)             Requested size: 252.0pt x 115.84006pt.
+ (code/browser.cpp) [4 <./figures/architectureexample.pdf>] (code/dns.cpp) (cod
+e/system.cpp) (code/multiport-frontend.cpp)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+(code/multiport-cpp.cpp
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 6.
+ (C:\Users\VP242103\Downloads\tex\latex\psnfss\omsptm.fd
+File: omsptm.fd 
+)
+
+LaTeX Font Warning: Font shape `OMS/ptm/bx/n' undefined
+(Font)              using `OMS/ptm/m/n' instead
+(Font)              for symbol `textasteriskcentered' on input line 6.
+
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <8> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 6.
+)) (sections/syntax.tex [5])
+Overfull \hbox (22.60077pt too wide) in paragraph at lines 187--196
+[]$[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 187--196
+
+ []
+
+(sections/synchronization.tex [6]
+<figures/scenario3_seq.pdf, id=107, 654.44273pt x 420.76974pt>
+File: figures/scenario3_seq.pdf Graphic file (type pdf)
+
+<use figures/scenario3_seq.pdf>
+Package pdftex.def Info: figures/scenario3_seq.pdf used on input line 48.
+(pdftex.def)             Requested size: 252.0pt x 162.01932pt.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 61.
+
+(C:\Users\VP242103\Downloads\tex\latex\psnfss\t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+))
+(sections/implementation.tex
+<figures/architecture.pdf, id=108, 963.6pt x 542.025pt>
+File: figures/architecture.pdf Graphic file (type pdf)
+
+<use figures/architecture.pdf>
+Package pdftex.def Info: figures/architecture.pdf used on input line 13.
+(pdftex.def)             Requested size: 252.0pt x 23.20265pt.
+
+<figures/modelchange.pdf, id=110, 963.6pt x 542.025pt>
+File: figures/modelchange.pdf Graphic file (type pdf)
+
+<use figures/modelchange.pdf>
+Package pdftex.def Info: figures/modelchange.pdf used on input line 123.
+(pdftex.def)             Requested size: 252.0pt x 100.65646pt.
+ [7 <./figures/architecture.pdf> <./figures/scenario3_seq.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/scenario3_seq.pdf): PDF inclusion:
+ multiple pdfs with page group included in a single page
+>] <figures/s2stransformation.pdf, id=1595, 963.6pt x 542.025pt>
+File: figures/s2stransformation.pdf Graphic file (type pdf)
+
+<use figures/s2stransformation.pdf>
+Package pdftex.def Info: figures/s2stransformation.pdf used on input line 162.
+(pdftex.def)             Requested size: 252.0pt x 31.98395pt.
+) (sections/experiment.tex
+<figures/rq1-2evaluation.pdf, id=1597, 963.6pt x 542.025pt>
+File: figures/rq1-2evaluation.pdf Graphic file (type pdf)
+
+<use figures/rq1-2evaluation.pdf>
+Package pdftex.def Info: figures/rq1-2evaluation.pdf used on input line 24.
+(pdftex.def)             Requested size: 252.0pt x 73.53307pt.
+ (sections/reverseexpr.tex) [8 <./figures/modelchange.pdf> <./figures/s2stransf
+ormation.pdf> <./figures/rq1-2evaluation.pdf>] <experiments/box-plot-mine.pdf, 
+id=1639, 614.295pt x 794.97pt>
+File: experiments/box-plot-mine.pdf Graphic file (type pdf)
+
+<use experiments/box-plot-mine.pdf>
+Package pdftex.def Info: experiments/box-plot-mine.pdf used on input line 217.
+(pdftex.def)             Requested size: 252.0pt x 133.71881pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 251.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 266.
+
+) (sections/casestudy.tex
+<figures/casestudy.pdf, id=1641, 963.6pt x 542.025pt>
+File: figures/casestudy.pdf Graphic file (type pdf)
+
+<use figures/casestudy.pdf>
+Package pdftex.def Info: figures/casestudy.pdf used on input line 11.
+(pdftex.def)             Requested size: 252.0pt x 53.51688pt.
+ [9 <./experiments/box-plot-mine.pdf> <./figures/casestudy.pdf>] <figures/cases
+tudystatemachine.pdf, id=1679, 963.6pt x 542.025pt>
+File: figures/casestudystatemachine.pdf Graphic file (type pdf)
+
+<use figures/casestudystatemachine.pdf>
+Package pdftex.def Info: figures/casestudystatemachine.pdf used on input line 3
+2.
+(pdftex.def)             Requested size: 252.0pt x 59.41692pt.
+
+<figures/highwayopenalternatives.pdf, id=1681, 963.6pt x 542.025pt>
+File: figures/highwayopenalternatives.pdf Graphic file (type pdf)
+
+<use figures/highwayopenalternatives.pdf>
+Package pdftex.def Info: figures/highwayopenalternatives.pdf used on input line
+ 52.
+(pdftex.def)             Requested size: 252.0pt x 120.6744pt.
+) (sections/relatedwork.tex [10 <./figures/casestudystatemachine.pdf> <./figure
+s/highwayopenalternatives.pdf>])
+(sections/conclusion.tex) (USMSyncCpp.bbl
+** WARNING: IEEEtran.bst: No hyphenation pattern has been
+** loaded for the language `en'. Using the pattern for
+** the default language instead.
+
+Package balance Warning: You have called \balance in second column
+(balance)                Columns might not be balanced.
+
+[11]
+** WARNING: IEEEtran.bst: No hyphenation pattern has been
+** loaded for the language `en'. Using the pattern for
+** the default language instead.
+
+Underfull \hbox (badness 10000) in paragraph at lines 224--227
+[]\T1/ptm/m/n/8 N. Magic, ``Magic Draw,'' $https : / / www . nomagic . com / pr
+oducts /$
+ []
+
+
+Underfull \hbox (badness 1824) in paragraph at lines 229--232
+[]\T1/ptm/m/n/8 SparxSysemx, ``En-ter-prise Ar-chi-tect,'' $http : / / www . sp
+arxsystems . com /$
+ []
+
+
+Underfull \hbox (badness 2027) in paragraph at lines 319--324
+[]\T1/ptm/m/n/8 SinelaboreRT, ``Sinela-bore Man-ual,'' $http : / / www . sinela
+bore .$
+ []
+
+
+Underfull \hbox (badness 1910) in paragraph at lines 319--324
+$\T1/ptm/m/n/8 com / lib / exe / fetch . php ? media = wiki : downloads : sinel
+aborert . pdf$. [On-
+ []
+
+
+Overfull \vbox (6.13403pt too high) has occurred while \output is active []
+
+
+[12])
+
+** Conference Paper **
+Before submitting the final camera ready copy, remember to:
+
+ 1. Manually equalize the lengths of two columns on the last page
+ of your paper;
+
+ 2. Ensure that any PostScript and/or PDF output post-processing
+ uses only Type 1 fonts and that every step in the generation
+ process uses the appropriate paper size.
+
+[13] (USMSyncCpp.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 27700 strings out of 493673
- 549394 string characters out of 3144029
- 750608 words of memory out of 3000000
- 30638 multiletter control sequences out of 15000+200000
- 97930 words of font info for 97 fonts, out of 3000000 for 9000
+ 28294 strings out of 493673
+ 558029 string characters out of 3144029
+ 862726 words of memory out of 3000000
+ 31092 multiletter control sequences out of 15000+200000
+ 128489 words of font info for 138 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 54i,8n,85p,10423b,275s stack positions out of 5000i,500n,10000p,200000b,50000s
-!  ==> Fatal error occurred, no output PDF file produced!
+ 54i,16n,85p,10423b,1348s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/VP242103/Downloads/fonts/enc/dvips/fontname/8r.enc}<C:/Users/VP2421
+03/Downloads/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/VP242103/Downl
+oads/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/VP242103/Downloads/font
+s/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/VP242103/Downloads/fonts/type1/p
+ublic/amsfonts/cm/cmsy8.pfb><C:/Users/VP242103/Downloads/fonts/type1/urw/courie
+r/ucrr8a.pfb><C:/Users/VP242103/Downloads/fonts/type1/urw/helvetic/uhvr8a.pfb><
+C:/Users/VP242103/Downloads/fonts/type1/urw/times/utmb8a.pfb><C:/Users/VP242103
+/Downloads/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/VP242103/Downloads/fonts
+/type1/urw/times/utmr8a.pfb><C:/Users/VP242103/Downloads/fonts/type1/urw/times/
+utmri8a.pfb>
+Output written on USMSyncCpp.pdf (13 pages, 1583498 bytes).
+PDF statistics:
+ 1753 PDF objects out of 2073 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 150 words of extra memory for PDF output out of 10000 (max. 10000000)
+
