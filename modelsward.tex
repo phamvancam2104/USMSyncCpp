@@ -1,0 +1,214 @@
+\documentclass[a4paper,twoside]{article}
+
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{calc}
+\usepackage{amssymb}
+\usepackage{amstext}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{multicol}
+\usepackage{pslatex}
+\usepackage{apalike}
+\usepackage{SCITEPRESS}     % Please add other packages that you may need BEFORE the SCITEPRESS.sty package.
+
+
+\usepackage{comment}
+
+\subfigtopskip=0pt
+\subfigcapskip=0pt
+\subfigbottomskip=0pt
+
+\usepackage{graphicx}
+% to typeset algorithms
+%\usepackage{algorithmic}
+\usepackage{algorithm}
+% to typeset code fragments
+\usepackage{listings}
+% to make an accent \k be available
+\usepackage[OT4,T1]{fontenc}
+% provides various features to facilitate writing math formulas and to improve the typographical quality of their output.
+%\usepackage[cmex10]{amsmath}
+%\interdisplaylinepenalty=2500
+% por urls typesetting and breaking
+\usepackage{url}
+% for vertical merging table cells
+\usepackage{multirow}
+
+\usepackage{filecontents}
+
+\usepackage{multicol}
+\usepackage{lipsum}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\definecolor{LightCyan}{rgb}{0.88,1,1}
+\definecolor{BluishGray}{RGB}{226,227,231}
+\definecolor{LightGray}{gray}{0.95}
+\definecolor{Gray}{gray}{0.85}
+\usepackage{algpseudocode,algorithmicx}
+\usepackage{comment}
+\newcommand*\DNA{\textsc{dna}}
+
+\usepackage{amssymb}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+
+%\parskip=0.2\baselineskip
+
+\usepackage{booktabs}% http://ctan.org/pkg/booktabs
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+
+
+
+\usepackage{amsthm}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
+\newcommand*\Let[2]{\State #1 $\gets$ #2}
+\algrenewcommand\algorithmicrequire{\textbf{Input:}}
+\algrenewcommand\algorithmicensure{\textbf{Output:}}
+\algrenewcommand\algorithmicrequire{\textbf{Input:}}
+\algrenewcommand\algorithmicensure{\textbf{Output:}}
+
+
+
+% define environments for remarks and examples
+\newtheorem{remark}{Remark}[section]
+\newtheorem{example}[remark]{Example}
+\newcommand{\ti}{\textit}
+\newcommand{\tb}{\textbf}
+\newcommand{\tf}{\textsf}
+\newcommand{\ttt}{\textit}
+\usepackage{mathtools}
+
+\usepackage{cuted}\usepackage{mathtools}
+
+\usepackage{cuted}
+\newcounter{mytempeqncnt}
+
+\usepackage{listings}
+\usepackage{fancyvrb}
+\usepackage{framed}
+\usepackage[listings,skins]{tcolorbox}
+\usepackage[skipbelow=\topskip,skipabove=\topskip]{mdframed}
+\mdfsetup{roundcorner=0}
+
+\usepackage[normalem]{ulem}
+
+\usepackage{alltt}
+
+
+%to change to spacing between floats (figures) and text
+\setlength{\textfloatsep}{2pt plus 1.0pt minus 2.0pt}
+
+
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{ %
+	backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+	basicstyle=\tiny,        % the size of the fonts that are used for the code
+	lineskip={-1.5pt},
+	breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+	breaklines=true,                 % sets automatic line breaking
+	captionpos=t,                    % sets the caption-position to bottom
+	commentstyle=\color{mygreen},    % comment style
+	deletekeywords={...},            % if you want to delete keywords from the given language
+	escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+	extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+	frame=single,	                   % adds a frame around the code
+	keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+	keywordstyle=\textbf,       % keyword style
+	language=Octave,                 % the language of the code
+	otherkeywords={*,state, shallow,history,final,transition,table,initial,machine,transition,choice,exit,point,entry...},           % if you want to add more keywords to the set
+	numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+	numbersep=5pt,                   % how far the line-numbers are from the code
+	numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+	rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+	showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+	showstringspaces=false,          % underline spaces within strings only
+	showtabs=false,                  % show tabs within strings adding particular underscores
+	stepnumber=2,                    % the step between two line-numbers. If it's 1, each line will be numbered
+	frame=none,
+	stringstyle=\color{mymauve},     % string literal style
+	tabsize=2,	                   % sets default tabsize to 2 spaces
+	title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+
+\begin{document}
+
+\title{RAOES: Round-trip Engineering for Event-Driven Embedded System Development and Evolution}
+
+\author{%\authorname{First Author Name\sup{1}, Second Author Name\sup{1} and Third Author Name\sup{2}}
+%\affiliation{\sup{1}Institute of Problem Solving, XYZ University, My Street, MyTown, MyCountry}
+%\affiliation{\sup{2}Department of Computing, Main University, MySecondTown, MyCountry}
+%\email{\{f\_author, s\_author\}@ips.xyz.edu, t\_author@dc.mu.edu}
+}
+
+\keywords{To be added}
+
+\abstract{A UML State Machine and its visualizations are efficient to model the logical behavior of event-driven embedded systems.   
+	Model Driven Engineering generates executable code from state machines. 
+	The generated code can then be modified by programmers.
+	Round-trip engineering is a technique used to propagate changes made in the code to the original model.
+	However, existing round-trip engineering tools and approaches mainly focus on structural parts of the system model such as those available from UML class diagrams.
+	This paper tackles the problem of collaboration between software architects and programmers in developing event-driven embedded systems using UML State Machine to describe the behavior.
+	We propose RAOES-a round-trip engineering and synchronization of model and code, with which the software architects and programmers can freely switch between model and code to be efficient with their preferred practice.
+	To do it, RAOES proposes to generate an intermediate representation, which acts as a bridge to connect the code to the model.
+	We implemented a prototype and conducted experiments to evaluate RAOES.}
+
+\onecolumn \maketitle \normalsize \vfill
+
+\input{sections/introduction}
+
+%\input{sections/background}
+
+\input{sections/motivation}
+
+\input{sections/overview}
+
+\input{sections/syntax}
+
+\input{sections/synchronization}
+
+%\input{sections/codegentex}
+
+\input{sections/implementation}
+
+\input{sections/experiment}
+
+%\input{sections/casestudy}
+
+%\input{sections/evaluationplan}
+
+\input{sections/relatedwork}
+
+%\input{sections/discussion}
+
+\input{sections/conclusion}
+
+\section*{\uppercase{Acknowledgements}}
+
+\noindent If any, should be placed before the references section
+without numbering. To do so please use the following command:
+\textit{$\backslash$section*\{ACKNOWLEDGEMENTS\}}
+
+
+\vfill
+\bibliographystyle{apalike}
+{\small
+\bibliography{refs}}
+
+
+\section*{\uppercase{Appendix}}
+
+\noindent If any, the appendix should appear directly after the
+references without numbering, and not on a new page. To do so please use the following command:
+\textit{$\backslash$section*\{APPENDIX\}}
+
+\vfill
+\end{document}
+

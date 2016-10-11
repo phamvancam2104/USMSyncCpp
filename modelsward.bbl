@@ -1,0 +1,99 @@
+\begin{thebibliography}{}
+
+\bibitem[EUM, ]{EUML}
+{State} {Machine} {Benchmark}.
+
+\bibitem[Aldrich et~al., 2002]{aldrich2002archjava}
+Aldrich, J., Chambers, C., and Notkin, D. (2002).
+\newblock Archjava: connecting software architecture to implementation.
+\newblock In {\em Software Engineering, 2002. ICSE 2002. Proceedings of the
+  24rd International Conference on}, pages 187--197. IEEE.
+
+\bibitem[Dunkels et~al., 2006]{Dunkels:2006:PSE:1182807.1182811}
+Dunkels, A., Schmidt, O., Voigt, T., and Ali, M. (2006).
+\newblock Protothreads: Simplifying event-driven programming of
+  memory-constrained embedded systems.
+\newblock In {\em Proceedings of the 4th International Conference on Embedded
+  Networked Sensor Systems}, SenSys '06, pages 29--42, New York, NY, USA. ACM.
+
+\bibitem[Hettel et~al., 2008]{Hettel2008}
+Hettel, T., Lawley, M., and Raymond, K. (2008).
+\newblock {Model synchronisation: Definitions for round-trip engineering}.
+\newblock In {\em Lecture Notes in Computer Science (including subseries
+  Lecture Notes in Artificial Intelligence and Lecture Notes in
+  Bioinformatics)}, volume 5063 LNCS, pages 31--45.
+
+\bibitem[Hutchinson et~al., 2011a]{Hutchinson:2011:MEP:1985793.1985882}
+Hutchinson, J., Rouncefield, M., and Whittle, J. (2011a).
+\newblock Model-driven engineering practices in industry.
+\newblock In {\em Proceedings of the 33rd International Conference on Software
+  Engineering}, ICSE '11, pages 633--642, New York, NY, USA. ACM.
+
+\bibitem[Hutchinson et~al., 2011b]{Hutchinson:2011:EAM:1985793.1985858}
+Hutchinson, J., Whittle, J., Rouncefield, M., and Kristoffersen, S. (2011b).
+\newblock Empirical assessment of mde in industry.
+\newblock In {\em Proceedings of the 33rd International Conference on Software
+  Engineering}, ICSE '11, pages 471--480, New York, NY, USA. ACM.
+
+\bibitem[IBM, ]{ibm_rhapsody}
+IBM.
+\newblock Ibm {Rhapsody}.
+
+\bibitem[Kent, 2002]{kent2002model}
+Kent, S. (2002).
+\newblock Model driven engineering.
+\newblock In {\em International Conference on Integrated Formal Methods}, pages
+  286--298. Springer.
+
+\bibitem[Langhammer, 2013]{langhammer2013co}
+Langhammer, M. (2013).
+\newblock Co-evolution of component-based architecture-model and
+  object-oriented source code.
+\newblock In {\em Proceedings of the 18th international doctoral symposium on
+  Components and architecture}, pages 37--42. ACM.
+
+\bibitem[MSM, 2016]{MSM}
+MSM (2016).
+\newblock {Meta} {State} {Machine}.
+\newblock
+  \url{http://www.boost.org/doc/libs/1_59_0_b1/libs/msm/doc/HTML/index.html}.
+\newblock [Online; accessed 04-July-2016].
+
+\bibitem[Posse, ]{possepapyrusrt}
+Posse, E.
+\newblock Papyrusrt: Modelling and code generation.
+
+\bibitem[Selic, 2012]{Selic2012}
+Selic, B. (2012).
+\newblock What will it take? a view on adoption of model-based methods in
+  practice.
+\newblock {\em Software {\&} Systems Modeling}, 11(4):513--526.
+
+\bibitem[Sendall and K\"{u}ster, ]{Sendall}
+Sendall, S. and K\"{u}ster, J.
+\newblock {Taming Model Round-Trip Engineering}.
+
+\bibitem[SparxSystems, 2016]{sparxsystems_enterprise_2014}
+SparxSystems (2016).
+\newblock Enterprise {Architect}.
+
+\bibitem[Steinberg et~al., 2008]{steinberg2008emf}
+Steinberg, D., Budinsky, F., Merks, E., and Paternostro, M. (2008).
+\newblock {\em EMF: eclipse modeling framework}.
+\newblock Pearson Education.
+
+\bibitem[Ubayashi et~al., 2010]{ubayashi2010archface}
+Ubayashi, N., Nomura, J., and Tamai, T. (2010).
+\newblock Archface: a contract place where architectural design and code meet
+  together.
+\newblock In {\em Proceedings of the 32nd ACM/IEEE International Conference on
+  Software Engineering-Volume 1}, pages 75--84. ACM.
+
+\bibitem[Zheng and Taylor, 2012]{zheng2012enhancing}
+Zheng, Y. and Taylor, R.~N. (2012).
+\newblock Enhancing architecture-implementation conformance with change
+  management and support for behavioral mapping.
+\newblock In {\em Proceedings of the 34th International Conference on Software
+  Engineering}, pages 628--638. IEEE Press.
+
+\end{thebibliography}

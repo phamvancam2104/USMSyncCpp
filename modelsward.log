@@ -1,0 +1,4279 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.1)  10 OCT 2016 18:44
+entering extended mode
+**modelsward.tex
+(modelsward.tex
+LaTeX2e <2015/01/01> patch level 2
+Babel <3.9m> and hyphenation patterns for 69 languages loaded.
+(article.cls
+Document Class: article 2000/05/19 v1.4b Standard LaTeX document class
+(C:\Users\VP242103\Downloads\tex\latex\base\size10.clo
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(C:\Users\VP242103\Downloads\tex\latex\graphics\epsfig.sty
+Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
+
+(C:\Users\VP242103\Downloads\tex\latex\graphics\graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\VP242103\Downloads\tex\latex\graphics\keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(C:\Users\VP242103\Downloads\tex\latex\graphics\graphics.sty
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\VP242103\Downloads\tex\latex\graphics\trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(C:\Users\VP242103\Downloads\tex\latex\00miktex\graphics.cfg
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 94.
+
+(C:\Users\VP242103\Downloads\tex\latex\pdftex-def\pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(C:\Users\VP242103\Downloads\tex\generic\oberdiek\infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(C:\Users\VP242103\Downloads\tex\generic\oberdiek\ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count87
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+\epsfxsize=\dimen105
+\epsfysize=\dimen106
+)
+(C:\Users\VP242103\Downloads\tex\latex\subfigure\subfigure.sty
+Package: subfigure 2002/07/30 v2.1.4 subfigure package
+\subfigtopskip=\skip43
+\subfigcapskip=\skip44
+\subfigcaptopadj=\dimen107
+\subfigbottomskip=\skip45
+\subfigcapmargin=\dimen108
+\subfiglabelskip=\skip46
+\c@subfigure=\count88
+\c@lofdepth=\count89
+\c@subtable=\count90
+\c@lotdepth=\count91
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(C:\Users\VP242103\Downloads\tex\latex\subfigure\subfigure.cfg)
+\subfig@top=\skip47
+\subfig@bottom=\skip48
+)
+(C:\Users\VP242103\Downloads\tex\latex\tools\calc.sty
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count92
+\calc@Bcount=\count93
+\calc@Adimen=\dimen109
+\calc@Bdimen=\dimen110
+\calc@Askip=\skip49
+\calc@Bskip=\skip50
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count94
+\calc@Cskip=\skip51
+)
+(C:\Users\VP242103\Downloads\tex\latex\amsfonts\amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(C:\Users\VP242103\Downloads\tex\latex\amsfonts\amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks15
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(C:\Users\VP242103\Downloads\tex\latex\amsmath\amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(C:\Users\VP242103\Downloads\tex\latex\amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks16
+\ex@=\dimen111
+))
+(C:\Users\VP242103\Downloads\tex\latex\amsmath\amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip52
+
+For additional information on amsmath, use the `?' option.
+(C:\Users\VP242103\Downloads\tex\latex\amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen112
+)
+(C:\Users\VP242103\Downloads\tex\latex\amsmath\amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count95
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count96
+\leftroot@=\count97
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count98
+\DOTSCASE@=\count99
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen113
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count100
+\c@MaxMatrixCols=\count101
+\dotsspace@=\muskip10
+\c@parentequation=\count102
+\dspbrk@lvl=\count103
+\tag@help=\toks17
+\row@=\count104
+\column@=\count105
+\maxfields@=\count106
+\andhelp@=\toks18
+\eqnshift@=\dimen114
+\alignsep@=\dimen115
+\tagshift@=\dimen116
+\tagwidth@=\dimen117
+\totwidth@=\dimen118
+\lineht@=\dimen119
+\@envbody=\toks19
+\multlinegap=\skip53
+\multlinetaggap=\skip54
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+(C:\Users\VP242103\Downloads\tex\latex\amscls\amsthm.sty
+Package: amsthm 2015/03/04 v2.20.2
+\thm@style=\toks21
+\thm@bodyfont=\toks22
+\thm@headfont=\toks23
+\thm@notefont=\toks24
+\thm@headpunct=\toks25
+\thm@preskip=\skip55
+\thm@postskip=\skip56
+\thm@headsep=\skip57
+\dth@everypar=\toks26
+)
+(C:\Users\VP242103\Downloads\tex\latex\tools\multicol.sty
+Package: multicol 2015/03/31 v1.8m multicolumn formatting (FMi)
+\c@tracingmulticols=\count107
+\mult@box=\box28
+\multicol@leftmargin=\dimen120
+\c@unbalance=\count108
+\c@collectmore=\count109
+\doublecol@number=\count110
+\multicoltolerance=\count111
+\multicolpretolerance=\count112
+\full@width=\dimen121
+\page@free=\dimen122
+\premulticols=\dimen123
+\postmulticols=\dimen124
+\multicolsep=\skip58
+\multicolbaselineskip=\skip59
+\partial@page=\box29
+\last@line=\box30
+\maxbalancingoverflow=\dimen125
+\mult@rightbox=\box31
+\mult@grightbox=\box32
+\mult@gfirstbox=\box33
+\mult@firstbox=\box34
+\@tempa=\box35
+\@tempa=\box36
+\@tempa=\box37
+\@tempa=\box38
+\@tempa=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\@tempa=\box50
+\@tempa=\box51
+\c@columnbadness=\count113
+\c@finalcolumnbadness=\count114
+\last@try=\dimen126
+\multicolovershoot=\dimen127
+\multicolundershoot=\dimen128
+\mult@nat@firstbox=\box52
+\colbreak@box=\box53
+\mc@col@check@num=\count115
+)
+(C:\Users\VP242103\Downloads\tex\latex\pslatex\pslatex.sty
+Package: pslatex 1996/07/24 v1.2 pslatex emulation (DPC)
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 65.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/ptmcm/m/n on input line 65.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/ptmcm/m/n on input line 65.
+LaTeX Font Info:    Redeclaring symbol font `letters' on input line 66.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/ptmcm/m/it on input line 66.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/ptmcm/m/it on input line 66.
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 67.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/pzccm/m/n on input line 67.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/pzccm/m/n on input line 67.
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 68.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/psycm/m/n on input line 68.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/psycm/m/n on input line 68.
+\symbold=\mathgroup6
+\symitalic=\mathgroup7
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 74.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/ptm/bx/n on input line 74.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/ptm/bx/n on input line 74.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 75.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/ptm/m/it on input line 75.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/ptm/m/it on input line 75.
+) (apalike.sty
+\bibhang=\skip60
+)
+(SCITEPRESS.sty
+Conference Style for SCITEPRESS for LaTeX 2e -- version of April 2015
+\titlebox=\skip61
+) (C:\Users\VP242103\Downloads\tex\latex\caption\caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+(C:\Users\VP242103\Downloads\tex\latex\caption\caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen129
+\captionmargin@=\dimen130
+\captionwidth=\dimen131
+\caption@tempdima=\dimen132
+\caption@indent=\dimen133
+\caption@parindent=\dimen134
+\caption@hangindent=\dimen135
+)
+\c@ContinuedFloat=\count116
+Package caption Info: subfigure package is loaded.
+)
+(C:\Users\VP242103\Downloads\tex\latex\comment\comment.sty
+\CommentStream=\write3
+
+Excluding comment 'comment')
+(C:\Users\VP242103\Downloads\tex\latex\algorithms\algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+(C:\Users\VP242103\Downloads\tex\latex\float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count117
+\float@exts=\toks27
+\float@box=\box54
+\@float@everytoks=\toks28
+\@floatcapt=\box55
+)
+(C:\Users\VP242103\Downloads\tex\latex\base\ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks29
+\c@algorithm=\count118
+)
+(C:\Users\VP242103\Downloads\tex\latex\listings\listings.sty
+\lst@mode=\count119
+\lst@gtempboxa=\box56
+\lst@token=\toks30
+\lst@length=\count120
+\lst@currlwidth=\dimen136
+\lst@column=\count121
+\lst@pos=\count122
+\lst@lostspace=\dimen137
+\lst@width=\dimen138
+\lst@newlines=\count123
+\lst@lineno=\count124
+\lst@maxwidth=\dimen139
+
+(C:\Users\VP242103\Downloads\tex\latex\listings\lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count125
+\lst@skipnumbers=\count126
+\lst@framebox=\box57
+)
+(C:\Users\VP242103\Downloads\tex\latex\listings\listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
+(C:\Users\VP242103\Downloads\tex\latex\base\fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(C:\Users\VP242103\Downloads\tex\latex\base\ot4enc.def
+File: ot4enc.def 2005/09/27 v1.99g Standard LaTeX file
+)
+(C:\Users\VP242103\Downloads\tex\latex\base\t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+))
+(C:\Users\VP242103\Downloads\tex\latex\url\url.sty
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(C:\Users\VP242103\Downloads\tex\latex\multirow\multirow.sty
+\bigstrutjot=\dimen140
+)
+(C:\Users\VP242103\Downloads\tex\latex\filecontents\filecontents.sty
+Package: filecontents 2011/10/08 v1.3 Create an external file from within a LaT
+eX document
+)
+(C:\Users\VP242103\Downloads\tex\latex\lipsum\lipsum.sty
+Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
+\c@lips@count=\count127
+)
+(C:\Users\VP242103\Downloads\tex\latex\graphics\color.sty
+Package: color 2014/10/28 v1.1a Standard LaTeX Color (DPC)
+
+(C:\Users\VP242103\Downloads\tex\latex\00miktex\color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 142.
+)
+(C:\Users\VP242103\Downloads\tex\latex\xcolor\xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(C:\Users\VP242103\Downloads\tex\latex\00miktex\color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+LaTeX Info: Redefining \color on input line 702.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+(C:\Users\VP242103\Downloads\tex\latex\colortbl\colortbl.sty
+Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
+
+(C:\Users\VP242103\Downloads\tex\latex\tools\array.sty
+Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen141
+\extrarowheight=\dimen142
+\NC@list=\toks31
+\extratabsurround=\skip62
+\backup@length=\skip63
+)
+\everycr=\toks32
+\minrowclearance=\skip64
+)
+(C:\Users\VP242103\Downloads\tex\latex\algorithmicx\algpseudocode.sty
+Package: algpseudocode 
+
+(C:\Users\VP242103\Downloads\tex\latex\algorithmicx\algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count128
+\c@ALG@rem=\count129
+\c@ALG@nested=\count130
+\ALG@tlm=\skip65
+\ALG@thistlm=\skip66
+\c@ALG@Lnr=\count131
+\c@ALG@blocknr=\count132
+\c@ALG@storecount=\count133
+\c@ALG@tmpcounter=\count134
+\ALG@tmplength=\skip67
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (C:\Users\VP242103\Downloads\tex\latex\booktabs\booktabs.sty
+Package: booktabs 2005/04/14 v1.61803 publication quality tables
+\heavyrulewidth=\dimen143
+\lightrulewidth=\dimen144
+\cmidrulewidth=\dimen145
+\belowrulesep=\dimen146
+\belowbottomsep=\dimen147
+\aboverulesep=\dimen148
+\abovetopsep=\dimen149
+\cmidrulesep=\dimen150
+\cmidrulekern=\dimen151
+\defaultaddspace=\dimen152
+\@cmidla=\count135
+\@cmidlb=\count136
+\@aboverulesep=\dimen153
+\@belowrulesep=\dimen154
+\@thisruleclass=\count137
+\@lastruleclass=\count138
+\@thisrulewidth=\dimen155
+)
+\c@definition=\count139
+\c@remark=\count140
+
+(C:\Users\VP242103\Downloads\tex\latex\mathtools\mathtools.sty
+Package: mathtools 2015/11/12 v1.18 mathematical typesetting tools
+
+(C:\Users\VP242103\Downloads\tex\latex\mathtools\mhsetup.sty
+Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
+)
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
+\g_MT_multlinerow_int=\count141
+\l_MT_multwidth_dim=\dimen156
+\origjot=\skip68
+\l_MT_shortvdotswithinadjustabove_dim=\dimen157
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen158
+\l_MT_above_intertext_sep=\dimen159
+\l_MT_below_intertext_sep=\dimen160
+\l_MT_above_shortintertext_sep=\dimen161
+\l_MT_below_shortintertext_sep=\dimen162
+)
+(C:\Users\VP242103\Downloads\tex\latex\sttools\cuted.sty
+Package: cuted 2012/10/04 v1.5 Mixing onecolumn and twocolumn modes
+\At@ViperColsBreak=\toks33
+\v@aaa=\box58
+\v@ccc=\box59
+\lastskip@a=\skip69
+\lastskip@b=\skip70
+\lastskip@d=\skip71
+\lastbox@a=\box60
+\stripsep=\skip72
+\@viper=\box61
+\viper@penalty=\count142
+\hold@viper=\box62
+\ht@viper=\dimen163
+)
+\c@mytempeqncnt=\count143
+
+(C:\Users\VP242103\Downloads\tex\latex\fancyvrb\fancyvrb.sty
+Package: fancyvrb 2008/02/07
+
+Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
+<2008/02/07> (tvz)
+\FV@CodeLineNo=\count144
+\FV@InFile=\read1
+\FV@TabBox=\box63
+\c@FancyVerbLine=\count145
+\FV@StepNumber=\count146
+\FV@OutFile=\write4
+) (C:\Users\VP242103\Downloads\tex\latex\framed\framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip73
+\fb@frw=\dimen164
+\fb@frh=\dimen165
+\FrameRule=\dimen166
+\FrameSep=\dimen167
+)
+(C:\Users\VP242103\Downloads\tex\latex\tcolorbox\tcolorbox.sty
+Package: tcolorbox 2016/04/27 version 3.91 text color boxes
+
+(C:\Users\VP242103\Downloads\tex\latex\pgf\basiclayer\pgf.sty
+(C:\Users\VP242103\Downloads\tex\latex\pgf\utilities\pgfrcs.sty
+(C:\Users\VP242103\Downloads\tex\generic\pgf\utilities\pgfutil-common.tex
+\pgfutil@everybye=\toks34
+\pgfutil@tempdima=\dimen168
+\pgfutil@tempdimb=\dimen169
+
+(C:\Users\VP242103\Downloads\tex\generic\pgf\utilities\pgfutil-common-lists.tex
+)) (C:\Users\VP242103\Downloads\tex\generic\pgf\utilities\pgfutil-latex.def
+\pgfutil@abb=\box64
+
+(C:\Users\VP242103\Downloads\tex\latex\ms\everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+(C:\Users\VP242103\Downloads\tex\generic\pgf\utilities\pgfrcs.code.tex
+Package: pgfrcs 2015/08/07 v3.0.1a (rcs-revision 1.31)
+))
+Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
+
+(C:\Users\VP242103\Downloads\tex\latex\pgf\basiclayer\pgfcore.sty
+(C:\Users\VP242103\Downloads\tex\latex\pgf\systemlayer\pgfsys.sty
+(C:\Users\VP242103\Downloads\tex\generic\pgf\systemlayer\pgfsys.code.tex
+Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
+
+(C:\Users\VP242103\Downloads\tex\generic\pgf\utilities\pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks35
+\pgfkeys@temptoks=\toks36
+
+(C:\Users\VP242103\Downloads\tex\generic\pgf\utilities\pgfkeysfiltered.code.tex
+\pgfkeys@tmptoks=\toks37
+))
+\pgf@x=\dimen170
+\pgf@y=\dimen171
+\pgf@xa=\dimen172
+\pgf@ya=\dimen173
+\pgf@xb=\dimen174
+\pgf@yb=\dimen175
+\pgf@xc=\dimen176
+\pgf@yc=\dimen177
+\w@pgf@writea=\write5
+\r@pgf@reada=\read2
+\c@pgf@counta=\count147
+\c@pgf@countb=\count148
+\c@pgf@countc=\count149
+\c@pgf@countd=\count150
+\t@pgf@toka=\toks38
+\t@pgf@tokb=\toks39
+\t@pgf@tokc=\toks40
+ (C:\Users\VP242103\Downloads\tex\generic\pgf\systemlayer\pgf.cfg
+File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(C:\Users\VP242103\Downloads\tex\generic\pgf\systemlayer\pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2014/10/11  (rcs-revision 1.35)
+
+(C:\Users\VP242103\Downloads\tex\generic\pgf\systemlayer\pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
+)))
+(C:\Users\VP242103\Downloads\tex\generic\pgf\systemlayer\pgfsyssoftpath.code.te
+x
+File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
+\pgfsyssoftpath@smallbuffer@items=\count151
+\pgfsyssoftpath@bigbuffer@items=\count152
+)
+(C:\Users\VP242103\Downloads\tex\generic\pgf\systemlayer\pgfsysprotocol.code.te
+x
+File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+)) (C:\Users\VP242103\Downloads\tex\generic\pgf\basiclayer\pgfcore.code.tex
+Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
+
+(C:\Users\VP242103\Downloads\tex\generic\pgf\math\pgfmath.code.tex
+(C:\Users\VP242103\Downloads\tex\generic\pgf\math\pgfmathcalc.code.tex
+(C:\Users\VP242103\Downloads\tex\generic\pgf\math\pgfmathutil.code.tex)
+(C:\Users\VP242103\Downloads\tex\generic\pgf\math\pgfmathparser.code.tex
+\pgfmath@dimen=\dimen178
+\pgfmath@count=\count153
+\pgfmath@box=\box65
+\pgfmath@toks=\toks41
+\pgfmath@stack@operand=\toks42
+\pgfmath@stack@operation=\toks43
+)
+(C:\Users\VP242103\Downloads\tex\generic\pgf\math\pgfmathfunctions.code.tex
+(C:\Users\VP242103\Downloads\tex\generic\pgf\math\pgfmathfunctions.basic.code.t
+ex)
+(C:\Users\VP242103\Downloads\tex\generic\pgf\math\pgfmathfunctions.trigonometri
+c.code.tex)
+(C:\Users\VP242103\Downloads\tex\generic\pgf\math\pgfmathfunctions.random.code.
+tex)
+(C:\Users\VP242103\Downloads\tex\generic\pgf\math\pgfmathfunctions.comparison.c
+ode.tex)
+(C:\Users\VP242103\Downloads\tex\generic\pgf\math\pgfmathfunctions.base.code.te
+x)
+(C:\Users\VP242103\Downloads\tex\generic\pgf\math\pgfmathfunctions.round.code.t
+ex)
+(C:\Users\VP242103\Downloads\tex\generic\pgf\math\pgfmathfunctions.misc.code.te
+x)
+(C:\Users\VP242103\Downloads\tex\generic\pgf\math\pgfmathfunctions.integerarith
+metics.code.tex)))
+(C:\Users\VP242103\Downloads\tex\generic\pgf\math\pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count154
+))
+(C:\Users\VP242103\Downloads\tex\generic\pgf\basiclayer\pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
+\pgf@picminx=\dimen179
+\pgf@picmaxx=\dimen180
+\pgf@picminy=\dimen181
+\pgf@picmaxy=\dimen182
+\pgf@pathminx=\dimen183
+\pgf@pathmaxx=\dimen184
+\pgf@pathminy=\dimen185
+\pgf@pathmaxy=\dimen186
+\pgf@xx=\dimen187
+\pgf@xy=\dimen188
+\pgf@yx=\dimen189
+\pgf@yy=\dimen190
+\pgf@zx=\dimen191
+\pgf@zy=\dimen192
+)
+(C:\Users\VP242103\Downloads\tex\generic\pgf\basiclayer\pgfcorepathconstruct.co
+de.tex
+File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
+\pgf@path@lastx=\dimen193
+\pgf@path@lasty=\dimen194
+)
+(C:\Users\VP242103\Downloads\tex\generic\pgf\basiclayer\pgfcorepathusage.code.t
+ex
+File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
+\pgf@shorten@end@additional=\dimen195
+\pgf@shorten@start@additional=\dimen196
+)
+(C:\Users\VP242103\Downloads\tex\generic\pgf\basiclayer\pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
+\pgfpic=\box66
+\pgf@hbox=\box67
+\pgf@layerbox@main=\box68
+\pgf@picture@serial@count=\count155
+)
+(C:\Users\VP242103\Downloads\tex\generic\pgf\basiclayer\pgfcoregraphicstate.cod
+e.tex
+File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
+\pgflinewidth=\dimen197
+)
+(C:\Users\VP242103\Downloads\tex\generic\pgf\basiclayer\pgfcoretransformations.
+code.tex
+File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
+\pgf@pt@x=\dimen198
+\pgf@pt@y=\dimen199
+\pgf@pt@temp=\dimen200
+)
+(C:\Users\VP242103\Downloads\tex\generic\pgf\basiclayer\pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
+)
+(C:\Users\VP242103\Downloads\tex\generic\pgf\basiclayer\pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
+)
+(C:\Users\VP242103\Downloads\tex\generic\pgf\basiclayer\pgfcorepathprocessing.c
+ode.tex
+File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
+)
+(C:\Users\VP242103\Downloads\tex\generic\pgf\basiclayer\pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
+\pgfarrowsep=\dimen201
+) (C:\Users\VP242103\Downloads\tex\generic\pgf\basiclayer\pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
+\pgf@max=\dimen202
+\pgf@sys@shading@range@num=\count156
+) (C:\Users\VP242103\Downloads\tex\generic\pgf\basiclayer\pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
+
+(C:\Users\VP242103\Downloads\tex\generic\pgf\basiclayer\pgfcoreexternal.code.te
+x
+File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
+\pgfexternal@startupbox=\box69
+))
+(C:\Users\VP242103\Downloads\tex\generic\pgf\basiclayer\pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
+)
+(C:\Users\VP242103\Downloads\tex\generic\pgf\basiclayer\pgfcoretransparency.cod
+e.tex
+File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
+)
+(C:\Users\VP242103\Downloads\tex\generic\pgf\basiclayer\pgfcorepatterns.code.te
+x
+File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
+)))
+(C:\Users\VP242103\Downloads\tex\generic\pgf\modules\pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
+\pgfnodeparttextbox=\box70
+)
+(C:\Users\VP242103\Downloads\tex\generic\pgf\modules\pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
+)
+(C:\Users\VP242103\Downloads\tex\latex\pgf\compatibility\pgfcomp-version-0-65.s
+ty
+Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen203
+\pgf@nodesepend=\dimen204
+)
+(C:\Users\VP242103\Downloads\tex\latex\pgf\compatibility\pgfcomp-version-1-18.s
+ty
+Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
+)) (C:\Users\VP242103\Downloads\tex\latex\tools\verbatim.sty
+Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks44
+\verbatim@line=\toks45
+\verbatim@in@stream=\read3
+)
+(C:\Users\VP242103\Downloads\tex\latex\environ\environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+
+(C:\Users\VP242103\Downloads\tex\latex\trimspaces\trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+))
+(C:\Users\VP242103\Downloads\tex\latex\etoolbox\etoolbox.sty
+Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count157
+)
+\tcb@titlebox=\box71
+\tcb@upperbox=\box72
+\tcb@lowerbox=\box73
+\tcb@phantombox=\box74
+\c@tcbbreakpart=\count158
+\c@tcblayer=\count159
+\tcolorbox@number=\count160
+\tcb@temp=\box75
+\tcb@temp=\box76
+\tcb@temp=\box77
+\tcb@temp=\box78
+\tcb@out=\write6
+\tcb@record@out=\write7
+
+(C:\Users\VP242103\Downloads\tex\latex\tcolorbox\tcblistings.code.tex
+Library (tcolorbox): 'tcblistings.code.tex' version '3.91'
+(C:\Users\VP242103\Downloads\tex\latex\tcolorbox\tcblistingscore.code.tex
+Library (tcolorbox): 'tcblistingscore.code.tex' version '3.91'
+(C:\Users\VP242103\Downloads\tex\generic\oberdiek\pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(C:\Users\VP242103\Downloads\tex\generic\oberdiek\ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(C:\Users\VP242103\Downloads\tex\generic\oberdiek\ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+\c@tcblisting=\count161
+))
+(C:\Users\VP242103\Downloads\tex\latex\tcolorbox\tcbskins.code.tex
+Library (tcolorbox): 'tcbskins.code.tex' version '3.91'
+(C:\Users\VP242103\Downloads\tex\latex\pgf\frontendlayer\tikz.sty
+(C:\Users\VP242103\Downloads\tex\latex\pgf\utilities\pgffor.sty
+(C:\Users\VP242103\Downloads\tex\latex\pgf\utilities\pgfkeys.sty
+(C:\Users\VP242103\Downloads\tex\generic\pgf\utilities\pgfkeys.code.tex))
+(C:\Users\VP242103\Downloads\tex\latex\pgf\math\pgfmath.sty
+(C:\Users\VP242103\Downloads\tex\generic\pgf\math\pgfmath.code.tex))
+(C:\Users\VP242103\Downloads\tex\generic\pgf\utilities\pgffor.code.tex
+Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
+
+(C:\Users\VP242103\Downloads\tex\generic\pgf\math\pgfmath.code.tex)
+\pgffor@iter=\dimen205
+\pgffor@skip=\dimen206
+\pgffor@stack=\toks46
+\pgffor@toks=\toks47
+))
+(C:\Users\VP242103\Downloads\tex\generic\pgf\frontendlayer\tikz\tikz.code.tex
+Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
+
+(C:\Users\VP242103\Downloads\tex\generic\pgf\libraries\pgflibraryplothandlers.c
+ode.tex
+File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
+\pgf@plot@mark@count=\count162
+\pgfplotmarksize=\dimen207
+)
+\tikz@lastx=\dimen208
+\tikz@lasty=\dimen209
+\tikz@lastxsaved=\dimen210
+\tikz@lastysaved=\dimen211
+\tikzleveldistance=\dimen212
+\tikzsiblingdistance=\dimen213
+\tikz@figbox=\box79
+\tikz@figbox@bg=\box80
+\tikz@tempbox=\box81
+\tikz@tempbox@bg=\box82
+\tikztreelevel=\count163
+\tikznumberofchildren=\count164
+\tikznumberofcurrentchild=\count165
+\tikz@fig@count=\count166
+
+(C:\Users\VP242103\Downloads\tex\generic\pgf\modules\pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
+\pgfmatrixcurrentrow=\count167
+\pgfmatrixcurrentcolumn=\count168
+\pgf@matrix@numberofcolumns=\count169
+)
+\tikz@expandcount=\count170
+
+(C:\Users\VP242103\Downloads\tex\generic\pgf\frontendlayer\tikz\libraries\tikzl
+ibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
+)))
+\tcb@waterbox=\box83
+
+(C:\Users\VP242103\Downloads\tex\latex\tcolorbox\tcbskinsjigsaw.code.tex
+Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '3.91'
+))) (C:\Users\VP242103\Downloads\tex\latex\mdframed\mdframed.sty
+Package: mdframed 2013/07/01 1.9b: mdframed
+
+(C:\Users\VP242103\Downloads\tex\latex\oberdiek\kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(C:\Users\VP242103\Downloads\tex\generic\oberdiek\kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(C:\Users\VP242103\Downloads\tex\generic\oberdiek\etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+(C:\Users\VP242103\Downloads\tex\latex\l3packages\xparse\xparse.sty
+(C:\Users\VP242103\Downloads\tex\latex\l3kernel\expl3.sty
+Package: expl3 2016/01/19 v6377 L3 programming layer (loader) 
+
+(C:\Users\VP242103\Downloads\tex\latex\l3kernel\expl3-code.tex
+Package: expl3 2016/01/19 v6377 L3 programming layer (code)
+L3 Module: l3bootstrap 2016/01/01 v6339 L3 Bootstrap code
+L3 Module: l3names 2015/12/21 v6328 L3 Namespace for primitives
+L3 Module: l3basics 2015/11/22 v6315 L3 Basic definitions
+L3 Module: l3expan 2015/09/10 v5983 L3 Argument expansion
+L3 Module: l3tl 2015/09/29 v6121 L3 Token lists
+L3 Module: l3str 2016/01/03 v6357 L3 Strings
+L3 Module: l3seq 2015/08/05 v5777 L3 Sequences and stacks
+L3 Module: l3int 2016/01/05 v6366 L3 Integers
+\c_max_int=\count171
+\l_tmpa_int=\count172
+\l_tmpb_int=\count173
+\g_tmpa_int=\count174
+\g_tmpb_int=\count175
+L3 Module: l3quark 2015/08/17 v5855 L3 Quarks
+L3 Module: l3prg 2015/11/01 v6216 L3 Control structures
+\g__prg_map_int=\count176
+L3 Module: l3clist 2015/09/02 v5901 L3 Comma separated lists
+L3 Module: l3token 2015/11/11 v6249 L3 Experimental token manipulation
+L3 Module: l3prop 2016/01/05 v6366 L3 Property lists
+L3 Module: l3msg 2015/09/28 v6113 L3 Messages
+L3 Module: l3file 2015/12/03 v6317 L3 File and I/O operations
+\l_iow_line_count_int=\count177
+\l__iow_target_count_int=\count178
+\l__iow_current_line_int=\count179
+\l__iow_current_word_int=\count180
+\l__iow_current_indentation_int=\count181
+L3 Module: l3skip 2016/01/05 v6366 L3 Dimensions and skips
+\c_zero_dim=\dimen214
+\c_max_dim=\dimen215
+\l_tmpa_dim=\dimen216
+\l_tmpb_dim=\dimen217
+\g_tmpa_dim=\dimen218
+\g_tmpb_dim=\dimen219
+\c_zero_skip=\skip74
+\c_max_skip=\skip75
+\l_tmpa_skip=\skip76
+\l_tmpb_skip=\skip77
+\g_tmpa_skip=\skip78
+\g_tmpb_skip=\skip79
+\c_zero_muskip=\muskip12
+\c_max_muskip=\muskip13
+\l_tmpa_muskip=\muskip14
+\l_tmpb_muskip=\muskip15
+\g_tmpa_muskip=\muskip16
+\g_tmpb_muskip=\muskip17
+L3 Module: l3keys 2015/11/17 v6284 L3 Key-value interfaces
+\g__keyval_level_int=\count182
+\l_keys_choice_int=\count183
+L3 Module: l3fp 2015/08/25 v5890 L3 Floating points
+\c__fp_leading_shift_int=\count184
+\c__fp_middle_shift_int=\count185
+\c__fp_trailing_shift_int=\count186
+\c__fp_big_leading_shift_int=\count187
+\c__fp_big_middle_shift_int=\count188
+\c__fp_big_trailing_shift_int=\count189
+\c__fp_Bigg_leading_shift_int=\count190
+\c__fp_Bigg_middle_shift_int=\count191
+\c__fp_Bigg_trailing_shift_int=\count192
+L3 Module: l3box 2015/08/09 v5822 L3 Experimental boxes
+\c_empty_box=\box84
+\l_tmpa_box=\box85
+\l_tmpb_box=\box86
+\g_tmpa_box=\box87
+\g_tmpb_box=\box88
+L3 Module: l3coffins 2015/08/06 v5789 L3 Coffin code layer
+\l__coffin_internal_box=\box89
+\l__coffin_internal_dim=\dimen220
+\l__coffin_offset_x_dim=\dimen221
+\l__coffin_offset_y_dim=\dimen222
+\l__coffin_x_dim=\dimen223
+\l__coffin_y_dim=\dimen224
+\l__coffin_x_prime_dim=\dimen225
+\l__coffin_y_prime_dim=\dimen226
+\c_empty_coffin=\box90
+\l__coffin_aligned_coffin=\box91
+\l__coffin_aligned_internal_coffin=\box92
+\l_tmpa_coffin=\box93
+\l_tmpb_coffin=\box94
+\l__coffin_display_coffin=\box95
+\l__coffin_display_coord_coffin=\box96
+\l__coffin_display_pole_coffin=\box97
+\l__coffin_display_offset_dim=\dimen227
+\l__coffin_display_x_dim=\dimen228
+\l__coffin_display_y_dim=\dimen229
+L3 Module: l3color 2014/08/23 v5354 L3 Experimental color support
+L3 Module: l3sys 2015/09/25 v6087 L3 Experimental system/runtime functions
+L3 Module: l3candidates 2016/01/14 v6376 L3 Experimental additions to l3kernel
+\l__box_top_dim=\dimen230
+\l__box_bottom_dim=\dimen231
+\l__box_left_dim=\dimen232
+\l__box_right_dim=\dimen233
+\l__box_top_new_dim=\dimen256
+\l__box_bottom_new_dim=\dimen257
+\l__box_left_new_dim=\dimen258
+\l__box_right_new_dim=\dimen259
+\l__box_internal_box=\box98
+\l__coffin_bounding_shift_dim=\dimen260
+\l__coffin_left_corner_dim=\dimen261
+\l__coffin_right_corner_dim=\dimen262
+\l__coffin_bottom_corner_dim=\dimen263
+\l__coffin_top_corner_dim=\dimen264
+\l__coffin_scaled_total_height_dim=\dimen265
+\l__coffin_scaled_width_dim=\dimen266
+L3 Module: l3luatex 2015/11/11 v6250 L3 Experimental LuaTeX-specific functions
+)
+(C:\Users\VP242103\Downloads\tex\latex\l3kernel\l3pdfmode.def
+File: l3pdfmode.def 2015/11/11 v6250 L3 Experimental driver: PDF mode
+\l__driver_color_stack_int=\count193
+))
+Package: xparse 2016/01/19 v6377 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count194
+\l__xparse_m_args_int=\count195
+\l__xparse_mandatory_args_int=\count196
+\l__xparse_processor_int=\count197
+\l__xparse_v_nesting_int=\count198
+)
+(C:\Users\VP242103\Downloads\tex\latex\oberdiek\zref-abspage.sty
+Package: zref-abspage 2012/04/04 v2.24 Module abspage for zref (HO)
+
+(C:\Users\VP242103\Downloads\tex\latex\oberdiek\zref-base.sty
+Package: zref-base 2012/04/04 v2.24 Module base for zref (HO)
+
+(C:\Users\VP242103\Downloads\tex\generic\oberdiek\kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+)
+(C:\Users\VP242103\Downloads\tex\latex\oberdiek\auxhook.sty
+Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
+)
+Package zref Info: New property list: main on input line 759.
+Package zref Info: New property: default on input line 760.
+Package zref Info: New property: page on input line 761.
+)
+(C:\Users\VP242103\Downloads\tex\generic\oberdiek\atbegshi.sty
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+)
+\c@abspage=\count199
+Package zref Info: New property: abspage on input line 62.
+)
+(C:\Users\VP242103\Downloads\tex\latex\needspace\needspace.sty
+Package: needspace 2010/09/12 v1.3d reserve vertical space
+)
+\mdf@templength=\skip80
+\c@mdf@globalstyle@cnt=\count200
+\mdf@skipabove@length=\skip81
+\mdf@skipbelow@length=\skip82
+\mdf@leftmargin@length=\skip83
+\mdf@rightmargin@length=\skip84
+\mdf@innerleftmargin@length=\skip85
+\mdf@innerrightmargin@length=\skip86
+\mdf@innertopmargin@length=\skip87
+\mdf@innerbottommargin@length=\skip88
+\mdf@splittopskip@length=\skip89
+\mdf@splitbottomskip@length=\skip90
+\mdf@outermargin@length=\skip91
+\mdf@innermargin@length=\skip92
+\mdf@linewidth@length=\skip93
+\mdf@innerlinewidth@length=\skip94
+\mdf@middlelinewidth@length=\skip95
+\mdf@outerlinewidth@length=\skip96
+\mdf@roundcorner@length=\skip97
+\mdf@footenotedistance@length=\skip98
+\mdf@userdefinedwidth@length=\skip99
+\mdf@needspace@length=\skip100
+\mdf@frametitleaboveskip@length=\skip101
+\mdf@frametitlebelowskip@length=\skip102
+\mdf@frametitlerulewidth@length=\skip103
+\mdf@frametitleleftmargin@length=\skip104
+\mdf@frametitlerightmargin@length=\skip105
+\mdf@shadowsize@length=\skip106
+\mdf@extratopheight@length=\skip107
+\mdf@subtitleabovelinewidth@length=\skip108
+\mdf@subtitlebelowlinewidth@length=\skip109
+\mdf@subtitleaboveskip@length=\skip110
+\mdf@subtitlebelowskip@length=\skip111
+\mdf@subtitleinneraboveskip@length=\skip112
+\mdf@subtitleinnerbelowskip@length=\skip113
+\mdf@subsubtitleabovelinewidth@length=\skip114
+\mdf@subsubtitlebelowlinewidth@length=\skip115
+\mdf@subsubtitleaboveskip@length=\skip116
+\mdf@subsubtitlebelowskip@length=\skip117
+\mdf@subsubtitleinneraboveskip@length=\skip118
+\mdf@subsubtitleinnerbelowskip@length=\skip119
+
+(C:\Users\VP242103\Downloads\tex\latex\mdframed\md-frame-0.mdf
+File: md-frame-0.mdf 2013/07/01\ 1.9b: md-frame-0
+)
+\mdf@frametitlebox=\box99
+\mdf@footnotebox=\box100
+\mdf@splitbox@one=\box101
+\mdf@splitbox@two=\box102
+\mdf@splitbox@save=\box103
+\mdfsplitboxwidth=\skip120
+\mdfsplitboxtotalwidth=\skip121
+\mdfsplitboxheight=\skip122
+\mdfsplitboxdepth=\skip123
+\mdfsplitboxtotalheight=\skip124
+\mdfframetitleboxwidth=\skip125
+\mdfframetitleboxtotalwidth=\skip126
+\mdfframetitleboxheight=\skip127
+\mdfframetitleboxdepth=\skip128
+\mdfframetitleboxtotalheight=\skip129
+\mdffootnoteboxwidth=\skip130
+\mdffootnoteboxtotalwidth=\skip131
+\mdffootnoteboxheight=\skip132
+\mdffootnoteboxdepth=\skip133
+\mdffootnoteboxtotalheight=\skip134
+\mdftotallinewidth=\skip135
+\mdfboundingboxwidth=\skip136
+\mdfboundingboxtotalwidth=\skip137
+\mdfboundingboxheight=\skip138
+\mdfboundingboxdepth=\skip139
+\mdfboundingboxtotalheight=\skip140
+\mdf@freevspace@length=\skip141
+\mdf@horizontalwidthofbox@length=\skip142
+\mdf@verticalmarginwhole@length=\skip143
+\mdf@horizontalspaceofbox=\skip144
+\mdfsubtitleheight=\skip145
+\mdfsubsubtitleheight=\skip146
+\c@mdfcountframes=\count201
+
+****** mdframed patching \endmdf@trivlist
+
+****** -- success******
+
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \newmdtheoremenv with sig. 'O{} m o m o ' on line 601.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \mdtheorem with sig. ' O{} m o m o ' on line 701.
+.................................................
+\mdf@envdepth=\count202
+\c@mdf@env@i=\count203
+\c@mdf@env@ii=\count204
+\c@mdf@zref@counter=\count205
+Package zref Info: New property: mdf@pagevalue on input line 895.
+)
+(C:\Users\VP242103\Downloads\tex\latex\ulem\ulem.sty
+\UL@box=\box104
+\UL@hyphenbox=\box105
+\UL@skip=\skip147
+\UL@hook=\toks48
+\UL@height=\dimen267
+\UL@pe=\count206
+\UL@pixel=\dimen268
+\ULC@box=\box106
+Package: ulem 2012/05/18
+\ULdepth=\dimen269
+)
+(C:\Users\VP242103\Downloads\tex\latex\base\alltt.sty
+Package: alltt 1997/06/16 v2.0g defines alltt environment
+)
+(C:\Users\VP242103\Downloads\tex\latex\listings\lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+) (modelsward.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for OMS/pzccm/m/n on input line 141.
+LaTeX Font Info:    Try loading font information for OMS+pzccm on input line 14
+1.
+
+(C:\Users\VP242103\Downloads\tex\latex\psnfss\omspzccm.fd
+File: omspzccm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/pzccm.
+)
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 141.
+LaTeX Font Info:    Try loading font information for OT4+cmr on input line 141.
+
+
+(C:\Users\VP242103\Downloads\tex\latex\polski\ot4cmr.fd
+File: ot4cmr.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
+)
+LaTeX Font Info:    ... okay on input line 141.
+
+(C:\Users\VP242103\Downloads\tex\context\base\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count207
+\scratchdimen=\dimen270
+\scratchbox=\box107
+\nofMPsegments=\count208
+\nofMParguments=\count209
+\everyMPshowfont=\toks49
+\MPscratchCnt=\count210
+\MPscratchDim=\dimen271
+\MPnumerator=\count211
+\makeMPintoPDFobject=\count212
+\everyMPtoPDFconversion=\toks50
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\c@lstlisting=\count213
+ ABD: EveryShipout initializing macros
+\AtBeginShipoutBox=\box108
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 163.
+
+Underfull \hbox (badness 10000) in paragraph at lines 163--163
+
+ []
+
+(sections/introduction.tex
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <13> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 19.
+
+
+LaTeX Warning: Citation ` Douglass1999' on page 1 undefined on input line 19.
+
+
+LaTeX Warning: Citation `Shalyto2006' on page 1 undefined on input line 19.
+
+
+LaTeX Warning: Citation ` ibm_rhapsody' on page 1 undefined on input line 19.
+
+
+LaTeX Warning: Citation ` kramer2015change' on page 1 undefined on input line 4
+6.
+
+
+Underfull \vbox (badness 1888) has occurred while \output is active []
+
+ [1{C:/Users/VP242103/Downloads/pdftex/config/pdftex.map}
+
+
+
+
+]
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 8.99994pt on input line 63.
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
+(Font)              Font shape `OMS/pzccm/m/n' tried instead on input line 99.
+
+Underfull \hbox (badness 1019) in paragraph at lines 100--101
+[]\T1/ptm/m/n/10 The im-ple-men-ta-tion of RAOES based on the
+ []
+
+
+LaTeX Warning: Reference `sec:background' on page 2 undefined on input line 112
+.
+
+
+LaTeX Warning: Reference `sec:casestudy' on page 2 undefined on input line 118.
+
+
+) (sections/motivation.tex
+<figures/illustration.pdf, id=11, 963.6pt x 542.025pt>
+File: figures/illustration.pdf Graphic file (type pdf)
+
+<use figures/illustration.pdf>
+Package pdftex.def Info: figures/illustration.pdf used on input line 12.
+(pdftex.def)             Requested size: 213.41443pt x 59.12701pt.
+
+(C:\Users\VP242103\Downloads\tex\latex\listings\lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+(C:\Users\VP242103\Downloads\tex\latex\listings\lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+(C:\Users\VP242103\Downloads\tex\latex\listings\lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+)
+(code/generated1.cpp
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 1.
+LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 1.
+
+ (C:\Users\VP242103\Downloads\tex\latex\psnfss\ot1ptmcm.fd
+File: ot1ptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ptmcm.
+)
+LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 1.
+
+(C:\Users\VP242103\Downloads\tex\latex\psnfss\omlptmcm.fd
+File: omlptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ptmcm.
+)
+LaTeX Font Info:    Try loading font information for OMX+psycm on input line 1.
+
+
+(C:\Users\VP242103\Downloads\tex\latex\psnfss\omxpsycm.fd
+File: omxpsycm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/psycm.
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 1.
+
+(C:\Users\VP242103\Downloads\tex\latex\amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 1.
+
+(C:\Users\VP242103\Downloads\tex\latex\amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
+) [2 <./figures/illustration.pdf>] (code/generated2.cpp)
+
+LaTeX Warning: Citation `walkinshaw2007reverse' on page 3 undefined on input li
+ne 102.
+
+
+LaTeX Warning: Citation `hall2010superstate' on page 3 undefined on input line 
+102.
+
+
+LaTeX Warning: Citation `DBLP:conf/kbse/AbadiF12' on page 3 undefined on input 
+line 102.
+
+) (sections/overview.tex <figures/frontend.pdf, id=29, 963.6pt x 542.025pt>
+File: figures/frontend.pdf Graphic file (type pdf)
+
+<use figures/frontend.pdf>
+Package pdftex.def Info: figures/frontend.pdf used on input line 11.
+(pdftex.def)             Requested size: 213.41443pt x 81.36638pt.
+ (code/front-end1.cpp [3 <./figures/frontend.pdf>])
+(code/front-end2.cpp)
+
+LaTeX Warning: Citation `lethbridge2010umplification' on page 4 undefined on in
+put line 49.
+
+
+LaTeX Warning: Citation `thingml' on page 4 undefined on input line 49.
+
+) (sections/syntax.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 7.
+
+
+LaTeX Warning: Citation `OMG2015' on page 4 undefined on input line 11.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 \item \ti
+              {state machine} $\rightarrow$ \tf{'state\_machine('name') \{ve...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 \item \ti
+              {state machine} $\rightarrow$ \tf{'state\_machine('name') \{ve...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 \item \ti
+              {state machine} $\rightarrow$ \tf{'state\_machine('name') \{ve...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <9> not available
+(Font)              Font shape `OMS/pzccm/m/n' tried instead on input line 16.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 16.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 16.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 8.09995pt on input line 16.
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 \item \ti
+              {state} $\rightarrow$ \tf{'state ('name, ent, ex, doAct');'}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 \item \ti
+              {state} $\rightarrow$ \tf{'state ('name, ent, ex, doAct');'}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 \item \ti
+              {state} $\rightarrow$ \tf{'state ('name, ent, ex, doAct');'}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20 \item \ti
+              {state} $\rightarrow$ \tf{'initial\_state ('name, ent, ex, doA...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20 \item \ti
+              {state} $\rightarrow$ \tf{'initial\_state ('name, ent, ex, doA...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20 \item \ti
+              {state} $\rightarrow$ \tf{'initial\_state ('name, ent, ex, doA...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22 \item \ti
+              {concurrent state} $\rightarrow$ \tf{'state ('name, ent, ex, d...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22 \item \ti
+              {concurrent state} $\rightarrow$ \tf{'state ('name, ent, ex, d...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22 \item \ti
+              {concurrent state} $\rightarrow$ \tf{'state ('name, ent, ex, d...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.24 \item \ti
+              {regions} $\rightarrow$ \tf{region; regions}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.24 \item \ti
+              {regions} $\rightarrow$ \tf{region; regions}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.24 \item \ti
+              {regions} $\rightarrow$ \tf{region; regions}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 \item \ti
+              {region} $\rightarrow$ \tf{'region (' name ') {' vertices '};'}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 \item \ti
+              {region} $\rightarrow$ \tf{'region (' name ') {' vertices '};'}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 \item \ti
+              {region} $\rightarrow$ \tf{'region (' name ') {' vertices '};'}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 \item \ti
+              {deferred event} $\rightarrow$ \tf{'defer(' eventId ');'}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 \item \ti
+              {deferred event} $\rightarrow$ \tf{'defer(' eventId ');'}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 \item \ti
+              {deferred event} $\rightarrow$ \tf{'defer(' eventId ');'}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.29 \end{itemize}
+                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.34 	\item \ttt
+                {name}: the unique identifier of a state machine, a state or...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.34 	\item \ttt
+                {name}: the unique identifier of a state machine, a state or...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.34 	\item \ttt
+                {name}: the unique identifier of a state machine, a state or...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.36 	\item \ttt
+                {ent/ex/doAct}: The name of the entry/exit/doActivity action...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.36 	\item \ttt
+                {ent/ex/doAct}: The name of the entry/exit/doActivity action...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.36 	\item \ttt
+                {ent/ex/doAct}: The name of the entry/exit/doActivity action...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.40 	\item \ttt
+                {initial\_state}: A state is defined as an initial state, wh...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.40 	\item \ttt
+                {initial\_state}: A state is defined as an initial state, wh...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.40 	\item \ttt
+                {initial\_state}: A state is defined as an initial state, wh...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.42 	\item \ttt
+                {effect}: For initial state, this is the transition effect a...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.42 	\item \ttt
+                {effect}: For initial state, this is the transition effect a...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.42 	\item \ttt
+                {effect}: For initial state, this is the transition effect a...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.45 	\item \ttt
+                {concurrent state}: The representation of a concurrent state.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.45 	\item \ttt
+                {concurrent state}: The representation of a concurrent state.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.45 	\item \ttt
+                {concurrent state}: The representation of a concurrent state.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.49 	\item \ttt
+                {eventId}: The identifier of a defined event (see \ref{subse...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.49 	\item \ttt
+                {eventId}: The identifier of a defined event (see \ref{subse...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.49 	\item \ttt
+                {eventId}: The identifier of a defined event (see \ref{subse...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.50 \end{itemize}
+                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[4]
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.61 \item \ti
+              {entry point} $\rightarrow$ \tf{'entry\_point ('name');'}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.61 \item \ti
+              {entry point} $\rightarrow$ \tf{'entry\_point ('name');'}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.61 \item \ti
+              {entry point} $\rightarrow$ \tf{'entry\_point ('name');'}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.63 \item \ti
+              {exit point} $\rightarrow$ \tf{'exit\_point ('name');'}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.63 \item \ti
+              {exit point} $\rightarrow$ \tf{'exit\_point ('name');'}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.63 \item \ti
+              {exit point} $\rightarrow$ \tf{'exit\_point ('name');'}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.65 \item \ti
+              {initial} $\rightarrow$ \tf{'initial ('name');'}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.65 \item \ti
+              {initial} $\rightarrow$ \tf{'initial ('name');'}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.65 \item \ti
+              {initial} $\rightarrow$ \tf{'initial ('name');'}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.67 \item \ti
+              {final} $\rightarrow$ \tf{'final\_state ('name');'}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.67 \item \ti
+              {final} $\rightarrow$ \tf{'final\_state ('name');'}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.67 \item \ti
+              {final} $\rightarrow$ \tf{'final\_state ('name');'}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.69 \item \ti
+              {join} $\rightarrow$ \tf{'join ('name');'}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.69 \item \ti
+              {join} $\rightarrow$ \tf{'join ('name');'}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.69 \item \ti
+              {join} $\rightarrow$ \tf{'join ('name');'}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.71 \item \ti
+              {fork} $\rightarrow$ \tf{'fork ('name');'}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.71 \item \ti
+              {fork} $\rightarrow$ \tf{'fork ('name');'}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.71 \item \ti
+              {fork} $\rightarrow$ \tf{'fork ('name');'}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.73 \item \ti
+              {choice} $\rightarrow$ \tf{'choice ('name');'}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.73 \item \ti
+              {choice} $\rightarrow$ \tf{'choice ('name');'}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.73 \item \ti
+              {choice} $\rightarrow$ \tf{'choice ('name');'}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.75 \item \ti
+              {junction} $\rightarrow$ \tf{'junction ('name');'}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.75 \item \ti
+              {junction} $\rightarrow$ \tf{'junction ('name');'}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.75 \item \ti
+              {junction} $\rightarrow$ \tf{'junction ('name');'}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.77 \item \ti
+              {shallow history} $\rightarrow$ \tf{'shallow\_history ('name');'}
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.77 \item \ti
+              {shallow history} $\rightarrow$ \tf{'shallow\_history ('name');'}
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.77 \item \ti
+              {shallow history} $\rightarrow$ \tf{'shallow\_history ('name');'}
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.79 \item \ti
+              {deep history} $\rightarrow$ \tf{'deep\_history ('name');'}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.79 \item \ti
+              {deep history} $\rightarrow$ \tf{'deep\_history ('name');'}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.79 \item \ti
+              {deep history} $\rightarrow$ \tf{'deep\_history ('name');'}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.80 \end{itemize}
+                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Reference `sec:background' on page 5 undefined on input line 91.
+
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.96 	\item \ttt
+                {CallEvent} $\rightarrow$ \tf{'call\_event'} \tf{'('name, op...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.96 	\item \ttt
+                {CallEvent} $\rightarrow$ \tf{'call\_event'} \tf{'('name, op...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.96 	\item \ttt
+                {CallEvent} $\rightarrow$ \tf{'call\_event'} \tf{'('name, op...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.98 	\item \ttt
+                {TimeEvent} $\rightarrow$ \tf{'time\_event'} \tf{'('name, du...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.98 	\item \ttt
+                {TimeEvent} $\rightarrow$ \tf{'time\_event'} \tf{'('name, du...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.98 	\item \ttt
+                {TimeEvent} $\rightarrow$ \tf{'time\_event'} \tf{'('name, du...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.100 	\item \ttt
+                 {SignalEvent} $\rightarrow$ \tf{'signal\_event'} \tf{'('nam...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.100 	\item \ttt
+                 {SignalEvent} $\rightarrow$ \tf{'signal\_event'} \tf{'('nam...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.100 	\item \ttt
+                 {SignalEvent} $\rightarrow$ \tf{'signal\_event'} \tf{'('nam...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.102 	\item \ttt
+                 {ChangeEvent} $\rightarrow$ \tf{'change\_event'} \tf{'('nam...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.102 	\item \ttt
+                 {ChangeEvent} $\rightarrow$ \tf{'change\_event'} \tf{'('nam...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.102 	\item \ttt
+                 {ChangeEvent} $\rightarrow$ \tf{'change\_event'} \tf{'('nam...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.104 	\item \ttt
+                 {SimpleEvent} $\rightarrow$ \tf{'simple\_event'} \tf{'('nam...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.104 	\item \ttt
+                 {SimpleEvent} $\rightarrow$ \tf{'simple\_event'} \tf{'('nam...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.104 	\item \ttt
+                 {SimpleEvent} $\rightarrow$ \tf{'simple\_event'} \tf{'('nam...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.106 	\item \ttt
+                 {Any} $\rightarrow$ \tf{'any\_event'} \tf{'('name');'}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.106 	\item \ttt
+                 {Any} $\rightarrow$ \tf{'any\_event'} \tf{'('name');'}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.106 	\item \ttt
+                 {Any} $\rightarrow$ \tf{'any\_event'} \tf{'('name');'}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.107 \end{itemize}
+                   
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--107
+$\OMS/pzccm/m/n/9 !$ \T1/phv/m/n/9 'time_event' '('name, dur');' []\T1/ptm/m/it
+/9 SignalEvent $\OMS/pzccm/m/n/9 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--107
+\T1/phv/m/n/9 'sig-nal_event' '('name, sig');' []\T1/ptm/m/it/9 ChangeEvent $\O
+MS/pzccm/m/n/9 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--107
+\T1/phv/m/n/9 'change_event' '('name, expr');' []\T1/ptm/m/it/9 SimpleEvent $\O
+MS/pzccm/m/n/9 !$
+ []
+
+
+LaTeX Warning: Reference `sec:background' on page 5 undefined on input line 111
+.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.113 	\item[\ttt{name}]
+                         The unique identifier for an event.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.113 	\item[\ttt{name}]
+                         The unique identifier for an event.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.113 	\item[\ttt{name}]
+                         The unique identifier for an event.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 113.
+LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <9> not available
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 113.
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.115 	\item[\ttt{op}]
+                       The name of the operation associated with a \ttt{Call...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.115 	\item[\ttt{op}]
+                       The name of the operation associated with a \ttt{Call...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.115 	\item[\ttt{op}]
+                       The name of the operation associated with a \ttt{Call...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.117 	\item[\ttt{dur}]
+                        The duration associated with a \ttt{TimeEvent} and s...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.117 	\item[\ttt{dur}]
+                        The duration associated with a \ttt{TimeEvent} and s...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.117 	\item[\ttt{dur}]
+                        The duration associated with a \ttt{TimeEvent} and s...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.119 	\item[\ttt{sig}]
+                        The name of the signal associated with a \ttt{Signal...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.119 	\item[\ttt{sig}]
+                        The name of the signal associated with a \ttt{Signal...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.119 	\item[\ttt{sig}]
+                        The name of the signal associated with a \ttt{Signal...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.121 	\item[\ttt{expr}]
+                         The expression associated with a \ttt{ChangeEvent}....
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.121 	\item[\ttt{expr}]
+                         The expression associated with a \ttt{ChangeEvent}....
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.121 	\item[\ttt{expr}]
+                         The expression associated with a \ttt{ChangeEvent}....
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.122 \end{description}
+                       
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Citation `qm' on page 5 undefined on input line 125.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.131 \item \ttt
+                {call\_event(CE1, method1)}: A \ttt{CallEvent} occurs if the...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.131 \item \ttt
+                {call\_event(CE1, method1)}: A \ttt{CallEvent} occurs if the...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.131 \item \ttt
+                {call\_event(CE1, method1)}: A \ttt{CallEvent} occurs if the...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.133 \item \ttt
+                {signal\_event(SE, Sig)}: A \ttt{SignalEvent} occurs if an i...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.133 \item \ttt
+                {signal\_event(SE, Sig)}: A \ttt{SignalEvent} occurs if an i...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.133 \item \ttt
+                {signal\_event(SE, Sig)}: A \ttt{SignalEvent} occurs if an i...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.135 \item \ttt
+                {time\_event(TE5ms, 5)}: A \ttt{TimeEvent} occurs after 5 mi...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.135 \item \ttt
+                {time\_event(TE5ms, 5)}: A \ttt{TimeEvent} occurs after 5 mi...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.135 \item \ttt
+                {time\_event(TE5ms, 5)}: A \ttt{TimeEvent} occurs after 5 mi...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 \end{itemize}
+                   
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 1242) in paragraph at lines 130--136
+\T1/ptm/m/n/9 the method \T1/ptm/m/it/9 method1 \T1/ptm/m/n/9 in the ac-tive cl
+ass is called.
+ []
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.145 \item \ttt
+                {external} $\rightarrow$ \tf{'transition'} \tf{'('src, tgt, ...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.145 \item \ttt
+                {external} $\rightarrow$ \tf{'transition'} \tf{'('src, tgt, ...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.145 \item \ttt
+                {external} $\rightarrow$ \tf{'transition'} \tf{'('src, tgt, ...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.148 \item \ttt
+                {local}$\rightarrow$\tf{'local\_transition}\tf{('src,tgt,gua...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.148 \item \ttt
+                {local}$\rightarrow$\tf{'local\_transition}\tf{('src,tgt,gua...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.148 \item \ttt
+                {local}$\rightarrow$\tf{'local\_transition}\tf{('src,tgt,gua...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.151 \item \ttt
+                {internal} $\rightarrow$ \tf{'int\_transition}\tf{('src, gua...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.151 \item \ttt
+                {internal} $\rightarrow$ \tf{'int\_transition}\tf{('src, gua...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.151 \item \ttt
+                {internal} $\rightarrow$ \tf{'int\_transition}\tf{('src, gua...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.152 \end{itemize}
+                   
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.157 	\item[\ttt{src}]
+                        The name of the source vertex of the transition.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.157 	\item[\ttt{src}]
+                        The name of the source vertex of the transition.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.157 	\item[\ttt{src}]
+                        The name of the source vertex of the transition.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.160 	\item[\ttt{tgt}]
+                        The name of the target vertex of the transition.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.160 	\item[\ttt{tgt}]
+                        The name of the target vertex of the transition.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.160 	\item[\ttt{tgt}]
+                        The name of the target vertex of the transition.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.162 	\item[\ttt{guard}]
+                          A boolean expression representing the transition's...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.162 	\item[\ttt{guard}]
+                          A boolean expression representing the transition's...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.162 	\item[\ttt{guard}]
+                          A boolean expression representing the transition's...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.164 	\item[\ttt{evt}]
+                        The name of the event triggering the transition.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.164 	\item[\ttt{evt}]
+                        The name of the event triggering the transition.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.164 	\item[\ttt{evt}]
+                        The name of the event triggering the transition.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.168 	\item[\ttt{eff}]
+                        The name of the method, which defines the effect of ...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.168 	\item[\ttt{eff}]
+                        The name of the method, which defines the effect of ...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.168 	\item[\ttt{eff}]
+                        The name of the method, which defines the effect of ...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.173 \end{description}
+                       
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.178 \item \ttt
+                {transition(S1,S2,guard1,CE1,effect1)}: A transition from \t...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.178 \item \ttt
+                {transition(S1,S2,guard1,CE1,effect1)}: A transition from \t...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.178 \item \ttt
+                {transition(S1,S2,guard1,CE1,effect1)}: A transition from \t...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.183 \item \ttt
+                {transition(S11,S2,NULL,SE,effect2)}: A transition, triggere...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.183 \item \ttt
+                {transition(S11,S2,NULL,SE,effect2)}: A transition, triggere...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.183 \item \ttt
+                {transition(S11,S2,NULL,SE,effect2)}: A transition, triggere...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.185 \end{itemize}
+                   
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 1831) in paragraph at lines 177--185
+[]\T1/ptm/m/n/10 [\T1/ptm/m/n/9 ]\T1/ptm/m/it/9 transition(S1,S2,guard1,CE1,eff
+ect1)\T1/ptm/m/n/9 : A tran-si-tion
+ []
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 199.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 199.
+)
+Overfull \hbox (24.89774pt too wide) in paragraph at lines 187--174
+[]$[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 187--174
+
+ []
+
+(sections/synchronization.tex
+
+LaTeX Warning: Reference `subsec:mdrtebackground' on page 5 undefined on input 
+line 5.
+
+[5] <figures/scenario3_seq.pdf, id=56, 654.44273pt x 420.76974pt>
+File: figures/scenario3_seq.pdf Graphic file (type pdf)
+
+<use figures/scenario3_seq.pdf>
+Package pdftex.def Info: figures/scenario3_seq.pdf used on input line 48.
+(pdftex.def)             Requested size: 213.41443pt x 137.21082pt.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.54 	\item[Step 1]
+                    Both the model and code may be edited concurrently.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.54 	\item[Step 1]
+                    Both the model and code may be edited concurrently.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.54 	\item[Step 1]
+                    Both the model and code may be edited concurrently.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.57 	\item[Step 2]
+                    First we create an SA from the edited model by generatin...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.57 	\item[Step 2]
+                    First we create an SA from the edited model by generatin...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.57 	\item[Step 2]
+                    First we create an SA from the edited model by generatin...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.60 	\item[Step 3]
+                    The SA is synchronized with the edited code. Since the SA
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.60 	\item[Step 3]
+                    The SA is synchronized with the edited code. Since the SA
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.60 	\item[Step 3]
+                    The SA is synchronized with the edited code. Since the SA
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.63 	\item[Step 4]
+                    Once SA and edited code are synchronized, the former is ...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.63 	\item[Step 4]
+                    Once SA and edited code are synchronized, the former is ...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.63 	\item[Step 4]
+                    Once SA and edited code are synchronized, the former is ...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.64 \end{description}
+                      
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+) (sections/implementation.tex
+<figures/architecture.pdf, id=57, 963.6pt x 542.025pt>
+File: figures/architecture.pdf Graphic file (type pdf)
+
+<use figures/architecture.pdf>
+Package pdftex.def Info: figures/architecture.pdf used on input line 13.
+(pdftex.def)             Requested size: 213.41443pt x 19.64955pt.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.63 	\item[Step 1]
+                    %The UML State Machines in UML models are verified wheth...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.63 	\item[Step 1]
+                    %The UML State Machines in UML models are verified wheth...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.63 	\item[Step 1]
+                    %The UML State Machines in UML models are verified wheth...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.68 	\item[Step 2]
+                   
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.68 	\item[Step 2]
+                   
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.68 	\item[Step 2]
+                   
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.71 	\item[Step 3]
+                    For each transition, a row in the transition table is ge...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.71 	\item[Step 3]
+                    For each transition, a row in the transition table is ge...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.71 	\item[Step 3]
+                    For each transition, a row in the transition table is ge...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.73 	\item[Step 4]
+                    Each state action or transition effect is transformed in...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.73 	\item[Step 4]
+                    Each state action or transition effect is transformed in...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.73 	\item[Step 4]
+                    Each state action or transition effect is transformed in...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.78 	\item[Step 5]
+                    For each active class, the structural and usual operatio...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.78 	\item[Step 5]
+                    For each active class, the structural and usual operatio...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.78 	\item[Step 5]
+                    For each active class, the structural and usual operatio...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Citation `_papyrus/designer/code-generation_????' on page 6 unde
+fined on input line 78.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.79 \end{description}
+                      
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[6 <./figures/architecture.pdf> <./figures/scenario3_seq.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/scenario3_seq.pdf): PDF inclusion:
+ multiple pdfs with page group included in a single page
+>]
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.88 	\item[Step 1]
+                    Parsing the state machine part in the front-end code by ...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.88 	\item[Step 1]
+                    Parsing the state machine part in the front-end code by ...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.88 	\item[Step 1]
+                    Parsing the state machine part in the front-end code by ...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.92 	\item[Step 2]
+                    For each class in written in RAOES, all class members ex...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.92 	\item[Step 2]
+                    For each class in written in RAOES, all class members ex...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.92 	\item[Step 2]
+                    For each class in written in RAOES, all class members ex...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.93 \end{description}
+                      
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+<figures/modelchange.pdf, id=1541, 963.6pt x 542.025pt>
+File: figures/modelchange.pdf Graphic file (type pdf)
+
+<use figures/modelchange.pdf>
+Package pdftex.def Info: figures/modelchange.pdf used on input line 123.
+(pdftex.def)             Requested size: 213.41443pt x 85.24287pt.
+
+
+LaTeX Warning: Citation `Badreddin2014' on page 7 undefined on input line 149.
+
+
+LaTeX Warning: Citation `niaz_mapping_2004' on page 7 undefined on input line 1
+54.
+
+<figures/s2stransformation.pdf, id=1543, 963.6pt x 542.025pt>
+File: figures/s2stransformation.pdf Graphic file (type pdf)
+
+<use figures/s2stransformation.pdf>
+Package pdftex.def Info: figures/s2stransformation.pdf used on input line 162.
+(pdftex.def)             Requested size: 213.41443pt x 27.08649pt.
+) (sections/experiment.tex [7 <./figures/modelchange.pdf> <./figures/s2stransfo
+rmation.pdf>]
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 	\item[\tb{RQ1}]
+                     %A state machine \ttt{sm} is used for generating the fr...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 	\item[\tb{RQ1}]
+                     %A state machine \ttt{sm} is used for generating the fr...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 	\item[\tb{RQ1}]
+                     %A state machine \ttt{sm} is used for generating the fr...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Citation `foster_combinators_2007' on page 8 undefined on input 
+line 8.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.10 	\item[\tb{RQ2}]
+                      The back-end code is used for compilation.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.10 	\item[\tb{RQ2}]
+                      The back-end code is used for compilation.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.10 	\item[\tb{RQ2}]
+                      The back-end code is used for compilation.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 	\item[\tb{RQ3}]
+                      Runtime performance and memory usage is undoubtedly cr...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 	\item[\tb{RQ3}]
+                      Runtime performance and memory usage is undoubtedly cr...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 	\item[\tb{RQ3}]
+                      Runtime performance and memory usage is undoubtedly cr...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 \end{description}
+                      
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 1127) in paragraph at lines 6--14
+\T1/ptm/m/n/9 USMs can be used for re-con-struct-ing the orig-i-nal
+ []
+
+<figures/rq1-2evaluation.pdf, id=1571, 963.6pt x 542.025pt>
+File: figures/rq1-2evaluation.pdf Graphic file (type pdf)
+
+<use figures/rq1-2evaluation.pdf>
+Package pdftex.def Info: figures/rq1-2evaluation.pdf used on input line 24.
+(pdftex.def)             Requested size: 213.41443pt x 62.27394pt.
+ (sections/reverseexpr.tex)
+
+LaTeX Warning: Citation `moka' on page 8 undefined on input line 43.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.49 	\item[Step 1]
+                    For a \ttt{model} from the Moka example set, we simulate...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.49 	\item[Step 1]
+                    For a \ttt{model} from the Moka example set, we simulate...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.49 	\item[Step 1]
+                    For a \ttt{model} from the Moka example set, we simulate...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.51 	\item[Step 2]
+                    A \ttt{C++ front-end} code is generated from the \ttt{mo...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.51 	\item[Step 2]
+                    A \ttt{C++ front-end} code is generated from the \ttt{mo...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.51 	\item[Step 2]
+                    A \ttt{C++ front-end} code is generated from the \ttt{mo...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.53 	\item[Step 3]
+                    The \ttt{C++ front-end} is used as input for generating ...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.53 	\item[Step 3]
+                    The \ttt{C++ front-end} is used as input for generating ...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.53 	\item[Step 3]
+                    The \ttt{C++ front-end} is used as input for generating ...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.55 	\item[Step 4]
+                    The \ttt{C++ back-end} is compiled for execution to obta...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.55 	\item[Step 4]
+                    The \ttt{C++ back-end} is compiled for execution to obta...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.55 	\item[Step 4]
+                    The \ttt{C++ back-end} is compiled for execution to obta...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.57 	\item[Step 5]
+                    \ttt{Trace 1} and \ttt{Trace 2} are compared.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.57 	\item[Step 5]
+                    \ttt{Trace 1} and \ttt{Trace 2} are compared.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.57 	\item[Step 5]
+                    \ttt{Trace 1} and \ttt{Trace 2} are compared.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.58 \end{description}
+                      
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Citation `boost' on page 8 undefined on input line 118.
+
+
+LaTeX Warning: Citation `benchmark' on page 8 undefined on input line 118.
+
+
+LaTeX Warning: Citation `Magicdraw' on page 8 undefined on input line 120.
+
+
+LaTeX Warning: Citation `EA' on page 8 undefined on input line 120.
+
+
+LaTeX Warning: Citation `qm' on page 8 undefined on input line 120.
+
+
+LaTeX Warning: Citation `Statechart' on page 8 undefined on input line 122.
+
+
+LaTeX Warning: Citation `benchmark' on page 8 undefined on input line 122.
+
+[8 <./figures/rq1-2evaluation.pdf>]
+<experiments/box-plot-mine.pdf, id=1591, 614.295pt x 794.97pt>
+File: experiments/box-plot-mine.pdf Graphic file (type pdf)
+
+<use experiments/box-plot-mine.pdf>
+Package pdftex.def Info: experiments/box-plot-mine.pdf used on input line 217.
+(pdftex.def)             Requested size: 213.41443pt x 113.24316pt.
+
+Underfull \hbox (badness 1242) in paragraph at lines 223--226
+\T1/ptm/m/n/10 Sinela-bore gen-er-ates the small-est ex-e-cutable size
+ []
+
+
+LaTeX Warning: Citation `Massif' on page 9 undefined on input line 227.
+
+
+LaTeX Warning: Citation `nethercote2007valgrind' on page 9 undefined on input l
+ine 227.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 251.
+
+
+Overfull \hbox (50.14818pt too wide) in paragraph at lines 255--262
+ [][] 
+ []
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 266.
+
+
+Overfull \hbox (62.02495pt too wide) in paragraph at lines 270--275
+ [][] 
+ []
+
+) (sections/relatedwork.tex
+
+LaTeX Warning: Citation `czarnecki_multi-level_2006' on page 9 undefined on inp
+ut line 27.
+
+
+LaTeX Warning: Citation `yu2012maintaining' on page 9 undefined on input line 3
+0.
+
+
+LaTeX Warning: Citation `christensen2011towards' on page 9 undefined on input l
+ine 38.
+
+
+LaTeX Warning: Citation ` kramer2015change' on page 9 undefined on input line 4
+1.
+
+
+LaTeX Warning: Citation `angyal_synchronizing_2008' on page 9 undefined on inpu
+t line 44.
+
+[9 <./experiments/box-plot-mine.pdf>]
+
+LaTeX Warning: Citation `plantuml' on page 10 undefined on input line 155.
+
+
+LaTeX Warning: Citation `lethbridge2010umplification' on page 10 undefined on i
+nput line 155.
+
+
+LaTeX Warning: Citation `mazanec2012general' on page 10 undefined on input line
+ 155.
+
+
+LaTeX Warning: Citation `mazanec2012general' on page 10 undefined on input line
+ 162.
+
+
+LaTeX Warning: Citation `voelter2012mbeddr' on page 10 undefined on input line 
+182.
+
+
+LaTeX Warning: Citation `Maro:2015:IGT:2814251.2814253' on page 10 undefined on
+ input line 188.
+
+
+LaTeX Warning: Citation `balz2009embedding' on page 10 undefined on input line 
+192.
+
+
+LaTeX Warning: Citation `EA' on page 10 undefined on input line 196.
+
+
+LaTeX Warning: Citation `sinelabore' on page 10 undefined on input line 196.
+
+
+LaTeX Warning: Citation `Douglass1999' on page 10 undefined on input line 197.
+
+
+LaTeX Warning: Citation `Shalyto2006' on page 10 undefined on input line 197.
+
+
+LaTeX Warning: Citation `niaz_mapping_2004' on page 10 undefined on input line 
+197.
+
+
+LaTeX Warning: Citation `Domnguez2012' on page 10 undefined on input line 198.
+
+
+LaTeX Warning: Citation `spinke_object-oriented_2013' on page 10 undefined on i
+nput line 208.
+
+) (sections/conclusion.tex
+Underfull \hbox (badness 2173) in paragraph at lines 11--15
+[]\T1/ptm/m/n/10 We eval-u-ated RAOES by con-duct-ing ex-per-i-
+ []
+
+[10]
+
+LaTeX Warning: Citation `gay2003nesc' on page 11 undefined on input line 23.
+
+
+Underfull \hbox (badness 3907) in paragraph at lines 20--27
+[]\T1/ptm/m/n/10 For the mo-ment, RAOES sup-ports the co-
+ []
+
+
+Underfull \hbox (badness 1412) in paragraph at lines 20--27
+\T1/ptm/m/n/10 pow-er-ful and ef-fec-tive. Our wish is to em-bed
+ []
+
+) (modelsward.bbl
+Overfull \hbox (64.15564pt too wide) in paragraph at lines 4--5
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--61
+[]\T1/ptm/m/n/9 MSM (2016).  Meta State Ma-chine.  $\T1/pcr/m/n/9 http :$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--61
+$\T1/pcr/m/n/9 / / www . boost . org / doc / libs / 1 _ 59 _ 0 _ b1 / libs /$
+ []
+
+
+Underfull \hbox (badness 2521) in paragraph at lines 56--61
+$\T1/pcr/m/n/9 msm / doc / HTML / index . html$\T1/ptm/m/n/9 .  [On-line; ac-ce
+ssed
+ []
+
+[11]) [12
+
+] (modelsward.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 28659 strings out of 493673
+ 561726 string characters out of 3144029
+ 845388 words of memory out of 3000000
+ 31468 multiletter control sequences out of 15000+200000
+ 71631 words of font info for 105 fonts, out of 3000000 for 9000
+ 1025 hyphenation exceptions out of 8191
+ 54i,16n,85p,10423b,1546s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/VP242103/Downloads/fonts/enc/dvips/fontname/8r.enc}<C:/Users/VP2421
+03/Downloads/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/VP242103/Downl
+oads/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/VP242103/Downloads/fonts/type
+1/urw/helvetic/uhvr8a.pfb><C:/Users/VP242103/Downloads/fonts/type1/urw/times/ut
+mb8a.pfb><C:/Users/VP242103/Downloads/fonts/type1/urw/times/utmbi8a.pfb><C:/Use
+rs/VP242103/Downloads/fonts/type1/urw/times/utmr8a.pfb><C:/Users/VP242103/Downl
+oads/fonts/type1/urw/times/utmri8a.pfb>
+Output written on modelsward.pdf (12 pages, 1052984 bytes).
+PDF statistics:
+ 1649 PDF objects out of 1728 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 95 words of extra memory for PDF output out of 10000 (max. 10000000)
+

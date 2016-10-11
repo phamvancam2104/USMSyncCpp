@@ -1,0 +1,21 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: modelsward.aux
+White space in argument---line 5 of file modelsward.aux
+ : \citation{possepapyrusrt,
+ :                           Douglass1999,Shalyto2006, ibm_rhapsody}
+I'm skipping whatever remains of this command
+White space in argument---line 13 of file modelsward.aux
+ : \citation{langhammer2013co,
+ :                             kramer2015change}
+I'm skipping whatever remains of this command
+The style file: apalike.bst
+Database file #1: refs.bib
+Warning--I didn't find a database entry for "Moore99"
+Warning--I didn't find a database entry for "Smith98"
+Warning--to sort, need author or key in EUML
+Warning--empty year in EUML
+Warning--empty year in ibm_rhapsody
+Warning--empty year in possepapyrusrt
+Warning--empty journal in possepapyrusrt
+Warning--empty year in Sendall
+Warning--empty journal in Sendall
+(There were 2 error messages)
