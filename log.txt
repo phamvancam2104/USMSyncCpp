@@ -1,0 +1,128 @@
+commit 65f0e98ef645d237e9367d45863aa800b41326e9
+Author: vancam.pham@cea.fr <phamvancam2104@gmail.com>
+Date:   Fri Oct 14 17:03:21 2016 +0200
+
+    Refactoring for benchmark + introduction
+    
+    Signed-off-by: vancam.pham@cea.fr <phamvancam2104@gmail.com>
+
+commit d052b4cbe55c14481acd6f244abce52fa9c8bd07
+Author: vancam.pham@cea.fr <phamvancam2104@gmail.com>
+Date:   Fri Oct 14 17:03:21 2016 +0200
+
+    Refactoring for benchmark + introduction
+    
+    Signed-off-by: vancam.pham@cea.fr <phamvancam2104@gmail.com>
+
+commit 9e77133eb6e227385cef3cf813bb44f741070fed
+Author: vancam.pham@cea.fr <phamvancam2104@gmail.com>
+Date:   Thu Oct 13 14:49:39 2016 +0200
+
+    refactoring (much)
+    
+    Signed-off-by: vancam.pham@cea.fr <phamvancam2104@gmail.com>
+
+commit 3136905ae468fee63b9b1b45b6d76966fd411374
+Author: vancam.pham@cea.fr <phamvancam2104@gmail.com>
+Date:   Wed Oct 12 10:27:13 2016 +0200
+
+    modelsward template and refactoring
+    
+    Signed-off-by: vancam.pham@cea.fr <phamvancam2104@gmail.com>
+
+commit 775eac938b3bdb760413b224652add7eeaad6bd2
+Author: vancam.pham@cea.fr <phamvancam2104@gmail.com>
+Date:   Tue Oct 11 23:07:43 2016 +0200
+
+    Added component based syntax
+    
+    Signed-off-by: vancam.pham@cea.fr <phamvancam2104@gmail.com>
+
+commit 0a715411cfd6bdb41f4c7021666a9918ac35d7bd
+Author: vancam.pham@cea.fr <phamvancam2104@gmail.com>
+Date:   Tue Oct 11 17:21:35 2016 +0200
+
+    added Modelsward template and comments from Federico for introduction
+
+commit edd283627c23b28f831257bb867e378fc33e69a9
+Author: vancam.pham@cea.fr <phamvancam2104@gmail.com>
+Date:   Sun Oct 9 19:23:19 2016 +0200
+
+    commit before using modelsward template
+
+commit f1311fb67ad0d183fd9e8ac009c348b1a8108cf9
+Author: Van Cam PHAM <phamvancam2104@gmail.com>
+Date:   Fri Sep 30 16:02:17 2016 +0200
+
+    Before fixing review comments
+    
+    Signed-off-by: Van Cam PHAM <phamvancam2104@gmail.com>
+
+commit 9d9bad09e96648461181279130051d31647c18e9
+Author: vancam.pham@cea.fr <phamvancam2104@gmail.com>
+Date:   Tue Sep 27 17:54:13 2016 +0200
+
+    first version before review
+
+commit 498043f389936e15232e6f09a01d855ed8a4e53b
+Author: Van Cam PHAM <phamvancam2104@gmail.com>
+Date:   Fri Sep 23 18:45:17 2016 +0200
+
+    before review
+
+commit c4a24b3f7a49507450f0a5075de56c8a87f42d0e
+Author: Van Cam PHAM <phamvancam2104@gmail.com>
+Date:   Thu Aug 25 15:12:12 2016 +0200
+
+    before reducing background
+
+commit 0767d7aaab801b3a6078b78bdf37a68e9ae6a292
+Author: vancam.pham@cea.fr <phamvancam2104@gmail.com>
+Date:   Sun Aug 14 22:46:56 2016 +0200
+
+    Refactor background section
+
+commit d806ecda3efb83af70293af3d65f66b0db2489f0
+Author: vancam.pham@cea.fr <phamvancam2104@gmail.com>
+Date:   Fri Aug 12 22:06:36 2016 +0200
+
+    Refine the background section by removing some definitions in both sub-sections
+
+commit ad094360ae10619d237516e7e542f21bf4484b8e
+Author: Van Cam PHAM <phamvancam2104@gmail.com>
+Date:   Fri Aug 12 19:20:23 2016 +0200
+
+    Update sections
+    
+    Signed-off-by: Van Cam PHAM <phamvancam2104@gmail.com>
+
+commit d9397b067e189f48bee5ca6885a650105019ea4d
+Merge: 4dcf175 15d42ef
+Author: Van Cam PHAM <phamvancam2104@gmail.com>
+Date:   Fri Aug 12 18:26:00 2016 +0200
+
+    WIP on master: 4dcf175 Initial commit, template
+
+commit 15d42efe9b376fab9e8beb1385106caf50fb6956
+Author: Van Cam PHAM <phamvancam2104@gmail.com>
+Date:   Fri Aug 12 18:25:59 2016 +0200
+
+    index on master: 4dcf175 Initial commit, template
+
+commit 4dcf175b2bc81e9e9cbff3d6a40678147a358297
+Author: Van Cam PHAM <phamvancam2104@gmail.com>
+Date:   Tue Jul 26 15:14:25 2016 +0200
+
+    Initial commit, template
+
+commit 887351302e19165a4b2e94fa4556a3f0f03bb0d6
+Author: Van Cam PHAM <vancam.pham@cea.fr>
+Date:   Tue Jul 26 15:10:24 2016 +0200
+
+    Initial version, template
+
+commit 2b491aa5ff509fa956562295a3c3137085e6fe64
+Author: phamvancam2104 <phamvancam2104@gmail.com>
+Date:   Tue Jul 26 15:06:38 2016 +0200
+
+    Initial commit

@@ -31,15 +31,24 @@ Yu et al. \cite{yu2012maintaining} propose to synchronize user-code and generate
 This latter does not, however, allow modifications in regions beyond the marked ones and thus prohibits the programmers from changing USMs' topology.
 \ttt{Deep separation} proposed in \cite{zheng2012enhancing} overcomes the limitations of the separation mechanisms.
 However, %as the authors state that, 
-it does not allow to modify the system architecture- and behavior-prescribed code in text-based development environment.  
+it does not allow to modify the system architecture-prescribed code in text-based development environment.  
 %Furthermore, as discussed in Section \ref{sec:intro}, there is still a possibility for the programmers to produce accidental changes, which cannot be reflected to the model.  
 
 
-The underlying idea of RAOES is similar to ArchJava \cite{aldrich2002archjava}, \cite{ubayashi2010archface} as discussed in Section \ref{sec:intro}, and the approach in \cite{christensen2011towards}.
-This latter utilizes Java annotations to preserve architecture intention in the source code.
-These approaches try to embed architectural information into the code, specifically Java while RAOES integrates the behavior represented by USMs into C++ to ease the RTE problem. 
-Regarding the co-evolution of component-based model and code, the authors in \cite{langhammer2013co, kramer2015change} use a super model, from which source code and component model can be derived as views for modifications.
-However, code modifications made outside of their (limited) editor and violating their rules are not updated to the super model. The co-evolution is then broken. For example, programmers can only change method bodies in a component's code. 
+The idea of adding more constructs for object-oriented languages to contain architecture information in XSeparation is similar to ArchJava \cite{aldrich2002archjava} and Archface \cite{ubayashi2010archface}.
+%This latter utilizes Java annotations to preserve architecture intention in the source code.
+%These approaches try to embed architectural information into the code, specifically Java while RAOES integrates the behavior represented by USMs into C++ to ease the RTE problem. 
+ArchJava is a Java-based language extension, which adds structural component concepts such as part and port to Java to support the co-evolution of architecture structure and Java implementation. 
+Archface is a contract description language, which supports components and connectors, between design and implementation using concepts such as \ttt{pointcut} in Aspect programming to reason about the design and code correctness.
+These approaches, however, do not provide the traceability between the behavior of the architecture and code.
+The user-code and generated code are not separated as in XSeparation and \ttt{1.x-way mapping} to allow modifications made in both architecture and code.
+They also do not have a synchronization mechanism in case of concurrent development.
+Furthermore, the communication between two ports uses method calls of object-oriented languages instead of interfaces conforming to the UML specification.
+In addition, while ArchJava makes it not Java anymore and facilities of Java's IDEs such as intelligent completion are not aware, the XSeparation-generated code in our implementation can use all IDE functionalities.
+
+Regarding the co-evolution of component-based model and code, the authors in \cite{kramer2015change} use a super model, from which source code and component model can be derived as views for modifications.
+However, code modifications made outside of their (limited) editor and violating their rules, e.g. only method bodies allow to be modified in code, are not updated to the super model. 
+ 
 
 The authors in \cite{angyal_synchronizing_2008} propose to synchronize code with platform specific models by using a three-way merging approaches.
 However, the approach only deals with syntactic synchronization while the code semantics such as state machines in source code is not taken into account.
@@ -152,16 +161,17 @@ transformations, necessary for synchronization.
 
 
 \subsection{Language engineering}
-Several languages such as PlantUML \cite{plantuml}, Umple \cite{lethbridge2010umplification}, and Earl Grey (EG) \cite{mazanec2012general} support the text-based modeling (Textual ML) of UML State Machine.  
-UML class and state machine elements are usually available in these languages.
+Several languages such as PlantUML \cite{plantuml}, Umple \cite{lethbridge2010umplification}, and Earl Grey (EG) \cite{mazanec2012general} support the text-based modeling (Textual ML) of UML.  
+UML class and State Machine elements are usually available in these languages.
 However, they lack the explicit support for event types definitions used in UML.
 Furthermore, these languages 
 do not allow the programmers to reuse the existing syntax of C++ but redefine it in their own language and IDE. 
 By this way, they need a new complete compiler, which requires a lot of engineering tasks to develop. 
-Contrarily, RAOES integrates the modeling features into C++, only requires a light-weight compiler for the modeling features, and enables using legacy code in development.
-RAOES allows the programmers stay with their familiar C++ syntax and existing favorite IDEs while familiarity of these Textual MLs are questionable in \cite{mazanec2012general}. 
-RAOES automatically synchronizes the code with the system model specified by UML.
-RAOES profits all benefices of IDEs such as intelligent completion and easy to implement. Furthermore, RAOES allows to use all specific C++ features such as function pointers for program performance, which are not available in the Textual MLs
+Contrarily, XSeparation integrates the modeling features into C++, only requires a light-weight compiler, and enables using legacy code in development.
+XSeparation allows the programmers stay with their familiar C++ syntax and existing favorite IDEs. %while familiarity of these Textual MLs are questionable in \cite{mazanec2012general}. 
+%XSeparation automatically synchronizes the code with the system model specified by UML.
+Hence, XSeparation profits all benefices of IDEs such as intelligent completion and easy to implement. 
+Furthermore, XSeparation allows to use all specific C++ features such as function pointers for program performance, which are not available in the Textual MLs.
 %Followings list differences in comparison between RAOES and the TMLs.
 
 \begin{comment}
@@ -181,32 +191,15 @@ RAOES profits all benefices of IDEs such as intelligent completion and easy to i
 
 \ti{mbeddr} \cite{voelter2012mbeddr} proposes an extensible C-based programming language.
 The idea of \ti{mbeddr} is similar to Umple's by introducing a new editor to mix high-level and low-level code for effective embedded system development. 
-Furthermore, \ti{mbeddr} is a code-centric approach and UML event types are not explicitly supported whereas RAOES is a model-code hybrid approach focusing on the collaboration between software architects and programmers and the evolution of artifacts.  
+\ti{mbeddr} is a code-centric approach and UML event types are not explicitly supported whereas XSeparation enables a model-code hybrid and concurrent development and maintenance approach focusing on the collaboration between software architects and programmers, and the evolution of the artifacts.  
 
 %FXU \cite{Pilitowski2007} is the most complete tool but generated code is heavily dependent on their own library and C\# is generated.
 
 In \cite{Maro:2015:IGT:2814251.2814253}, the authors propose to integrate graphical and textual editors for UML profiles.
 The goal is to allow developers to work graphically and textually, which is similar to our goal.
-However, this approach is dependent on Eclipse technologies and embeds all modeling concepts to textual editors while RAOES only introduces partially to allow programmers to be familiar with the syntax of their favorite programming language.
+However, this approach is dependent on Eclipse technologies and embeds all modeling concepts to textual editors while XSeparation only introduces partially to allow programmers to be familiar with the syntax of their favorite programming language.
 
-In \cite{balz2009embedding}, the authors embeds behavior models into Java by representing, for example, states as classes, transitions as annotations, guards as methods.
-Although the programmers can modify the code following these patterns, the code size is large because of class explosion.
+%In \cite{balz2009embedding}, the authors embeds behavior models into Java by representing, for example, states as classes, transitions as annotations, guards as methods.
+%Although the programmers can modify the code following these patterns, the code size is large because of class explosion.
 
-\subsection{Code generation patterns and tools}
-Tools such as IBM Rhapsody \cite{ibm_rhapsody}, Enterprise Architect \cite{EA}, Papyrus-RT \cite{possepapyrusrt}, and Sinelabore \cite{sinelabore} support only the structure RTE for UML class diagram concepts and code generation from UML State Machines.
-Techniques for generating code from USM such as SWITCH/IF, state table \cite{Douglass1999} and state pattern \cite{Shalyto2006,niaz_mapping_2004} are proposed. 
-A systematic review of code generation approaches is presented in \cite{Domnguez2012}.
-%Switch/if %is the most intuitive technique implementing a "flat" state machine \cite{Booch1998}.
-%and state table approach \cite{Douglass1999} are intuitive techniques. 
-%Some approaches such as state pattern \cite{Shalyto2006,niaz_mapping_2004} produce object-oriented code.
-% to implement flat state machines. Each state is represented as a class and each event as a method. %The event is processed by a delegation from the context class to sub-states. 
-%Separation of states in classes makes the code more readable and maintainable. %Unfortunately, this technique only supports flat state machines. 
-%This pattern is extended in \cite{niaz_mapping_2004} to support hierarchical-concurrent USMs. 
-%Recently, a double-dispatch (DD) pattern presented in \cite{spinke_object-oriented_2013} extends \cite{niaz_mapping_2004} to support maintainability. %by as a new technique to implement state machines. 
-%representing states and events as classes, and transitions as methods. 
-However, only a subset of USM features is supported and generated code is not efficient, %of class explosion and uses dynamic memory allocation, 
-which cannot be used for embedded systems \cite{spinke_object-oriented_2013}.
-%Our source-to-source transformation combines SWITCH/IF the pattern in \cite{niaz_mapping_2004} to produce small footprint and preserve state hierarchy.
-%Furthermore, 
-RAOES offers code generation for all USM concepts. %including states, pseudo states, transitions, and events.
-Therefore, users are free and flexible to create there USM conforming to UML without restrictions.
+%\input{sections/codegenerationpattern}

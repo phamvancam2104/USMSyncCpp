@@ -1,110 +1,65 @@
-\section{Process for synchronization}
+\section{Synchronization}
 \label{sec:collaboration}
-This section describes RAOES's process to synchronize a model with USMs and front-end code in case that these artifacts concurrently evolve.
-We assume then use of an integrated development environment (IDE) %used by software architects and programmers 
-offering the use-cases defined in Section \ref{subsec:mdrtebackground}. 
-%Although, the pattern is presented in a model-code synchronization-oriented way, it is flexibly extensible to any artifacts. 
-%For the sake of generality, we postulate that the architect and programmer are actors with starkly opposite development practices.
-The process allows concurrent modifications made to the model
-and front-end code so that in the end we obtain a full system.
-%rather than just architectural design for the former,
-%and code implementation for the latter.
 
 
-We propose two synchronization strategies.
-The rationale behind our strategies
-is to represent one artifact (model or front-end code) in the language of its corresponding other artifact (front-end code or model).
-%These two can then be compared. 
-For this, we define the
-concept of a \ttt{synchronization artifact}:
+%\subsection{Synchronization in case of concurrent modifications}
+In our previous work [XX], a methodological pattern is proposed to synchronize model and object-oriented code in case of concurrent modifications made in the model and code.
+The pattern especially requires the availability of several use-cases as followings:
+\begin{itemize}
+	\item \tb{Batch code generation}: generates and overwrites any existing code from model.
+	\item \tb{Incremental code generation}: updates the code by propagating changes from the model to the code.
+	\item \tb{Batch reverse engineering}: creates and overwrites any existing model from code.
+	\item \tb{Incremental reverse engineering}: updates the model by propagating changes from the code to the model.
+\end{itemize}
 
-\begin{definition}[Synchronization artifact]
-	An artifact used to synchronize a model and its corresponding front-end code
-	is called a synchronization artifact.
-	It is an image of one of the artifacts, either the model or the front-end code.
-	In this context, an image $I$ of an artifact $A$ is a copy of $A$ obtained by
-	transforming $A$ to $I$. $A$ and $I$ are semantically equivalent but are specified in different languages.
-\end{definition}
 
-For example, a synchronization artifact (SA) can be code that was generated from the edited model in batch mode.
-In that case, it is code that represents an image of the edited model (being image requires that the model is able to be reconstructed from the code).
+The batch code generation and reverse engineering are straightforwardly supported by using the bidirectional traceability between the architecture model and code created by XSeparation. The incremental code generation (ICG) and incremental reverse engineering (IRE) needs a classification and management of modifications made in the model and code.
 
-Using the concept of SA, two strategies are
-proposed: one in which the SA is code,
-and the other in which the SA is a model.
-The developer can choose to either use these two use-cases of the IDE. 
-The choice may be determined by
-preferred development practices or the availability of suitable tools (e.g. the programmer
-may prefer to synchronize two artifacts, both represented
-in the same programming language, since he prefers to
-work exclusively with code).
+\vskip 0.2cm
+\noindent
+\tb{Model modification classification and management:}
+Table \ref{table:modelchangeclassification} shows our classification and management of actions for propagating modifications in model to code.
+They can be detected by a model listener.
+We make a distinction between structural and behavioral modifications, which result in creating/removing/regenerating the corresponding code part.
+Although only add/remove/update are detected, the moving of a model element can be combined as a removal following by an addition.  
+Some particular modifications requires the corresponding actions to respect and preserve the user code.
+For example, if the \ttt{sendDataToFifo} method in Listing \ref{lst:producerinteraction} is renamed to \ttt{sendDataFromProducerToFifo} at the model level, the corresponding action consists of several steps: (1) identify the method, at the code level, associated with the operation, at the model level, using the old name \ttt{sendDataToFifo}, which is recorded by the model listener;
+(2) rename the method to \ttt{sendDataFromProducerToFifo} while keeping its parameters and body intact. 
 
-Figure \ref{fig:scenario3} shows the first synchronization
-strategy based on using front-end code as SA.
-The general steps of the process shown in Figure \ref{fig:scenario3} are described as follows:
-
-\begin{figure}
+\vskip 0.2cm
+\noindent
+\tb{Code modification classification and management:}
+Modifications types in code are similar to that of model consisting of structural and behavioral modifications.
+However, we do not support the removal of classes in code because this kind of modification causes conflicts and syntax errors, which require the code to be manually re-factored for reconciliation. 
+We believe that an automatic mechanism brought by the regeneration of code caused by the removal can better handle the refactoring.
+If the FIFO class is removed in the code, for example, the \ttt{fifo} in \ttt{System} in Listing \ref{lst:architectureprescribed} must be retyped or removed.
+If not, a compilation error is raised.
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+\begin{table*}[]
 	\centering
-	\includegraphics[width = \columnwidth]{figures/scenario3_seq}
-	\caption{Synchronization process, in which the model and the code are concurrently edited with code as the SA (CDD = Code-Driven Developer = Programmer, MDD = Model-Driven Developer = Software Architect, Code = C++ front-end code). The API calls for Model and Code are represented generically as "Read" and "Write".}
-	\label{fig:scenario3}
-\end{figure}
+	\caption{Model change classification and management}
+	\label{table:modelchangeclassification}
+	\begin{tabular}{|l|p{3cm}|l|p{9.5cm}|}
+		\hline
+		\multicolumn{2}{|c|}{Element type}                                                              & \multicolumn{1}{c|}{Modification type} & \multicolumn{1}{c|}{Action}                                                                              \\ \hline
+		\multirow{3}{*}{Structure} & Part/Port/Connector                                                                & Add/Remove/Update                & Regenerate Component structure-prescribed code                                                                                          \\ \cline{2-4} 
+		& Class/Component/Interface                                          & Add/Remove/Update                & Create/Remove/Update the corresponding code                                                              \\ \cline{2-4} 
+		& Property                                                           & Add/Remove/Update                & Create/Remove/Regenerate the corresponding class attribute                                               \\ \hline
+		\multirow{5}{*}{Behavior}  & Operation                                                          & Add/Remove/Update                & Create/Remove/Regenerate the corresponding method with keeping its method body                           \\ \cline{2-4} 
+		& \multirow{3}{*}{UML State Machine}                                 & Create                           & Generate Behavior-prescribed code and State machine action code                                          \\ \cline{3-4} 
+		&                                                                    & Remove                           & Remove Behavior-prescribed code and State machine action code from the corresponding component           \\ \cline{3-4} 
+		&                                                                    & Update                           & Regenerate Behavior-prescribed code and State machine action code with respect to the existing user-code \\ \cline{2-4} 
+		& UML State Machine concept (state, transition, pseudo state, event) & Create/Remove/Update             & Regenerate Behavior-prescribed code and State machine action code with respect to the existing user-code \\ \hline
+	\end{tabular}
+\end{table*}
 
-\begin{description}[\footnotesize]
-	\item[Step 1] Both the model and code may be edited concurrently.
-	%(To simplify Figure \ref{fig:scenario3}, we don't show the Read and Write interactions for this step.)
-	%After both artifacts have been edited concurrently, we need to synchronize them.	
-	\item[Step 2] First we create an SA from the edited model by generating front-end code in batch mode.
-	This SA is code and it is an image of the edited model.	
-	
-	\item[Step 3] The SA is synchronized with the edited code. Since the SA
-	is code itself, this step is done with the \texttt{Synchronize Code} use-case of the IDE.
-	
-	\item[Step 4] Once SA and edited code are synchronized, the former is reversed incrementally to update the edited model.
-\end{description}
+Using these use-cases and the bidirectional traceability facilitated by XSeparation during code generation, the concurrent modifications in model and code can be synchronized by our previous methodological pattern.
 
-The second strategy, based on using the model as the SA,
-is the opposite of the first strategy. 
-In the second strategy, the SA is
-obtained by reversing the edited code in batch mode.
-Afterwards the SA is synchronized with the edited model.
-Finally, we generate code incrementally from the SA to update the edited code.
+After synchronization, to be executable, the XSeparation-generated code needs to be compiled.
+In the next section, we will present the architecture of our XSeparation compiler for compilation. 
 
-%Figure \ref{fig:strategy2} shows the synchronization strategy based on using model as the synchronization artifact.
-%This strategy is the opposite of the strategy presented in Figure \ref{fig:strategy1}. Its steps are described as follows:
-%
-%\begin{center}
-%\textbf{\textit{- Steps of synchronization strategy 2 -}}
-%\end{center}
-%\begin{description}
-%	\item[Step 1] The synchronization artifact is obtained by reversing the edited code in batch mode.
-%	\item[Step 2] Afterwards the synchronization artifact is synchronized with the edited model.
-%	\item[Step 3] Finally, we generate code incrementally from the synchronization artifact to update the edited code.
-%\end{description}
-%
-%\begin{figure}
-%\centering
-%\includegraphics[width=\columnwidth]{figures/strategy2}
-%\caption{Synchronization strategy 2 using model as synchronization artifact}
-%\label{fig:strategy2}
-%\end{figure}
+%\input{sections/mappingtable}
 
-The actors may even use both strategies, successively, as a kind of hybrid strategy.
-This may be useful
-when developers want to synchronize some parts of the system using one strategy,
-and other parts using the other strategy. %For example, they may choose
-%to synchronize method bodies using strategy 1, where the synchronization artifact is code.
-%Then strategy 2, in which the synchronization artifact is a model, is used to
-%to synchronize architectural elements of the system.
-
-%In reality of collaboration, there are of course conflicts between editions made by developers to their respective baseline artifact.
-%Two approaches are proposed to reconcile these conflicts.
-%In the first approach, we let the developers explicitly determine which edition should be kept in the synchronization process.
-%This is based on the \texttt{Compare and Merge} paradigm proposed by model/code merge tools such as \textbf{EMF Compare} or \textbf{Git}.  
-%The second approach extends the semi-automated conflict resolution presented in \cite{Hermann2012}.
-%Specifically, our approach records editions made to artifacts (see Section \ref{sec:implementation} for more information about edition listening), decides whether editions are \textit{conflict-free} or not, and automatically bi-directionally merges or interactively shows the developers in-conflict editions.
-%For example, if an MDD adds an attribute to a class by using graphical modeling tools and a CDD renames the class.
-%Two editions are detected and asserted as conflict-free. The automated merge therefore is used for reconciliation. 
-
-%In the next section we propose an implementation
-%of an IDE and the proposed synchronization processes.
+%\input{sections/oldsynchronization}
+%\input{sections/synchronizationexample}

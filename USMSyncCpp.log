@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.1)  11 OCT 2016 18:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.1)  1 NOV 2016 12:45
 entering extended mode
 **USMSyncCpp.tex
 (USMSyncCpp.tex
@@ -401,123 +401,79 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
+(C:\Users\VP242103\Downloads\tex\latex\tools\tabularx.sty
+Package: tabularx 2014/10/28 v2.10 `tabularx' package (DPC)
+\TX@col@width=\dimen154
+\TX@old@table=\dimen155
+\TX@old@col=\dimen156
+\TX@target=\dimen157
+\TX@delta=\dimen158
+\TX@cols=\count134
+\TX@ftn=\toks27
+)
 (C:\Users\VP242103\Downloads\tex\latex\booktabs\booktabs.sty
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
-\heavyrulewidth=\dimen154
-\lightrulewidth=\dimen155
-\cmidrulewidth=\dimen156
-\belowrulesep=\dimen157
-\belowbottomsep=\dimen158
-\aboverulesep=\dimen159
-\abovetopsep=\dimen160
-\cmidrulesep=\dimen161
-\cmidrulekern=\dimen162
-\defaultaddspace=\dimen163
-\@cmidla=\count134
-\@cmidlb=\count135
-\@aboverulesep=\dimen164
-\@belowrulesep=\dimen165
-\@thisruleclass=\count136
-\@lastruleclass=\count137
-\@thisrulewidth=\dimen166
+\heavyrulewidth=\dimen159
+\lightrulewidth=\dimen160
+\cmidrulewidth=\dimen161
+\belowrulesep=\dimen162
+\belowbottomsep=\dimen163
+\aboverulesep=\dimen164
+\abovetopsep=\dimen165
+\cmidrulesep=\dimen166
+\cmidrulekern=\dimen167
+\defaultaddspace=\dimen168
+\@cmidla=\count135
+\@cmidlb=\count136
+\@aboverulesep=\dimen169
+\@belowrulesep=\dimen170
+\@thisruleclass=\count137
+\@lastruleclass=\count138
+\@thisrulewidth=\dimen171
 )
-(C:\Users\VP242103\Downloads\tex\latex\amscls\amsthm.sty
-Package: amsthm 2015/03/04 v2.20.2
-\thm@style=\toks27
-\thm@bodyfont=\toks28
-\thm@headfont=\toks29
-\thm@notefont=\toks30
-\thm@headpunct=\toks31
-\thm@preskip=\skip55
-\thm@postskip=\skip56
-\thm@headsep=\skip57
-\dth@everypar=\toks32
-)
-\c@definition=\count138
-\c@remark=\count139
-
-(C:\Users\VP242103\Downloads\tex\latex\mathtools\mathtools.sty
-Package: mathtools 2015/11/12 v1.18 mathematical typesetting tools
+(C:\Users\VP242103\Downloads\tex\latex\pbox\pbox.sty
+Package: pbox 2011/12/07 v1.2 Dynamic parboxes
 
 (C:\Users\VP242103\Downloads\tex\latex\tools\calc.sty
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count140
-\calc@Bcount=\count141
-\calc@Adimen=\dimen167
-\calc@Bdimen=\dimen168
-\calc@Askip=\skip58
-\calc@Bskip=\skip59
+\calc@Acount=\count139
+\calc@Bcount=\count140
+\calc@Adimen=\dimen172
+\calc@Bdimen=\dimen173
+\calc@Askip=\skip55
+\calc@Bskip=\skip56
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count142
-\calc@Cskip=\skip60
+\calc@Ccount=\count141
+\calc@Cskip=\skip57
 )
-(C:\Users\VP242103\Downloads\tex\latex\mathtools\mhsetup.sty
-Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
+\pb@xlen=\skip58
 )
-LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
-LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
-LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
-LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
-\g_MT_multlinerow_int=\count143
-\l_MT_multwidth_dim=\dimen169
-\origjot=\skip61
-\l_MT_shortvdotswithinadjustabove_dim=\dimen170
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen171
-\l_MT_above_intertext_sep=\dimen172
-\l_MT_below_intertext_sep=\dimen173
-\l_MT_above_shortintertext_sep=\dimen174
-\l_MT_below_shortintertext_sep=\dimen175
+(C:\Users\VP242103\Downloads\tex\latex\amscls\amsthm.sty
+Package: amsthm 2015/03/04 v2.20.2
+\thm@style=\toks28
+\thm@bodyfont=\toks29
+\thm@headfont=\toks30
+\thm@notefont=\toks31
+\thm@headpunct=\toks32
+\thm@preskip=\skip59
+\thm@postskip=\skip60
+\thm@headsep=\skip61
+\dth@everypar=\toks33
 )
-(C:\Users\VP242103\Downloads\tex\latex\sttools\cuted.sty
-Package: cuted 2012/10/04 v1.5 Mixing onecolumn and twocolumn modes
-\At@ViperColsBreak=\toks33
-\v@aaa=\box60
-\v@ccc=\box61
-\lastskip@a=\skip62
-\lastskip@b=\skip63
-\lastskip@d=\skip64
-\lastbox@a=\box62
-\stripsep=\skip65
-\@viper=\box63
-\viper@penalty=\count144
-\hold@viper=\box64
-\ht@viper=\dimen176
-)
-\c@mytempeqncnt=\count145
+\c@definition=\count142
 
-(C:\Users\VP242103\Downloads\tex\latex\fancyvrb\fancyvrb.sty
-Package: fancyvrb 2008/02/07
-
-Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
-<2008/02/07> (tvz)
-\FV@CodeLineNo=\count146
-\FV@InFile=\read1
-\FV@TabBox=\box65
-\c@FancyVerbLine=\count147
-\FV@StepNumber=\count148
-\FV@OutFile=\write4
-) (C:\Users\VP242103\Downloads\tex\latex\framed\framed.sty
-Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
-\OuterFrameSep=\skip66
-\fb@frw=\dimen177
-\fb@frh=\dimen178
-\FrameRule=\dimen179
-\FrameSep=\dimen180
-)
-(C:\Users\VP242103\Downloads\tex\latex\tcolorbox\tcolorbox.sty
-Package: tcolorbox 2016/04/27 version 3.91 text color boxes
-
+(C:\Users\VP242103\Downloads\tex\latex\pgf\frontendlayer\tikz.sty
 (C:\Users\VP242103\Downloads\tex\latex\pgf\basiclayer\pgf.sty
 (C:\Users\VP242103\Downloads\tex\latex\pgf\utilities\pgfrcs.sty
 (C:\Users\VP242103\Downloads\tex\generic\pgf\utilities\pgfutil-common.tex
 \pgfutil@everybye=\toks34
-\pgfutil@tempdima=\dimen181
-\pgfutil@tempdimb=\dimen182
+\pgfutil@tempdima=\dimen174
+\pgfutil@tempdimb=\dimen175
 
 (C:\Users\VP242103\Downloads\tex\generic\pgf\utilities\pgfutil-common-lists.tex
 )) (C:\Users\VP242103\Downloads\tex\generic\pgf\utilities\pgfutil-latex.def
-\pgfutil@abb=\box66
+\pgfutil@abb=\box60
 
 (C:\Users\VP242103\Downloads\tex\latex\ms\everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
@@ -539,20 +495,20 @@ Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
 (C:\Users\VP242103\Downloads\tex\generic\pgf\utilities\pgfkeysfiltered.code.tex
 \pgfkeys@tmptoks=\toks37
 ))
-\pgf@x=\dimen183
-\pgf@y=\dimen184
-\pgf@xa=\dimen185
-\pgf@ya=\dimen186
-\pgf@xb=\dimen187
-\pgf@yb=\dimen188
-\pgf@xc=\dimen189
-\pgf@yc=\dimen190
-\w@pgf@writea=\write5
-\r@pgf@reada=\read2
-\c@pgf@counta=\count149
-\c@pgf@countb=\count150
-\c@pgf@countc=\count151
-\c@pgf@countd=\count152
+\pgf@x=\dimen176
+\pgf@y=\dimen177
+\pgf@xa=\dimen178
+\pgf@ya=\dimen179
+\pgf@xb=\dimen180
+\pgf@yb=\dimen181
+\pgf@xc=\dimen182
+\pgf@yc=\dimen183
+\w@pgf@writea=\write4
+\r@pgf@reada=\read1
+\c@pgf@counta=\count143
+\c@pgf@countb=\count144
+\c@pgf@countc=\count145
+\c@pgf@countd=\count146
 \t@pgf@toka=\toks38
 \t@pgf@tokb=\toks39
 \t@pgf@tokc=\toks40
@@ -570,8 +526,8 @@ File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 (C:\Users\VP242103\Downloads\tex\generic\pgf\systemlayer\pgfsyssoftpath.code.te
 x
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count153
-\pgfsyssoftpath@bigbuffer@items=\count154
+\pgfsyssoftpath@smallbuffer@items=\count147
+\pgfsyssoftpath@bigbuffer@items=\count148
 )
 (C:\Users\VP242103\Downloads\tex\generic\pgf\systemlayer\pgfsysprotocol.code.te
 x
@@ -583,9 +539,9 @@ Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
 (C:\Users\VP242103\Downloads\tex\generic\pgf\math\pgfmathcalc.code.tex
 (C:\Users\VP242103\Downloads\tex\generic\pgf\math\pgfmathutil.code.tex)
 (C:\Users\VP242103\Downloads\tex\generic\pgf\math\pgfmathparser.code.tex
-\pgfmath@dimen=\dimen191
-\pgfmath@count=\count155
-\pgfmath@box=\box67
+\pgfmath@dimen=\dimen184
+\pgfmath@count=\count149
+\pgfmath@box=\box61
 \pgfmath@toks=\toks41
 \pgfmath@stack@operand=\toks42
 \pgfmath@stack@operation=\toks43
@@ -608,55 +564,55 @@ x)
 (C:\Users\VP242103\Downloads\tex\generic\pgf\math\pgfmathfunctions.integerarith
 metics.code.tex)))
 (C:\Users\VP242103\Downloads\tex\generic\pgf\math\pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count156
+\c@pgfmathroundto@lastzeros=\count150
 ))
 (C:\Users\VP242103\Downloads\tex\generic\pgf\basiclayer\pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
-\pgf@picminx=\dimen192
-\pgf@picmaxx=\dimen193
-\pgf@picminy=\dimen194
-\pgf@picmaxy=\dimen195
-\pgf@pathminx=\dimen196
-\pgf@pathmaxx=\dimen197
-\pgf@pathminy=\dimen198
-\pgf@pathmaxy=\dimen199
-\pgf@xx=\dimen200
-\pgf@xy=\dimen201
-\pgf@yx=\dimen202
-\pgf@yy=\dimen203
-\pgf@zx=\dimen204
-\pgf@zy=\dimen205
+\pgf@picminx=\dimen185
+\pgf@picmaxx=\dimen186
+\pgf@picminy=\dimen187
+\pgf@picmaxy=\dimen188
+\pgf@pathminx=\dimen189
+\pgf@pathmaxx=\dimen190
+\pgf@pathminy=\dimen191
+\pgf@pathmaxy=\dimen192
+\pgf@xx=\dimen193
+\pgf@xy=\dimen194
+\pgf@yx=\dimen195
+\pgf@yy=\dimen196
+\pgf@zx=\dimen197
+\pgf@zy=\dimen198
 )
 (C:\Users\VP242103\Downloads\tex\generic\pgf\basiclayer\pgfcorepathconstruct.co
 de.tex
 File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
-\pgf@path@lastx=\dimen206
-\pgf@path@lasty=\dimen207
+\pgf@path@lastx=\dimen199
+\pgf@path@lasty=\dimen200
 )
 (C:\Users\VP242103\Downloads\tex\generic\pgf\basiclayer\pgfcorepathusage.code.t
 ex
 File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
-\pgf@shorten@end@additional=\dimen208
-\pgf@shorten@start@additional=\dimen209
+\pgf@shorten@end@additional=\dimen201
+\pgf@shorten@start@additional=\dimen202
 )
 (C:\Users\VP242103\Downloads\tex\generic\pgf\basiclayer\pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
-\pgfpic=\box68
-\pgf@hbox=\box69
-\pgf@layerbox@main=\box70
-\pgf@picture@serial@count=\count157
+\pgfpic=\box62
+\pgf@hbox=\box63
+\pgf@layerbox@main=\box64
+\pgf@picture@serial@count=\count151
 )
 (C:\Users\VP242103\Downloads\tex\generic\pgf\basiclayer\pgfcoregraphicstate.cod
 e.tex
 File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
-\pgflinewidth=\dimen210
+\pgflinewidth=\dimen203
 )
 (C:\Users\VP242103\Downloads\tex\generic\pgf\basiclayer\pgfcoretransformations.
 code.tex
 File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
-\pgf@pt@x=\dimen211
-\pgf@pt@y=\dimen212
-\pgf@pt@temp=\dimen213
+\pgf@pt@x=\dimen204
+\pgf@pt@y=\dimen205
+\pgf@pt@temp=\dimen206
 )
 (C:\Users\VP242103\Downloads\tex\generic\pgf\basiclayer\pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
@@ -670,18 +626,18 @@ File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
 )
 (C:\Users\VP242103\Downloads\tex\generic\pgf\basiclayer\pgfcorearrows.code.tex
 File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
-\pgfarrowsep=\dimen214
+\pgfarrowsep=\dimen207
 ) (C:\Users\VP242103\Downloads\tex\generic\pgf\basiclayer\pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
-\pgf@max=\dimen215
-\pgf@sys@shading@range@num=\count158
+\pgf@max=\dimen208
+\pgf@sys@shading@range@num=\count152
 ) (C:\Users\VP242103\Downloads\tex\generic\pgf\basiclayer\pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
 
 (C:\Users\VP242103\Downloads\tex\generic\pgf\basiclayer\pgfcoreexternal.code.te
 x
 File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
-\pgfexternal@startupbox=\box71
+\pgfexternal@startupbox=\box65
 ))
 (C:\Users\VP242103\Downloads\tex\generic\pgf\basiclayer\pgfcorelayers.code.tex
 File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
@@ -696,7 +652,7 @@ File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
 )))
 (C:\Users\VP242103\Downloads\tex\generic\pgf\modules\pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
-\pgfnodeparttextbox=\box72
+\pgfnodeparttextbox=\box66
 )
 (C:\Users\VP242103\Downloads\tex\generic\pgf\modules\pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
@@ -704,16 +660,127 @@ File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
 (C:\Users\VP242103\Downloads\tex\latex\pgf\compatibility\pgfcomp-version-0-65.s
 ty
 Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen216
-\pgf@nodesepend=\dimen217
+\pgf@nodesepstart=\dimen209
+\pgf@nodesepend=\dimen210
 )
 (C:\Users\VP242103\Downloads\tex\latex\pgf\compatibility\pgfcomp-version-1-18.s
 ty
 Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
-)) (C:\Users\VP242103\Downloads\tex\latex\tools\verbatim.sty
+)) (C:\Users\VP242103\Downloads\tex\latex\pgf\utilities\pgffor.sty
+(C:\Users\VP242103\Downloads\tex\latex\pgf\utilities\pgfkeys.sty
+(C:\Users\VP242103\Downloads\tex\generic\pgf\utilities\pgfkeys.code.tex))
+(C:\Users\VP242103\Downloads\tex\latex\pgf\math\pgfmath.sty
+(C:\Users\VP242103\Downloads\tex\generic\pgf\math\pgfmath.code.tex))
+(C:\Users\VP242103\Downloads\tex\generic\pgf\utilities\pgffor.code.tex
+Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
+
+(C:\Users\VP242103\Downloads\tex\generic\pgf\math\pgfmath.code.tex)
+\pgffor@iter=\dimen211
+\pgffor@skip=\dimen212
+\pgffor@stack=\toks44
+\pgffor@toks=\toks45
+))
+(C:\Users\VP242103\Downloads\tex\generic\pgf\frontendlayer\tikz\tikz.code.tex
+Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
+
+(C:\Users\VP242103\Downloads\tex\generic\pgf\libraries\pgflibraryplothandlers.c
+ode.tex
+File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
+\pgf@plot@mark@count=\count153
+\pgfplotmarksize=\dimen213
+)
+\tikz@lastx=\dimen214
+\tikz@lasty=\dimen215
+\tikz@lastxsaved=\dimen216
+\tikz@lastysaved=\dimen217
+\tikzleveldistance=\dimen218
+\tikzsiblingdistance=\dimen219
+\tikz@figbox=\box67
+\tikz@figbox@bg=\box68
+\tikz@tempbox=\box69
+\tikz@tempbox@bg=\box70
+\tikztreelevel=\count154
+\tikznumberofchildren=\count155
+\tikznumberofcurrentchild=\count156
+\tikz@fig@count=\count157
+
+(C:\Users\VP242103\Downloads\tex\generic\pgf\modules\pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
+\pgfmatrixcurrentrow=\count158
+\pgfmatrixcurrentcolumn=\count159
+\pgf@matrix@numberofcolumns=\count160
+)
+\tikz@expandcount=\count161
+
+(C:\Users\VP242103\Downloads\tex\generic\pgf\frontendlayer\tikz\libraries\tikzl
+ibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
+)))
+\c@remark=\count162
+
+(C:\Users\VP242103\Downloads\tex\latex\mathtools\mathtools.sty
+Package: mathtools 2015/11/12 v1.18 mathematical typesetting tools
+
+(C:\Users\VP242103\Downloads\tex\latex\mathtools\mhsetup.sty
+Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
+)
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
+\g_MT_multlinerow_int=\count163
+\l_MT_multwidth_dim=\dimen220
+\origjot=\skip62
+\l_MT_shortvdotswithinadjustabove_dim=\dimen221
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen222
+\l_MT_above_intertext_sep=\dimen223
+\l_MT_below_intertext_sep=\dimen224
+\l_MT_above_shortintertext_sep=\dimen225
+\l_MT_below_shortintertext_sep=\dimen226
+)
+(C:\Users\VP242103\Downloads\tex\latex\sttools\cuted.sty
+Package: cuted 2012/10/04 v1.5 Mixing onecolumn and twocolumn modes
+\At@ViperColsBreak=\toks46
+\v@aaa=\box71
+\v@ccc=\box72
+\lastskip@a=\skip63
+\lastskip@b=\skip64
+\lastskip@d=\skip65
+\lastbox@a=\box73
+\stripsep=\skip66
+\@viper=\box74
+\viper@penalty=\count164
+\hold@viper=\box75
+\ht@viper=\dimen227
+)
+\c@mytempeqncnt=\count165
+
+(C:\Users\VP242103\Downloads\tex\latex\fancyvrb\fancyvrb.sty
+Package: fancyvrb 2008/02/07
+
+Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
+<2008/02/07> (tvz)
+\FV@CodeLineNo=\count166
+\FV@InFile=\read2
+\FV@TabBox=\box76
+\c@FancyVerbLine=\count167
+\FV@StepNumber=\count168
+\FV@OutFile=\write5
+) (C:\Users\VP242103\Downloads\tex\latex\framed\framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip67
+\fb@frw=\dimen228
+\fb@frh=\dimen229
+\FrameRule=\dimen230
+\FrameSep=\dimen231
+)
+(C:\Users\VP242103\Downloads\tex\latex\tcolorbox\tcolorbox.sty
+Package: tcolorbox 2016/04/27 version 3.91 text color boxes
+
+(C:\Users\VP242103\Downloads\tex\latex\tools\verbatim.sty
 Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks44
-\verbatim@line=\toks45
+\every@verbatim=\toks47
+\verbatim@line=\toks48
 \verbatim@in@stream=\read3
 )
 (C:\Users\VP242103\Downloads\tex\latex\environ\environ.sty
@@ -724,19 +791,19 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
 (C:\Users\VP242103\Downloads\tex\latex\etoolbox\etoolbox.sty
 Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count159
+\etb@tempcnta=\count169
 )
-\tcb@titlebox=\box73
-\tcb@upperbox=\box74
-\tcb@lowerbox=\box75
-\tcb@phantombox=\box76
-\c@tcbbreakpart=\count160
-\c@tcblayer=\count161
-\tcolorbox@number=\count162
-\tcb@temp=\box77
-\tcb@temp=\box78
-\tcb@temp=\box79
-\tcb@temp=\box80
+\tcb@titlebox=\box77
+\tcb@upperbox=\box78
+\tcb@lowerbox=\box79
+\tcb@phantombox=\box80
+\c@tcbbreakpart=\count170
+\c@tcblayer=\count171
+\tcolorbox@number=\count172
+\tcb@temp=\box81
+\tcb@temp=\box82
+\tcb@temp=\box83
+\tcb@temp=\box84
 \tcb@out=\write6
 \tcb@record@out=\write7
 
@@ -761,63 +828,11 @@ Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-\c@tcblisting=\count163
+\c@tcblisting=\count173
 ))
 (C:\Users\VP242103\Downloads\tex\latex\tcolorbox\tcbskins.code.tex
 Library (tcolorbox): 'tcbskins.code.tex' version '3.91'
-(C:\Users\VP242103\Downloads\tex\latex\pgf\frontendlayer\tikz.sty
-(C:\Users\VP242103\Downloads\tex\latex\pgf\utilities\pgffor.sty
-(C:\Users\VP242103\Downloads\tex\latex\pgf\utilities\pgfkeys.sty
-(C:\Users\VP242103\Downloads\tex\generic\pgf\utilities\pgfkeys.code.tex))
-(C:\Users\VP242103\Downloads\tex\latex\pgf\math\pgfmath.sty
-(C:\Users\VP242103\Downloads\tex\generic\pgf\math\pgfmath.code.tex))
-(C:\Users\VP242103\Downloads\tex\generic\pgf\utilities\pgffor.code.tex
-Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
-
-(C:\Users\VP242103\Downloads\tex\generic\pgf\math\pgfmath.code.tex)
-\pgffor@iter=\dimen218
-\pgffor@skip=\dimen219
-\pgffor@stack=\toks46
-\pgffor@toks=\toks47
-))
-(C:\Users\VP242103\Downloads\tex\generic\pgf\frontendlayer\tikz\tikz.code.tex
-Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
-
-(C:\Users\VP242103\Downloads\tex\generic\pgf\libraries\pgflibraryplothandlers.c
-ode.tex
-File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
-\pgf@plot@mark@count=\count164
-\pgfplotmarksize=\dimen220
-)
-\tikz@lastx=\dimen221
-\tikz@lasty=\dimen222
-\tikz@lastxsaved=\dimen223
-\tikz@lastysaved=\dimen224
-\tikzleveldistance=\dimen225
-\tikzsiblingdistance=\dimen226
-\tikz@figbox=\box81
-\tikz@figbox@bg=\box82
-\tikz@tempbox=\box83
-\tikz@tempbox@bg=\box84
-\tikztreelevel=\count165
-\tikznumberofchildren=\count166
-\tikznumberofcurrentchild=\count167
-\tikz@fig@count=\count168
-
-(C:\Users\VP242103\Downloads\tex\generic\pgf\modules\pgfmodulematrix.code.tex
-File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count169
-\pgfmatrixcurrentcolumn=\count170
-\pgf@matrix@numberofcolumns=\count171
-)
-\tikz@expandcount=\count172
-
-(C:\Users\VP242103\Downloads\tex\generic\pgf\frontendlayer\tikz\libraries\tikzl
-ibrarytopaths.code.tex
-File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
-)))
 \tcb@waterbox=\box85
-
 (C:\Users\VP242103\Downloads\tex\latex\tcolorbox\tcbskinsjigsaw.code.tex
 Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '3.91'
 ))) (C:\Users\VP242103\Downloads\tex\latex\mdframed\mdframed.sty
@@ -850,37 +865,37 @@ L3 Module: l3tl 2015/09/29 v6121 L3 Token lists
 L3 Module: l3str 2016/01/03 v6357 L3 Strings
 L3 Module: l3seq 2015/08/05 v5777 L3 Sequences and stacks
 L3 Module: l3int 2016/01/05 v6366 L3 Integers
-\c_max_int=\count173
-\l_tmpa_int=\count174
-\l_tmpb_int=\count175
-\g_tmpa_int=\count176
-\g_tmpb_int=\count177
+\c_max_int=\count174
+\l_tmpa_int=\count175
+\l_tmpb_int=\count176
+\g_tmpa_int=\count177
+\g_tmpb_int=\count178
 L3 Module: l3quark 2015/08/17 v5855 L3 Quarks
 L3 Module: l3prg 2015/11/01 v6216 L3 Control structures
-\g__prg_map_int=\count178
+\g__prg_map_int=\count179
 L3 Module: l3clist 2015/09/02 v5901 L3 Comma separated lists
 L3 Module: l3token 2015/11/11 v6249 L3 Experimental token manipulation
 L3 Module: l3prop 2016/01/05 v6366 L3 Property lists
 L3 Module: l3msg 2015/09/28 v6113 L3 Messages
 L3 Module: l3file 2015/12/03 v6317 L3 File and I/O operations
-\l_iow_line_count_int=\count179
-\l__iow_target_count_int=\count180
-\l__iow_current_line_int=\count181
-\l__iow_current_word_int=\count182
-\l__iow_current_indentation_int=\count183
+\l_iow_line_count_int=\count180
+\l__iow_target_count_int=\count181
+\l__iow_current_line_int=\count182
+\l__iow_current_word_int=\count183
+\l__iow_current_indentation_int=\count184
 L3 Module: l3skip 2016/01/05 v6366 L3 Dimensions and skips
-\c_zero_dim=\dimen227
-\c_max_dim=\dimen228
-\l_tmpa_dim=\dimen229
-\l_tmpb_dim=\dimen230
-\g_tmpa_dim=\dimen231
-\g_tmpb_dim=\dimen232
-\c_zero_skip=\skip67
-\c_max_skip=\skip68
-\l_tmpa_skip=\skip69
-\l_tmpb_skip=\skip70
-\g_tmpa_skip=\skip71
-\g_tmpb_skip=\skip72
+\c_zero_dim=\dimen232
+\c_max_dim=\dimen233
+\l_tmpa_dim=\dimen256
+\l_tmpb_dim=\dimen257
+\g_tmpa_dim=\dimen258
+\g_tmpb_dim=\dimen259
+\c_zero_skip=\skip68
+\c_max_skip=\skip69
+\l_tmpa_skip=\skip70
+\l_tmpb_skip=\skip71
+\g_tmpa_skip=\skip72
+\g_tmpb_skip=\skip73
 \c_zero_muskip=\muskip12
 \c_max_muskip=\muskip13
 \l_tmpa_muskip=\muskip14
@@ -888,18 +903,18 @@ L3 Module: l3skip 2016/01/05 v6366 L3 Dimensions and skips
 \g_tmpa_muskip=\muskip16
 \g_tmpb_muskip=\muskip17
 L3 Module: l3keys 2015/11/17 v6284 L3 Key-value interfaces
-\g__keyval_level_int=\count184
-\l_keys_choice_int=\count185
+\g__keyval_level_int=\count185
+\l_keys_choice_int=\count186
 L3 Module: l3fp 2015/08/25 v5890 L3 Floating points
-\c__fp_leading_shift_int=\count186
-\c__fp_middle_shift_int=\count187
-\c__fp_trailing_shift_int=\count188
-\c__fp_big_leading_shift_int=\count189
-\c__fp_big_middle_shift_int=\count190
-\c__fp_big_trailing_shift_int=\count191
-\c__fp_Bigg_leading_shift_int=\count192
-\c__fp_Bigg_middle_shift_int=\count193
-\c__fp_Bigg_trailing_shift_int=\count194
+\c__fp_leading_shift_int=\count187
+\c__fp_middle_shift_int=\count188
+\c__fp_trailing_shift_int=\count189
+\c__fp_big_leading_shift_int=\count190
+\c__fp_big_middle_shift_int=\count191
+\c__fp_big_trailing_shift_int=\count192
+\c__fp_Bigg_leading_shift_int=\count193
+\c__fp_Bigg_middle_shift_int=\count194
+\c__fp_Bigg_trailing_shift_int=\count195
 L3 Module: l3box 2015/08/09 v5822 L3 Experimental boxes
 \c_empty_box=\box86
 \l_tmpa_box=\box87
@@ -908,13 +923,13 @@ L3 Module: l3box 2015/08/09 v5822 L3 Experimental boxes
 \g_tmpb_box=\box90
 L3 Module: l3coffins 2015/08/06 v5789 L3 Coffin code layer
 \l__coffin_internal_box=\box91
-\l__coffin_internal_dim=\dimen233
-\l__coffin_offset_x_dim=\dimen256
-\l__coffin_offset_y_dim=\dimen257
-\l__coffin_x_dim=\dimen258
-\l__coffin_y_dim=\dimen259
-\l__coffin_x_prime_dim=\dimen260
-\l__coffin_y_prime_dim=\dimen261
+\l__coffin_internal_dim=\dimen260
+\l__coffin_offset_x_dim=\dimen261
+\l__coffin_offset_y_dim=\dimen262
+\l__coffin_x_dim=\dimen263
+\l__coffin_y_dim=\dimen264
+\l__coffin_x_prime_dim=\dimen265
+\l__coffin_y_prime_dim=\dimen266
 \c_empty_coffin=\box92
 \l__coffin_aligned_coffin=\box93
 \l__coffin_aligned_internal_coffin=\box94
@@ -923,40 +938,40 @@ L3 Module: l3coffins 2015/08/06 v5789 L3 Coffin code layer
 \l__coffin_display_coffin=\box97
 \l__coffin_display_coord_coffin=\box98
 \l__coffin_display_pole_coffin=\box99
-\l__coffin_display_offset_dim=\dimen262
-\l__coffin_display_x_dim=\dimen263
-\l__coffin_display_y_dim=\dimen264
+\l__coffin_display_offset_dim=\dimen267
+\l__coffin_display_x_dim=\dimen268
+\l__coffin_display_y_dim=\dimen269
 L3 Module: l3color 2014/08/23 v5354 L3 Experimental color support
 L3 Module: l3sys 2015/09/25 v6087 L3 Experimental system/runtime functions
 L3 Module: l3candidates 2016/01/14 v6376 L3 Experimental additions to l3kernel
-\l__box_top_dim=\dimen265
-\l__box_bottom_dim=\dimen266
-\l__box_left_dim=\dimen267
-\l__box_right_dim=\dimen268
-\l__box_top_new_dim=\dimen269
-\l__box_bottom_new_dim=\dimen270
-\l__box_left_new_dim=\dimen271
-\l__box_right_new_dim=\dimen272
+\l__box_top_dim=\dimen270
+\l__box_bottom_dim=\dimen271
+\l__box_left_dim=\dimen272
+\l__box_right_dim=\dimen273
+\l__box_top_new_dim=\dimen274
+\l__box_bottom_new_dim=\dimen275
+\l__box_left_new_dim=\dimen276
+\l__box_right_new_dim=\dimen277
 \l__box_internal_box=\box100
-\l__coffin_bounding_shift_dim=\dimen273
-\l__coffin_left_corner_dim=\dimen274
-\l__coffin_right_corner_dim=\dimen275
-\l__coffin_bottom_corner_dim=\dimen276
-\l__coffin_top_corner_dim=\dimen277
-\l__coffin_scaled_total_height_dim=\dimen278
-\l__coffin_scaled_width_dim=\dimen279
+\l__coffin_bounding_shift_dim=\dimen278
+\l__coffin_left_corner_dim=\dimen279
+\l__coffin_right_corner_dim=\dimen280
+\l__coffin_bottom_corner_dim=\dimen281
+\l__coffin_top_corner_dim=\dimen282
+\l__coffin_scaled_total_height_dim=\dimen283
+\l__coffin_scaled_width_dim=\dimen284
 L3 Module: l3luatex 2015/11/11 v6250 L3 Experimental LuaTeX-specific functions
 )
 (C:\Users\VP242103\Downloads\tex\latex\l3kernel\l3pdfmode.def
 File: l3pdfmode.def 2015/11/11 v6250 L3 Experimental driver: PDF mode
-\l__driver_color_stack_int=\count195
+\l__driver_color_stack_int=\count196
 ))
 Package: xparse 2016/01/19 v6377 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count196
-\l__xparse_m_args_int=\count197
-\l__xparse_mandatory_args_int=\count198
-\l__xparse_processor_int=\count199
-\l__xparse_v_nesting_int=\count200
+\l__xparse_current_arg_int=\count197
+\l__xparse_m_args_int=\count198
+\l__xparse_mandatory_args_int=\count199
+\l__xparse_processor_int=\count200
+\l__xparse_v_nesting_int=\count201
 )
 (C:\Users\VP242103\Downloads\tex\latex\oberdiek\zref-abspage.sty
 Package: zref-abspage 2012/04/04 v2.24 Module abspage for zref (HO)
@@ -977,53 +992,53 @@ Package zref Info: New property: page on input line 761.
 (C:\Users\VP242103\Downloads\tex\generic\oberdiek\atbegshi.sty
 Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
 )
-\c@abspage=\count201
+\c@abspage=\count202
 Package zref Info: New property: abspage on input line 62.
 )
 (C:\Users\VP242103\Downloads\tex\latex\needspace\needspace.sty
 Package: needspace 2010/09/12 v1.3d reserve vertical space
 )
-\mdf@templength=\skip73
-\c@mdf@globalstyle@cnt=\count202
-\mdf@skipabove@length=\skip74
-\mdf@skipbelow@length=\skip75
-\mdf@leftmargin@length=\skip76
-\mdf@rightmargin@length=\skip77
-\mdf@innerleftmargin@length=\skip78
-\mdf@innerrightmargin@length=\skip79
-\mdf@innertopmargin@length=\skip80
-\mdf@innerbottommargin@length=\skip81
-\mdf@splittopskip@length=\skip82
-\mdf@splitbottomskip@length=\skip83
-\mdf@outermargin@length=\skip84
-\mdf@innermargin@length=\skip85
-\mdf@linewidth@length=\skip86
-\mdf@innerlinewidth@length=\skip87
-\mdf@middlelinewidth@length=\skip88
-\mdf@outerlinewidth@length=\skip89
-\mdf@roundcorner@length=\skip90
-\mdf@footenotedistance@length=\skip91
-\mdf@userdefinedwidth@length=\skip92
-\mdf@needspace@length=\skip93
-\mdf@frametitleaboveskip@length=\skip94
-\mdf@frametitlebelowskip@length=\skip95
-\mdf@frametitlerulewidth@length=\skip96
-\mdf@frametitleleftmargin@length=\skip97
-\mdf@frametitlerightmargin@length=\skip98
-\mdf@shadowsize@length=\skip99
-\mdf@extratopheight@length=\skip100
-\mdf@subtitleabovelinewidth@length=\skip101
-\mdf@subtitlebelowlinewidth@length=\skip102
-\mdf@subtitleaboveskip@length=\skip103
-\mdf@subtitlebelowskip@length=\skip104
-\mdf@subtitleinneraboveskip@length=\skip105
-\mdf@subtitleinnerbelowskip@length=\skip106
-\mdf@subsubtitleabovelinewidth@length=\skip107
-\mdf@subsubtitlebelowlinewidth@length=\skip108
-\mdf@subsubtitleaboveskip@length=\skip109
-\mdf@subsubtitlebelowskip@length=\skip110
-\mdf@subsubtitleinneraboveskip@length=\skip111
-\mdf@subsubtitleinnerbelowskip@length=\skip112
+\mdf@templength=\skip74
+\c@mdf@globalstyle@cnt=\count203
+\mdf@skipabove@length=\skip75
+\mdf@skipbelow@length=\skip76
+\mdf@leftmargin@length=\skip77
+\mdf@rightmargin@length=\skip78
+\mdf@innerleftmargin@length=\skip79
+\mdf@innerrightmargin@length=\skip80
+\mdf@innertopmargin@length=\skip81
+\mdf@innerbottommargin@length=\skip82
+\mdf@splittopskip@length=\skip83
+\mdf@splitbottomskip@length=\skip84
+\mdf@outermargin@length=\skip85
+\mdf@innermargin@length=\skip86
+\mdf@linewidth@length=\skip87
+\mdf@innerlinewidth@length=\skip88
+\mdf@middlelinewidth@length=\skip89
+\mdf@outerlinewidth@length=\skip90
+\mdf@roundcorner@length=\skip91
+\mdf@footenotedistance@length=\skip92
+\mdf@userdefinedwidth@length=\skip93
+\mdf@needspace@length=\skip94
+\mdf@frametitleaboveskip@length=\skip95
+\mdf@frametitlebelowskip@length=\skip96
+\mdf@frametitlerulewidth@length=\skip97
+\mdf@frametitleleftmargin@length=\skip98
+\mdf@frametitlerightmargin@length=\skip99
+\mdf@shadowsize@length=\skip100
+\mdf@extratopheight@length=\skip101
+\mdf@subtitleabovelinewidth@length=\skip102
+\mdf@subtitlebelowlinewidth@length=\skip103
+\mdf@subtitleaboveskip@length=\skip104
+\mdf@subtitlebelowskip@length=\skip105
+\mdf@subtitleinneraboveskip@length=\skip106
+\mdf@subtitleinnerbelowskip@length=\skip107
+\mdf@subsubtitleabovelinewidth@length=\skip108
+\mdf@subsubtitlebelowlinewidth@length=\skip109
+\mdf@subsubtitleaboveskip@length=\skip110
+\mdf@subsubtitlebelowskip@length=\skip111
+\mdf@subsubtitleinneraboveskip@length=\skip112
+\mdf@subsubtitleinnerbelowskip@length=\skip113
 
 (C:\Users\VP242103\Downloads\tex\latex\mdframed\md-frame-0.mdf
 File: md-frame-0.mdf 2013/07/01\ 1.9b: md-frame-0
@@ -1033,34 +1048,34 @@ File: md-frame-0.mdf 2013/07/01\ 1.9b: md-frame-0
 \mdf@splitbox@one=\box103
 \mdf@splitbox@two=\box104
 \mdf@splitbox@save=\box105
-\mdfsplitboxwidth=\skip113
-\mdfsplitboxtotalwidth=\skip114
-\mdfsplitboxheight=\skip115
-\mdfsplitboxdepth=\skip116
-\mdfsplitboxtotalheight=\skip117
-\mdfframetitleboxwidth=\skip118
-\mdfframetitleboxtotalwidth=\skip119
-\mdfframetitleboxheight=\skip120
-\mdfframetitleboxdepth=\skip121
-\mdfframetitleboxtotalheight=\skip122
-\mdffootnoteboxwidth=\skip123
-\mdffootnoteboxtotalwidth=\skip124
-\mdffootnoteboxheight=\skip125
-\mdffootnoteboxdepth=\skip126
-\mdffootnoteboxtotalheight=\skip127
-\mdftotallinewidth=\skip128
-\mdfboundingboxwidth=\skip129
-\mdfboundingboxtotalwidth=\skip130
-\mdfboundingboxheight=\skip131
-\mdfboundingboxdepth=\skip132
-\mdfboundingboxtotalheight=\skip133
-\mdf@freevspace@length=\skip134
-\mdf@horizontalwidthofbox@length=\skip135
-\mdf@verticalmarginwhole@length=\skip136
-\mdf@horizontalspaceofbox=\skip137
-\mdfsubtitleheight=\skip138
-\mdfsubsubtitleheight=\skip139
-\c@mdfcountframes=\count203
+\mdfsplitboxwidth=\skip114
+\mdfsplitboxtotalwidth=\skip115
+\mdfsplitboxheight=\skip116
+\mdfsplitboxdepth=\skip117
+\mdfsplitboxtotalheight=\skip118
+\mdfframetitleboxwidth=\skip119
+\mdfframetitleboxtotalwidth=\skip120
+\mdfframetitleboxheight=\skip121
+\mdfframetitleboxdepth=\skip122
+\mdfframetitleboxtotalheight=\skip123
+\mdffootnoteboxwidth=\skip124
+\mdffootnoteboxtotalwidth=\skip125
+\mdffootnoteboxheight=\skip126
+\mdffootnoteboxdepth=\skip127
+\mdffootnoteboxtotalheight=\skip128
+\mdftotallinewidth=\skip129
+\mdfboundingboxwidth=\skip130
+\mdfboundingboxtotalwidth=\skip131
+\mdfboundingboxheight=\skip132
+\mdfboundingboxdepth=\skip133
+\mdfboundingboxtotalheight=\skip134
+\mdf@freevspace@length=\skip135
+\mdf@horizontalwidthofbox@length=\skip136
+\mdf@verticalmarginwhole@length=\skip137
+\mdf@horizontalspaceofbox=\skip138
+\mdfsubtitleheight=\skip139
+\mdfsubsubtitleheight=\skip140
+\c@mdfcountframes=\count204
 
 ****** mdframed patching \endmdf@trivlist
 
@@ -1076,165 +1091,168 @@ File: md-frame-0.mdf 2013/07/01\ 1.9b: md-frame-0
 . 
 . Defining command \mdtheorem with sig. ' O{} m o m o ' on line 701.
 .................................................
-\mdf@envdepth=\count204
-\c@mdf@env@i=\count205
-\c@mdf@env@ii=\count206
-\c@mdf@zref@counter=\count207
+\mdf@envdepth=\count205
+\c@mdf@env@i=\count206
+\c@mdf@env@ii=\count207
+\c@mdf@zref@counter=\count208
 Package zref Info: New property: mdf@pagevalue on input line 895.
 )
 (C:\Users\VP242103\Downloads\tex\latex\ulem\ulem.sty
 \UL@box=\box106
 \UL@hyphenbox=\box107
-\UL@skip=\skip140
-\UL@hook=\toks48
-\UL@height=\dimen280
-\UL@pe=\count208
-\UL@pixel=\dimen281
+\UL@skip=\skip141
+\UL@hook=\toks49
+\UL@height=\dimen285
+\UL@pe=\count209
+\UL@pixel=\dimen286
 \ULC@box=\box108
 Package: ulem 2012/05/18
-\ULdepth=\dimen282
+\ULdepth=\dimen287
 )
 (C:\Users\VP242103\Downloads\tex\latex\base\alltt.sty
 Package: alltt 1997/06/16 v2.0g defines alltt environment
 )
 (C:\Users\VP242103\Downloads\tex\latex\listings\lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
-) (USMSyncCpp.aux
+) (USMSyncCpp.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 181.
+LaTeX Font Info:    ... okay on input line 181.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 181.
+LaTeX Font Info:    ... okay on input line 181.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 181.
+LaTeX Font Info:    ... okay on input line 181.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 181.
+LaTeX Font Info:    ... okay on input line 181.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 181.
+LaTeX Font Info:    ... okay on input line 181.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 181.
+LaTeX Font Info:    ... okay on input line 181.
+LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 181.
+LaTeX Font Info:    Try loading font information for OT4+cmr on input line 181.
 
-LaTeX Warning: Label `lst:front-end2' multiply defined.
 
-
-LaTeX Warning: Label `lst:front-end2' multiply defined.
-
-
-LaTeX Warning: Label `lst:front-end2' multiply defined.
-
-
-LaTeX Warning: Label `lst:front-end2' multiply defined.
-
-
-LaTeX Warning: Label `lst:front-end2' multiply defined.
-
-)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 175.
-LaTeX Font Info:    ... okay on input line 175.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 175.
-LaTeX Font Info:    ... okay on input line 175.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 175.
-LaTeX Font Info:    ... okay on input line 175.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 175.
-LaTeX Font Info:    ... okay on input line 175.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 175.
-LaTeX Font Info:    ... okay on input line 175.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 175.
-LaTeX Font Info:    ... okay on input line 175.
-LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 175.
-LaTeX Font Info:    Try loading font information for OT4+cmr on input line 175.
-
- (C:\Users\VP242103\Downloads\tex\latex\polski\ot4cmr.fd
+(C:\Users\VP242103\Downloads\tex\latex\polski\ot4cmr.fd
 File: ot4cmr.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    ... okay on input line 181.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 175.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 181.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <5> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 175.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 181.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 175.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 181.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <7> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 175.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 181.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 175.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 181.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <8> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 175.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 181.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 175.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 181.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <9> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 175.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 181.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 175.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 181.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <10> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 175.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 181.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <11> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 175.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 181.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <11> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 175.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 181.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 175.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 181.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 175.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 181.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 175.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 181.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <17> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 175.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 181.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 175.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 181.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <20> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 175.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 181.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 175.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 181.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <24> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 175.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 181.
 
 -- Lines per column: 56 (exact).
 (C:\Users\VP242103\Downloads\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count209
-\scratchdimen=\dimen283
+\scratchcounter=\count210
+\scratchdimen=\dimen288
 \scratchbox=\box109
-\nofMPsegments=\count210
-\nofMParguments=\count211
-\everyMPshowfont=\toks49
-\MPscratchCnt=\count212
-\MPscratchDim=\dimen284
-\MPnumerator=\count213
-\makeMPintoPDFobject=\count214
-\everyMPtoPDFconversion=\toks50
+\nofMPsegments=\count211
+\nofMParguments=\count212
+\everyMPshowfont=\toks50
+\MPscratchCnt=\count213
+\MPscratchDim=\dimen289
+\MPnumerator=\count214
+\makeMPintoPDFobject=\count215
+\everyMPtoPDFconversion=\toks51
 )
-\c@lstlisting=\count215
+\c@lstlisting=\count216
  ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box110
  (sections/abstract.tex)
-(sections/introduction.tex
-LaTeX Font Info:    Try loading font information for T1+phv on input line 63.
-
-(C:\Users\VP242103\Downloads\tex\latex\psnfss\t1phv.fd
-File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
-) [1{C:/Users/VP242103/Downloads/pdftex/config/pdftex.map}
+(sections/introduction.tex [1{C:/Users/VP242103/Downloads/pdftex/config/pdftex.
+map}
 
 
 ]
-LaTeX Font Info:    Try loading font information for U+msa on input line 99.
-
-(C:\Users\VP242103\Downloads\tex\latex\amsfonts\umsa.fd
+LaTeX Font Info:    Try loading font information for U+msa on input line 132.
+ (C:\Users\VP242103\Downloads\tex\latex\amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 99.
+LaTeX Font Info:    Try loading font information for U+msb on input line 132.
 
 (C:\Users\VP242103\Downloads\tex\latex\amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
-(sections/background.tex
-<figures/smmetamodel.pdf, id=13, 532.99126pt x 339.2675pt>
-File: figures/smmetamodel.pdf Graphic file (type pdf)
-
-<use figures/smmetamodel.pdf>
-Package pdftex.def Info: figures/smmetamodel.pdf used on input line 59.
-(pdftex.def)             Requested size: 252.0pt x 136.41547pt.
-
-Underfull \hbox (badness 2781) in paragraph at lines 73--74
-[]\T1/ptm/m/n/8 A \T1/ptm/m/it/8 ChangeEvent \T1/ptm/m/n/8 is as-so-ci-ated wit
-h a boolean ex-pres-sion \T1/ptm/m/it/8 expr\T1/ptm/m/n/8 .
+(sections/approachinanut.tex
+Underfull \hbox (badness 1558) in paragraph at lines 26--29
+[]\T1/ptm/b/n/10 Component structure-provided im-ple-men-ta-tion: \T1/ptm/m/n/1
+0 A
  []
 
-(sections/rtebackground.tex)) (sections/motivation.tex
-<figures/illustration.pdf, id=15, 963.6pt x 542.025pt>
-File: figures/illustration.pdf Graphic file (type pdf)
+<figures/xseparationoverview.pdf, id=12, 963.6pt x 542.025pt>
+File: figures/xseparationoverview.pdf Graphic file (type pdf)
 
-<use figures/illustration.pdf>
-Package pdftex.def Info: figures/illustration.pdf used on input line 12.
-(pdftex.def)             Requested size: 252.0pt x 69.81857pt.
- [2 <./figures/smmetamodel.pdf>]
+<use figures/xseparationoverview.pdf>
+Package pdftex.def Info: figures/xseparationoverview.pdf used on input line 34.
+
+(pdftex.def)             Requested size: 252.0pt x 133.63226pt.
+) (sections/motivation.tex [2 <./figures/xseparationoverview.pdf>] <figures/cbs
+eexample.pdf, id=30, 963.6pt x 542.025pt>
+File: figures/cbseexample.pdf Graphic file (type pdf)
+
+<use figures/cbseexample.pdf>
+Package pdftex.def Info: figures/cbseexample.pdf used on input line 25.
+(pdftex.def)             Requested size: 252.0pt x 107.21092pt.
+
+<figures/fifostatemachine.png, id=32, 542.025pt x 221.32687pt>
+File: figures/fifostatemachine.png Graphic file (type png)
+
+<use figures/fifostatemachine.png>
+Package pdftex.def Info: figures/fifostatemachine.png used on input line 33.
+(pdftex.def)             Requested size: 252.0pt x 102.65294pt.
+) (sections/architectureprescribed.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--7
+[]\T1/ptm/m/n/10 This sec-tion presents how XSep-a-ra-tion gen-er-ates
+ []
+
+
+Underfull \hbox (badness 1400) in paragraph at lines 3--7
+\T1/ptm/b/n/10 Com-po-nent structure-prescribed code \T1/ptm/m/n/10 and \T1/ptm
+/b/n/10 Com-po-nent
+ []
+
+
+Underfull \hbox (badness 1466) in paragraph at lines 3--7
+\T1/ptm/b/n/10 prescribed code \T1/ptm/m/n/10 is con-trolled by the UML com-po-
+nent
+ []
+
 (C:\Users\VP242103\Downloads\tex\latex\listings\lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
@@ -1244,179 +1262,114 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 (C:\Users\VP242103\Downloads\tex\latex\listings\lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 )
-(code/generated1.cpp) (code/generated2.cpp)) (sections/overview.tex
-<figures/frontend.pdf, id=53, 963.6pt x 542.025pt>
-File: figures/frontend.pdf Graphic file (type pdf)
- <use figures/frontend.pdf>
-Package pdftex.def Info: figures/frontend.pdf used on input line 11.
-(pdftex.def)             Requested size: 252.0pt x 96.07826pt.
-
-[3 <./figures/illustration.pdf> <./figures/frontend.pdf>] (code/front-end1.cpp)
-(code/front-end2.cpp)) (sections/cbse.tex
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 18.
-
-<figures/architectureexample.pdf, id=86, 963.6pt x 542.025pt>
-File: figures/architectureexample.pdf Graphic file (type pdf)
-
-<use figures/architectureexample.pdf>
-Package pdftex.def Info: figures/architectureexample.pdf used on input line 41.
-
-(pdftex.def)             Requested size: 252.0pt x 115.84006pt.
- (code/browser.cpp) [4 <./figures/architectureexample.pdf>] (code/dns.cpp) (cod
-e/system.cpp) (code/multiport-frontend.cpp)
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-(code/multiport-cpp.cpp
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 6.
+(code/systemparts.cpp
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 12.
  (C:\Users\VP242103\Downloads\tex\latex\psnfss\omsptm.fd
 File: omsptm.fd 
 )
 
 LaTeX Font Warning: Font shape `OMS/ptm/bx/n' undefined
 (Font)              using `OMS/ptm/m/n' instead
-(Font)              for symbol `textasteriskcentered' on input line 6.
+(Font)              for symbol `textasteriskcentered' on input line 12.
 
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 6.
-)) (sections/syntax.tex [5])
-Overfull \hbox (22.60077pt too wide) in paragraph at lines 187--196
-[]$[]$
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 12.
+LaTeX Font Info:    Font shape `OMS/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 30.
+)
+Underfull \vbox (badness 1917) has occurred while \output is active []
+
+ [3 <./figures/cbseexample.pdf> <./figures/fifostatemachine.png>]
+(code/producerinteraction.cpp)
+<figures/dataportexample.pdf, id=55, 963.6pt x 542.025pt>
+File: figures/dataportexample.pdf Graphic file (type pdf)
+
+<use figures/dataportexample.pdf>
+Package pdftex.def Info: figures/dataportexample.pdf used on input line 59.
+(pdftex.def)             Requested size: 252.0pt x 42.60149pt.
+ (code/dataport.cpp)
+<figures/transformationchain.pdf, id=57, 963.6pt x 542.025pt>
+File: figures/transformationchain.pdf Graphic file (type pdf)
+
+<use figures/transformationchain.pdf>
+Package pdftex.def Info: figures/transformationchain.pdf used on input line 98.
+
+(pdftex.def)             Requested size: 252.0pt x 120.05882pt.
+) (sections/behaviorprescribed.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4 <./figures/dataportexample.pdf> <./figures/transformationchain.pdf>]
+(sections/remindusm.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 13--16
+[]\T1/ptm/m/n/10 XSeparation gen-er-ates and syn-chro-nizes \T1/ptm/b/n/10 Beha
+vior-
+ []
+
+(code/fifostatemachine.cpp)
+LaTeX Font Info:    Try loading font information for T1+phv on input line 40.
+
+(C:\Users\VP242103\Downloads\tex\latex\psnfss\t1phv.fd
+File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
+) [5]
+Underfull \hbox (badness 10000) in paragraph at lines 118--120
+[]\T1/ptm/b/n/10 Example: \T1/ptm/m/it/10 Pseu-do-Choice(dataChoice) \T1/ptm/m/
+n/10 and \T1/ptm/m/it/10 Pseu-do-
+ []
+
+) (sections/synchronization.tex [6]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 39.
+
+
+Overfull \hbox (2.10466pt too wide) in paragraph at lines 47--47
+[]|\T1/ptm/m/n/8 Class/Component/Interface| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 187--196
-
+Underfull \hbox (badness 10000) in paragraph at lines 53--53
+[]|\T1/ptm/m/n/8 UML State Ma-chine
  []
 
-(sections/synchronization.tex [6]
-<figures/scenario3_seq.pdf, id=107, 654.44273pt x 420.76974pt>
-File: figures/scenario3_seq.pdf Graphic file (type pdf)
+) (sections/compilation.tex
+<figures/compilerarchitecture.pdf, id=100, 963.6pt x 542.025pt>
+File: figures/compilerarchitecture.pdf Graphic file (type pdf)
 
-<use figures/scenario3_seq.pdf>
-Package pdftex.def Info: figures/scenario3_seq.pdf used on input line 48.
-(pdftex.def)             Requested size: 252.0pt x 162.01932pt.
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 61.
+<use figures/compilerarchitecture.pdf>
+Package pdftex.def Info: figures/compilerarchitecture.pdf used on input line 8.
 
-(C:\Users\VP242103\Downloads\tex\latex\psnfss\t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-))
-(sections/implementation.tex
-<figures/architecture.pdf, id=108, 963.6pt x 542.025pt>
-File: figures/architecture.pdf Graphic file (type pdf)
-
-<use figures/architecture.pdf>
-Package pdftex.def Info: figures/architecture.pdf used on input line 13.
-(pdftex.def)             Requested size: 252.0pt x 23.20265pt.
-
-<figures/modelchange.pdf, id=110, 963.6pt x 542.025pt>
-File: figures/modelchange.pdf Graphic file (type pdf)
-
-<use figures/modelchange.pdf>
-Package pdftex.def Info: figures/modelchange.pdf used on input line 123.
-(pdftex.def)             Requested size: 252.0pt x 100.65646pt.
- [7 <./figures/architecture.pdf> <./figures/scenario3_seq.pdf
-
-pdfTeX warning: pdflatex.exe (file ./figures/scenario3_seq.pdf): PDF inclusion:
- multiple pdfs with page group included in a single page
->] <figures/s2stransformation.pdf, id=1595, 963.6pt x 542.025pt>
-File: figures/s2stransformation.pdf Graphic file (type pdf)
-
-<use figures/s2stransformation.pdf>
-Package pdftex.def Info: figures/s2stransformation.pdf used on input line 162.
-(pdftex.def)             Requested size: 252.0pt x 31.98395pt.
-) (sections/experiment.tex
-<figures/rq1-2evaluation.pdf, id=1597, 963.6pt x 542.025pt>
-File: figures/rq1-2evaluation.pdf Graphic file (type pdf)
-
-<use figures/rq1-2evaluation.pdf>
-Package pdftex.def Info: figures/rq1-2evaluation.pdf used on input line 24.
-(pdftex.def)             Requested size: 252.0pt x 73.53307pt.
- (sections/reverseexpr.tex) [8 <./figures/modelchange.pdf> <./figures/s2stransf
-ormation.pdf> <./figures/rq1-2evaluation.pdf>] <experiments/box-plot-mine.pdf, 
-id=1639, 614.295pt x 794.97pt>
-File: experiments/box-plot-mine.pdf Graphic file (type pdf)
-
-<use experiments/box-plot-mine.pdf>
-Package pdftex.def Info: experiments/box-plot-mine.pdf used on input line 217.
-(pdftex.def)             Requested size: 252.0pt x 133.71881pt.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 251.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 266.
-
-) (sections/casestudy.tex
-<figures/casestudy.pdf, id=1641, 963.6pt x 542.025pt>
-File: figures/casestudy.pdf Graphic file (type pdf)
-
-<use figures/casestudy.pdf>
-Package pdftex.def Info: figures/casestudy.pdf used on input line 11.
-(pdftex.def)             Requested size: 252.0pt x 53.51688pt.
- [9 <./experiments/box-plot-mine.pdf> <./figures/casestudy.pdf>] <figures/cases
-tudystatemachine.pdf, id=1679, 963.6pt x 542.025pt>
-File: figures/casestudystatemachine.pdf Graphic file (type pdf)
-
-<use figures/casestudystatemachine.pdf>
-Package pdftex.def Info: figures/casestudystatemachine.pdf used on input line 3
-2.
-(pdftex.def)             Requested size: 252.0pt x 59.41692pt.
-
-<figures/highwayopenalternatives.pdf, id=1681, 963.6pt x 542.025pt>
-File: figures/highwayopenalternatives.pdf Graphic file (type pdf)
-
-<use figures/highwayopenalternatives.pdf>
-Package pdftex.def Info: figures/highwayopenalternatives.pdf used on input line
- 52.
-(pdftex.def)             Requested size: 252.0pt x 120.6744pt.
-) (sections/relatedwork.tex [10 <./figures/casestudystatemachine.pdf> <./figure
-s/highwayopenalternatives.pdf>])
-(sections/conclusion.tex) (USMSyncCpp.bbl
+(pdftex.def)             Requested size: 252.0pt x 68.78279pt.
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 13.
+ (code/archcodecompiler.cpp))
+(sections/evaluation.tex [7 <./figures/compilerarchitecture.pdf>])
+(sections/relatedwork.tex [8]) (sections/conclusion.tex) (USMSyncCpp.bbl
 ** WARNING: IEEEtran.bst: No hyphenation pattern has been
 ** loaded for the language `en'. Using the pattern for
 ** the default language instead.
 
-Package balance Warning: You have called \balance in second column
-(balance)                Columns might not be balanced.
-
-[11]
-** WARNING: IEEEtran.bst: No hyphenation pattern has been
-** loaded for the language `en'. Using the pattern for
-** the default language instead.
-
-Underfull \hbox (badness 10000) in paragraph at lines 224--227
-[]\T1/ptm/m/n/8 N. Magic, ``Magic Draw,'' $https : / / www . nomagic . com / pr
-oducts /$
- []
-
-
-Underfull \hbox (badness 1824) in paragraph at lines 229--232
-[]\T1/ptm/m/n/8 SparxSysemx, ``En-ter-prise Ar-chi-tect,'' $http : / / www . sp
-arxsystems . com /$
- []
-
-
-Underfull \hbox (badness 2027) in paragraph at lines 319--324
+Underfull \hbox (badness 2027) in paragraph at lines 110--115
 []\T1/ptm/m/n/8 SinelaboreRT, ``Sinela-bore Man-ual,'' $http : / / www . sinela
 bore .$
  []
 
 
-Underfull \hbox (badness 1910) in paragraph at lines 319--324
+Underfull \hbox (badness 1910) in paragraph at lines 110--115
 $\T1/ptm/m/n/8 com / lib / exe / fetch . php ? media = wiki : downloads : sinel
 aborert . pdf$. [On-
  []
 
 
-Overfull \vbox (6.13403pt too high) has occurred while \output is active []
+Underfull \hbox (badness 1824) in paragraph at lines 131--134
+[]\T1/ptm/m/n/8 SparxSysemx, ``En-ter-prise Ar-chi-tect,'' $http : / / www . sp
+arxsystems . com /$
+ []
 
 
-[12])
+Package balance Warning: You have called \balance in second column
+(balance)                Columns might not be balanced.
+
+[9])
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -1428,35 +1381,31 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[13] (USMSyncCpp.aux)
+[10] (USMSyncCpp.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
  ) 
 Here is how much of TeX's memory you used:
- 28294 strings out of 493673
- 558029 string characters out of 3144029
- 862726 words of memory out of 3000000
- 31092 multiletter control sequences out of 15000+200000
- 128489 words of font info for 138 fonts, out of 3000000 for 9000
+ 28198 strings out of 493673
+ 556683 string characters out of 3144029
+ 851360 words of memory out of 3000000
+ 31023 multiletter control sequences out of 15000+200000
+ 127868 words of font info for 136 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 54i,16n,85p,10423b,1348s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,13n,85p,10423b,1457s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/VP242103/Downloads/fonts/enc/dvips/fontname/8r.enc}<C:/Users/VP2421
-03/Downloads/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/VP242103/Downl
+03/Downloads/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/VP242103/Downl
 oads/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/VP242103/Downloads/font
 s/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/VP242103/Downloads/fonts/type1/p
-ublic/amsfonts/cm/cmsy8.pfb><C:/Users/VP242103/Downloads/fonts/type1/urw/courie
-r/ucrr8a.pfb><C:/Users/VP242103/Downloads/fonts/type1/urw/helvetic/uhvr8a.pfb><
-C:/Users/VP242103/Downloads/fonts/type1/urw/times/utmb8a.pfb><C:/Users/VP242103
-/Downloads/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/VP242103/Downloads/fonts
-/type1/urw/times/utmr8a.pfb><C:/Users/VP242103/Downloads/fonts/type1/urw/times/
-utmri8a.pfb>
-Output written on USMSyncCpp.pdf (13 pages, 1583498 bytes).
+ublic/amsfonts/cm/cmsy8.pfb><C:/Users/VP242103/Downloads/fonts/type1/urw/helvet
+ic/uhvr8a.pfb><C:/Users/VP242103/Downloads/fonts/type1/urw/times/utmb8a.pfb><C:
+/Users/VP242103/Downloads/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/VP242103/
+Downloads/fonts/type1/urw/times/utmr8a.pfb><C:/Users/VP242103/Downloads/fonts/t
+ype1/urw/times/utmri8a.pfb>
+Output written on USMSyncCpp.pdf (10 pages, 688773 bytes).
 PDF statistics:
- 1753 PDF objects out of 2073 (max. 8388607)
+ 155 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 150 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 79 words of extra memory for PDF output out of 10000 (max. 10000000)
 

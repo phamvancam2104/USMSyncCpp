@@ -1,0 +1,18 @@
+\subsection{Code generation patterns and tools}
+Tools such as IBM Rhapsody \cite{ibm_rhapsody}, Enterprise Architect \cite{EA}, Papyrus-RT \cite{possepapyrusrt}, and Sinelabore \cite{sinelabore} support only the structure RTE for UML class diagram concepts and code generation from UML State Machines.
+Techniques for generating code from USM such as SWITCH/IF, state table \cite{Douglass1999} and state pattern \cite{Shalyto2006,niaz_mapping_2004} are proposed. 
+A systematic review of code generation approaches is presented in \cite{Domnguez2012}.
+%Switch/if %is the most intuitive technique implementing a "flat" state machine \cite{Booch1998}.
+%and state table approach \cite{Douglass1999} are intuitive techniques. 
+%Some approaches such as state pattern \cite{Shalyto2006,niaz_mapping_2004} produce object-oriented code.
+% to implement flat state machines. Each state is represented as a class and each event as a method. %The event is processed by a delegation from the context class to sub-states. 
+%Separation of states in classes makes the code more readable and maintainable. %Unfortunately, this technique only supports flat state machines. 
+%This pattern is extended in \cite{niaz_mapping_2004} to support hierarchical-concurrent USMs. 
+%Recently, a double-dispatch (DD) pattern presented in \cite{spinke_object-oriented_2013} extends \cite{niaz_mapping_2004} to support maintainability. %by as a new technique to implement state machines. 
+%representing states and events as classes, and transitions as methods. 
+However, only a subset of USM features is supported and generated code is not efficient, %of class explosion and uses dynamic memory allocation, 
+which cannot be used for embedded systems \cite{spinke_object-oriented_2013}.
+%Our source-to-source transformation combines SWITCH/IF the pattern in \cite{niaz_mapping_2004} to produce small footprint and preserve state hierarchy.
+%Furthermore, 
+RAOES offers code generation for all USM concepts. %including states, pseudo states, transitions, and events.
+Therefore, users are free and flexible to create there USM conforming to UML without restrictions.

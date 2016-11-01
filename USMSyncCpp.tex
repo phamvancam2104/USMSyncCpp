@@ -47,13 +47,14 @@
 \usepackage{amssymb}
 \usepackage{algorithm}
 \usepackage{algorithmicx}
+\usepackage{tabularx}
 
 %\parskip=0.2\baselineskip
 
 \usepackage{booktabs}% http://ctan.org/pkg/booktabs
 \newcommand{\tabitem}{~~\llap{\textbullet}~~}
 
-
+\usepackage{pbox}
 
 \usepackage{amsthm}
 \theoremstyle{definition}
@@ -66,6 +67,10 @@
 \algrenewcommand\algorithmicensure{\textbf{Output:}}
 
 
+
+\usepackage{tikz}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+		\node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
 
 % define environments for remarks and examples
 \newtheorem{remark}{Remark}[section]
@@ -117,7 +122,8 @@
 	keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
 	keywordstyle=\textbf,       % keyword style
 	language=Octave,                 % the language of the code
-	otherkeywords={*,state, shallow,history,final,transition,table,initial,machine,transition,choice,exit,point,entry, port, part, requires, provides, bindPorts, configuration,...},           % if you want to add more keywords to the set
+	otherkeywords={*,Statemachine,machine, ShallowHistory,FinalState,Transition,TransitionTable,InitialState,Initial,State,PseudoChoice,StateEntry, StateExit, CallEvent,port, part, requires, provides, bindPorts, configuration,...},           % if you want to add more keywords to the set
+	alsoletter={_},
 	numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
 	numbersep=5pt,                   % how far the line-numbers are from the code
 	numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
@@ -135,7 +141,7 @@
 
 %
 %
-\title{RAOES: Round-trip Engineering for Event-Driven Embedded System Development and Evolution}
+\title{XSeparation: A Code Generation Approach for Round-trip Engineering of Model and Code}
 %
 %
 \author{
@@ -182,17 +188,23 @@ Email: first-name.lastname@cea.fr}
 
 \input{sections/introduction}
 
-\input{sections/background}
+%\input{sections/background}
+
+\input{sections/approachinanut}
 
 \input{sections/motivation}
 
 %\input{sections/motivationtlc}
 
-\input{sections/overview}
+\input{sections/architectureprescribed}
 
-\input{sections/cbse}
+\input{sections/behaviorprescribed}
 
-\input{sections/syntax}
+%\input{sections/overview}
+
+%\input{sections/cbse}
+
+%\input{sections/syntax}
 
 %\input{sections/example}
 
@@ -200,11 +212,14 @@ Email: first-name.lastname@cea.fr}
 
 %\input{sections/codegentex}
 
-\input{sections/implementation}
+\input{sections/compilation}
 
-\input{sections/experiment}
+%\input{sections/implementation}
 
-\input{sections/casestudy}
+%\input{sections/experiment}
+
+%\input{sections/casestudy}
+\input{sections/evaluation}
 
 %\input{sections/evaluationplan}
 

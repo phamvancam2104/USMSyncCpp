@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_nCt0IJVOEeaACLvclm2O-A" name="RootElement">
+  <packagedElement xmi:type="uml:Class" xmi:id="_oWlPwJVOEeaACLvclm2O-A" name="Producer" classifierBehavior="_uM6xAJVOEeaACLvclm2O-A">
+    <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_uM6xAJVOEeaACLvclm2O-A" name="ProducerMachine">
+      <region xmi:type="uml:Region" xmi:id="_unxhAJVOEeaACLvclm2O-A" name="Region1">
+        <transition xmi:type="uml:Transition" xmi:id="_eBfOwJVPEeaACLvclm2O-A" source="_Z1dTMJVPEeaACLvclm2O-A" target="_cF658JVPEeaACLvclm2O-A"/>
+        <transition xmi:type="uml:Transition" xmi:id="_0jZVcJVPEeaACLvclm2O-A" source="_cF658JVPEeaACLvclm2O-A" target="_1iTDIJVOEeaACLvclm2O-A"/>
+        <transition xmi:type="uml:Transition" xmi:id="_RcPwEJVQEeaACLvclm2O-A" source="_xeOwwJVOEeaACLvclm2O-A" target="_1iTDIJVOEeaACLvclm2O-A"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_xeOwwJVOEeaACLvclm2O-A" name="Initial1"/>
+        <subvertex xmi:type="uml:State" xmi:id="_1iTDIJVOEeaACLvclm2O-A" name="DataProduction">
+          <region xmi:type="uml:Region" xmi:id="_5Kn0spVOEeaACLvclm2O-A" name="Region1">
+            <transition xmi:type="uml:Transition" xmi:id="_P5-hgJVPEeaACLvclm2O-A" source="_5K0B9pVOEeaACLvclm2O-A" target="_-VA18JVOEeaACLvclm2O-A"/>
+            <transition xmi:type="uml:Transition" xmi:id="_Q25cwJVPEeaACLvclm2O-A" source="_-VA18JVOEeaACLvclm2O-A" target="_KdpbsJVPEeaACLvclm2O-A"/>
+            <transition xmi:type="uml:Transition" xmi:id="_Wt0M0JVPEeaACLvclm2O-A" source="_UvuvgJVPEeaACLvclm2O-A" target="_5K0B9pVOEeaACLvclm2O-A"/>
+            <transition xmi:type="uml:Transition" xmi:id="_bb33YJVPEeaACLvclm2O-A" guard="_m8GZUJVPEeaACLvclm2O-A" source="_KdpbsJVPEeaACLvclm2O-A" target="_Z1dTMJVPEeaACLvclm2O-A">
+              <ownedRule xmi:type="uml:Constraint" xmi:id="_m8GZUJVPEeaACLvclm2O-A">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_m8GZUZVPEeaACLvclm2O-A">
+                  <language>C++</language>
+                  <body>isDataValid</body>
+                </specification>
+              </ownedRule>
+            </transition>
+            <transition xmi:type="uml:Transition" xmi:id="_p5DSoJVPEeaACLvclm2O-A" guard="_zSFekJVPEeaACLvclm2O-A" source="_KdpbsJVPEeaACLvclm2O-A" target="__LqUoJVPEeaACLvclm2O-A">
+              <ownedRule xmi:type="uml:Constraint" xmi:id="_zSFekJVPEeaACLvclm2O-A">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_zSFekZVPEeaACLvclm2O-A">
+                  <language>C++</language>
+                  <body>else</body>
+                </specification>
+              </ownedRule>
+            </transition>
+            <transition xmi:type="uml:Transition" xmi:id="_LHso0JVQEeaACLvclm2O-A" source="__LqUoJVPEeaACLvclm2O-A" target="_1iTDIJVOEeaACLvclm2O-A"/>
+            <subvertex xmi:type="uml:State" xmi:id="_5K0B9pVOEeaACLvclm2O-A" name="DataCollection"/>
+            <subvertex xmi:type="uml:State" xmi:id="_-VA18JVOEeaACLvclm2O-A" name="DataDiagnosis"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_KdpbsJVPEeaACLvclm2O-A" name="choice" kind="choice"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_UvuvgJVPEeaACLvclm2O-A" name="Initial2"/>
+            <subvertex xmi:type="uml:State" xmi:id="__LqUoJVPEeaACLvclm2O-A" name="ErrorMessaging"/>
+          </region>
+        </subvertex>
+        <subvertex xmi:type="uml:State" xmi:id="_Z1dTMJVPEeaACLvclm2O-A" name="DataMaking"/>
+        <subvertex xmi:type="uml:State" xmi:id="_cF658JVPEeaACLvclm2O-A" name="DataPushing"/>
+      </region>
+    </ownedBehavior>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_q75FIJVOEeaACLvclm2O-A" name="FIFO" classifierBehavior="_VkCr4JVQEeaACLvclm2O-A">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="__Mef0Jh3EeacAOQBGlt3ig" name="numberOfItems">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_fEWQUJh4EeacAOQBGlt3ig" name="MAX_SIZE" isStatic="true">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_jh4LkJh4EeacAOQBGlt3ig" name="queue" type="_wTvosJVQEeaACLvclm2O-A" isOrdered="true">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_mHEFIJh4EeacAOQBGlt3ig"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_mHtlYJh4EeacAOQBGlt3ig" value="*"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_niWXYJh4EeacAOQBGlt3ig" name="isDataValid">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_TAqmkJh5EeacAOQBGlt3ig" client="_q75FIJVOEeaACLvclm2O-A" supplier="_Bp7kQJh5EeacAOQBGlt3ig" contract="_Bp7kQJh5EeacAOQBGlt3ig"/>
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_TcKPwJh5EeacAOQBGlt3ig" name="" client="_q75FIJVOEeaACLvclm2O-A" supplier="_Ev5PoJh5EeacAOQBGlt3ig" contract="_Ev5PoJh5EeacAOQBGlt3ig"/>
+    <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_VkCr4JVQEeaACLvclm2O-A" name="FIFOMachine">
+      <region xmi:type="uml:Region" xmi:id="_VuDjgJVQEeaACLvclm2O-A" name="Region1">
+        <transition xmi:type="uml:Transition" xmi:id="_grNNkJVQEeaACLvclm2O-A" source="_cXTvcJVQEeaACLvclm2O-A" target="_cz6L4JVQEeaACLvclm2O-A"/>
+        <transition xmi:type="uml:Transition" xmi:id="_m6tcwJVQEeaACLvclm2O-A" source="_cz6L4JVQEeaACLvclm2O-A" target="_i3_OMJVQEeaACLvclm2O-A">
+          <trigger xmi:type="uml:Trigger" xmi:id="_wmvdMJVQEeaACLvclm2O-A" event="_wc7Z4JVQEeaACLvclm2O-A"/>
+        </transition>
+        <transition xmi:type="uml:Transition" xmi:id="_2FrLEJVQEeaACLvclm2O-A" source="_i3_OMJVQEeaACLvclm2O-A" target="_ysK4oJVQEeaACLvclm2O-A"/>
+        <transition xmi:type="uml:Transition" xmi:id="_KSJEYJVREeaACLvclm2O-A" guard="_NqCNQJVREeaACLvclm2O-A" source="_ysK4oJVQEeaACLvclm2O-A" target="_dGNnaZVREeaACLvclm2O-A">
+          <ownedRule xmi:type="uml:Constraint" xmi:id="_NqCNQJVREeaACLvclm2O-A">
+            <specification xmi:type="uml:OpaqueExpression" xmi:id="_NqCNQZVREeaACLvclm2O-A">
+              <language>C++</language>
+              <body>isDataValid</body>
+            </specification>
+          </ownedRule>
+        </transition>
+        <transition xmi:type="uml:Transition" xmi:id="_WYbgwJVREeaACLvclm2O-A" guard="_HKapAJVSEeaACLvclm2O-A" source="_ysK4oJVQEeaACLvclm2O-A" target="_SosfoJVREeaACLvclm2O-A">
+          <ownedRule xmi:type="uml:Constraint" xmi:id="_HKapAJVSEeaACLvclm2O-A">
+            <specification xmi:type="uml:OpaqueExpression" xmi:id="_HKapAZVSEeaACLvclm2O-A">
+              <language>C++</language>
+              <body>else</body>
+            </specification>
+          </ownedRule>
+        </transition>
+        <transition xmi:type="uml:Transition" xmi:id="_ZmhNYJVREeaACLvclm2O-A" source="_SosfoJVREeaACLvclm2O-A" target="_cz6L4JVQEeaACLvclm2O-A"/>
+        <transition xmi:type="uml:Transition" xmi:id="_IYrL4JVSEeaACLvclm2O-A" source="_52q7AJVREeaACLvclm2O-A" target="_cz6L4JVQEeaACLvclm2O-A"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_cXTvcJVQEeaACLvclm2O-A" name="Initial1"/>
+        <subvertex xmi:type="uml:State" xmi:id="_cz6L4JVQEeaACLvclm2O-A" name="Idle"/>
+        <subvertex xmi:type="uml:State" xmi:id="_i3_OMJVQEeaACLvclm2O-A" name="SignalChecking"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_ysK4oJVQEeaACLvclm2O-A" name="dataChoice" kind="choice"/>
+        <subvertex xmi:type="uml:State" xmi:id="_72CnMJVQEeaACLvclm2O-A" name="DataQueuing">
+          <region xmi:type="uml:Region" xmi:id="_dGNnYpVREeaACLvclm2O-A" name="Region1">
+            <transition xmi:type="uml:Transition" xmi:id="_oifdcJVREeaACLvclm2O-A" guard="_sFnl8JVREeaACLvclm2O-A" source="_dGNnaZVREeaACLvclm2O-A" target="_ndI-8JVREeaACLvclm2O-A">
+              <ownedRule xmi:type="uml:Constraint" xmi:id="_sFnl8JVREeaACLvclm2O-A">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_sFnl8ZVREeaACLvclm2O-A">
+                  <language>C++</language>
+                  <body>isQueueFull()</body>
+                </specification>
+              </ownedRule>
+            </transition>
+            <transition xmi:type="uml:Transition" xmi:id="_zGSzYJVREeaACLvclm2O-A" source="_ndI-8JVREeaACLvclm2O-A" target="_cz6L4JVQEeaACLvclm2O-A"/>
+            <transition xmi:type="uml:Transition" xmi:id="_7j8VIJVREeaACLvclm2O-A" guard="_EJP-EJVSEeaACLvclm2O-A" source="_dGNnaZVREeaACLvclm2O-A" target="_52q7AJVREeaACLvclm2O-A">
+              <ownedRule xmi:type="uml:Constraint" xmi:id="_EJP-EJVSEeaACLvclm2O-A">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_EJP-EZVSEeaACLvclm2O-A">
+                  <language>C++</language>
+                  <body>else</body>
+                </specification>
+              </ownedRule>
+            </transition>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_dGNnaZVREeaACLvclm2O-A" name="queueChoice" kind="choice"/>
+            <subvertex xmi:type="uml:State" xmi:id="_ndI-8JVREeaACLvclm2O-A" name="Queuing"/>
+          </region>
+        </subvertex>
+        <subvertex xmi:type="uml:State" xmi:id="_SosfoJVREeaACLvclm2O-A" name="ErrorNotification"/>
+        <subvertex xmi:type="uml:State" xmi:id="_52q7AJVREeaACLvclm2O-A" name="Discarding"/>
+      </region>
+    </ownedBehavior>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_1s_4MJh4EeacAOQBGlt3ig" name="isQueueFull">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_8lXeMJh4EeacAOQBGlt3ig" name="ret" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Signal" xmi:id="_wTvosJVQEeaACLvclm2O-A" name="Data"/>
+  <packagedElement xmi:type="uml:SignalEvent" xmi:id="_wc7Z4JVQEeaACLvclm2O-A" name="DataIncoming" signal="_wTvosJVQEeaACLvclm2O-A"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_Bp7kQJh5EeacAOQBGlt3ig" name="IPush">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_MQn2IJh5EeacAOQBGlt3ig" name="push">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_PaOEUJh5EeacAOQBGlt3ig" name="item" type="_wTvosJVQEeaACLvclm2O-A"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_Ev5PoJh5EeacAOQBGlt3ig" name="IPull">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_HSXMYJh5EeacAOQBGlt3ig" name="pull">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_LNeXEJh5EeacAOQBGlt3ig" name="ret" type="_wTvosJVQEeaACLvclm2O-A" direction="return"/>
+    </ownedOperation>
+  </packagedElement>
+</uml:Model>

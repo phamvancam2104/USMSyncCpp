@@ -1,91 +1,132 @@
-\section{Component-based development}
-\begin{itemize}
-	\item An intermediate language CDL - Component-based Description Language is proposed for programmers
-	\item CDL is generated from model or can be created by programmers
-	\item CDL is used for whole system implementation, not just architecture description
-	\item CDL adds more constructs to OO languages:
-	\begin{itemize}
-		\item UML State Machine constructs: state, transition, event, pseudo state, action
+\section{RAOES as a Component-based language}
+We consider the \ttt{component-port-connector} architecture for the representation of system architecture.
+Table \ref{table:mapping} shows a mapping from UML component diagram concepts and corresponding elements in DCL.
+The following sections describe the DCL elements.
+
+
+\subsection{Components and parts}
+A component is one of the constituents of a system implementation.
+It encapsulates its content, which can be composed a set of sub-components or a class in object-oriented programming (OOP) languages.
+Each sub-component is considered as a part of the component.
+
+Listing \ref{lst:system} shows the description of the example in Fig. \ref{fig:cbseexample}.
+\ttt{System} is implemented as an OO class and consists of three parts: a producer \ttt{p}, a consumer \ttt{c}, and a first-in first-out (FIFO) communication channel \ttt{fifo}.
+
+
+\begin{minipage}{0.95\columnwidth}
+	\lstinputlisting[language=C++, caption=Front-end code generated from the System in Fig. \ref{fig:cbseexample}, label=lst:system,frame=f]{code/system.cpp}
+\end{minipage}
+
+The behavior of a component is described by a state machine written in RAOES. 
+
+A component interacts with other components via interaction points, namely, ports, which are described in the following sub-section.
+
+\subsection{Ports and binding}
+A port can be a data/message port or a method call/control port.
+While a data port of a component exchanges data with other components,
+a control port uses interfaces and method calls for interacting with other components. 
+A port provides/requires one or multiple data types, for data port, and/or one or multiple interfaces, for control port.
+Note that this port definition is different from UML's, in which a port can provide/require one interface.
+
+Listing \ref{lst:systemparts} displays the code segment generated for the example.
+The producer and the consumer require the interfaces \ttt{IPush} and \ttt{IPull} to interact with the fifo via their respective ports \ttt{pIPush} and \ttt{pIPull}.
+The interfaces contain method declarations, which are implemented by a certain component, the fifo in this case.
+
+\begin{minipage}{0.95\columnwidth}
+	\lstinputlisting[language=C++, caption={DCL code generated Producer, Consumer, and FIFO}, label=lst:systemparts,frame=f]{code/systemparts.cpp}
+\end{minipage}
+
+\ttt{Binding}s are used for connecting ports of different components for configuration of component communication in a system.
+A binding is created by an invocation to the function \ttt{bindPorts}, which takes as input two ports as shown in Fig. \ref{fig:cbseexample}.
+A binding is similar to the concept of UML connectors.
+It can be a delegate or an assemble binding.
+A delegate binding connects two ports of components that have a hierarchical relationship while ports in an assembly binding do not.
+
+\vskip 0.03in
+\noindent
+\tb{Static and dynamic component creation and bindings:}
+Each composite component has a unique configuration.
+It is used for creating static bindings during system initialization by putting all of bindings inside the system configuration as in Listing \ref{lst:system}.
+However, components and bindings can be created dynamically by using \ttt{instance creation expression (new)} of OOPLs and the \ttt{bindPorts} function, respectively, so that the topology of system's components can be changed at runtime. 
+This feature is useful in adaptive systems.
+
+For example, the communication component \ttt{fifo} in Fig. \ref{fig:cbseexample} can be replaced by a priority queue by instantiating \ttt{prioQueue} and binding the producer to it as in Listing \ref{lst:dynamic}.
+
+\begin{minipage}{0.95\columnwidth}
+	\lstinputlisting[language=C++, caption={Dynamic component and binding}, label=lst:dynamic,frame=f]{code/dynamic.cpp}
+\end{minipage}
+
+\vskip 0.03in
+\noindent
+\tb{Usage of provided interfaces:} A port with required interfaces bound to a port with provided interfaces through the methods (services) defined in the interfaces in an object-oriented way.
+For example, the \ttt{p} producer can push data items to \ttt{fifo} by calling the \ttt{push} method via the \ttt{pPush}: \ttt{p.pPush.push(item)}. 
+
+The \ttt{FIFO} component contains two provided ports \ttt{pPush} and \ttt{pPull}.
+However, using the concept of port with multiple required interfaces, we can re-write \ttt{FIFO} and the configuration in \ttt{System} as followings:
+
+\begin{minipage}{0.95\columnwidth}
+	\lstinputlisting[language=C++, caption={FIFO using a port with multiple required interfaces}, label=lst:multiple-port,frame=f]{code/multiple-port.cpp}
+\end{minipage} 
+
+Data ports can be used instead of control ports in the example.
+Data items flow from the port providing to the port requiring the data.
+Data ports are defined to support the explicit understanding of "physical" system data flow. 
+Fig \ref{fig:dataportexample} shows the example of using data ports.
+The \ttt{p} producer provides data items to \ttt{fifo} through their respective ports \ttt{pProvideData} and \ttt{pRequireData}.
+The code for the data ports is shown in Listing \ref{lst:dataport}.
+
+In system implementation, the producer provides data items to the fifo via the port \ttt{pProvideData} by calling \ttt{pProvideData.send(item)} as object-oriented way.
+
+
+
+
+\subsection{Consistency of ports}
+This section presents the constraints for ports and bindings.
+The constraints for a port \ttt{p} of a component \ttt{Comp} are stated as followings:
+
+%\begin{itemize}
+	%\item An intermediate language CDL - Component-based Description Language is proposed for programmers
+	%\item CDL is generated from model or can be created by programmers
+	%\item CDL is used for whole system implementation, not just architecture description
+	%\item CDL adds more constructs to OO languages:
+	%\begin{itemize}
+	%	\item UML State Machine constructs: state, transition, event, pseudo state, action
 		
-		\item Component constructs: component, part, port, connector
+	%	\item Component constructs: component, part, port, connector
 		
-		\item Reuse maximally existing constructs in OO languages such as class, attribute
-	\end{itemize}
+	%	\item Reuse maximally existing constructs in OO languages such as class, attribute
+	%\end{itemize}
 	
-	\item CDL is synchronized with models
+	%\item CDL is synchronized with models
+%\end{itemize}
+
+
+
+
+\begin{itemize}
+	%\item A port can provide or require multiple interfaces/data
+	
+	%\item For port p of component C
+	
+	%\begin{itemize}
+	\item If \ttt{p} provides an interface \ttt{I} => \ttt{Comp} or one of \ttt{Comp}'s sub-com must implement I. 
+	
+	\item If \ttt{p} requires a data type/signal \ttt{D} => A realization of an interface named \ttt{ISendD}, which contains only one method \ttt{sendD}, is generated for \ttt{Comp}.
+	
+	%\item If p provides a data signal Sig => C sends signal via p by calling p->sendSig
+	%\item If p uses a data signal Sig => C/C's sub-component implements ISig interface, which contains only a method sendSig(Sig\& sig);
+	%\end{itemize}
+	
 \end{itemize}
 
-\begin{table}[]
-	\centering
-	\caption{Mapping between UML and CDL concepts}
-	\label{my-label}
-	\begin{tabular}{|l|l|l|l|}
-		\hline
-		UML                                                                  & DCL                                                                 & OO                                                                            & C++                                                            \\ \hline
-		\begin{tabular}[c]{@{}l@{}}Class/\\ component\end{tabular}           & Class                                                               & Class                                                                         & Class                                                          \\ \hline
-		Part                                                                 & Part                                                                & \begin{tabular}[c]{@{}l@{}}Composition \\ attribute\end{tabular}              & Attribute                                                      \\ \hline
-		\begin{tabular}[c]{@{}l@{}}Port \\ (data/control)\end{tabular}       & Port                                                                & Attribute                                                                     & \begin{tabular}[c]{@{}l@{}}Reference \\ Attribute\end{tabular} \\ \hline
-		Many ports                                                           & Multiple-port                                                       & \begin{tabular}[c]{@{}l@{}}Multiple\\   interface \\ realization\end{tabular} & --                                                             \\ \hline
-		Connector                                                            & \begin{tabular}[c]{@{}l@{}}Binding \\ (static+runtime)\end{tabular} & --                                                                            & Methods                                                        \\ \hline
-		State machine                                                        & State machine                                                       & \begin{tabular}[c]{@{}l@{}}Set of classes\\  and methods\end{tabular}         & --                                                             \\ \hline
-		\begin{tabular}[c]{@{}l@{}}Provided port \\ constraints\end{tabular} &                                                                     &                                                                               &                                                                \\ \hline
-		Interface                                                            & Class/Interface                                                     & Interface                                                                     & Class                                                          \\ \hline
-		Signal                                                               & Class                                                               & Class                                                                         & Class/Struct                                                   \\ \hline
-	\end{tabular}
-\end{table}
 
-
-
-\begin{figure}
-	\centering
-	\includegraphics[clip, trim=0cm 12.4cm 19.4cm 0cm, width=\columnwidth]{figures/architectureexample.pdf}
-	\caption{Component-based architecture example in CDL} 
-	\label{fig:architectureexample}
-\end{figure}
-
-
-
-\begin{minipage}{0.95\columnwidth}
-\lstinputlisting[language=C++, caption=Front-end code generated from the Browser in Fig. \ref{fig:architectureexample}, label=lst:front-end2,frame=f]{code/browser.cpp}
-\end{minipage}
-
-\begin{minipage}{0.95\columnwidth}
-\lstinputlisting[language=C++, caption=Front-end code generated from the DNS in Fig. \ref{fig:architectureexample}, label=lst:front-end2,frame=f]{code/dns.cpp}
-\end{minipage}
-
-\begin{minipage}{0.95\columnwidth}
-\lstinputlisting[language=C++, caption=Front-end code generated from the System in Fig. \ref{fig:architectureexample}, label=lst:front-end2,frame=f]{code/system.cpp}
-\end{minipage}
-
-
+Two ports \ttt{p1} and \ttt{p2} match for binding if one of the following conditions is met:
 \begin{itemize}
-	\item A port can provide or require multiple interfaces/data
+	\item Assemble: All required interface and data types of p1 (p2) match with all provided interfaces and data types, respectively, of p2 (p1).
 	
-	\item For port p of component C
-	
-	\begin{itemize}
-		\item If p provides an interface I => C must implement I or one of C's sub-com implements
-		\item If p requires an interface I => invocations via p (pIConnect -> connect(), e.g.)
-		\item If p provides a data signal Sig => C sends signal via p by calling p->sendSig
-		\item If p uses a data signal Sig => C/C's sub-component implements ISig interface, which contains only a method sendSig(Sig\& sig);
-	\end{itemize}
-	
-	\item Two ports p1 and p2 are matches for binding if one of the following cases:
-	\begin{itemize}
-		\item Assemble: All required interfaces of p1 (p2) match with all provided interfaces of p2 (p1) and all provided signals of p1 (p2) match with all required signals of p2 (p1)
-		
-		\item Delegation: All required interfaces of p1 (p2) match with all required interfaces of p2 (p1) and all provided signals of p1 (p2) match with all provided signals of p2 (p1)
-	\end{itemize}
-	
-	\item Match: A match B => A = B or A inherits from B.
-	
+	\item Delegation: All required interfaces and data types of p1 (p2) match with all required interfaces and data types, respectively, of p2 (p1).
 \end{itemize}
 
-\begin{minipage}{0.95\columnwidth}
-	\lstinputlisting[language=C++, caption=Multi-interface/data port front-end code, label=lst:front-end2,frame=f]{code/multiport-frontend.cpp}
-\end{minipage}
+\noindent
+\tb{Match:} an interface/data type A matches with an interface/data type B if A = B or A inherits from B.
 
-
-\begin{minipage}{0.95\columnwidth}
-\lstinputlisting[language=C++, caption=Multi-interface/data port front-end code, label=lst:front-end2,frame=f]{code/multiport-cpp.cpp}
-\end{minipage}

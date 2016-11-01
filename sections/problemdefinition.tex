@@ -1,0 +1,9 @@
+\subsection{Problem definition and challenges}
+\label{subsec:problemdefinition}
+The system architecture is described by UML class and component diagrams and the behavior by UML State Machines.
+These architecture and behavior models, briefly as the design model, are then used for generating code (implementation).
+The code can be modified by programmers while in the meantime the architecture model might be modified by software architects.
+The concurrent modifications raise the problem of consistency between the architecture model and implementation code.
+
+Synchronization of concurrent modifications made in the architecture model and code is considered as a hard problem because of the abstraction gap between the architecture and the implementation (code). 
+This gap makes the bidirectional traceability, which allows to reflect modifications made in one artifact to the other, between model and code hard, even impossible.

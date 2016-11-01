@@ -1,4 +1,4 @@
-\section{RAOES's language syntax}
+\section{RAOES as a state machine-based language}
 \label{sec:syntax}
 This section presents how USMs can be represented in the front-end language of RAOES.
 A USM in RAOES is defined inside an active class (C++ class).
@@ -57,26 +57,31 @@ Similarly, the state \ttt{S2} and its sub-vertexes such as \ttt{Enp1}, \ttt{h1},
 
 \subsubsection{Pseudo state} ~\\
 \tb{Syntax:}
+Pseudo states have similar syntax as below.
+In this latter, \ttt{pseudo\_keyword} is one of \ttt{\{entry\_point, exit\_point, initial, final\_state, join, fork, choice, junction, shallow\_history, deep\_history\}}, which correspond to the pseudo states in USM. 
+\ttt{name} is the unique name of the pseudo state.
+
 \begin{itemize}[\footnotesize]
-\item \ti{entry point} $\rightarrow$ \tf{'entry\_point ('name');'} 
+\item \ti{pseudo state} $\rightarrow$ \tf{'pseudo\_keyword ('name');'} 
+%\item \ti{entry point} $\rightarrow$ \tf{'entry\_point ('name');'} 
 
-\item \ti{exit point} $\rightarrow$ \tf{'exit\_point ('name');'}
+%\item \ti{exit point} $\rightarrow$ \tf{'exit\_point ('name');'}
 
-\item \ti{initial} $\rightarrow$ \tf{'initial ('name');'}
+%\item \ti{initial} $\rightarrow$ \tf{'initial ('name');'}
 
-\item \ti{final} $\rightarrow$ \tf{'final\_state ('name');'}
+%\item \ti{final} $\rightarrow$ \tf{'final\_state ('name');'}
 
-\item \ti{join} $\rightarrow$ \tf{'join ('name');'}
+%\item \ti{join} $\rightarrow$ \tf{'join ('name');'}
 
-\item \ti{fork} $\rightarrow$ \tf{'fork ('name');'}
+%\item \ti{fork} $\rightarrow$ \tf{'fork ('name');'}
 
-\item \ti{choice} $\rightarrow$ \tf{'choice ('name');'}
+%\item \ti{choice} $\rightarrow$ \tf{'choice ('name');'}
 
-\item \ti{junction} $\rightarrow$ \tf{'junction ('name');'}
+%\item \ti{junction} $\rightarrow$ \tf{'junction ('name');'}
 
-\item \ti{shallow history} $\rightarrow$ \tf{'shallow\_history ('name');'}
+%\item \ti{shallow history} $\rightarrow$ \tf{'shallow\_history ('name');'}
 
-\item \ti{deep history} $\rightarrow$ \tf{'deep\_history ('name');'}
+%\item \ti{deep history} $\rightarrow$ \tf{'deep\_history ('name');'}
 \end{itemize}
 
 \noindent

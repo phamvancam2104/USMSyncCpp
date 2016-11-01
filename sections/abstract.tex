@@ -1,12 +1,17 @@
 \begin{abstract}
 %Event-driven architecture is an useful way to design memory-constrained embedded systems.
-A UML State Machine and its visualizations are efficient to model the logical behavior of event-driven embedded systems.   
-Model Driven Engineering generates executable code from state machines. 
-The generated code can then be modified by programmers.
-Round-trip engineering is a technique used to propagate changes made in the code to the original model.
-However, existing round-trip engineering tools and approaches mainly focus on structural parts of the system model such as those available from UML class diagrams.
-This paper tackles the problem of collaboration between software architects and programmers in developing event-driven embedded systems using UML State Machine to describe the behavior.
-We propose RAOES-a round-trip engineering and synchronization of model and code, with which the software architects and programmers can freely switch between model and code to be efficient with their preferred practice.
-To do it, RAOES proposes to generate an intermediate representation, which acts as a bridge to connect the code to the model.
-We implemented a prototype and conducted experiments to evaluate RAOES.
+UML State Machines and composite structure are prove to efficiently capture and simplify the complexity in designing the behavior and structure, respectively, of event-driven and cyber-physical system architecture.
+%A UML State Machine and its visualizations are efficient to model the logical behavior of event-driven embedded systems.   
+Model Driven Engineering (MDE) tries to generate fully executable code from architecture models. 
+Nevertheless, because of abstraction gap between architecture and implementation, and lack of means to describe fine-grained behaviors, e.g. UML State Machine and Sequence diagrams are not sufficient, current MDE tools and approaches put code directly in the model
+in order to achieve full code generation.
+It is, however, not favorable because the architecture should only hold design decisions.
+Hence, code generated from the tools must be tailored by programmers for fine-grained code.
+In this case, the architecture correctness might be violated, which raises the problem of consistency between architecture and implementation code.
+This paper tackles the problem of synchronization between object-oriented code and architecture model 
+%specified by UML composite structure and State Machine diagrams 
+for the co-evolution of these artifacts.
+We propose XSeparation - an extreme separation code generation and synchronization for enabling the bidirectional traceability between architecture model and code.
+%To do it, RAOES proposes to generate an intermediate representation, which acts as a bridge to connect the code to the model.
+We implemented XSeparation a prototype based on the Papyrus modeling tool and evaluated it by developing a software application for LEGO.
 \end{abstract}

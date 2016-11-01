@@ -1,0 +1,26 @@
+\begin{table}[]
+	\centering
+	\caption{Mapping between UML and XSeparation-generated code (XGC)}
+	\label{table:mapping}
+	\begin{tabular}{llll}
+		%\hline
+		UML & XGC                                                                & OO                                                                         & C++                                                            \\ \hline
+		\begin{tabular}[c]{@{}l@{}}Class/\\ component\end{tabular} & Class                                                              & Class                                                                      & Class                                                          \\ \hline
+		Part                                                       & Part                                                               & \begin{tabular}[c]{@{}l@{}}Composition\\ attribute\end{tabular}            & Attribute                                                      \\ \hline
+		Port  (data/control)                                       & Port                                                               & Attribute                                                                  & \begin{tabular}[c]{@{}l@{}}Reference \\ Attribute\end{tabular} \\ \hline
+		Many ports                                                 & Multiple-port                                                      & \begin{tabular}[c]{@{}l@{}}Multiple\\ interface\\ realization\end{tabular} & --                                                             \\ \hline
+		Connector                                                  & \begin{tabular}[c]{@{}l@{}}Binding\\ (static+dynamic)\end{tabular} & --                                                                         & Methods                                                        \\ \hline
+		Interface                                                  & Class/Interface                                                    & Interface                                                                  & Class                                                          \\ \hline
+		Signal                                                     & Class                                                              & Class                                                                      & Class/Struct                                                   \\ \hline
+		State machine                                              & state\_machine                                                     & --                                                                         & --                                                             \\ \hline
+		State                                                      & state                                                              & --                                                                         & --                                                             \\ \hline
+		Region                                                     & region                                                             & --                                                                         & --                                                             \\ \hline
+		CallEvent                                                  & call\_event                                                        & --                                                                         & --                                                             \\ \hline
+		TimeEvent                                                  & time\_event                                                        & --                                                                         & --                                                             \\ \hline
+		ChangeEvent                                                & change\_event                                                      & --                                                                         & --                                                             \\ \hline
+		SignalEvent                                                & signal\_event                                                      & --                                                                         & --                                                             \\ \hline
+		Any                                                        & any                                                                & --                                                                         & --                                                             \\ \hline
+		Pseudo state                                               & pseudo\_state                                                      & --                                                                         & --                                                             \\ \hline
+		Action/Effect                                              & Method                                                             & Method                                                                     & Method                                                         \\ %\hline
+	\end{tabular}
+\end{table}

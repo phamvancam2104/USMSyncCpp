@@ -21,31 +21,23 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{Dunkels:2006:PSE:1182807.1182811}
-\BIBentryALTinterwordspacing
-A.~Dunkels, O.~Schmidt, T.~Voigt, and M.~Ali, ``Protothreads: Simplifying
-  event-driven programming of memory-constrained embedded systems,'' in
-  \emph{Proceedings of the 4th International Conference on Embedded Networked
-  Sensor Systems}, ser. SenSys '06.\hskip 1em plus 0.5em minus 0.4em\relax New
-  York, NY, USA: ACM, 2006, pp. 29--42. [Online]. Available:
-  \url{http://doi.acm.org/10.1145/1182807.1182811}
-\BIBentrySTDinterwordspacing
+\bibitem{possepapyrusrt}
+E.~Posse, ``Papyrusrt: Modelling and code generation.''
+
+\bibitem{Ringert2013}
+J.~O. Ringert, B.~Rumpe, and A.~Wortmann, ``{From software architecture
+  structure and behavior modeling to implementations of cyber-physical
+  systems},'' in \emph{Lecture Notes in Informatics (LNI), Proceedings - Series
+  of the Gesellschaft fur Informatik (GI)}, vol. P-215, 2013, pp. 155--170.
 
 \bibitem{kent2002model}
 S.~Kent, ``Model driven engineering,'' in \emph{International Conference on
   Integrated Formal Methods}.\hskip 1em plus 0.5em minus 0.4em\relax Springer,
   2002, pp. 286--298.
 
-\bibitem{possepapyrusrt}
-E.~Posse, ``Papyrusrt: Modelling and code generation.''
-
 \bibitem{Douglass1999}
 B.~P. Douglass, \emph{{Real-time UML : developing efficient objects for
   embedded systems}}, 1999.
-
-\bibitem{Shalyto2006}
-A.~Shalyto and N.~Shamgunov, ``{State machine design pattern},'' \emph{Proc. of
-  the 4th International Conference on.NET Technologies}, 2006.
 
 \bibitem{ibm_rhapsody}
 \BIBentryALTinterwordspacing
@@ -64,47 +56,15 @@ J.~Hutchinson, M.~Rouncefield, and J.~Whittle, ``Model-driven engineering
   Conference on Software Engineering}, ser. ICSE '11.\hskip 1em plus 0.5em
   minus 0.4em\relax New York, NY, USA: ACM, 2011, pp. 633--642.
 
-\bibitem{Hutchinson:2011:EAM:1985793.1985858}
-\BIBentryALTinterwordspacing
-J.~Hutchinson, J.~Whittle, M.~Rouncefield, and S.~Kristoffersen, ``Empirical
-  assessment of mde in industry,'' in \emph{Proceedings of the 33rd
-  International Conference on Software Engineering}, ser. ICSE '11.\hskip 1em
-  plus 0.5em minus 0.4em\relax New York, NY, USA: ACM, 2011, pp. 471--480.
-  [Online]. Available: \url{http://doi.acm.org/10.1145/1985793.1985858}
-\BIBentrySTDinterwordspacing
+\bibitem{ubayashi2010archface}
+N.~Ubayashi, J.~Nomura, and T.~Tamai, ``Archface: a contract place where
+  architectural design and code meet together,'' in \emph{Proceedings of the
+  32nd ACM/IEEE International Conference on Software Engineering-Volume
+  1}.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2010, pp. 75--84.
 
-\bibitem{Hettel2008}
-T.~Hettel, M.~Lawley, and K.~Raymond, ``{Model synchronisation: Definitions for
-  round-trip engineering},'' in \emph{Lecture Notes in Computer Science
-  (including subseries Lecture Notes in Artificial Intelligence and Lecture
-  Notes in Bioinformatics)}, vol. 5063 LNCS, 2008, pp. 31--45.
-
-\bibitem{Sendall}
-S.~Sendall and J.~K\"{u}ster, ``{Taming Model Round-Trip Engineering}.''
-
-\bibitem{sparxsystems_enterprise_2014}
-\BIBentryALTinterwordspacing
-SparxSystems, ``\BIBforeignlanguage{en}{Enterprise {Architect}},'' Sep. 2016.
-  [Online]. Available: \url{http://www.sparxsystems.eu/start/home/}
-\BIBentrySTDinterwordspacing
-
-\bibitem{langhammer2013co}
-M.~Langhammer, ``Co-evolution of component-based architecture-model and
-  object-oriented source code,'' in \emph{Proceedings of the 18th international
-  doctoral symposium on Components and architecture}.\hskip 1em plus 0.5em
-  minus 0.4em\relax ACM, 2013, pp. 37--42.
-
-\bibitem{kramer2015change}
-M.~E. Kramer, M.~Langhammer, D.~Messinger, S.~Seifermann, and E.~Burger,
-  ``Change-driven consistency for component code, architectural models, and
-  contracts,'' in \emph{Proceedings of the 18th International ACM SIGSOFT
-  Symposium on Component-Based Software Engineering}.\hskip 1em plus 0.5em
-  minus 0.4em\relax ACM, 2015, pp. 21--26.
-
-\bibitem{steinberg2008emf}
-D.~Steinberg, F.~Budinsky, E.~Merks, and M.~Paternostro, \emph{EMF: eclipse
-  modeling framework}.\hskip 1em plus 0.5em minus 0.4em\relax Pearson
-  Education, 2008.
+\bibitem{kelly2008domain}
+S.~Kelly and J.-P. Tolvanen, \emph{Domain-specific modeling: enabling full code
+  generation}.\hskip 1em plus 0.5em minus 0.4em\relax John Wiley \& Sons, 2008.
 
 \bibitem{zheng2012enhancing}
 Y.~Zheng and R.~N. Taylor, ``Enhancing architecture-implementation conformance
@@ -113,157 +73,15 @@ Y.~Zheng and R.~N. Taylor, ``Enhancing architecture-implementation conformance
   Engineering}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE Press, 2012, pp.
   628--638.
 
-\bibitem{aldrich2002archjava}
-J.~Aldrich, C.~Chambers, and D.~Notkin, ``Archjava: connecting software
-  architecture to implementation,'' in \emph{Software Engineering, 2002. ICSE
-  2002. Proceedings of the 24rd International Conference on}.\hskip 1em plus
-  0.5em minus 0.4em\relax IEEE, 2002, pp. 187--197.
+\bibitem{steinberg2008emf}
+D.~Steinberg, F.~Budinsky, E.~Merks, and M.~Paternostro, \emph{EMF: eclipse
+  modeling framework}.\hskip 1em plus 0.5em minus 0.4em\relax Pearson
+  Education, 2008.
 
-\bibitem{ubayashi2010archface}
-N.~Ubayashi, J.~Nomura, and T.~Tamai, ``Archface: a contract place where
-  architectural design and code meet together,'' in \emph{Proceedings of the
-  32nd ACM/IEEE International Conference on Software Engineering-Volume
-  1}.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2010, pp. 75--84.
-
-\bibitem{MSM}
-MSM, ``{Meta} {State} {Machine},''
-  \url{http://www.boost.org/doc/libs/1_59_0_b1/libs/msm/doc/HTML/index.html},
-  2016, [Online; accessed 04-July-2016].
-
-\bibitem{EUML}
-\BIBentryALTinterwordspacing
-``{State} {Machine} {Benchmark}.'' [Online]. Available:
-  \url{http://www.boost.org/doc/libs/1_61_0/libs/msm/doc/HTML/ch03s04.html}
-\BIBentrySTDinterwordspacing
-
-\bibitem{OMG2015}
-OMG, ``{Precise Semantics Of UML Composite Structures},'' no. October, 2015.
-
-\bibitem{Giese2006}
-H.~Giese and R.~Wagner, ``{Incremental Model Synchronization with Triple Graph
-  Grammars},'' in \emph{Proceedings of the 9th international conference on
-  Model Driven Engineering Languages and Systems}, Genova, Italy, 2006.
-
-\bibitem{walkinshaw2007reverse}
-N.~Walkinshaw, K.~Bogdanov, M.~Holcombe, and S.~Salahuddin, ``Reverse
-  engineering state machines by interactive grammar inference,'' in \emph{14th
-  Working Conference on Reverse Engineering (WCRE 2007)}.\hskip 1em plus 0.5em
-  minus 0.4em\relax IEEE, 2007, pp. 209--218.
-
-\bibitem{hall2010superstate}
-M.~Hall, P.~McMinn, and N.~Walkinshaw, ``Superstate identification for state
-  machines using search-based clustering,'' in \emph{Proceedings of the 12th
-  annual conference on Genetic and evolutionary computation}.\hskip 1em plus
-  0.5em minus 0.4em\relax ACM, 2010, pp. 1381--1388.
-
-\bibitem{DBLP:conf/kbse/AbadiF12}
-\BIBentryALTinterwordspacing
-M.~Abadi and Y.~A. Feldman, ``Automatic recovery of statecharts from procedural
-  code,'' in \emph{{IEEE/ACM} International Conference on Automated Software
-  Engineering, ASE'12, Essen, Germany, September 3-7, 2012}, 2012, pp.
-  238--241. [Online]. Available:
-  \url{http://doi.acm.org/10.1145/2351676.2351711}
-\BIBentrySTDinterwordspacing
-
-\bibitem{lethbridge2010umplification}
-T.~C. Lethbridge, A.~Forward, and O.~Badreddin, ``Umplification: Refactoring to
-  incrementally add abstraction to a program,'' in \emph{2010 17th Working
-  Conference on Reverse Engineering}.\hskip 1em plus 0.5em minus 0.4em\relax
-  IEEE, 2010, pp. 220--224.
-
-\bibitem{thingml}
-``Thingml,'' \url{http://thingml.org/}.
-
-\bibitem{qm}
-QM, ``Qm,'' \url{http://www.state-machine.com/qm/}, 2016, [Online; accessed
-  14-May-2016].
-
-\bibitem{_papyrus/designer/code-generation_????}
-\BIBentryALTinterwordspacing
-``Papyrus/{Designer}/code-generation - {Eclipsepedia},''
-  \url{http://wiki.eclipse.org/Papyrus/Designer/code-generation}. [Online].
-  Available: \url{http://wiki.eclipse.org/Papyrus/Designer/code-generation}
-\BIBentrySTDinterwordspacing
-
-\bibitem{Badreddin2014}
-O.~Badreddin, T.~C. Lethbridge, A.~Forward, M.~Elasaar, and H.~Aljamaan,
-  ``{Enhanced Code Generation from UML Composite State Machines},''
-  \emph{Modelsward 2014}, pp. 1--11, 2014.
-
-\bibitem{niaz_mapping_2004}
-\BIBentryALTinterwordspacing
-I.~A. Niaz, J.~Tanaka, and {others}, ``Mapping {UML} statecharts to java
-  code.'' in \emph{{IASTED} {Conf}. on {Software} {Engineering}}, 2004, pp.
-  111--116. [Online]. Available:
-  \url{http://www.actapress.com/PDFViewer.aspx?paperId=16433}
-\BIBentrySTDinterwordspacing
-
-\bibitem{foster_combinators_2007}
-J.~N. Foster, M.~B. Greenwald, J.~T. Moore, B.~C. Pierce, and A.~Schmitt,
-  ``Combinators for {Bidirectional} {Tree} {Transformations}: {A} {Linguistic}
-  {Approach} to the {View}-update {Problem},'' \emph{ACM Trans. Program. Lang.
-  Syst.}, vol.~29, no.~3, May 2007.
-
-\bibitem{moka}
-\BIBentryALTinterwordspacing
-``Moka {Model} {Execution}.'' [Online]. Available:
-  \url{https://wiki.eclipse.org/Papyrus/UserGuide/ModelExecution}
-\BIBentrySTDinterwordspacing
-
-\bibitem{boost}
-boost, ``{Boost} {C++},'' \url{http://www.boost.org/}, 2016, [Online; accessed
-  04-July-2016].
-
-\bibitem{benchmark}
-\BIBentryALTinterwordspacing
-``{State} {Machine} {Benchmark}.'' [Online]. Available:
-  \url{http://boost-experimental.github.io/msm-lite/benchmarks/index.html}
-\BIBentrySTDinterwordspacing
-
-\bibitem{Magicdraw}
-N.~{Magic}, ``{Magic} {Draw},''
-  \url{https://www.nomagic.com/products/magicdraw.html}, 2016, [Online;
-  accessed 14-Mar-2016].
-
-\bibitem{EA}
-SparxSysemx, ``{Enterprise} {Architect},''
-  \url{http://www.sparxsystems.com/products/ea/}, 2016, [Online; accessed
-  14-Mar-2016].
-
-\bibitem{Statechart}
-B.~{Library}, ``{The} {Boost} {Statechart} {Library},''
-  \url{http://www.boost.org/doc/libs/1_61_0/libs/statechart/doc/index.html},
-  2016, [Online; accessed 04-July-2016].
-
-\bibitem{Massif}
-\BIBentryALTinterwordspacing
-``{Valgrind} {Massif}.'' [Online]. Available:
-  \url{http://valgrind.org/docs/manual/ms-manual.html}
-\BIBentrySTDinterwordspacing
-
-\bibitem{nethercote2007valgrind}
-N.~Nethercote and J.~Seward, ``Valgrind: a framework for heavyweight dynamic
-  binary instrumentation,'' in \emph{ACM Sigplan notices}, vol.~42,
-  no.~6.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2007, pp. 89--100.
-
-\bibitem{katz2005contemporary}
-R.~H. Katz and G.~Borriello, ``Contemporary logic design,'' 2005.
-
-\bibitem{trafficlight}
-{Yasmine}, ``{The} {classic} {farmroad} {example},''
-  \url{http://yasmine.seadex.de/The_classic_farmroad_example.html}.
-
-\bibitem{farmroadexample}
-\BIBentryALTinterwordspacing
-``{Farmroad} {Example},''
-  \url{http://yasmine.seadex.de/The_classic_farmroad_example.html}. [Online].
-  Available: \url{http://yasmine.seadex.de/The_classic_farmroad_example.html}
-\BIBentrySTDinterwordspacing
-
-\bibitem{czarnecki_multi-level_2006}
-K.~Czarnecki, M.~Antkiewicz, and C.~H.~P. Kim, ``Multi-level customization in
-  application engineering,'' \emph{Communications of the ACM}, vol.~49, no.~12,
-  p.~60, Dec. 2006.
+\bibitem{zheng2013classification}
+Y.~Zheng and R.~N. Taylor, ``A classification and rationalization of
+  model-based software development,'' \emph{Software \& Systems Modeling},
+  vol.~12, no.~4, pp. 669--678, 2013.
 
 \bibitem{yu2012maintaining}
 Y.~Yu, Y.~Lin, Z.~Hu, S.~Hidaka, H.~Kato, and L.~Montrieux, ``Maintaining
@@ -272,11 +90,76 @@ Y.~Yu, Y.~Lin, Z.~Hu, S.~Hidaka, H.~Kato, and L.~Montrieux, ``Maintaining
   Engineering}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE Press, 2012, pp.
   540--550.
 
-\bibitem{christensen2011towards}
-H.~B. Christensen and K.~M. Hansen, ``Towards architectural information in
-  implementation (nier track),'' in \emph{Proceedings of the 33rd International
-  Conference on Software Engineering}.\hskip 1em plus 0.5em minus 0.4em\relax
-  ACM, 2011, pp. 928--931.
+\bibitem{Taylor:2007:SDA:1253532.1254721}
+\BIBentryALTinterwordspacing
+R.~N. Taylor and A.~van~der Hoek, ``Software design and architecture the once
+  and future focus of software engineering,'' in \emph{2007 Future of Software
+  Engineering}, ser. FOSE '07.\hskip 1em plus 0.5em minus 0.4em\relax
+  Washington, DC, USA: IEEE Computer Society, 2007, pp. 226--243. [Online].
+  Available: \url{http://dx.doi.org/10.1109/FOSE.2007.21}
+\BIBentrySTDinterwordspacing
+
+\bibitem{van2008challenges}
+R.~Van Der~Straeten, T.~Mens, and S.~Van~Baelen, ``Challenges in model-driven
+  software engineering,'' in \emph{International Conference on Model Driven
+  Engineering Languages and Systems}.\hskip 1em plus 0.5em minus 0.4em\relax
+  Springer, 2008, pp. 35--47.
+
+\bibitem{sinelabore}
+\BIBentryALTinterwordspacing
+{SinelaboreRT}, ``{Sinelabore} {Manual},''
+  \url{http://www.sinelabore.com/lib/exe/fetch.php?media=wiki:downloads:sinelaborert.pdf}.
+  [Online]. Available:
+  \url{http://www.sinelabore.com/lib/exe/fetch.php?media=wiki:downloads:sinelaborert.pdf}
+\BIBentrySTDinterwordspacing
+
+\bibitem{ibmdiff}
+IBM, ``{IBM} {Rhapshody} {and} {UML} {differences},''
+  \url{http://www-01.ibm.com/support/docview.wss?uid=swg27040251}, 2016,
+  [Online; accessed 04-July-2016].
+
+\bibitem{specification_uml_2007}
+O.~M.~G. Specification, ``{UML} specification,'' \emph{Object Management Group
+  pct/07-08-04}, 2007.
+
+\bibitem{Badreddin2014}
+O.~Badreddin, T.~C. Lethbridge, A.~Forward, M.~Elasaar, and H.~Aljamaan,
+  ``{Enhanced Code Generation from UML Composite State Machines},''
+  \emph{Modelsward 2014}, pp. 1--11, 2014.
+
+\bibitem{EA}
+SparxSysemx, ``{Enterprise} {Architect},''
+  \url{http://www.sparxsystems.com/products/ea/}, 2016, [Online; accessed
+  14-Mar-2016].
+
+\bibitem{Pilitowski2007}
+\BIBentryALTinterwordspacing
+R.~Pilitowski and A.~Derezi{\~{n}}ska, \emph{Code Generation and Execution
+  Framework for UML 2.0 Classes and State Machines}.\hskip 1em plus 0.5em minus
+  0.4em\relax Dordrecht: Springer Netherlands, 2007, pp. 421--427. [Online].
+  Available: \url{http://dx.doi.org/10.1007/978-1-4020-6268-1_75}
+\BIBentrySTDinterwordspacing
+
+\bibitem{OMG2015}
+OMG, ``{Precise Semantics Of UML Composite Structures},'' no. October, 2015.
+
+\bibitem{czarnecki_multi-level_2006}
+K.~Czarnecki, M.~Antkiewicz, and C.~H.~P. Kim, ``Multi-level customization in
+  application engineering,'' \emph{Communications of the ACM}, vol.~49, no.~12,
+  p.~60, Dec. 2006.
+
+\bibitem{aldrich2002archjava}
+J.~Aldrich, C.~Chambers, and D.~Notkin, ``Archjava: connecting software
+  architecture to implementation,'' in \emph{Software Engineering, 2002. ICSE
+  2002. Proceedings of the 24rd International Conference on}.\hskip 1em plus
+  0.5em minus 0.4em\relax IEEE, 2002, pp. 187--197.
+
+\bibitem{kramer2015change}
+M.~E. Kramer, M.~Langhammer, D.~Messinger, S.~Seifermann, and E.~Burger,
+  ``Change-driven consistency for component code, architectural models, and
+  contracts,'' in \emph{Proceedings of the 18th International ACM SIGSOFT
+  Symposium on Component-Based Software Engineering}.\hskip 1em plus 0.5em
+  minus 0.4em\relax ACM, 2015, pp. 21--26.
 
 \bibitem{angyal_synchronizing_2008}
 L.~Angyal, L.~Lengyel, and H.~Charaf, ``A {Synchronizing} {Technique} for
@@ -287,6 +170,12 @@ L.~Angyal, L.~Lengyel, and H.~Charaf, ``A {Synchronizing} {Technique} for
 
 \bibitem{plantuml}
 ``Plantuml,'' \url{http://plantuml.com/}.
+
+\bibitem{lethbridge2010umplification}
+T.~C. Lethbridge, A.~Forward, and O.~Badreddin, ``Umplification: Refactoring to
+  incrementally add abstraction to a program,'' in \emph{2010 17th Working
+  Conference on Reverse Engineering}.\hskip 1em plus 0.5em minus 0.4em\relax
+  IEEE, 2010, pp. 220--224.
 
 \bibitem{mazanec2012general}
 M.~Mazanec and O.~Macek, ``On general-purpose textual modeling
@@ -309,33 +198,5 @@ S.~Maro, J.-P. Stegh\"{o}fer, A.~Anjorin, M.~Tichy, and L.~Gelin, ``On
   2015, pp. 1--12. [Online]. Available:
   \url{http://doi.acm.org/10.1145/2814251.2814253}
 \BIBentrySTDinterwordspacing
-
-\bibitem{balz2009embedding}
-M.~Balz, M.~Striewe, and M.~Goedicke, ``Embedding behavioral models into
-  object-oriented source code.''
-
-\bibitem{sinelabore}
-\BIBentryALTinterwordspacing
-{SinelaboreRT}, ``{Sinelabore} {Manual},''
-  \url{http://www.sinelabore.com/lib/exe/fetch.php?media=wiki:downloads:sinelaborert.pdf}.
-  [Online]. Available:
-  \url{http://www.sinelabore.com/lib/exe/fetch.php?media=wiki:downloads:sinelaborert.pdf}
-\BIBentrySTDinterwordspacing
-
-\bibitem{Domnguez2012}
-E.~Dom\'{i}nguez, B.~P\'{e}rez, A.~L. Rubio, and M.~A. Zapata, ``{A systematic
-  review of code generation proposals from state machine specifications},'' pp.
-  1045--1066, 2012.
-
-\bibitem{spinke_object-oriented_2013}
-V.~Spinke, ``An object-oriented implementation of concurrent and hierarchical
-  state machines,'' \emph{Information and Software Technology}, vol.~55,
-  no.~10, pp. 1726--1740, Oct. 2013.
-
-\bibitem{gay2003nesc}
-D.~Gay, P.~Levis, R.~Von~Behren, M.~Welsh, E.~Brewer, and D.~Culler, ``The nesc
-  language: A holistic approach to networked embedded systems,'' in \emph{Acm
-  Sigplan Notices}, vol.~38, no.~5.\hskip 1em plus 0.5em minus 0.4em\relax ACM,
-  2003, pp. 1--11.
 
 \end{thebibliography}

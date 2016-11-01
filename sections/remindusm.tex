@@ -1,0 +1,34 @@
+\subsection{Reminding of UML State Machines} 
+A UML State Machine is efficient to describe the behavior of a component \cite{possepapyrusrt, Ringert2013}.
+It has a number of vertexes (state and pseudo state) and well-defined conditional transitions. 
+A state is either an atomic state or a composite state, which is composed of sub-states. 
+A composite state can have one or several active sub-states at the same time. %Only one of the inner states of the USM can be active at a time. 
+Transitions between states can be triggered by external or internal events. 
+An action (effect) can also be activated by the trigger while transitioning from one state to another state. 
+A state can have associated actions such as \ti{entry/exit/doActivity} executed when the state is entered/exited or while it is active, respectively. 
+A pseudo state is a transient vertex in UML State Machine diagrams to connect multiple transitions into more complex state transitions paths.
+
+Tools such as IBM Rhapsody \cite{ibm_rhapsody} and Papyrus-RT \cite{possepapyrusrt} generate code from UML State Machines. 
+However, modifications in generated code cannot be reflected to the models.
+This is because there is no trivial mapping between UML State Machine concepts and object-oriented code.
+
+Our XSeparation presented in the following subsection will generate code which enables the bidirectional traceability between UML State Machine concepts and object-oriented code.
+%In addition, other issues of event processing speed, executable file size, and UML semantic-conformance defined by a recent work on the Precise Semantics of State Machine (PSSM) \cite{OMG2015}
+%Some tools use specialized comments to separate code areas which are allow to be modified and the modifications made in these areas are preserved during next code generation process.
+%This kind of mechanisms however has some limitations as discussed in Section \ref{sec:intro}. 
+
+%Furthermore, the code generation approaches for UML State Machines have following issues:
+%\begin{itemize}
+%	\setlength\itemsep{0em}
+%	\item Existing tools and approaches mainly focus on the sequential aspect while the concurrency of \ti{doActivity} states and orthogonal regions is not taken into account. We investigated on industrial leading tools. Rhapsody does not support \ti{doActivity}, junctions, and truly concurrent execution of orthogonal regions
+%	\cite{ibmdiff} (see \cite{specification_uml_2007} for more detail). 
+%	The concurrency of the orthogonal regions is often implemented sequentially \cite{Badreddin2014}. 
+	%Sinelabore \cite{sinelabore} does not support fork, join, junction and concurrent states. 
+%	Rhapsody and Enterprise Architect \cite{EA} only support \ti{CallEvent} and \ti{TimeEvent} while \ti{SignalEvent} and \ti{ChangeEvent} are missing. 
+	
+%	\item The support for pseudo states such as history, choice and junction is poor \cite{EA, sinelabore} while these are very helpful in modeling.
+	
+%	\item Code generated from tools such as \cite{ibm_rhapsody} and FXU \cite{Pilitowski2007} is heavily dependent on their own libraries, which make the generated code not portable.
+	
+%	\item Issues of event processing speed, executable file size, and UML semantic-conformance defined by a recent work on the Precise Semantics of State Machine (PSSM) \cite{OMG2015}. 
+%\end{itemize}

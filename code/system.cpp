@@ -1,16 +1,10 @@
 class System {
-	part Browser browser;
-	part DNS1 dns1;
-	part DNS2 dns2;
+	part Producer p;
+	part Consumer c;
+	part FIFO fifo;
 	//static configuration
 	configuration {
-		bindPorts(browser.pIConnect, dns1.pIConnect); 
-	}
-	//start system
-	void run() {
-		//
-		
-		//dynamic change of system connectors
-		bindPorts(browser.pIConnect, dns2.pIConnect);
+		bindPorts(p.pPush, fifo.pPush); 
+		bindPorts(c.pPull, fifo.pPull); 
 	}
 }
