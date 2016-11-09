@@ -8,26 +8,31 @@ This section presents overview of XSeparation.
 For a component whose structure is described by UML components, parts, ports, and connectors and behavior by a UML State Machine, the structure- and the behavior-prescribed code are generated within the same object-oriented class. 
 
 Fig. \ref{fig:xseparationoverview} shows the overview of the code generation in XSeparation.
-A component \ttt{System} is generated to code of an object-oriented class, which consists of five code parts defined as followings:
-\begin{itemize}
-	\item \tb{Component structure-prescribed code:} It is generated from the component structure, which is described by UML class and component diagram structural concepts such as \ttt{property}, \ttt{port}, \ttt{part}, and \ttt{connector}.
+A component \ttt{System} is generated to code of an object-oriented class, which consists of five code parts defined as in the belows.
+
+\noindent
+\tb{Component structure-prescribed code:} It is generated from the component structure, which is described by UML class and component diagram structural concepts such as \ttt{property}, \ttt{port}, \ttt{part}, and \ttt{connector}.
+
+\noindent	
+\tb{Behavior-prescribed code:} It is generated from the component behavior, which is described by UML State Machine diagrams and UML-defined events such as \ttt{CallEvent}, \ttt{TimeEvent}, \ttt{SignalEvent}, and \ttt{ChangeEvent}.
+
+\noindent	
+\tb{State machine action code:} It is used to define fine-grained action code for the state machine actions such as state entry/exit/doActivity and transition effect.
+This code can also be generated from the model in case of industrial tools such as IBM Rhapsody and Enterprise Architect, which allow to embed the fine-grained code within the model as blocks of text.
+This code, which will be invoked by the state machine behavior of the component, has an agreement (\ttt{BP-U Agreement}) with \tb{Behavior-prescribed code}.
+The details of \ttt{BP-U Agreement} are presented in Section \ref{sec:xseparationbehavior}. 
+
+\noindent	
+\tb{User-filled skeleton code:} This code contains object-oriented methods generated from UML operations defined in the model for the component.
+Similar \tb{State machine action code}, users can fill fine-grained code within the model for the operations.
+The methods can be called by \tb{State machine action code} or \tb{Component structure-provided implementation}.
+
+\noindent	
+\tb{Component structure-provided implementation:} A component might provide some interfaces through its ports in order for other components to interact with. 
+This code part is for the implementation of the interfaces.
+If \tb{Architecture-prescribed code} contains a port, which provides an interface and is not delegated (connected) to an other port of one of the sub-components (see Section \ref{sec:xseparationarchitecture} for more details).  
 	
-	\item \tb{Behavior-prescribed code:} It is generated from the component behavior, which is described by UML State Machine diagrams and UML-defined events such as \ttt{CallEvent}, \ttt{TimeEvent}, \ttt{SignalEvent}, and \ttt{ChangeEvent}.
-	
-	\item \tb{State machine action code:} It is used to define fine-grained action code for the state machine actions such as state entry/exit/doActivity and transition effect.
-	This code can also be generated from the model in case of industrial tools such as IBM Rhapsody and Enterprise Architect, which allow to embed the fine-grained code within the model as blocks of text.
-	This code, which will be invoked by the state machine behavior of the component, has an agreement (\ttt{BP-U Agreement}) with \tb{Behavior-prescribed code}.
-	The details of \ttt{BP-U Agreement} are presented in Section \ref{sec:xseparationbehavior}. 
-	
-	\item \tb{User-filled skeleton code:} This code contains object-oriented methods generated from UML operations defined in the model for the component.
-	Similar \tb{State machine action code}, users can fill fine-grained code within the model for the operations.
-	The methods can be called by \tb{State machine action code} or \tb{Component structure-provided implementation}.
-	
-	\item \tb{Component structure-provided implementation:} A component might provide some interfaces through its ports in order for other components to interact with. 
-	This code part is for the implementation of the interfaces.
-	If \tb{Architecture-prescribed code} contains a port, which provides an interface and is not delegated (connected) to an other port of one of the sub-components (see Section \ref{sec:xseparationarchitecture} for more details).  
-	
-\end{itemize} 
+ 
 
 \begin{figure}
 	\centering

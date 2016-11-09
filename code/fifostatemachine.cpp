@@ -1,7 +1,7 @@
 class FIFO : public IPush, IPull {
 public:
-	ProvidedPort<IPush> pPush;
-	ProvidedPort<IPull> pPull;
+	ProvidedPort<IPush>* pPush;
+	ProvidedPort<IPull>* pPull;
 	//Behavior-prescribed code
 	Statemachine FIFOMachine {
 		InitialState Idle;

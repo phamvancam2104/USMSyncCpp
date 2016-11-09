@@ -49,7 +49,7 @@
 \usepackage{algorithmicx}
 \usepackage{tabularx}
 
-%\parskip=0.2\baselineskip
+\parskip=0\baselineskip
 
 \usepackage{booktabs}% http://ctan.org/pkg/booktabs
 \newcommand{\tabitem}{~~\llap{\textbullet}~~}
@@ -98,6 +98,10 @@
 \usepackage{alltt}
 
 
+\def\bibfont{\small}
+\bibliographystyle{apacite}
+
+
 %to change to spacing between floats (figures) and text
 \setlength{\textfloatsep}{2pt plus 1.0pt minus 2.0pt}
 
@@ -109,7 +113,7 @@
 
 \lstset{ %
 	backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
-	basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+	basicstyle=\scriptsize,        % the size of the fonts that are used for the code
 	lineskip={-1.5pt},
 	breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
 	breaklines=true,                 % sets automatic line breaking
@@ -188,6 +192,7 @@ Email: first-name.lastname@cea.fr}
 
 \input{sections/introduction}
 
+%\begin{comment}
 %\input{sections/background}
 
 \input{sections/approachinanut}
@@ -199,6 +204,8 @@ Email: first-name.lastname@cea.fr}
 \input{sections/architectureprescribed}
 
 \input{sections/behaviorprescribed}
+
+%\input{sections/discussion}
 
 %\input{sections/overview}
 
@@ -225,10 +232,10 @@ Email: first-name.lastname@cea.fr}
 
 \input{sections/relatedwork}
 
-%\input{sections/discussion}
 
 \input{sections/conclusion}
 
+%\end{comment}
 %\section*{Appendix}
 %Appendixes, if needed, appear before the acknowledgment.
 
@@ -237,9 +244,9 @@ Email: first-name.lastname@cea.fr}
 
 %\pagebreak
 \balance
+
 \bibliographystyle{IEEEtran}
+
 \bibliography{refs}
-
-
 
 \end{document}

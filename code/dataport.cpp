@@ -1,13 +1,10 @@
 class Producer {
 public:
-	ProvidedDataPort<Data> pProvideData;
+	ProvidedDataPort<Data>* pProvideData;
 }
 class FIFO : public IPush, IPull {
 public:
-	RequiredDataPort<Data> pRequireData;
-	ProvidedDataPort<Data> pProvideConsumer;
+	RequiredDataPort<Data>* pRequireData;
+	ProvidedPort<IPull>* pPull;
 }
-class Consumer {
-public:	
-	RequiredDataPort<Data> pRequireData;	
-}
+

@@ -5,7 +5,8 @@
 %\subsection{Synchronization in case of concurrent modifications}
 In our previous work [XX], a methodological pattern is proposed to synchronize model and object-oriented code in case of concurrent modifications made in the model and code.
 The pattern especially requires the availability of several use-cases as followings:
-\begin{itemize}
+\begin{itemize}[\footnotesize]
+	\itemsep0em
 	\item \tb{Batch code generation}: generates and overwrites any existing code from model.
 	\item \tb{Incremental code generation}: updates the code by propagating changes from the model to the code.
 	\item \tb{Batch reverse engineering}: creates and overwrites any existing model from code.
@@ -18,8 +19,8 @@ The batch code generation and reverse engineering are straightforwardly supporte
 \vskip 0.2cm
 \noindent
 \tb{Model modification classification and management:}
-Table \ref{table:modelchangeclassification} shows our classification and management of actions for propagating modifications in model to code.
-They can be detected by a model listener.
+Table \ref{table:modelchangeclassification} shows our classification and management of actions for propagating modifications, detected by a model listener, in model to code.
+%The modifications can be detected by a model listener.
 We make a distinction between structural and behavioral modifications, which result in creating/removing/regenerating the corresponding code part.
 Although only add/remove/update are detected, the moving of a model element can be combined as a removal following by an addition.  
 Some particular modifications requires the corresponding actions to respect and preserve the user code.

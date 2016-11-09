@@ -50,38 +50,16 @@ B.~Selic, ``What will it take? a view on adoption of model-based methods in
   practice,'' \emph{Software {\&} Systems Modeling}, vol.~11, no.~4, pp.
   513--526, 2012.
 
-\bibitem{Hutchinson:2011:MEP:1985793.1985882}
-J.~Hutchinson, M.~Rouncefield, and J.~Whittle, ``Model-driven engineering
-  practices in industry,'' in \emph{Proceedings of the 33rd International
-  Conference on Software Engineering}, ser. ICSE '11.\hskip 1em plus 0.5em
-  minus 0.4em\relax New York, NY, USA: ACM, 2011, pp. 633--642.
+\bibitem{zheng2013classification}
+Y.~Zheng and R.~N. Taylor, ``A classification and rationalization of
+  model-based software development,'' \emph{Software \& Systems Modeling},
+  vol.~12, no.~4, pp. 669--678, 2013.
 
 \bibitem{ubayashi2010archface}
 N.~Ubayashi, J.~Nomura, and T.~Tamai, ``Archface: a contract place where
   architectural design and code meet together,'' in \emph{Proceedings of the
   32nd ACM/IEEE International Conference on Software Engineering-Volume
   1}.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2010, pp. 75--84.
-
-\bibitem{kelly2008domain}
-S.~Kelly and J.-P. Tolvanen, \emph{Domain-specific modeling: enabling full code
-  generation}.\hskip 1em plus 0.5em minus 0.4em\relax John Wiley \& Sons, 2008.
-
-\bibitem{zheng2012enhancing}
-Y.~Zheng and R.~N. Taylor, ``Enhancing architecture-implementation conformance
-  with change management and support for behavioral mapping,'' in
-  \emph{Proceedings of the 34th International Conference on Software
-  Engineering}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE Press, 2012, pp.
-  628--638.
-
-\bibitem{steinberg2008emf}
-D.~Steinberg, F.~Budinsky, E.~Merks, and M.~Paternostro, \emph{EMF: eclipse
-  modeling framework}.\hskip 1em plus 0.5em minus 0.4em\relax Pearson
-  Education, 2008.
-
-\bibitem{zheng2013classification}
-Y.~Zheng and R.~N. Taylor, ``A classification and rationalization of
-  model-based software development,'' \emph{Software \& Systems Modeling},
-  vol.~12, no.~4, pp. 669--678, 2013.
 
 \bibitem{yu2012maintaining}
 Y.~Yu, Y.~Lin, Z.~Hu, S.~Hidaka, H.~Kato, and L.~Montrieux, ``Maintaining
@@ -105,6 +83,18 @@ R.~Van Der~Straeten, T.~Mens, and S.~Van~Baelen, ``Challenges in model-driven
   Engineering Languages and Systems}.\hskip 1em plus 0.5em minus 0.4em\relax
   Springer, 2008, pp. 35--47.
 
+\bibitem{aldrich2002archjava}
+J.~Aldrich, C.~Chambers, and D.~Notkin, ``Archjava: connecting software
+  architecture to implementation,'' in \emph{Software Engineering, 2002. ICSE
+  2002. Proceedings of the 24rd International Conference on}.\hskip 1em plus
+  0.5em minus 0.4em\relax IEEE, 2002, pp. 187--197.
+
+\bibitem{Hinkel2015}
+G.~Hinkel, ``{Change propagation in an internal model transformation
+  language},'' in \emph{Lecture Notes in Computer Science (including subseries
+  Lecture Notes in Artificial Intelligence and Lecture Notes in
+  Bioinformatics)}, vol. 9152, 2015, pp. 3--17.
+
 \bibitem{sinelabore}
 \BIBentryALTinterwordspacing
 {SinelaboreRT}, ``{Sinelabore} {Manual},''
@@ -122,37 +112,27 @@ IBM, ``{IBM} {Rhapshody} {and} {UML} {differences},''
 O.~M.~G. Specification, ``{UML} specification,'' \emph{Object Management Group
   pct/07-08-04}, 2007.
 
-\bibitem{Badreddin2014}
-O.~Badreddin, T.~C. Lethbridge, A.~Forward, M.~Elasaar, and H.~Aljamaan,
-  ``{Enhanced Code Generation from UML Composite State Machines},''
-  \emph{Modelsward 2014}, pp. 1--11, 2014.
-
 \bibitem{EA}
 SparxSysemx, ``{Enterprise} {Architect},''
   \url{http://www.sparxsystems.com/products/ea/}, 2016, [Online; accessed
   14-Mar-2016].
 
-\bibitem{Pilitowski2007}
-\BIBentryALTinterwordspacing
-R.~Pilitowski and A.~Derezi{\~{n}}ska, \emph{Code Generation and Execution
-  Framework for UML 2.0 Classes and State Machines}.\hskip 1em plus 0.5em minus
-  0.4em\relax Dordrecht: Springer Netherlands, 2007, pp. 421--427. [Online].
-  Available: \url{http://dx.doi.org/10.1007/978-1-4020-6268-1_75}
-\BIBentrySTDinterwordspacing
-
-\bibitem{OMG2015}
-OMG, ``{Precise Semantics Of UML Composite Structures},'' no. October, 2015.
+\bibitem{Badreddin2014}
+O.~Badreddin, T.~C. Lethbridge, A.~Forward, M.~Elasaar, and H.~Aljamaan,
+  ``{Enhanced Code Generation from UML Composite State Machines},''
+  \emph{Modelsward 2014}, pp. 1--11, 2014.
 
 \bibitem{czarnecki_multi-level_2006}
 K.~Czarnecki, M.~Antkiewicz, and C.~H.~P. Kim, ``Multi-level customization in
   application engineering,'' \emph{Communications of the ACM}, vol.~49, no.~12,
   p.~60, Dec. 2006.
 
-\bibitem{aldrich2002archjava}
-J.~Aldrich, C.~Chambers, and D.~Notkin, ``Archjava: connecting software
-  architecture to implementation,'' in \emph{Software Engineering, 2002. ICSE
-  2002. Proceedings of the 24rd International Conference on}.\hskip 1em plus
-  0.5em minus 0.4em\relax IEEE, 2002, pp. 187--197.
+\bibitem{zheng2012enhancing}
+Y.~Zheng and R.~N. Taylor, ``Enhancing architecture-implementation conformance
+  with change management and support for behavioral mapping,'' in
+  \emph{Proceedings of the 34th International Conference on Software
+  Engineering}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE Press, 2012, pp.
+  628--638.
 
 \bibitem{kramer2015change}
 M.~E. Kramer, M.~Langhammer, D.~Messinger, S.~Seifermann, and E.~Burger,
@@ -160,6 +140,17 @@ M.~E. Kramer, M.~Langhammer, D.~Messinger, S.~Seifermann, and E.~Burger,
   contracts,'' in \emph{Proceedings of the 18th International ACM SIGSOFT
   Symposium on Component-Based Software Engineering}.\hskip 1em plus 0.5em
   minus 0.4em\relax ACM, 2015, pp. 21--26.
+
+\bibitem{Maro:2015:IGT:2814251.2814253}
+\BIBentryALTinterwordspacing
+S.~Maro, J.-P. Stegh\"{o}fer, A.~Anjorin, M.~Tichy, and L.~Gelin, ``On
+  integrating graphical and textual editors for a uml profile based domain
+  specific language: An industrial experience,'' in \emph{Proceedings of the
+  2015 ACM SIGPLAN International Conference on Software Language Engineering},
+  ser. SLE 2015.\hskip 1em plus 0.5em minus 0.4em\relax New York, NY, USA: ACM,
+  2015, pp. 1--12. [Online]. Available:
+  \url{http://doi.acm.org/10.1145/2814251.2814253}
+\BIBentrySTDinterwordspacing
 
 \bibitem{angyal_synchronizing_2008}
 L.~Angyal, L.~Lengyel, and H.~Charaf, ``A {Synchronizing} {Technique} for
@@ -187,16 +178,5 @@ M.~Voelter, D.~Ratiu, B.~Schaetz, and B.~Kolb, ``mbeddr: an extensible c-based
   the 3rd annual conference on Systems, programming, and applications: software
   for humanity}.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2012, pp.
   121--140.
-
-\bibitem{Maro:2015:IGT:2814251.2814253}
-\BIBentryALTinterwordspacing
-S.~Maro, J.-P. Stegh\"{o}fer, A.~Anjorin, M.~Tichy, and L.~Gelin, ``On
-  integrating graphical and textual editors for a uml profile based domain
-  specific language: An industrial experience,'' in \emph{Proceedings of the
-  2015 ACM SIGPLAN International Conference on Software Language Engineering},
-  ser. SLE 2015.\hskip 1em plus 0.5em minus 0.4em\relax New York, NY, USA: ACM,
-  2015, pp. 1--12. [Online]. Available:
-  \url{http://doi.acm.org/10.1145/2814251.2814253}
-\BIBentrySTDinterwordspacing
 
 \end{thebibliography}

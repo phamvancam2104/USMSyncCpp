@@ -26,28 +26,51 @@ A number of code generation approaches have been proposed in the context of Mode
 %\cite{possepapyrusrt, Douglass1999,Shalyto2006, ibm_rhapsody}.  
 
 Ideally, a full model-centric approach is preferred by MDE community due to its advantages \cite{Selic2012} such as complex project management, model-based system analysis, abstraction, and automation. 
-However, in industrial practice, there is significant reticence \cite{Hutchinson:2011:MEP:1985793.1985882} to adopt it.
+The ultimate goal of MDE is to create executable models for generating full implementation code.
+%However, in industrial practice, there is significant reticence \cite{Hutchinson:2011:MEP:1985793.1985882} to adopt it.
 
-On one hand, it is frequent that programmers modify architecture information during implementation because of abstraction gap between architecture and implementation. %It is not easy to preserve the architecture correctness in implementation. 
-Current industrial MDE tools such as IBM Rhapsody put fine-grained behaviors/computational algorithms directly in the architecture model as blocks of text to generate full code. 
-However, it is %difficult for system analysis and 
-not favorable because the architecture should only hold design decisions. 
-Hence, code generated from the current MDE tools must be tailored by programmers for fine-grained code.
-In this case, the architecture correctness might be violated, which is not easy to detect due to the lack of a bidirectional traceability between the architecture and code \cite{ubayashi2010archface}.
-Some approaches \cite{kelly2008domain} prevent modifications in code through complete code generation.
-However, the latter only works for very highly specialized domains and specific architecture styles \cite{zheng2012enhancing}.
 
-On the other hand, in software evolution, continuous development and maintenance, the architects might change the architecture for new functionalities or requirements while the programmers might still implement the current architecture or modify the code for various reasons such as code level optimization, bug fixing, refactoring. 
+On the one hand, to generate full code, models must contain very detailed information. Nevertheless, current MDE tools and approaches are not sufficient to describe fine-grained behavior of the architecture using models. Therefore, to achieve the goal of complete code generation, some industrial MDE tools put fine-grained action code within the architecture model as blocks of text. MDE tools usually support limited editors for manual fine-grained coding tasks, which might produce errors during compilation of the generated code. When it happens, the developers tend to directly modify/correct the generated code for successful compilation because the code can be opened and easily modified within a familiar integrated development environment of the developers. Furthermore, some architecture-centric MDE approaches \cite{zheng2013classification} only produce skeleton code from architecture models. The generated code in this case must then be tailored by developers for fine-grained code. The modifications of generated code in these cases might violate the architecture correctness, which is not easy to detect due to the lack of a bidirectional traceability between the architecture and code \cite{ubayashi2010archface}.
+
+On the other hand, in software evolution, continuous development and maintenance, the architects might change the architecture for new functionalities or requirements while the programmers might still tailor the current architecture or modify the code for various reasons such as code level optimization, bug fixing, refactoring. This results that the architecture model and code are concurrently modified. 
+
+
+
+
+%However, on one hand, to generate full code, models must contain very detailed information. 
+%Nevertheless, current MDE tools and approaches are not sufficient to describe fine-grained behavior of the architecture. 
+%Some MDE tools such as IBM Rhapsody put fine-grained action code within the architecture model as blocks of text to generate full code. 
+%However, it is not favorable because the architecture should only hold design decisions. 
+%Hence, code generated from the current MDE tools must be tailored by programmers for fine-grained code. 
+%Furthermore, it is frequent that programmers modify architecture information during implementation because of abstraction gap between architecture and implementation \cite{ubayashi2010archface}. 
+%In these cases the architecture correctness might be violated, which is not easy to detect due to the lack of a bidirectional traceability between the architecture and code. 
+%Some approaches \cite{kelly2008domain} prevent modifications in code through complete code generation.
+%However, the latter only works for very highly specialized domains and specific architecture styles \cite{zheng2012enhancing}.
+
+%On one hand, it is frequent that programmers modify architecture information during implementation because of abstraction gap between architecture and implementation. %It is not easy to preserve the architecture correctness in implementation. 
+%Current industrial MDE tools such as IBM Rhapsody put fine-grained behaviors/computational algorithms directly in the architecture model as blocks of text to generate full code. 
+%However, it is %difficult for system analysis and 
+%not favorable because the architecture should only hold design decisions. 
+%Hence, code generated from the current MDE tools must be tailored by programmers for fine-grained code.
+%In this case, the architecture correctness might be violated, which is not easy to detect due to the lack of a bidirectional traceability between the architecture and code \cite{ubayashi2010archface}.
+%Some approaches \cite{kelly2008domain} prevent modifications in code through complete code generation.
+%However, the latter only works for very highly specialized domains and specific architecture styles \cite{zheng2012enhancing}.
+
+%On the other hand, in software evolution, continuous development and maintenance, the architects might change the architecture for new functionalities or requirements while the programmers might still implement the current architecture or modify the code for various reasons such as code level optimization, bug fixing, refactoring. 
+
+\begin{comment}
 In MDE tools, the regeneration of code from the changed architecture would overwrite the modifications made by programmers in code. 
 Some tools such as Eclipse Modeling Framework (EMF) \cite{steinberg2008emf} separate code areas, which could be modified by the programmers, to preserve the code changes by using some specialized comments such as \ttt{@generated NOT}.
 However, current separation mechanisms require the programmers to be very highly discipline.
 Furthermore, even so, accidental changes are still possible \cite{zheng2012enhancing}.
 The \ttt{1.x-way architecture mapping deep separation} approach \cite{zheng2012enhancing} overcome the limitations of these separation mechanisms by generating \ttt{architecture-prescribed code} in a class separating from user-code written in an other class.
 However, deep separation does not allow to modify the architecture at the code level.
+\end{comment}
 
-The modifications made in model and code raise the consistency and synchronization problem \cite{zheng2013classification}.
-If the latter is not solved, modifications in the code are not reflected to the model. 
-As a result, the model does not reflect the actual running system, which even worse entails that model-based activities such as architecture and behavior analysis, or testing are obsolete, hence many of the advantages of MDE would disappear.
+The modifications made in model and code raise the consistency and synchronization problem.  If the latter is not solved, modifications in the code are not reflected to the model. As a result, the model does not reflect the actual running system, which even worse entails that model-based activities such as architecture and behavior analysis, or testing are obsolete, hence many of the advantages of MDE would disappear.
+%The modifications made in model and code raise the consistency and synchronization problem \cite{zheng2013classification}.
+%If the latter is not solved, modifications in the code are not reflected to the model. 
+%As a result, the model does not reflect the actual running system, which even worse entails that model-based activities such as architecture and behavior analysis, or testing are obsolete, hence many of the advantages of MDE would disappear.
 In order to solve this problem, which hinders the adoption of MDE in practice, it is necessary to have a code generation process, which establishes a way to trace code modifications back to the model.
 
 In this paper, we propose \tb{XSeparation} - an extreme separation code generation and synchronization approach, which enables the bidirectional traceability between architecture model 
@@ -63,27 +86,30 @@ XSeparation provides an adequate support for programmers to control both structu
 
 %Synchronization of concurrent modifications made in the architecture model and code is considered as a hard problem because of the abstraction gap between the architecture and the implementation (code). 
 %This gap makes the bidirectional traceability, which allows to reflect modifications made in one artifact to the other, between model and code hard, even impossible.
-Our work is motivated by both industry and research.
-From the latter, MDE, for flexibility, allows the architecture model and the generated code to evolve concurrently \cite{yu2012maintaining}.
-Furthermore, R. N. Taylor et al. \cite{Taylor:2007:SDA:1253532.1254721} pointed out an important research direction, in which key design decisions may be made in implementation (code) and evolution of architecture must be seamlessly propagated to the code. 
-This implies the fluid moving from architecture to code and vice versa. 
-Additionally, synchronization of model and code is also considered as an important need by the MODELS community \cite{van2008challenges}.
+
+
+From a research perspective, this study aims to improve flexibility in MDE to allow the architecture model and the generated code to co-evolve while keeping these two consistent \cite{yu2012maintaining}. 
+Furthermore, R. N. Taylor et al. \cite{Taylor:2007:SDA:1253532.1254721} pointed out an important research direction, in which key design decisions may be made in implementation (code) and evolution of architecture must be seamlessly propagated to the code [5]. 
+This implies the fluid moving from architecture to code and vice versa. Additionally, synchronization of model and code is also considered as an important need by the MODELS community \cite{van2008challenges}.
+
+For industry, one of the reasons that impede the adoption of MDE is the perceived gap between diagram-based modeling languages and textual languages. On one hand, programmers prefer to use the more familiar combination of a programming language and Integrated Development Environment (IDE). On the other hand, software architects, working at higher levels of abstraction, tend to favor the use of modeling languages for describing the system architecture.
+
+
+%Our work is motivated by both industry and research.
+%From the latter, MDE, for flexibility, allows the architecture model and the generated code to evolve concurrently \cite{yu2012maintaining}.
+%Furthermore, R. N. Taylor et al. \cite{Taylor:2007:SDA:1253532.1254721} pointed out an important research direction, in which key design decisions may be made in implementation (code) and evolution of architecture must be seamlessly propagated to the code. 
+%This implies the fluid moving from architecture to code and vice versa. 
+%Additionally, synchronization of model and code is also considered as an important need by the MODELS community \cite{van2008challenges}.
 
 %Furthermore, as addressed in \cite{zheng2012enhancing}, bidirectional mapping (two-way mapping) between the design model (architecture + behavior model) and the code is the most promising among others such as \ttt{correct-by-detection} and \ttt{one way mapping}.
 %This is because the bidirectional mapping provides concurrent modifications made in the design model and the code to foster for software architects and programmers collaboration.
 
-For industry, one of the reasons that impede the adoption of MDE is the perceived gap between diagram-based modeling
-languages and textual languages.
-On one hand, programmers prefer to use
-the more familiar combination of a programming language
-and Integrated Development Environment (IDE). 
+%For industry, one of the reasons that impede the adoption of MDE is the perceived gap between diagram-based modeling languages and textual languages.
+%On one hand, programmers prefer to use the more familiar combination of a programming language and Integrated Development Environment (IDE). 
 %Text editors
 %like Emacs and Vim are also favored by some programmers in
 %the embedded Linux community. 
-On the other hand, software
-architects, working at higher levels of abstraction, tend to favor
-the use of modeling languages for
-describing the system architecture.
+%On the other hand, software architects, working at higher levels of abstraction, tend to favor the use of modeling languages for describing the system architecture.
 
 %In order to provide better support for industry to raise the adoption of MDE synchronization, our goal is to automate the mode-code synchronization in order to maximize the effectiveness of both modeling and programming world \cite{zheng2013classification}.
 	

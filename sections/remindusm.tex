@@ -1,6 +1,6 @@
 \subsection{Reminding of UML State Machines} 
-A UML State Machine is efficient to describe the behavior of a component \cite{possepapyrusrt, Ringert2013}.
-It has a number of vertexes (state and pseudo state) and well-defined conditional transitions. 
+A UML State Machine has vertexes (state and pseudo state) and well-defined conditional transitions to efficiently describe the behavior of a component \cite{possepapyrusrt, Ringert2013}.
+%It has a number of vertexes (state and pseudo state) and well-defined conditional transitions. 
 A state is either an atomic state or a composite state, which is composed of sub-states. 
 A composite state can have one or several active sub-states at the same time. %Only one of the inner states of the USM can be active at a time. 
 Transitions between states can be triggered by external or internal events. 
@@ -8,9 +8,8 @@ An action (effect) can also be activated by the trigger while transitioning from
 A state can have associated actions such as \ti{entry/exit/doActivity} executed when the state is entered/exited or while it is active, respectively. 
 A pseudo state is a transient vertex in UML State Machine diagrams to connect multiple transitions into more complex state transitions paths.
 
-Tools such as IBM Rhapsody \cite{ibm_rhapsody} and Papyrus-RT \cite{possepapyrusrt} generate code from UML State Machines. 
-However, modifications in generated code cannot be reflected to the models.
-This is because there is no trivial mapping between UML State Machine concepts and object-oriented code.
+%Tools such as IBM Rhapsody \cite{ibm_rhapsody} and Papyrus-RT \cite{possepapyrusrt} generate code from UML State Machines. 
+%This is because there is no trivial mapping between UML State Machine concepts and object-oriented code.
 
 Our XSeparation presented in the following subsection will generate code which enables the bidirectional traceability between UML State Machine concepts and object-oriented code.
 %In addition, other issues of event processing speed, executable file size, and UML semantic-conformance defined by a recent work on the Precise Semantics of State Machine (PSSM) \cite{OMG2015}

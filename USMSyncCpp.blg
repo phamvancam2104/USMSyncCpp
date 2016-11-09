@@ -1,17 +1,13 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: USMSyncCpp.aux
 The style file: IEEEtran.bst
 Database file #1: refs.bib
-Repeated entry---line 2817 of file refs.bib
+Repeated entry---line 2831 of file refs.bib
  : @inproceedings{mazanec2012general
  :                                  ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 2851 of file refs.bib
+Repeated entry---line 2865 of file refs.bib
  : @inproceedings{ubayashi2010archface
  :                                    ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 3137 of file refs.bib
- : @article{OMG2015
- :                 ,
 I'm skipping whatever remains of this entry
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
@@ -19,8 +15,7 @@ I'm skipping whatever remains of this entry
 Warning--empty journal in possepapyrusrt
 Warning--empty year in possepapyrusrt
 Warning--missing publisher in Douglass1999
-Warning--empty journal in OMG2015
 Warning--empty booktitle in mazanec2012general
 
 Done.
-(There were 3 error messages)
+(There were 2 error messages)
