@@ -37,15 +37,14 @@ it does not allow to modify the system architecture at the code level as previou
 
 
 
-Regarding the co-evolution of component-based model and code, the authors in \cite{kramer2015change} use a super model, from which source code and component model can be derived as views for modifications.
+In \cite{kramer2015change}, source code and component model can be derived as views from a super model for modifications in an editor for co-evolution.
 However, code modifications made outside of their (limited) editor and violating their rules, e.g. only method bodies allow to be modified in code, are not updated to the super model. 
  
-In \cite{Maro:2015:IGT:2814251.2814253}, the authors propose to integrate graphical and textual editors for UML profiles.
-The goal is to allow developers to work graphically and textually, which is similar to our goal.
-However, this approach is dependent on Eclipse technologies and embeds all modeling concepts to textual editors while XSeparation only introduces partially to allow programmers to be familiar with the syntax of their favorite programming language.
+In \cite{Maro:2015:IGT:2814251.2814253}, the authors integrate graphical and textual editors for UML profiles to allow developers to work in both of the representations.
+However, this approach is dependent and embeds all modeling concepts to textual editors while XSeparation only introduces partially to keep programmers being familiar with of their favorite programming language.
 
-The authors in \cite{angyal_synchronizing_2008} propose to synchronize code with platform specific models by using a three-way merging approaches.
-However, the approach only deals with syntactic synchronization while the code semantics such as state machines in source code is not taken into account.
+In \cite{angyal_synchronizing_2008} a three-way merging approach is proposed to synchronize code with platform specific models.
+However, it only deals with syntactic synchronization while the code semantics such as state machines in source code is not taken into account.
 
 %\paragraph{Viewpoint synchronization}
 %
@@ -163,7 +162,7 @@ By this way, Textual MLs need a tooling support such as compiler and editor, whi
 Contrarily, XSeparation only requires a light-weight compiler and enables using favorite IDEs. %while familiarity of these Textual MLs are questionable in \cite{mazanec2012general}. 
 %XSeparation automatically synchronizes the code with the system model specified by UML.
 %Hence, XSeparation profits all benefices of IDEs such as intelligent completion and easy to implement. 
-Furthermore, XSeparation allows to use all specific OOL features such as pointers and references in C++ for program performance, which are not available in the Textual MLs.
+Furthermore, XSeparation allows to use all specific OOL features such as pointers and references in C++ for program performance.%, which are not available in the Textual MLs.
 %Followings list differences in comparison between RAOES and the TMLs.
 
 \begin{comment}
@@ -181,20 +180,23 @@ Furthermore, XSeparation allows to use all specific OOL features such as pointer
 \end{comment}
 
 
-Similarly to Umple, \ti{mbeddr} \cite{voelter2012mbeddr} - an extensible C-based programming language introduces a new editor to mix high-level using state machines and components, and low-level code. 
-\ti{mbeddr} is a code-centric approach and events are not UML-compliant whereas XSeparation conforms enables a model-code concurrent development, maintenance, and co-evolution of the artifacts.  
+In \cite{Luo:2016:BIS:2997364.2997372} BSML-mbeddr is proposed as an state machine-based programming language integrated into the C language.
+Big and small steps are defined in the language semantics.
+However, the latter is not UML-compliant. 
+BSML-mbeddr only it specifies only state and region concepts and does not allow different event types as XSeparation does. 
+Furthermore, BSML-mbeddr is a code-centric approach whereas XSeparation enables a model-code concurrent development, maintenance, and co-evolution of the artifacts.  
 
 %The idea of adding more constructs for object-oriented languages to contain architecture information in XSeparation is similar to ArchJava \cite{aldrich2002archjava} and Archface \cite{ubayashi2010archface}.
 %This latter utilizes Java annotations to preserve architecture intention in the source code.
 %These approaches try to embed architectural information into the code, specifically Java while RAOES integrates the behavior represented by USMs into C++ to ease the RTE problem. 
-ArchJava \cite{aldrich2002archjava} adds structural component concepts such as part and port to Java to support the co-evolution of architecture structure and Java implementation. 
+ArchJava \cite{aldrich2002archjava} adds structural component concepts such as part and port to Java. %to support the co-evolution of architecture structure and Java implementation. 
 The Archface \cite{ubayashi2010archface} contract description language supports components and connectors, between design and implementation using concepts such as \ttt{pointcut} in Aspect programming to reason about the design and code correctness.
-The latter can also realized with XSeparation because we generated code can be used to reconstruct component models.
+%The latter can also be realized with XSeparation because we generated code can be used to reconstruct component models.
 These approaches, however, do not provide the traceability between of the architecture behavior and code.
 %The user-code and generated code are not separated as in XSeparation and \ttt{1.x-way mapping} to allow modifications made in both architecture and code.
 They also do not have a synchronization mechanism in case of concurrent development.
 Furthermore, the communication between two ports uses method calls of object-oriented languages instead of interfaces as in UML.
-In addition, while ArchJava makes it not Java anymore and facilities of Java's IDEs such as auto-completion are not aware, XSeparation-generated code can use all of these IDE functionalities as discussed in \ref{sec:xseparationarchitecture}.
+In addition, while ArchJava makes it not Java anymore and facilities of Java's IDEs such as auto-completion are not aware, XSeparation-generated code can use these facilities as discussed in \ref{sec:xseparationarchitecture}.
 
 %FXU \cite{Pilitowski2007} is the most complete tool but generated code is heavily dependent on their own library and C\# is generated.
 

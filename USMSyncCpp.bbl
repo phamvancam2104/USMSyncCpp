@@ -89,6 +89,19 @@ J.~Aldrich, C.~Chambers, and D.~Notkin, ``Archjava: connecting software
   2002. Proceedings of the 24rd International Conference on}.\hskip 1em plus
   0.5em minus 0.4em\relax IEEE, 2002, pp. 187--197.
 
+\bibitem{plantuml}
+``Plantuml,'' \url{http://plantuml.com/}.
+
+\bibitem{lethbridge2010umplification}
+T.~C. Lethbridge, A.~Forward, and O.~Badreddin, ``Umplification: Refactoring to
+  incrementally add abstraction to a program,'' in \emph{2010 17th Working
+  Conference on Reverse Engineering}.\hskip 1em plus 0.5em minus 0.4em\relax
+  IEEE, 2010, pp. 220--224.
+
+\bibitem{mazanec2012general}
+M.~Mazanec and O.~Macek, ``On general-purpose textual modeling
+  languages.''\hskip 1em plus 0.5em minus 0.4em\relax Citeseer, 2012.
+
 \bibitem{Hinkel2015}
 G.~Hinkel, ``{Change propagation in an internal model transformation
   language},'' in \emph{Lecture Notes in Computer Science (including subseries
@@ -116,11 +129,6 @@ O.~M.~G. Specification, ``{UML} specification,'' \emph{Object Management Group
 SparxSysemx, ``{Enterprise} {Architect},''
   \url{http://www.sparxsystems.com/products/ea/}, 2016, [Online; accessed
   14-Mar-2016].
-
-\bibitem{Badreddin2014}
-O.~Badreddin, T.~C. Lethbridge, A.~Forward, M.~Elasaar, and H.~Aljamaan,
-  ``{Enhanced Code Generation from UML Composite State Machines},''
-  \emph{Modelsward 2014}, pp. 1--11, 2014.
 
 \bibitem{czarnecki_multi-level_2006}
 K.~Czarnecki, M.~Antkiewicz, and C.~H.~P. Kim, ``Multi-level customization in
@@ -159,24 +167,14 @@ L.~Angyal, L.~Lengyel, and H.~Charaf, ``A {Synchronizing} {Technique} for
   {Annual} {IEEE} {International} {Conference} and {Workshop} on the}, Mar.
   2008, pp. 463--472.
 
-\bibitem{plantuml}
-``Plantuml,'' \url{http://plantuml.com/}.
-
-\bibitem{lethbridge2010umplification}
-T.~C. Lethbridge, A.~Forward, and O.~Badreddin, ``Umplification: Refactoring to
-  incrementally add abstraction to a program,'' in \emph{2010 17th Working
-  Conference on Reverse Engineering}.\hskip 1em plus 0.5em minus 0.4em\relax
-  IEEE, 2010, pp. 220--224.
-
-\bibitem{mazanec2012general}
-M.~Mazanec and O.~Macek, ``On general-purpose textual modeling
-  languages.''\hskip 1em plus 0.5em minus 0.4em\relax Citeseer, 2012.
-
-\bibitem{voelter2012mbeddr}
-M.~Voelter, D.~Ratiu, B.~Schaetz, and B.~Kolb, ``mbeddr: an extensible c-based
-  programming language and ide for embedded systems,'' in \emph{Proceedings of
-  the 3rd annual conference on Systems, programming, and applications: software
-  for humanity}.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2012, pp.
-  121--140.
+\bibitem{Luo:2016:BIS:2997364.2997372}
+\BIBentryALTinterwordspacing
+Z.~Luo and J.~M. Atlee, ``Bsml-mbeddr: Integrating semantically configurable
+  state-machine models in a c programming environment,'' in \emph{Proceedings
+  of the 2016 ACM SIGPLAN International Conference on Software Language
+  Engineering}, ser. SLE 2016.\hskip 1em plus 0.5em minus 0.4em\relax New York,
+  NY, USA: ACM, 2016, pp. 105--117. [Online]. Available:
+  \url{http://doi.acm.org/10.1145/2997364.2997372}
+\BIBentrySTDinterwordspacing
 
 \end{thebibliography}

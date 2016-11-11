@@ -73,10 +73,10 @@ The modifications made in model and code raise the consistency and synchronizati
 %As a result, the model does not reflect the actual running system, which even worse entails that model-based activities such as architecture and behavior analysis, or testing are obsolete, hence many of the advantages of MDE would disappear.
 In order to solve this problem, which hinders the adoption of MDE in practice, it is necessary to have a code generation process, which establishes a way to trace code modifications back to the model.
 
-In this paper, we propose \tb{XSeparation} - an extreme separation code generation and synchronization approach, which enables the bidirectional traceability between architecture model 
+In this paper, we propose \tb{XSeparation} - an extreme separation code generation and synchronization approach. 
 %, which consists of structure and behavior models
  and code.
-XSeparation lifts the \ttt{deep separation} approach to an extreme level of separation.
+The core idea of XSeparation is to leverage an object-oriented language by engineering additional constructs to it in order to enable the bidirectional traceability between architecture model.
 XSeparation provides an adequate support for programmers to control both structure and behavior of a component at the code level. %by making changes in generated architecture-prescribed and state machine-based behavior-prescribed code, respectively.
 %XSeparation increases the bidirectional traceability to keep the model and the code consistent. 
 %Our goal is to synchronize the system architecture described by UML class and component diagrams and the behavior by UML State Machines with object-oriented code such as C++ and Java.

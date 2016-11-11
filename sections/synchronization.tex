@@ -37,21 +37,22 @@ If the FIFO class is removed in the code, for example, the \ttt{fifo} in \ttt{Sy
 If not, a compilation error is raised.
 % Please add the following required packages to your document preamble:
 % \usepackage{multirow}
+
 \begin{table*}[]
 	\centering
 	\caption{Model change classification and management}
 	\label{table:modelchangeclassification}
 	\begin{tabular}{|l|p{3cm}|l|p{9.5cm}|}
 		\hline
-		\multicolumn{2}{|c|}{Element type}                                                              & \multicolumn{1}{c|}{Modification type} & \multicolumn{1}{c|}{Action}                                                                              \\ \hline
-		\multirow{3}{*}{Structure} & Part/Port/Connector                                                                & Add/Remove/Update                & Regenerate Component structure-prescribed code                                                                                          \\ \cline{2-4} 
-		& Class/Component/Interface                                          & Add/Remove/Update                & Create/Remove/Update the corresponding code                                                              \\ \cline{2-4} 
-		& Property                                                           & Add/Remove/Update                & Create/Remove/Regenerate the corresponding class attribute                                               \\ \hline
-		\multirow{5}{*}{Behavior}  & Operation                                                          & Add/Remove/Update                & Create/Remove/Regenerate the corresponding method with keeping its method body                           \\ \cline{2-4} 
-		& \multirow{3}{*}{UML State Machine}                                 & Create                           & Generate Behavior-prescribed code and State machine action code                                          \\ \cline{3-4} 
-		&                                                                    & Remove                           & Remove Behavior-prescribed code and State machine action code from the corresponding component           \\ \cline{3-4} 
-		&                                                                    & Update                           & Regenerate Behavior-prescribed code and State machine action code with respect to the existing user-code \\ \cline{2-4} 
-		& UML State Machine concept (state, transition, pseudo state, event) & Create/Remove/Update             & Regenerate Behavior-prescribed code and State machine action code with respect to the existing user-code \\ \hline
+		\multicolumn{2}{|c|}{Element type}                              & \multicolumn{1}{c|}{Modification type} & \multicolumn{1}{c|}{Action}                                                                              \\ \hline
+		\multirow{3}{*}{Structure} & Part/Port/Connector                & Add/Remove/Update                      & Regenerate Component structure-prescribed code                                                           \\ \cline{2-4} 
+		& Class/Component/Interface          & Add/Remove/Update                      & Create/Remove/Update the corresponding code                                                              \\ \cline{2-4} 
+		& Property                           & Add/Remove/Update                      & Create/Remove/Regenerate the corresponding class attribute                                               \\ \hline
+		\multirow{4}{*}{Behavior}  & Operation                          & Add/Remove/Update                      & Create/Remove/Regenerate the corresponding method with keeping its method body                           \\ \cline{2-4} 
+		& \multirow{3}{*}{UML State Machine} & Create                                 & Generate Behavior-prescribed code and State machine action code                                          \\ \cline{3-4} 
+		&                                    & Remove                                 & Remove Behavior-prescribed code and State machine action code from the corresponding component           \\ \cline{3-4} 
+		&                                    & Update                                 & Regenerate Behavior-prescribed code and State machine action code with respect to the existing user-code \\
+		\hline
 	\end{tabular}
 \end{table*}
 

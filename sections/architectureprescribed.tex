@@ -1,13 +1,13 @@
 \section{XSeparation for Architecture structure}
 \label{sec:xseparationarchitecture}
-This section presents how XSeparation generates \tb{Component structure-prescribed code} and \tb{Component structure-provided implementation}.
-\tb{Component structure-prescribed code} is controlled by the UML component modeling concepts such as component, connector, part, and port.
+XSeparation generates \tb{Component structure-prescribed code} and \tb{Component structure-provided implementation}.
+\tb{Component structure-prescribed code} is derived UML component modeling concepts such as component, connector, part, and port.
 These concepts are not directly mapped to the object-oriented code.
-Therefore, we customize an object-oriented language by adding more specific constructs to it in order to be able to establish a bidirectional traceability between the architecture and the code.
+XSeparation customizes an object-oriented language by adding more specific constructs to it in order to be able to establish a bidirectional traceability between the architecture and the code.
 
 Listing \ref{lst:architectureprescribed} shows the C++ code generated from the architecture model of \ttt{System} by using XSeparation.
 A UML component is mapped to a class while additional constructs: part and port, reflect UML parts and ports, respectively.
-A UML connector contained by a parent component (System in this case) is mapped to an invocation to the \ttt{bindPorts} method, which takes as input two declared ports of the sub-components of the parent.
+A UML connector is mapped to an invocation to the \ttt{bindPorts} method, which takes as input two declared ports of the sub-components of the parent.
 The \tb{bindPorts} method must be called under the unique configuration declared within the parent component for wiring its sub-components' ports.
 
 
@@ -15,15 +15,16 @@ The \tb{bindPorts} method must be called under the unique configuration declared
 
 
 
-Each part is typed similarly to that of class attributes.
+
+Each part is typed as class attributes.
 A UML port is either required with a unique required interface, or provided with a unique provided interface, or bidirectional with one required and one provided interface, which is transformed into an object of either \tb{ProvidedPort} or \tb{RequiredPort} or \tb{BidirectionalPort}, respectively.
 For the UML \ttt{FIFO} component, its two ports provide two interfaces \ttt{IPush} and \ttt{IPull}, which respectively define the two UML operations \ttt{push} and \ttt{pull}.
 These interfaces are mapped to object-oriented interfaces, which, in C++, are classes with all of its methods defined as \ttt{pure virtual}.
-Following the AP-U Agreement between as described previously in Section \ref{sec:butshell}, \tb{Component structure-provided implementation} is generated in the FIFO class. 
-The implementation should consist of the concrete definitions of the \ttt{push} and \ttt{pull} methods, which are originally declared in the two interfaces \ttt{IPush} and \ttt{IPull} (class in C++).
+In AP-U Agreement mentioned in Section \ref{sec:butshell}, \tb{Component structure-provided implementation} should consist of concrete realizations of the \ttt{push} and \ttt{pull} methods, which are originally declared in the two interfaces \ttt{IPush} and \ttt{IPull} (class in C++).
 
+A connector between two ports can be assemble, if the two parts containing the ports are in the same parent component, or delegate, if one of the parts is itself a part of the other.
 
-\begin{minipage}{0.95\columnwidth}
+\begin{minipage}{\columnwidth}
 	\lstinputlisting[language=C++, caption=Architecture-prescribed code generated from the architecture model in Fig. \ref{fig:cbseexample} (left), label=lst:architectureprescribed,frame=f]{code/systemparts.cpp}
 \end{minipage}
 
@@ -34,6 +35,7 @@ Their generated code is \tb{User-filled skeleton code} as the lines 34-40 in Lis
 \tb{User-filled skeleton code} code can use or be used by \tb{Component structure-provided implementation}.
 
 \vskip 0.1cm
+\noindent
 \tb{Interaction between components through ports:} Given the generated code as in Listing \ref{lst:architectureprescribed}, we now show how a component, through its ports, can interact with other components.
 A component containing a port with a required interface can call the defined services/methods implemented within the component containing an other port providing the interface.
 
@@ -42,16 +44,17 @@ The \ttt{sendDataToFifo} and \ttt{pullDataFromFifo} methods can be either writte
 These methods will be synchronized with the model because there is a clear mapping between object-oriented methods and UML operations.
 The producer pushes data items to \ttt{fifo} by invoking the \ttt{push} method through the \ttt{pPush} port and the consumer actively pulls items by invoking \ttt{pull} through \ttt{pPull}.
 
-\begin{minipage}{0.95\columnwidth}
+\begin{minipage}{\columnwidth}
 	\lstinputlisting[language=C++, caption=Code for interacting between components, label=lst:producerinteraction,frame=f]{code/producerinteraction.cpp}
 \end{minipage}
  
 \vskip 0.1cm
+\noindent
 \tb{Data port:} 
 A port can also provide/require a message signal, a class in this case, to become a data port.
 Data items flow from a port providing to a port requiring the items.
 A data port is useful when being used with UML State Machine signal events, which will be detailed in Section \ref{sec:xseparationbehavior}.
-In the examples, data ports can be used instead of ports with interfaces.
+%In the examples, data ports can be used instead of ports with interfaces.
 Data ports are defined to support the explicit understanding of "physical" system data flow. 
 
 %Fig \ref{fig:dataportexample} shows the component diagram of the example in using data ports.
@@ -69,7 +72,7 @@ The \ttt{p} producer provides data items to \ttt{fifo} through their respective 
 \end{comment}
 
 
-\begin{minipage}{0.95\columnwidth}
+\begin{minipage}{\columnwidth}
 	\lstinputlisting[language=C++, caption={System using data ports}, label=lst:dataport,frame=f]{code/dataport.cpp}
 \end{minipage} 
 
@@ -78,6 +81,7 @@ In case that the behavior of the component is described by a state machine, the 
 
 
 \vskip 0.1cm
+\noindent
 \tb{Discussion:}
 Compared to other code generation approaches, the philosophy of XSeparation is different.
 Usually, a code generation approach refines the architecture model at high level of abstraction to the code through a chain of transformations.

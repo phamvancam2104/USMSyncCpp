@@ -3,7 +3,7 @@
 This section presents our experiments with a case study of developing a software application for LEGO to evaluate the feasibility and usability of XSeparation.
 The latter is implemented as an extension of the Papyrus modeling tool, which is based on Eclipse.
 Architecture models in UML and XSeparation-generated C++ are synchronized.
-Our XSeparation compiler supports POSIX systems, in which pthreads are used for executing concurrency in UML State Machines such as doActivity or infinite loop for event dispatching.
+Our XSeparation compiler supports POSIX systems, in which pthreads are used for concurrency in UML State Machines such as doActivity, parallel regions, and infinite loop for event dispatching.
 The usage of C++11 standard threads can be easily integrated in the future.
 For incremental code generation in XSeparation, a model listener based on IncQuery is hooked to the modeling tool to detect model modifications.
 
@@ -11,7 +11,7 @@ The additional constructs added to C++ are engineered in a way that allows progr
 It means that the programmers can stay within their familiar IDE and its facilities to effectively write code.
 This is one of our advantages over other approaches which will be discussed in Section \ref{sec:relatedwork}. 
 For example, Fig. \ref{fig:autocompletion} shows auto-completions for writing interaction codes for the examples in case using interface and data ports within Eclipse CDT ((a) and (b)) and Visual Studio ((c) and (d)).
-Note that no additional tools need to be required for the auto-completions.
+Note that no additional tools need to be installed for the auto-completions.
 
 \begin{figure}
 	\centering
