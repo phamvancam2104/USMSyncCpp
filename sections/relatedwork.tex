@@ -24,14 +24,17 @@
 \subsection{Round-trip engineering and co-evolution}
 Some RTE techniques restrict the development artifact to avoid
 synchronization problems.
-Partial RTE and protected regions are introduced in \cite{czarnecki_multi-level_2006} to preserve code editions which cannot be propagated to models.
-The mechanisms as discussed in Section \ref{sec:intro} are used for the separation of generated and non-generated code. 
-EMF implements these techniques to allow users to embed user-code replacing the default generated code.
+Partial RTE is introduced in \cite{czarnecki_multi-level_2006} to preserve code modifications which cannot be propagated to models.
+It separates non-generated code from generated areas. 
+EMF implements these techniques to allow users to replace the default generated code with user-code.
+However, this mechanisms requires programmers to be highly discipline.
+Even so, there is still a possibility for the programmers to produce accidental changes, which cannot be reflected to the model \cite{zheng2012enhancing}.
 Yu et al. \cite{yu2012maintaining} propose to synchronize user-code and generated code through bidirectional transformation.
-This latter does not, however, allow modifications in regions beyond the marked ones and thus prohibits the programmers from changing USMs' topology.
-\ttt{Deep separation} proposed in \cite{zheng2012enhancing} overcomes the limitations of the separation mechanisms.
+This latter does not, however, allow modifications in regions beyond the marked ones. 
+% and thus prohibits the programmers from changing USMs' topology.
+\ttt{Deep separation} proposed in \cite{zheng2012enhancing} overcomes the limitations of these separation mechanisms.
 However, %as the authors state that, 
-it does not allow to modify the system architecture at the code level as previously discussed.  
+it does not allow to modify the system architecture at the code level.  
 %Furthermore, as discussed in Section \ref{sec:intro}, there is still a possibility for the programmers to produce accidental changes, which cannot be reflected to the model.  
 
 
@@ -156,13 +159,13 @@ transformations, necessary for synchronization.
 \subsection{Language engineering}
 Text-based modeling languages (Textual ML) of UML such as PlantUML \cite{plantuml}, Umple \cite{lethbridge2010umplification}, and Earl Grey (EG) \cite{mazanec2012general} support UML class and State Machine elements.
 However, these languages lack the explicit support for event types definitions used in UML.
-Furthermore, they 
-do not allow the programmers to reuse the existing syntax of object-oriented languages but redefine it in their own language and IDE, which is different with the idea of considering OOL as a hosting language and additional constructs as an internal language. 
-By this way, Textual MLs need a tooling support such as compiler and editor, which require a lot of engineering tasks to develop. 
+Furthermore, 
+%they do not allow the programmers to reuse the existing syntax of object-oriented languages but redefine it in their own language and IDE, which is different with the idea of considering OOL as a hosting language and additional constructs as an internal language. 
+Textual MLs require a lot of engineering tasks to develop a tooling support such as compiler and editor. 
 Contrarily, XSeparation only requires a light-weight compiler and enables using favorite IDEs. %while familiarity of these Textual MLs are questionable in \cite{mazanec2012general}. 
 %XSeparation automatically synchronizes the code with the system model specified by UML.
 %Hence, XSeparation profits all benefices of IDEs such as intelligent completion and easy to implement. 
-Furthermore, XSeparation allows to use all specific OOL features such as pointers and references in C++ for program performance.%, which are not available in the Textual MLs.
+XSeparation does not impose programmers to change programming environments.%, which are not available in the Textual MLs.
 %Followings list differences in comparison between RAOES and the TMLs.
 
 \begin{comment}
@@ -183,8 +186,8 @@ Furthermore, XSeparation allows to use all specific OOL features such as pointer
 In \cite{Luo:2016:BIS:2997364.2997372} BSML-mbeddr is proposed as an state machine-based programming language integrated into the C language.
 Big and small steps are defined in the language semantics.
 However, the latter is not UML-compliant. 
-BSML-mbeddr only it specifies only state and region concepts and does not allow different event types as XSeparation does. 
-Furthermore, BSML-mbeddr is a code-centric approach whereas XSeparation enables a model-code concurrent development, maintenance, and co-evolution of the artifacts.  
+BSML-mbeddr only specifies state and region concepts, and does not allow different event types as XSeparation does. 
+Furthermore, BSML-mbeddr is a code-centric approach whereas XSeparation enables a model-code concurrent development, maintenance, and co-evolution.  
 
 %The idea of adding more constructs for object-oriented languages to contain architecture information in XSeparation is similar to ArchJava \cite{aldrich2002archjava} and Archface \cite{ubayashi2010archface}.
 %This latter utilizes Java annotations to preserve architecture intention in the source code.

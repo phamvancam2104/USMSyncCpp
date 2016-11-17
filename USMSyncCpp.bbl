@@ -83,14 +83,17 @@ R.~Van Der~Straeten, T.~Mens, and S.~Van~Baelen, ``Challenges in model-driven
   Engineering Languages and Systems}.\hskip 1em plus 0.5em minus 0.4em\relax
   Springer, 2008, pp. 35--47.
 
+\bibitem{foster2016}
+V.~C. Pham, S.~Li, A.~Radermacher, and S.~G\'{e}rard, ``Foster software
+  architect and programmer collaboration,'' in \emph{21th International
+  Conference on Engineering of Complex Computer Systems, {ICECCS} 2016, Dubai,
+  United Arab Emirates, November 6-8, 2016}, 2016, pp. 1--10.
+
 \bibitem{aldrich2002archjava}
 J.~Aldrich, C.~Chambers, and D.~Notkin, ``Archjava: connecting software
   architecture to implementation,'' in \emph{Software Engineering, 2002. ICSE
   2002. Proceedings of the 24rd International Conference on}.\hskip 1em plus
   0.5em minus 0.4em\relax IEEE, 2002, pp. 187--197.
-
-\bibitem{plantuml}
-``Plantuml,'' \url{http://plantuml.com/}.
 
 \bibitem{lethbridge2010umplification}
 T.~C. Lethbridge, A.~Forward, and O.~Badreddin, ``Umplification: Refactoring to
@@ -129,6 +132,10 @@ O.~M.~G. Specification, ``{UML} specification,'' \emph{Object Management Group
 SparxSysemx, ``{Enterprise} {Architect},''
   \url{http://www.sparxsystems.com/products/ea/}, 2016, [Online; accessed
   14-Mar-2016].
+
+\bibitem{collaborativepapyrus}
+``{Collaborative Modeling with Papyrus},''
+  \url{http://eclipsesource.com/blogs/2015/04/13/collaborative-modeling-with-papyrus-emf-compare-and-egit/}.
 
 \bibitem{czarnecki_multi-level_2006}
 K.~Czarnecki, M.~Antkiewicz, and C.~H.~P. Kim, ``Multi-level customization in

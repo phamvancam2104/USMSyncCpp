@@ -1,6 +1,6 @@
 \section{Conclusion}
 \label{sec:conclusion}
-We have presented XSeparation- code generation, synchronization, and compilation, which enable round-trip engineering of architecture model and code for developing and maintaining reactive event-driven software application using Model-Driven Engineering.
+We have presented XSeparation- a set of utilities including code generation, synchronization, and compilation, which enable round-trip engineering of architecture model and code for developing and maintaining reactive event-driven software application using Model-Driven Engineering.
 %a round-trip engineering approach for effective collaboration between software architects and programmers in developing and maintaining reactive embedded systems using UML State Machines for describing behaviors. 
 %The design for concurrency of generated code is based on multi-thread.
 %The code generation pattern set extends the IF-ELSE/SWITCH patterns and the state pattern extension. 
@@ -8,7 +8,14 @@ We have presented XSeparation- code generation, synchronization, and compilation
 XSeparation code generation improves the bidirectional traceability between architecture model and code by proposing to generate code at an appropriate level of abstraction. 
 The architecture model and XSeparation-generated code are then used as input in a model-code synchronization methodological pattern.
 An XSeparation compiler was developed to compile the XSeparation-generated code.
-XSeparation is implemented based on the Papyrus modeling tool for the case of UML and C++. 
+XSeparation is implemented as an extension of the Papyrus modeling tool for the case of UML and C++. 
+
+We successfully applied XSeparation to the development of a case study.
+The latter is an software application for LEGO.
+An evaluation of usability of XSeparation was also conducted to assess that: XSeparation improved the work flow of Model-Driven Development because XSeparation allows model-code synchronization, which then maximizes the effectiveness and advantages of both programming and modeling  
+
+For the moment, the approach is implemented for UML and C++.
+In future, we want to instantiate XSeparation for Java to have synchronization of UML with a range of general-purpose object-oriented programming languages. 
  
 %\lipsum[1-2] 
 %RAOES introduces a C++ front-end code lying between models and actual executable code.

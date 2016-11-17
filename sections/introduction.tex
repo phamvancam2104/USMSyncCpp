@@ -67,16 +67,15 @@ The \ttt{1.x-way architecture mapping deep separation} approach \cite{zheng2012e
 However, deep separation does not allow to modify the architecture at the code level.
 \end{comment}
 
-The modifications made in model and code raise the consistency and synchronization problem.  If the latter is not solved, modifications in the code are not reflected to the model. As a result, the model does not reflect the actual running system, which even worse entails that model-based activities such as architecture and behavior analysis, or testing are obsolete, hence many of the advantages of MDE would disappear.
+The modifications made in model and code raise the consistency and synchronization problem. If the latter is not solved, modifications in the code are not reflected to the model. Consequently, the model does not reflect the actual running system, which even worse entails that model-based activities such as architecture and behavior analysis, or testing are obsolete, hence many of the advantages of MDE would disappear.
 %The modifications made in model and code raise the consistency and synchronization problem \cite{zheng2013classification}.
 %If the latter is not solved, modifications in the code are not reflected to the model. 
 %As a result, the model does not reflect the actual running system, which even worse entails that model-based activities such as architecture and behavior analysis, or testing are obsolete, hence many of the advantages of MDE would disappear.
 In order to solve this problem, which hinders the adoption of MDE in practice, it is necessary to have a code generation process, which establishes a way to trace code modifications back to the model.
 
-In this paper, we propose \tb{XSeparation} - an extreme separation code generation and synchronization approach. 
+This paper proposes \tb{XSeparation} - an extreme separation code generation and synchronization approach. 
 %, which consists of structure and behavior models
- and code.
-The core idea of XSeparation is to leverage an object-oriented language by engineering additional constructs to it in order to enable the bidirectional traceability between architecture model.
+The core idea is to leverage an object-oriented language by engineering additional constructs to it in order to enable the bidirectional traceability between architecture model and code.
 XSeparation provides an adequate support for programmers to control both structure and behavior of a component at the code level. %by making changes in generated architecture-prescribed and state machine-based behavior-prescribed code, respectively.
 %XSeparation increases the bidirectional traceability to keep the model and the code consistent. 
 %Our goal is to synchronize the system architecture described by UML class and component diagrams and the behavior by UML State Machines with object-oriented code such as C++ and Java.
@@ -92,7 +91,7 @@ From a research perspective, this study aims to improve flexibility in MDE to al
 Furthermore, R. N. Taylor et al. \cite{Taylor:2007:SDA:1253532.1254721} pointed out an important research direction, in which key design decisions may be made in implementation (code) and evolution of architecture must be seamlessly propagated to the code [5]. 
 This implies the fluid moving from architecture to code and vice versa. Additionally, synchronization of model and code is also considered as an important need by the MODELS community \cite{van2008challenges}.
 
-For industry, one of the reasons that impede the adoption of MDE is the perceived gap between diagram-based modeling languages and textual languages. On one hand, programmers prefer to use the more familiar combination of a programming language and Integrated Development Environment (IDE). On the other hand, software architects, working at higher levels of abstraction, tend to favor the use of modeling languages for describing the system architecture.
+For industry, one of the reasons that impede the adoption of MDE is the perceived gap between diagram-based modeling languages and textual languages. On one hand, programmers prefer to use the more familiar combination of a programming language and Integrated Development Environment (IDE). On the other hand, software architects, working at higher levels of abstraction, tend to favor the use of modeling languages for describing the system architecture \cite{foster2016}.
 
 
 %Our work is motivated by both industry and research.
@@ -161,10 +160,10 @@ Our contribution is summarized as followings:
 \end{itemize}
 
 The remainder of this paper is organized as follows: Section \ref{sec:butshell} presents the overview of XSeparation code generation. 
-Section \ref{sec:xseparationarchitecture} and \ref{sec:xseparationbehavior} describe how XSeparation is applied to code generation from architecture structure and behavior, respectively, for enabling bidirectional traceability between model and code. 
+Section \ref{sec:xseparationarchitecture}, \ref{sec:xseparationbehavior}, \ref{sec:collaboration}, and \ref{sec:compilation} describe the details of XSeparation including: XSeparation for architecture structure, behavior, synchronization, and compilation, respectively. %, for enabling bidirectional traceability between model and code. 
 %The syntax of RAOES's front-end is detailed in Section \ref{sec:syntax}.
-Section \ref{sec:collaboration} shows how to synchronize concurrent modifications architecture model and XSeparation-generated code.
+%Section \ref{sec:collaboration} shows how to synchronize concurrent modifications architecture model and XSeparation-generated code.
 The development of a case study is presented in Section \ref{sec:evaluation} to evaluate XSeparation. 
-Section \ref{sec:relatedwork} shows related work. 
+Section \ref{sec:relatedwork} discusses related work. 
 The conclusion and future work are presented in Section \ref{sec:conclusion}.
 

@@ -1,18 +1,18 @@
 \begin{abstract}
 %Event-driven architecture is an useful way to design memory-constrained embedded systems.
-UML State Machines and composite structure are prove to efficiently capture and simplify the complexity in designing the behavior and structure, respectively, of event-driven architecture.
+UML State Machines and composite structure are efficient to capture and simplify the complexity in designing the behavior and structure, respectively, of event-driven architecture.
 %A UML State Machine and its visualizations are efficient to model the logical behavior of event-driven embedded systems.   
 Model Driven Engineering (MDE) tries to generate full code from executable models. 
 To achieve it, models must contain very detailed information.
 Nevertheless, current MDE tools and approaches are not sufficient to describe fine-grained behavior of the architecture. 
-To achieve full code generation, current MDE tools allow to manually put action code directly within the architecture model by limited editors, in which code errors might be produced during generated code compilation.
+Current MDE tools therefore allow to manually put action code directly within the architecture model by limited editors, in which code errors might be produced during generated code compilation.
 In this case, the programmers tend to directly modify the code in familiar integrated development environments.
-Furthermore, some tools only produce skeleton code which is then tailored by programmers for fine-grained.
-The modifications in code might violate the architecture correctness, which raises the problem of consistency and synchronization between architecture and implementation code.
+Furthermore, some tools only produce skeleton code which is then fine-tuned by programmers.
+The modifications in code in these cases might violate the architecture correctness, which raises the problem of consistency and synchronization between architecture and implementation code.
 This paper tackles the problem of synchronization between object-oriented code and architecture model 
 %specified by UML composite structure and State Machine diagrams 
 for the co-evolution of these artifacts.
-We propose XSeparation - an extreme separation code generation and synchronization for enabling the bidirectional traceability between architecture model and code.
+We propose XSeparation - a set of utilities for enabling the bidirectional traceability and synchronization between architecture model and code.
 %To do it, RAOES proposes to generate an intermediate representation, which acts as a bridge to connect the code to the model.
 We implemented XSeparation in a prototype based on the Papyrus modeling tool and evaluated it by developing a software application for LEGO.
 \end{abstract}

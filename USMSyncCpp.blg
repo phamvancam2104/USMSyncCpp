@@ -1,14 +1,18 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: USMSyncCpp.aux
 The style file: IEEEtran.bst
 Database file #1: refs.bib
-Repeated entry---line 2850 of file refs.bib
+Repeated entry---line 2875 of file refs.bib
  : @inproceedings{mazanec2012general
  :                                  ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 2884 of file refs.bib
+Repeated entry---line 2909 of file refs.bib
  : @inproceedings{ubayashi2010archface
  :                                    ,
 I'm skipping whatever remains of this entry
+A bad cross reference---entry "foster2016"
+refers to entry "DBLP:conf/iceccs/2016", which doesn't exist
+Warning--I didn't find a database entry for "plantuml"
+Warning--I didn't find a database entry for "DBLP:conf/iceccs/2016"
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
@@ -18,4 +22,4 @@ Warning--missing publisher in Douglass1999
 Warning--empty booktitle in mazanec2012general
 
 Done.
-(There were 2 error messages)
+(There were 3 error messages)

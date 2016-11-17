@@ -2,6 +2,7 @@
 <xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SmConfigurationProfile="http:///schemas/SmConfigurationProfile/_b8nAgKdkEeaoTZyxqWEGBw/3" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/SmConfigurationProfile/_b8nAgKdkEeaoTZyxqWEGBw/3 ../../org.eclipse.papyrus.designer.codegen.statemachine.profile/SmProfile.profile.uml#_b8uVQKdkEeaoTZyxqWEGBw">
   <uml:Model xmi:id="_nCt0IJVOEeaACLvclm2O-A" name="RootElement">
     <packagedElement xmi:type="uml:Class" xmi:id="_oWlPwJVOEeaACLvclm2O-A" name="Producer" classifierBehavior="_uM6xAJVOEeaACLvclm2O-A">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_XGoWUKzFEeaDkriV8w0lmA" name="pPush" type="_Bp7kQJh5EeacAOQBGlt3ig" aggregation="composite" isConjugated="true"/>
       <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_uM6xAJVOEeaACLvclm2O-A" name="ProducerMachine">
         <region xmi:type="uml:Region" xmi:id="_unxhAJVOEeaACLvclm2O-A" name="Region1">
           <transition xmi:type="uml:Transition" xmi:id="_eBfOwJVPEeaACLvclm2O-A" source="_Z1dTMJVPEeaACLvclm2O-A" target="_cF658JVPEeaACLvclm2O-A"/>
@@ -56,13 +57,15 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_niWXYJh4EeacAOQBGlt3ig" name="isDataValid">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
       </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_eKqZwKzFEeaDkriV8w0lmA" name="pPush" type="_Bp7kQJh5EeacAOQBGlt3ig" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_kJr88KzFEeaDkriV8w0lmA" name="Port1" type="_Ev5PoJh5EeacAOQBGlt3ig" aggregation="composite"/>
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_TAqmkJh5EeacAOQBGlt3ig" client="_q75FIJVOEeaACLvclm2O-A" supplier="_Bp7kQJh5EeacAOQBGlt3ig" contract="_Bp7kQJh5EeacAOQBGlt3ig"/>
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_TcKPwJh5EeacAOQBGlt3ig" name="" client="_q75FIJVOEeaACLvclm2O-A" supplier="_Ev5PoJh5EeacAOQBGlt3ig" contract="_Ev5PoJh5EeacAOQBGlt3ig"/>
       <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_VkCr4JVQEeaACLvclm2O-A" name="FIFOMachine">
         <region xmi:type="uml:Region" xmi:id="_VuDjgJVQEeaACLvclm2O-A" name="Region1">
           <transition xmi:type="uml:Transition" xmi:id="_grNNkJVQEeaACLvclm2O-A" source="_cXTvcJVQEeaACLvclm2O-A" target="_cz6L4JVQEeaACLvclm2O-A"/>
           <transition xmi:type="uml:Transition" xmi:id="_m6tcwJVQEeaACLvclm2O-A" source="_cz6L4JVQEeaACLvclm2O-A" target="_i3_OMJVQEeaACLvclm2O-A">
-            <trigger xmi:type="uml:Trigger" xmi:id="_wmvdMJVQEeaACLvclm2O-A" event="_wc7Z4JVQEeaACLvclm2O-A"/>
+            <trigger xmi:type="uml:Trigger" xmi:id="_wmvdMJVQEeaACLvclm2O-A" event="_xPofgKzFEeaDkriV8w0lmA"/>
           </transition>
           <transition xmi:type="uml:Transition" xmi:id="_2FrLEJVQEeaACLvclm2O-A" source="_i3_OMJVQEeaACLvclm2O-A" target="_ysK4oJVQEeaACLvclm2O-A"/>
           <transition xmi:type="uml:Transition" xmi:id="_KSJEYJVREeaACLvclm2O-A" guard="_NqCNQJVREeaACLvclm2O-A" source="_ysK4oJVQEeaACLvclm2O-A" target="_dGNnaZVREeaACLvclm2O-A">
@@ -119,6 +122,12 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
         </ownedParameter>
       </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_7PVC0KzFEeaDkriV8w0lmA" name="push">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_7PVC0azFEeaDkriV8w0lmA" name="item" type="_wTvosJVQEeaACLvclm2O-A"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_8KYV0KzFEeaDkriV8w0lmA" name="pull">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_8KYV0azFEeaDkriV8w0lmA" name="ret" type="_wTvosJVQEeaACLvclm2O-A" direction="return"/>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Signal" xmi:id="_wTvosJVQEeaACLvclm2O-A" name="Data"/>
     <packagedElement xmi:type="uml:SignalEvent" xmi:id="_wc7Z4JVQEeaACLvclm2O-A" name="DataIncoming" signal="_wTvosJVQEeaACLvclm2O-A"/>
@@ -132,6 +141,23 @@
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_LNeXEJh5EeacAOQBGlt3ig" name="ret" type="_wTvosJVQEeaACLvclm2O-A" direction="return"/>
       </ownedOperation>
     </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_IFcPEKzFEeaDkriV8w0lmA" name="System">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_LCFmYKzFEeaDkriV8w0lmA" name="p" type="_oWlPwJVOEeaACLvclm2O-A"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_OESMEKzFEeaDkriV8w0lmA" name="fifo" type="_q75FIJVOEeaACLvclm2O-A"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_TPH5QKzFEeaDkriV8w0lmA" name="c" type="_R2VhYKzFEeaDkriV8w0lmA"/>
+      <ownedConnector xmi:type="uml:Connector" xmi:id="_rh45kKzFEeaDkriV8w0lmA" name="Connector1">
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_rh45kazFEeaDkriV8w0lmA" partWithPort="_LCFmYKzFEeaDkriV8w0lmA" role="_XGoWUKzFEeaDkriV8w0lmA"/>
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_rh45kqzFEeaDkriV8w0lmA" partWithPort="_OESMEKzFEeaDkriV8w0lmA" role="_eKqZwKzFEeaDkriV8w0lmA"/>
+      </ownedConnector>
+      <ownedConnector xmi:type="uml:Connector" xmi:id="_sSsrcKzFEeaDkriV8w0lmA" name="Connector2">
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_sSsrcazFEeaDkriV8w0lmA" partWithPort="_OESMEKzFEeaDkriV8w0lmA" role="_kJr88KzFEeaDkriV8w0lmA"/>
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_sSsrcqzFEeaDkriV8w0lmA" partWithPort="_TPH5QKzFEeaDkriV8w0lmA" role="_k3k9sKzFEeaDkriV8w0lmA"/>
+      </ownedConnector>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_R2VhYKzFEeaDkriV8w0lmA" name="Consumer">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_k3k9sKzFEeaDkriV8w0lmA" name="Port1" type="_Ev5PoJh5EeacAOQBGlt3ig" aggregation="composite" isConjugated="true"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_xPofgKzFEeaDkriV8w0lmA" name="DataPushCallEvent" operation="_7PVC0KzFEeaDkriV8w0lmA"/>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_iGbecKdkEeaoTZyxqWEGBw">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_iGpg4KdkEeaoTZyxqWEGBw" source="PapyrusVersion">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_iGpg4adkEeaoTZyxqWEGBw" key="Version" value="0.0.4"/>

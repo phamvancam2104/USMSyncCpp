@@ -8,7 +8,7 @@ The \ttt{p} producer produces data items and sends to a first-in first-out passi
 The latter stores data in order for the consumer to pull it.
 The class diagram of \ttt{FIFO} is explored in Fig. \ref{fig:cbseexample} (right).
 FIFO persists data items in a sized queue attribute, namely, \ttt{queue}.
-The latter is associated with the number of currently stored items (\ttt{numberOfItems}), the capacity (\ttt{MAX\_SIZE}), and other attributes and operations used for validating incoming data items and the status of the queue.
+The latter is associated with the number of currently stored items (\ttt{numberOfItems}), the capacity (\ttt{MAX\_SIZE}), and other attributes and operations used for validating incoming items and the status of the queue.
 
 The producer's port with \ttt{IPush} as its required interface is connected to the port of FIFO with \ttt{IPush} as its provided interface so that the producer and FIFO can interact with each other through their respective port.
 Because FIFO provides two interfaces, it implements these.
@@ -22,7 +22,7 @@ The \ttt{DataQueuing} state verifies the status of the queue to decide to either
 
 \begin{figure}
 	\centering
-	\includegraphics[clip, trim=0cm 10.3cm 13.3cm 0cm, width=\columnwidth]{figures/cbseexample.pdf}
+	\includegraphics[clip, trim=0cm 14.9cm 14.9cm 0cm, width=\columnwidth]{figures/cbseexample.pdf}
 	\caption{Architecture of System (left) and Class diagram of FIFO (right)} 
 	\label{fig:cbseexample}
 \end{figure}

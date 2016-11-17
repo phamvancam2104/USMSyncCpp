@@ -39,14 +39,16 @@ Their generated code is \tb{User-filled skeleton code} as the lines 34-40 in Lis
 \tb{Interaction between components through ports:} Given the generated code as in Listing \ref{lst:architectureprescribed}, we now show how a component, through its ports, can interact with other components.
 A component containing a port with a required interface can call the defined services/methods implemented within the component containing an other port providing the interface.
 
+\begin{minipage}{\columnwidth}
+	\lstinputlisting[language=C++, caption=Code for interacting between components, label=lst:producerinteraction,frame=f]{code/producerinteraction.cpp}
+\end{minipage}
+
 Listing \ref{lst:producerinteraction} shows a C++ code segment of the components \ttt{Producer} and \ttt{Consumer}.
 The \ttt{sendDataToFifo} and \ttt{pullDataFromFifo} methods can be either written by programmers or generated from the example model.
 These methods will be synchronized with the model because there is a clear mapping between object-oriented methods and UML operations.
 The producer pushes data items to \ttt{fifo} by invoking the \ttt{push} method through the \ttt{pPush} port and the consumer actively pulls items by invoking \ttt{pull} through \ttt{pPull}.
 
-\begin{minipage}{\columnwidth}
-	\lstinputlisting[language=C++, caption=Code for interacting between components, label=lst:producerinteraction,frame=f]{code/producerinteraction.cpp}
-\end{minipage}
+
  
 \vskip 0.1cm
 \noindent
@@ -73,10 +75,12 @@ The \ttt{p} producer provides data items to \ttt{fifo} through their respective 
 
 
 \begin{minipage}{\columnwidth}
-	\lstinputlisting[language=C++, caption={System using data ports}, label=lst:dataport,frame=f]{code/dataport.cpp}
+	\lstinputlisting[language=C++, caption={System using data ports}, label=lst:dataport,frame=f]{
+		code/dataport.cpp
+		}
 \end{minipage} 
 
-In system implementation, the producer provides data items to the fifo via the port \ttt{pProvideData} by calling \ttt{pProvideData->sendSignal(item)} as an object-oriented way.
+In implementation, the producer provides data items to the fifo via the port \ttt{pProvideData} by calling \ttt{pProvideData->sendSignal(item)} (line 6) as an object-oriented way.
 In case that the behavior of the component is described by a state machine, the \ttt{sendSignal} method will fire a signal event in order for the state machine to handle it.
 
 
@@ -87,15 +91,16 @@ Compared to other code generation approaches, the philosophy of XSeparation is d
 Usually, a code generation approach refines the architecture model at high level of abstraction to the code through a chain of transformations.
 Although the latter help to modularize the code generation process, hence make it easy to implement, the traceability from the code back to the model becomes very hard because the abstraction gap degree increases at each transformation.
 
-XSeparation generates code at an intermediate abstraction level. 
 Fig. \ref{fig:transformationchain} shows how different XSeparation is from the other approaches.
-We argue that synchronization of model and code at different abstraction is a very hard problem, even impossible because component concepts such as part, port, and connectors are not directly mapped to object-oriented code. 
-To deal with it, XSeparation proposes to preserve the abstraction level of these concepts by representing and introducing additional equivalent classes/constructs to object-oriented code as shown in the example in Listing \ref{lst:architectureprescribed}.
+We argue that synchronization of architecture model and executable code is a very hard problem, even impossible because component concepts such as part, port, and connectors are not directly mapped to object-oriented code. 
+To deal with it, XSeparation generates code at an intermediate abstraction level. 
+We propose to preserve the abstraction level of these concepts by representing and introducing additional equivalent classes/constructs to object-oriented code as shown in the example in Listing \ref{lst:architectureprescribed}.
 Other modeling concepts such as properties and operations are generated to code using a trivial mapping used by many industrial code generation tools such as Rhapsody.
 
-Although introducing additional constructs is not really new when compared to Archface \cite{ubayashi2010archface} and \cite{aldrich2002archjava}, these approaches are very language-specific.
-XSeparation is, on the other hand, purely object-oriented, hence better suitable to object-programmers. 
-Furthermore, the programmers can write interaction code between components (Listing \ref{lst:producerinteraction}) by the way, which fully profits advantages of familiar integrated development environments such as Eclipse without having to install any additional tools/plug-ins.  
+Although introducing additional constructs is not really new when compared to Archface \cite{ubayashi2010archface} and ArchJava \cite{aldrich2002archjava}, these approaches are very language-specific.
+XSeparation is, on the other hand, purely object-oriented, hence better suitable to object-oriented programmers. 
+Furthermore, the programmers can write interaction code between components (Listing \ref{lst:producerinteraction}) by the way, which fully profits advantages such as auto-completion of familiar integrated development environments such as Eclipse without having to install any additional tools/plug-ins. 
+XSeparation also enables full integration with legacy code and interaction with existing frameworks. 
 
 %should be moved to related work???
 XSeparation and the \ttt{1.x-way mapping deep separation} approach are similar in the philosophy of separating completely \tb{Component structure-prescribed code} and \tb{User-filled skeleton code} in different constructs, the two approaches are fundamentally not the same. 

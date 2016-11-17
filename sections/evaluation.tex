@@ -27,16 +27,46 @@ The followings present the case study development for the applicability evaluati
 \subsection{Case study development}
 Description of the application...
 
-The case study was developed by a developer. She used the Papyrus Designer tool, which is component-based and model-driven development and features full C++ code generation.
-UML models are used for the software and allow to embed fine-grained code as blocks of texts within a plain text editor.   
+The case study was developed by a developer \tb{Dev}. 
+\tb{Dev} used the Papyrus Designer tool, which features component-based and model-driven development in UML and full C++ code generation through embedding of fine-grained code as blocks of texts within a limited text editor.   
 
-During the development, a software model is created.
-However, the developer felt difficult, unfamiliar, and annoyed to write code with a limited editor.
-She then refused to use that editor and programmed in CDT to be familiar and effective because of CDT facilities such as C++ syntax highlights and auto-completion.
-She then copied the code from CDT to the model and regenerated the code.
-Although the latter was compiled, the developer felt inefficient, prone-to-error, and lack comprehension of the architecture information generated from the model during code writing and copying.
+During the development, an architecture model is created.
+However, the developer felt difficult, unfamiliar, and annoyed to write code with the limited editor.
+\tb{Dev} then refused to use that editor and programmed in CDT to be familiar and effective with C++ facilities such as syntax highlights and auto-completion.
+\tb{Dev} then copied the code from CDT to the model and regenerated the code.
+The developer felt inefficient, prone-to-error, and lack comprehension of the architecture information during code writing and copying.
 
-Given the above issues, the developer wants to try a synchronization approach, which at least can automatically synchronize modifications in fine-grained code to the model.
+Given the above issues, \tb{Dev} wants to try a synchronization approach, which at least can automatically synchronize modifications in fine-grained behavior to the model.
+
+\vskip 0.1cm
+\noindent
+\tb{Application of XSeparation}:
+We applied XSeparation to two distinct scenarios: (1) \tb{Dev} modifies both model and code; and (2) A collaboration scenario between \tb{Dev}, as a programmer, and a software architect. 
+
+\vskip 0.1cm
+\noindent
+\tb{Scenario 1}:
+In this scenario, \tb{Dev} managed the application revision by using Git.
+\tb{Dev} used Papyrus Designer to create the architecture model, and generates intermediate and executable code from it.
+She then filled fine-grained behavior in the intermediate code using CDT.
+After that, \tb{Dev} then used XSeparation to regenerate the executable code and compiled it.
+The modified intermediate code is then automatically synchronized back to the original architecture model by using XSeparation.
+Following each synchronization, \tb{Dev} committed and pushed both of the model, the intermediate code, and the executable code to Git.  
+
+\vskip 0.1cm
+\noindent
+\tb{Scenario 2}:
+\tb{Dev} and an other developer \tb{OtherDev} use Git to control versions of the case study project and work together.
+In the beginning, the component-based architecture structure model is created by the two developers using Papyrus Designer.
+Intermediate and executable code are then generated from the model by XSeparation.
+The model and codes are then pushed to the Git repository as an initial version.
+Each developer took in charge of development of several components.
+For each corresponding component, each of the developers then described its course-grained behavior via a UML State machine, regenerated the intermediate code, wrote fine-grained code for the component, and synchronized the modified intermediate code with the model by using XSeparation.
+After synchronization, the developer tried to pulled the artifacts from the remote Git repository.
+If the remote model was updated by the other developer, both of the models were merged with each other using the Papyrus model merger \cite{collaborativepapyrus}.
+After merging, the intermediate code is then regenerated.
+The two artifacts are then pushed to the remote repository.
+  
 
 
 %\subsection{Evaluations of Incremental code generation and reverse engineering in XSeparation}
@@ -52,3 +82,4 @@ To evaluate the usability of XSeparation, several questions are used for asking 
 
 \paragraph{Is concurrent development using XSeparation effective?}
 
+\lipsum[1-2]
