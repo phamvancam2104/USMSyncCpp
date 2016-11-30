@@ -39,26 +39,36 @@ However, only a subset of UML State Machine concepts is supported by these tools
 %The concurrency of the orthogonal regions is often implemented sequentially \cite{Badreddin2014}. 
 %In addition, there are other issues such as event processing speed, executable file size, and UML semantic-conformance defined by a recent work on the Precise Semantics of State Machine (PSSM) \cite{OMG2015}.
 XSeparation compiler supports full features of state machines.
-XSeparation compiler has following unique features:
+XSeparation compiler has following features.
 
-\begin{itemize}[\footnotesize]
-	\item \tb{Completeness:} XSeparation compiler supports all state machine vertexes and transitions including all pseudo states and transition kinds. 
-	Hence, XSeparation compiler improves flexibility of using state machines to express architecture behavior.
-	For the moment, the only issue with the compiler is that it cannot deal with transitions from an entry point to an exit point.
+%\begin{itemize}[\footnotesize]
+\vskip 0.1cm
+\noindent
+\tb{Completeness:} XSeparation compiler supports all state machine vertexes and transitions including all pseudo states and transition kinds. 
+Hence, XSeparation compiler improves flexibility of using state machines to express architecture behavior.
+For the moment, the only issue with the compiler is that it cannot deal with transitions from an entry point to an exit point.
+
+\vskip 0.1cm
+\noindent	
+\tb{Event support:} XSeparation compiler utilizes four UML event types and deferred events, which are able to express synchronous and asynchronous behaviors and exchange data between components.
 	
-	\item \tb{Event support:} XSeparation compiler utilizes four UML event types and deferred events, which are able to express synchronous and asynchronous behaviors and exchange data between components.
-	
-	\item \tb{UML-conformance:} A recent specification formalizing the precise semantics of UML State Machine is under standardization of OMG.
-	It defines a test suite with 66 test cases for certifying the conformance of runtime execution of code generated from UML State Machines.
-	We have experimented XSeparation compiler with the test suite.
-	The traced execution results of 62/66 test cases comply with the standard and are a good hint that the execution is semantically correct.
-	Due to space limitation, the details of patterns and evaluation for state machine code generation semantics are not presented in this paper.
-	
-	\item \tb{State machine configuration:} XSeparation allows to configure the event queue size and periodic time for evaluation of change events.
-	
-	\item \tb{Event API:} Generated code in XSeparation compiler provides APIs for environment code to invoke operations or send data signals through component ports.
+\vskip 0.1cm
+\noindent	
+\tb{UML-conformance:} A recent specification formalizing the precise semantics of UML State Machine is under standardization of OMG.
+It defines a test suite with 66 test cases for certifying the conformance of runtime execution of code generated from UML State Machines.
+We have experimented XSeparation compiler with the test suite.
+The traced execution results of 62/66 test cases comply with the standard and are a good hint that the execution is semantically correct.
+Due to space limitation, the details of patterns and evaluation for state machine code generation semantics are not presented in this paper.
+
+\vskip 0.1cm
+\noindent	
+\tb{State machine configuration:} XSeparation allows to configure the event queue size and periodic time for evaluation of change events.
+
+\vskip 0.1cm
+\noindent	
+\tb{Event API:} Generated code in XSeparation compiler provides APIs for environment code to invoke operations or send data signals through component ports.
 	The invocations and sending will automatically fire events for state machines to process.
-\end{itemize}
+%\end{itemize}
 
 
 In the next section, XSeparation will be implemented as an extension of the Papyrus modeling tool and evaluated by developing a case study of software application for LEGO.

@@ -1,10 +1,56 @@
 \section{Synchronization}
 \label{sec:collaboration}
 
-
+\begin{comment}
 %\subsection{Synchronization in case of concurrent modifications}
-In our previous work \cite{foster2016}, a methodological pattern is proposed to synchronize model and object-oriented code in case of concurrent modifications made in the model and code.
+In our previous work \cite{foster2016}, a model-code synchronization methodological pattern in case of concurrent modifications is proposed.
+This section extends the pattern to maximize automation and minimize user intervention in synchronization of architecture model and intermediate code.
+In order to keep the paper focused, we abstractly present the synchronization as below.
+
+Given a modified model \tb{ModM}, its previous/ancestor version \tb{PrevM}, and the modified intermediate code \tb{ModCode}, our synchronization consists of five steps as in Fig. \ref{fig:syncextended}. 
+
+\vskip 0.1cm
+\noindent
+\tb{Step 1}:
+We transform the modified intermediate code \tb{ModCode} into a corresponding model \tb{ReversedM} using the bidirectional traceability established in the previous sections.
+
+\vskip 0.1cm
+\noindent
+\tb{Step 2}:
+We compare \tb{ReversedM} and \tb{PrevM} to find differences \tb{Diff} between the two models.
+Currently, we rely on EMFCompare.
+Diff??
+
+
+\vskip 0.1cm
+\noindent
+\tb{Step 3}:
+From the differences set \tb{Diff}, we create a new model \tb{Model with Code Modifications} by merging \tb{Diff} into \tb{PrevM}.
+After this step, \tb{Model with Code Modifications} is a successor of its ancestor model \tb{PrevM}.
+The successor does not only reflect modifications made in the intermediate code but also the model elements which are not used for code generation but other model activities such as model-based analysis for safety and security (because we allow models to contain fine-grained code, full implementation code can be derived from the models. Therefore, the model always contains more information than the code. Preservation of model information is needed).
+
+\vskip 0.1cm
+\noindent
+\tb{Step 4}:
+At this point, both \tb{ModM} and the successor are considered as models diverged from the common ancestor \tb{PrevM}.
+\tb{ModM} is created by model modifications made to \tb{PrevM} and the successor by code modifications made to the associated intermediate code of \tb{PrevM}.
+We therefore use a three-way merger.
+
+\vskip 0.1cm
+\noindent
+\tb{Step 5}:
+
+\begin{figure}
+	\centering
+	\includegraphics[clip, trim=0cm 12.7cm 7.8cm 0cm, width=\columnwidth]{figures/syncextended.pdf}
+	\caption{Synchronization process} 
+	\label{fig:syncextended}
+\end{figure}
+
+\end{comment}
+
 The pattern especially requires the availability of several use-cases as followings:
+
 \begin{itemize}[\footnotesize]
 	\itemsep0em
 	\item \tb{Batch code generation}: generates and overwrites any existing code from model.
@@ -27,6 +73,9 @@ Some particular modifications requires the corresponding actions to respect and 
 For example, if the \ttt{sendDataToFifo} method in Listing \ref{lst:producerinteraction} is renamed to \ttt{sendDataFromProducerToFifo} at the model level, the corresponding action consists of several steps: (1) identify the method, at the code level, associated with the operation, at the model level, using the old name \ttt{sendDataToFifo}, which is recorded by the model listener;
 (2) rename the method to \ttt{sendDataFromProducerToFifo} while keeping its parameters and body intact. 
 
+
+
+\begin{comment}
 \vskip 0.2cm
 \noindent
 \tb{Code modification classification and management:}
@@ -37,8 +86,9 @@ If the FIFO class is removed in the code, for example, the \ttt{fifo} in \ttt{Sy
 If not, a compilation error is raised.
 % Please add the following required packages to your document preamble:
 % \usepackage{multirow}
-
+\end{comment}
 \begin{table*}[]
+	\scriptsize
 	\centering
 	\caption{Model change classification and management}
 	\label{table:modelchangeclassification}
@@ -56,7 +106,7 @@ If not, a compilation error is raised.
 	\end{tabular}
 \end{table*}
 
-Using these use-cases and the bidirectional traceability facilitated by XSeparation during code generation, the concurrent modifications in model and code can be synchronized by our previous methodological pattern.
+%Using these use-cases and the bidirectional traceability facilitated by XSeparation during code generation, the concurrent modifications in model and code can be synchronized by our previous methodological pattern.
 
 After synchronization, to be executable, the XSeparation-generated code needs to be compiled.
 In the next section, we will present the architecture of our XSeparation compiler for compilation. 

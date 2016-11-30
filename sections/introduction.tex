@@ -71,12 +71,15 @@ The modifications made in model and code raise the consistency and synchronizati
 %The modifications made in model and code raise the consistency and synchronization problem \cite{zheng2013classification}.
 %If the latter is not solved, modifications in the code are not reflected to the model. 
 %As a result, the model does not reflect the actual running system, which even worse entails that model-based activities such as architecture and behavior analysis, or testing are obsolete, hence many of the advantages of MDE would disappear.
-In order to solve this problem, which hinders the adoption of MDE in practice, it is necessary to have a code generation process, which establishes a way to trace code modifications back to the model.
+In order to solve this problem, which hinders the adoption of MDE in practice, it is necessary to have a code generation process, which establishes a way to trace code elements back to the model.
 
-This paper proposes \tb{XSeparation} - an extreme separation code generation and synchronization approach. 
+This paper describes \tb{XSeparation} - an code generation approach which enables the bidirectional traceability between architecture model and code. %allows to extremely separate architecture-generated code and user-code. 
 %, which consists of structure and behavior models
-The core idea is to leverage an object-oriented language by engineering additional constructs to it in order to enable the bidirectional traceability between architecture model and code.
-XSeparation provides an adequate support for programmers to control both structure and behavior of a component at the code level. %by making changes in generated architecture-prescribed and state machine-based behavior-prescribed code, respectively.
+Current programming language elements are at lower level of abstraction than software architectures.
+To establish a bidirectional traceability between architecture model and code, the core idea of XSeparation is to leverage an object-oriented language by creating additional constructs for expressing architectural information.
+The established traceability is then combined with our synchronization methodological pattern presented in \cite{foster2016} for synchronization.
+
+%XSeparation provides an adequate support for programmers to control both structure and behavior of a component at the code level. %by making changes in generated architecture-prescribed and state machine-based behavior-prescribed code, respectively.
 %XSeparation increases the bidirectional traceability to keep the model and the code consistent. 
 %Our goal is to synchronize the system architecture described by UML class and component diagrams and the behavior by UML State Machines with object-oriented code such as C++ and Java.
 %These architecture and behavior models, briefly as the design model, are then used for generating code (implementation).
@@ -91,7 +94,7 @@ From a research perspective, this study aims to improve flexibility in MDE to al
 Furthermore, R. N. Taylor et al. \cite{Taylor:2007:SDA:1253532.1254721} pointed out an important research direction, in which key design decisions may be made in implementation (code) and evolution of architecture must be seamlessly propagated to the code [5]. 
 This implies the fluid moving from architecture to code and vice versa. Additionally, synchronization of model and code is also considered as an important need by the MODELS community \cite{van2008challenges}.
 
-For industry, one of the reasons that impede the adoption of MDE is the perceived gap between diagram-based modeling languages and textual languages. On one hand, programmers prefer to use the more familiar combination of a programming language and Integrated Development Environment (IDE). On the other hand, software architects, working at higher levels of abstraction, tend to favor the use of modeling languages for describing the system architecture \cite{foster2016}.
+%For industry, one of the reasons that impede the adoption of MDE is the perceived gap between diagram-based modeling languages and textual languages. On one hand, programmers prefer to use the more familiar combination of a programming language and Integrated Development Environment (IDE). On the other hand, software architects, working at higher levels of abstraction, tend to favor the use of modeling languages for describing the system architecture \cite{foster2016}.
 
 
 %Our work is motivated by both industry and research.
