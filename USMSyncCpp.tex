@@ -67,6 +67,10 @@
 \algrenewcommand\algorithmicensure{\textbf{Output:}}
 
 
+\usepackage{tikz}
+\newcommand\encircle[1]{%
+	\tikz[baseline=(X.base)] 
+	\node (X) [draw, shape=circle, inner sep=0, fill=red, text=white] {\strut #1};}
 
 %\usepackage{etoolbox}
 %\apptocmd{\thebibliography}{\scriptsize}{}{}
@@ -107,7 +111,7 @@
 %\renewcommand{\bibfont}{\tiny}
 
 %to change to spacing between floats (figures) and text
-\setlength{\textfloatsep}{2pt plus 1.0pt minus 2.0pt}
+\setlength{\textfloatsep}{2pt plus 1.0pt minus 1.0pt}
 
 
 
@@ -152,8 +156,7 @@
 
 %
 %
-\title{XSeparation: A Code Generation Approach for %Round-trip Engineering of
-	Bidirectional Traceability between Model and Code}
+\title{Bidirectional Mapping between Architecture and Code for Synchronization}
 %
 %
 \author{
@@ -203,18 +206,18 @@ Email: first-name.lastname@cea.fr}
 %\begin{comment}
 %\input{sections/background}
 
-\input{sections/motivation}
+%\input{sections/motivation}
 
-\input{sections/approachinanut}
-
+\input{sections/xseparationoverview}
+%\input{sections/approachinanut}
 
 
 
 %\input{sections/motivationtlc}
 
-\input{sections/architectureprescribed}
+%\input{sections/architectureprescribed}
 
-\input{sections/behaviorprescribed}
+%\input{sections/behaviorprescribed}
 
 %\input{sections/discussion}
 
@@ -230,16 +233,18 @@ Email: first-name.lastname@cea.fr}
 
 %\input{sections/codegentex}
 
-\input{sections/compilation}
+%\input{sections/compilation}
 
 %\input{sections/implementation}
 
 %\input{sections/experiment}
 
 %\input{sections/casestudy}
-\input{sections/evaluation}
+%\input{sections/evaluation}
 
-%\input{sections/evaluationplan}
+
+\input{sections/evaluationplan}
+
 
 \input{sections/relatedwork}
 
@@ -255,8 +260,7 @@ Email: first-name.lastname@cea.fr}
 
 %\pagebreak
 \balance
-
-%\small{
+%\tiny{
 \bibliographystyle{IEEEtran}
 \bibliography{refs}
 %}

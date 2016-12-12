@@ -21,6 +21,19 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
+\bibitem{HUTCHINSON2014144}
+J.~Hutchinson, J.~Whittle, and M.~Rouncefield, ``Model-driven engineering
+  practices in industry: Social, organizational and managerial factors that
+  lead to success or failure,'' \emph{Science of Computer Programming},
+  vol.~89, pp. 144 -- 161, 2014.
+
+\bibitem{Dunkels:2006:PSE:1182807.1182811}
+A.~Dunkels, O.~Schmidt, T.~Voigt, and M.~Ali, ``Protothreads: Simplifying
+  event-driven programming of memory-constrained embedded systems,'' in
+  \emph{Proceedings of the 4th International Conference on Embedded Networked
+  Sensor Systems}, ser. SenSys '06.\hskip 1em plus 0.5em minus 0.4em\relax New
+  York, NY, USA: ACM, 2006, pp. 29--42.
+
 \bibitem{possepapyrusrt}
 E.~Posse, ``Papyrusrt: Modelling and code generation.''
 
@@ -30,58 +43,16 @@ J.~O. Ringert, B.~Rumpe, and A.~Wortmann, ``{From software architecture
   systems},'' in \emph{Lecture Notes in Informatics (LNI), Proceedings - Series
   of the Gesellschaft fur Informatik (GI)}, vol. P-215, 2013, pp. 155--170.
 
-\bibitem{kent2002model}
-S.~Kent, ``Model driven engineering,'' in \emph{International Conference on
-  Integrated Formal Methods}.\hskip 1em plus 0.5em minus 0.4em\relax Springer,
-  2002, pp. 286--298.
-
-\bibitem{Douglass1999}
-B.~P. Douglass, \emph{{Real-time UML : developing efficient objects for
-  embedded systems}}, 1999.
-
 \bibitem{ibm_rhapsody}
 \BIBentryALTinterwordspacing
 IBM, ``\BIBforeignlanguage{en}{Ibm {Rhapsody}}.'' [Online]. Available:
   \url{http://www.ibm.com/developerworks/downloads/r/rhapsodydeveloper/}
 \BIBentrySTDinterwordspacing
 
-\bibitem{Selic2012}
-B.~Selic, ``What will it take? a view on adoption of model-based methods in
-  practice,'' \emph{Software {\&} Systems Modeling}, vol.~11, no.~4, pp.
-  513--526, 2012.
-
 \bibitem{zheng2013classification}
 Y.~Zheng and R.~N. Taylor, ``A classification and rationalization of
   model-based software development,'' \emph{Software \& Systems Modeling},
   vol.~12, no.~4, pp. 669--678, 2013.
-
-\bibitem{ubayashi2010archface}
-N.~Ubayashi, J.~Nomura, and T.~Tamai, ``Archface: a contract place where
-  architectural design and code meet together,'' in \emph{Proceedings of the
-  32nd ACM/IEEE International Conference on Software Engineering-Volume
-  1}.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2010, pp. 75--84.
-
-\bibitem{yu2012maintaining}
-Y.~Yu, Y.~Lin, Z.~Hu, S.~Hidaka, H.~Kato, and L.~Montrieux, ``Maintaining
-  invariant traceability through bidirectional transformations,'' in
-  \emph{Proceedings of the 34th International Conference on Software
-  Engineering}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE Press, 2012, pp.
-  540--550.
-
-\bibitem{Taylor:2007:SDA:1253532.1254721}
-\BIBentryALTinterwordspacing
-R.~N. Taylor and A.~van~der Hoek, ``Software design and architecture the once
-  and future focus of software engineering,'' in \emph{2007 Future of Software
-  Engineering}, ser. FOSE '07.\hskip 1em plus 0.5em minus 0.4em\relax
-  Washington, DC, USA: IEEE Computer Society, 2007, pp. 226--243. [Online].
-  Available: \url{http://dx.doi.org/10.1109/FOSE.2007.21}
-\BIBentrySTDinterwordspacing
-
-\bibitem{van2008challenges}
-R.~Van Der~Straeten, T.~Mens, and S.~Van~Baelen, ``Challenges in model-driven
-  software engineering,'' in \emph{International Conference on Model Driven
-  Engineering Languages and Systems}.\hskip 1em plus 0.5em minus 0.4em\relax
-  Springer, 2008, pp. 35--47.
 
 \bibitem{foster2016}
 V.~C. Pham, S.~Li, A.~Radermacher, and S.~G\'{e}rard, ``Foster software
@@ -89,11 +60,48 @@ V.~C. Pham, S.~Li, A.~Radermacher, and S.~G\'{e}rard, ``Foster software
   Conference on Engineering of Complex Computer Systems, {ICECCS} 2016, Dubai,
   United Arab Emirates, November 6-8, 2016}, 2016, pp. 1--10.
 
-\bibitem{aldrich2002archjava}
-J.~Aldrich, C.~Chambers, and D.~Notkin, ``Archjava: connecting software
-  architecture to implementation,'' in \emph{Software Engineering, 2002. ICSE
-  2002. Proceedings of the 24rd International Conference on}.\hskip 1em plus
-  0.5em minus 0.4em\relax IEEE, 2002, pp. 187--197.
+\bibitem{ubayashi2010archface}
+N.~Ubayashi, J.~Nomura, and T.~Tamai, ``Archface: a contract place where
+  architectural design and code meet together,'' in \emph{Proceedings of the
+  32nd ACM/IEEE International Conference on Software Engineering-Volume
+  1}.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2010, pp. 75--84.
+
+\bibitem{DeSilva2012}
+L.~{De Silva} and D.~Balasubramaniam, ``{Controlling software architecture
+  erosion: A survey},'' \emph{Journal of Systems and Software}, vol.~85, no.~1,
+  pp. 132--151, 2012.
+
+\bibitem{ibmdiff}
+IBM, ``{IBM} {Rhapshody} {and} {UML} {differences},''
+  \url{http://www-01.ibm.com/support/docview.wss?uid=swg27040251}, 2016,
+  [Online; accessed 04-July-2016].
+
+\bibitem{gerard201019}
+S.~G{\'e}rard, C.~Dumoulin, P.~Tessier, and B.~Selic, ``19 papyrus: A uml2 tool
+  for domain-specific language modeling,'' in \emph{Model-Based Engineering of
+  Embedded Real-Time Systems}.\hskip 1em plus 0.5em minus 0.4em\relax Springer,
+  2010, pp. 361--368.
+
+\bibitem{PSSM}
+OMG, ``{Precise Semantics of UML State Machines (PSSM) Revised Submission},''
+  2016, [Revised Submission, ad/16-11-01].
+
+\bibitem{Magicdraw}
+N.~{Magic}, ``{Magic} {Draw},''
+  \url{https://www.nomagic.com/products/magicdraw.html}, 2016, [Online;
+  accessed 14-Mar-2016].
+
+\bibitem{steinberg2008emf}
+D.~Steinberg, F.~Budinsky, E.~Merks, and M.~Paternostro, \emph{EMF: eclipse
+  modeling framework}.\hskip 1em plus 0.5em minus 0.4em\relax Pearson
+  Education, 2008.
+
+\bibitem{zheng2012enhancing}
+Y.~Zheng and R.~N. Taylor, ``Enhancing architecture-implementation conformance
+  with change management and support for behavioral mapping,'' in
+  \emph{Proceedings of the 34th International Conference on Software
+  Engineering}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE Press, 2012, pp.
+  628--638.
 
 \bibitem{lethbridge2010umplification}
 T.~C. Lethbridge, A.~Forward, and O.~Badreddin, ``Umplification: Refactoring to
@@ -105,83 +113,17 @@ T.~C. Lethbridge, A.~Forward, and O.~Badreddin, ``Umplification: Refactoring to
 M.~Mazanec and O.~Macek, ``On general-purpose textual modeling
   languages.''\hskip 1em plus 0.5em minus 0.4em\relax Citeseer, 2012.
 
-\bibitem{Hinkel2015}
-G.~Hinkel, ``{Change propagation in an internal model transformation
-  language},'' in \emph{Lecture Notes in Computer Science (including subseries
-  Lecture Notes in Artificial Intelligence and Lecture Notes in
-  Bioinformatics)}, vol. 9152, 2015, pp. 3--17.
-
-\bibitem{sinelabore}
-\BIBentryALTinterwordspacing
-{SinelaboreRT}, ``{Sinelabore} {Manual},''
-  \url{http://www.sinelabore.com/lib/exe/fetch.php?media=wiki:downloads:sinelaborert.pdf}.
-  [Online]. Available:
-  \url{http://www.sinelabore.com/lib/exe/fetch.php?media=wiki:downloads:sinelaborert.pdf}
-\BIBentrySTDinterwordspacing
-
-\bibitem{ibmdiff}
-IBM, ``{IBM} {Rhapshody} {and} {UML} {differences},''
-  \url{http://www-01.ibm.com/support/docview.wss?uid=swg27040251}, 2016,
-  [Online; accessed 04-July-2016].
-
-\bibitem{specification_uml_2007}
-O.~M.~G. Specification, ``{UML} specification,'' \emph{Object Management Group
-  pct/07-08-04}, 2007.
-
-\bibitem{EA}
-SparxSysemx, ``{Enterprise} {Architect},''
-  \url{http://www.sparxsystems.com/products/ea/}, 2016, [Online; accessed
-  14-Mar-2016].
-
-\bibitem{collaborativepapyrus}
-``{Collaborative Modeling with Papyrus},''
-  \url{http://eclipsesource.com/blogs/2015/04/13/collaborative-modeling-with-papyrus-emf-compare-and-egit/}.
-
-\bibitem{czarnecki_multi-level_2006}
-K.~Czarnecki, M.~Antkiewicz, and C.~H.~P. Kim, ``Multi-level customization in
-  application engineering,'' \emph{Communications of the ACM}, vol.~49, no.~12,
-  p.~60, Dec. 2006.
-
-\bibitem{zheng2012enhancing}
-Y.~Zheng and R.~N. Taylor, ``Enhancing architecture-implementation conformance
-  with change management and support for behavioral mapping,'' in
-  \emph{Proceedings of the 34th International Conference on Software
-  Engineering}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE Press, 2012, pp.
-  628--638.
-
-\bibitem{kramer2015change}
-M.~E. Kramer, M.~Langhammer, D.~Messinger, S.~Seifermann, and E.~Burger,
-  ``Change-driven consistency for component code, architectural models, and
-  contracts,'' in \emph{Proceedings of the 18th International ACM SIGSOFT
-  Symposium on Component-Based Software Engineering}.\hskip 1em plus 0.5em
-  minus 0.4em\relax ACM, 2015, pp. 21--26.
-
-\bibitem{Maro:2015:IGT:2814251.2814253}
-\BIBentryALTinterwordspacing
-S.~Maro, J.-P. Stegh\"{o}fer, A.~Anjorin, M.~Tichy, and L.~Gelin, ``On
-  integrating graphical and textual editors for a uml profile based domain
-  specific language: An industrial experience,'' in \emph{Proceedings of the
-  2015 ACM SIGPLAN International Conference on Software Language Engineering},
-  ser. SLE 2015.\hskip 1em plus 0.5em minus 0.4em\relax New York, NY, USA: ACM,
-  2015, pp. 1--12. [Online]. Available:
-  \url{http://doi.acm.org/10.1145/2814251.2814253}
-\BIBentrySTDinterwordspacing
-
-\bibitem{angyal_synchronizing_2008}
-L.~Angyal, L.~Lengyel, and H.~Charaf, ``A {Synchronizing} {Technique} for
-  {Syntactic} {Model}-{Code} {Round}-{Trip} {Engineering},'' in
-  \emph{Engineering of {Computer} {Based} {Systems}, 2008. {ECBS} 2008. 15th
-  {Annual} {IEEE} {International} {Conference} and {Workshop} on the}, Mar.
-  2008, pp. 463--472.
-
 \bibitem{Luo:2016:BIS:2997364.2997372}
-\BIBentryALTinterwordspacing
-Z.~Luo and J.~M. Atlee, ``Bsml-mbeddr: Integrating semantically configurable
+Z.~Luo and J.~M. Atlee, ``{BSML-mbeddr}: Integrating semantically configurable
   state-machine models in a c programming environment,'' in \emph{Proceedings
   of the 2016 ACM SIGPLAN International Conference on Software Language
   Engineering}, ser. SLE 2016.\hskip 1em plus 0.5em minus 0.4em\relax New York,
-  NY, USA: ACM, 2016, pp. 105--117. [Online]. Available:
-  \url{http://doi.acm.org/10.1145/2997364.2997372}
-\BIBentrySTDinterwordspacing
+  NY, USA: ACM, 2016, pp. 105--117.
+
+\bibitem{aldrich2002archjava}
+J.~Aldrich, C.~Chambers, and D.~Notkin, ``Archjava: connecting software
+  architecture to implementation,'' in \emph{Software Engineering, 2002. ICSE
+  2002. Proceedings of the 24rd International Conference on}.\hskip 1em plus
+  0.5em minus 0.4em\relax IEEE, 2002, pp. 187--197.
 
 \end{thebibliography}

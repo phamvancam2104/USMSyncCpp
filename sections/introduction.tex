@@ -15,24 +15,30 @@
 %Even, if a graphical language such as Unified Modeling Language (UML) \cite{Specification2007} is not the silver bullet for all software related concerns, it provides hence better support than text-based solutions for some concerns such as architecture and logical behavior of application development. 
 %Abstraction provides simplified and focused views of a system and requires adequate graphical modeling languages such as Unified Modeling Language (UML). %Even, if the latter is not the silver bullet for all software related concerns, 
 %The latter provides better support than text-based solutions for some concerns such as architecture and logical behavior of application development. 
-
-%Event-driven architecture is used for . 
+Unified Modeling Language (UML) has been widely used in Model-Driven Engineering (MDE) to describe architecture of complex systems \cite{HUTCHINSON2014144}.
+Event-driven architecture is useful for designing 
 %UML state machines (USMs) and their visual representations are efficient to modeling high level logic behaviors of event-driven embedded software architecture. % for designing memory-constrained 
-%embedded systems \cite{Dunkels:2006:PSE:1182807.1182811}.
-%UML class and composite structure diagrams prove to better capture the structure of such architecture \cite{possepapyrusrt,Ringert2013}.    
-UML State Machines and composite structure are prove to efficiently capture and simplify the complexity in designing the behavior and structure, respectively, of event-driven and cyber-physical system architecture \cite{possepapyrusrt,Ringert2013}.
-A number of code generation approaches have been proposed in the context of Model-Driven Engineering (MDE) \cite{kent2002model} to automate the process of translating the software architecture represented by these models into implementation 
-\cite{possepapyrusrt, Douglass1999, ibm_rhapsody}.
+embedded systems \cite{Dunkels:2006:PSE:1182807.1182811}.
+UML class, composite structure, and State Machine diagrams prove to well capture such architecture structure \cite{possepapyrusrt,Ringert2013}.    
+%UML State Machines efficiently describe such architecture behavior \cite{possepapyrusrt,Ringert2013}.
+Approaches have been proposed in the context of Model-Driven Engineering (MDE) to automatically translate the architecture represented by the UML diagrams into implementation \cite{possepapyrusrt, Ringert2013,ibm_rhapsody}.
 %\cite{possepapyrusrt, Douglass1999,Shalyto2006, ibm_rhapsody}.  
 
-Ideally, a full model-centric approach is preferred by MDE community due to its advantages \cite{Selic2012} such as complex project management, model-based system analysis, abstraction, and automation. 
-The ultimate goal of MDE is to create executable models for generating full implementation code.
+%Ideally, a full model-centric approach is preferred by MDE community due to its advantages \cite{Selic2012} such as complex project management, model-based system analysis, abstraction, and automation. 
+%The ultimate goal of MDE is to create executable models for generating full implementation code.
 %However, in industrial practice, there is significant reticence \cite{Hutchinson:2011:MEP:1985793.1985882} to adopt it.
 
+%Model-Driven Engineering (MDE) aims to create executable models for generating full implementation code.
+%This aim enables a full model centric-approach, which is preferred by MDE community due to its advantages \cite{Selic2012} such as complex project management, model-based system analysis, abstraction, and automation.
 
-On the one hand, to generate full code, models must contain very detailed information. Nevertheless, current MDE tools and approaches are not sufficient to describe fine-grained behavior of the architecture using models. Therefore, to achieve the goal of complete code generation, some industrial MDE tools put fine-grained action code within the architecture model as blocks of text. MDE tools usually support limited editors for manual fine-grained coding tasks, which might produce errors during compilation of the generated code. When it happens, the developers tend to directly modify/correct the generated code for successful compilation because the code can be opened and easily modified within a familiar integrated development environment of the developers. Furthermore, some architecture-centric MDE approaches \cite{zheng2013classification} only produce skeleton code from architecture models. The generated code in this case must then be tailored by developers for fine-grained code. The modifications of generated code in these cases might violate the architecture correctness, which is not easy to detect due to the lack of a bidirectional traceability between the architecture and code \cite{ubayashi2010archface}.
+On the one hand, current UML tools and approaches are not sufficient to describe fine-grained behavior of the architecture using models. 
+%Therefore, to achieve the goal of complete code generation, some industrial MDE tools put fine-grained action code within the architecture model as blocks of text. MDE tools usually support limited editors for manual fine-grained coding tasks, which might produce errors during compilation of the generated code. When it happens, the developers tend to directly modify/correct the generated code for successful compilation because the code can be opened and easily modified within a familiar integrated development environment of the developers. 
+These tools only produce skeleton code \cite{zheng2013classification}, which must then be tailored by programmers for fine-grained code. 
+Furthermore, there is perception gap between diagram-based and textual languages.
+While programmers prefer to use the more familiar combination of a programming language and Integrated Development Environment (IDE), software architects, working at higher levels of abstraction, tend to favor the use of modeling languages for describing the system architecture \cite{foster2016}.
+The modifications of generated code might violate the architecture correctness, which is not easy to detect due to the lack of a bidirectional mapping between the architecture and code \cite{ubayashi2010archface}.
 
-On the other hand, in software evolution, continuous development and maintenance, the architects might change the architecture for new functionalities or requirements while the programmers might still tailor the current architecture or modify the code for various reasons such as code level optimization, bug fixing, refactoring. This results that the architecture model and code are concurrently modified. 
+On the other hand, in continuous development, the architects might change the architecture for new functionalities or requirements while the programmers might still tailor the current architecture. This results that the architecture model and code are concurrently modified. 
 
 
 
@@ -67,17 +73,19 @@ The \ttt{1.x-way architecture mapping deep separation} approach \cite{zheng2012e
 However, deep separation does not allow to modify the architecture at the code level.
 \end{comment}
 
-The modifications made in model and code raise the consistency and synchronization problem. If the latter is not solved, modifications in the code are not reflected to the model. Consequently, the model does not reflect the actual running system, which even worse entails that model-based activities such as architecture and behavior analysis, or testing are obsolete, hence many of the advantages of MDE would disappear.
+The modifications made in model and code muse be synchronized to make the architecture and code consistent. 
+%If the latter is not solved, modifications in the code are not reflected to the model. Consequently, the model does not reflect the actual running system, which even worse entails that model-based activities such as architecture and behavior analysis, or testing are obsolete, hence many of the advantages of MDE would disappear.
 %The modifications made in model and code raise the consistency and synchronization problem \cite{zheng2013classification}.
 %If the latter is not solved, modifications in the code are not reflected to the model. 
 %As a result, the model does not reflect the actual running system, which even worse entails that model-based activities such as architecture and behavior analysis, or testing are obsolete, hence many of the advantages of MDE would disappear.
-In order to solve this problem, which hinders the adoption of MDE in practice, it is necessary to have a code generation process, which establishes a way to trace code elements back to the model.
+%In order to solve this problem, which hinders the adoption of MDE in practice, it is necessary to have a code generation process, which establishes a way to trace code elements back to the model.
+However, current UML tools and approaches cannot synchronize the modifications due to the lack of a bidirectional mapping between architecture model specified by the aforementioned diagrams and code.
 
-This paper describes \tb{XSeparation} - an code generation approach which enables the bidirectional traceability between architecture model and code. %allows to extremely separate architecture-generated code and user-code. 
+This paper describes an approach which enables the bidirectional mapping between architecture model and code. %allows to extremely separate architecture-generated code and user-code. 
 %, which consists of structure and behavior models
-Current programming language elements are at lower level of abstraction than software architectures.
-To establish a bidirectional traceability between architecture model and code, the core idea of XSeparation is to leverage an object-oriented language by creating additional constructs for expressing architectural information.
-The established traceability is then combined with our synchronization methodological pattern presented in \cite{foster2016} for synchronization.
+We argue that current programming language elements are at lower level of abstraction than software architectures.
+To establish a bidirectional mapping, XSeparation leverages the abstraction level of an object-oriented language by creating additional constructs for expressing architectural information.
+The established mapping is then combined with our synchronization methodological pattern presented in \cite{foster2016} for synchronization.
 
 %XSeparation provides an adequate support for programmers to control both structure and behavior of a component at the code level. %by making changes in generated architecture-prescribed and state machine-based behavior-prescribed code, respectively.
 %XSeparation increases the bidirectional traceability to keep the model and the code consistent. 
@@ -90,9 +98,9 @@ The established traceability is then combined with our synchronization methodolo
 %This gap makes the bidirectional traceability, which allows to reflect modifications made in one artifact to the other, between model and code hard, even impossible.
 
 
-From a research perspective, this study aims to improve flexibility in MDE to allow the architecture model and the generated code to co-evolve while keeping these two consistent \cite{yu2012maintaining}. 
-Furthermore, R. N. Taylor et al. \cite{Taylor:2007:SDA:1253532.1254721} pointed out an important research direction, in which key design decisions may be made in implementation (code) and evolution of architecture must be seamlessly propagated to the code [5]. 
-This implies the fluid moving from architecture to code and vice versa. Additionally, synchronization of model and code is also considered as an important need by the MODELS community \cite{van2008challenges}.
+%From a research perspective, this study aims to improve flexibility in MDE to allow the architecture model and the generated code to co-evolve while keeping these two consistent \cite{yu2012maintaining}. 
+%Furthermore, R. N. Taylor et al. \cite{Taylor:2007:SDA:1253532.1254721} pointed out an important research direction, in which key design decisions may be made in implementation (code) and evolution of architecture must be seamlessly propagated to the code [5]. 
+%This implies the fluid moving from architecture to code and vice versa. Additionally, synchronization of model and code is also considered as an important need by the MODELS community \cite{van2008challenges}.
 
 %For industry, one of the reasons that impede the adoption of MDE is the perceived gap between diagram-based modeling languages and textual languages. On one hand, programmers prefer to use the more familiar combination of a programming language and Integrated Development Environment (IDE). On the other hand, software architects, working at higher levels of abstraction, tend to favor the use of modeling languages for describing the system architecture \cite{foster2016}.
 
@@ -154,19 +162,19 @@ This implies the fluid moving from architecture to code and vice versa. Addition
 
 %Even though this presented work is specific to C++ and embedded systems, the general idea can be applied to other object-oriented programming languages such as Java and to other domains.
 
-Our contribution is summarized as followings:
+%Our contribution is summarized as followings:
 
-\begin{itemize}
-	\item XSeparation - code generator, mode-code synchronizer, and compiler for enabling a fluid moving between architecture and implementation.
+%\begin{itemize}
+%	\item XSeparation - code generator, mode-code synchronizer, and compiler for enabling a fluid moving between architecture and implementation.
 	
-	\item Evaluations of XSeparation based on a case study.
-\end{itemize}
+%	\item Evaluations of XSeparation based on a case study.
+%\end{itemize}
 
-The remainder of this paper is organized as follows: Section \ref{sec:butshell} presents the overview of XSeparation code generation. 
-Section \ref{sec:xseparationarchitecture}, \ref{sec:xseparationbehavior}, \ref{sec:collaboration}, and \ref{sec:compilation} describe the details of XSeparation including: XSeparation for architecture structure, behavior, synchronization, and compilation, respectively. %, for enabling bidirectional traceability between model and code. 
+The remainder of this paper is organized as follows: Section \ref{sec:approach} describes our mapping approach. 
+%Section \ref{sec:xseparationarchitecture}, \ref{sec:xseparationbehavior}, \ref{sec:collaboration}, and \ref{sec:compilation} describe the details of XSeparation including: XSeparation for architecture structure, behavior, synchronization, and compilation, respectively. %, for enabling bidirectional traceability between model and code. 
 %The syntax of RAOES's front-end is detailed in Section \ref{sec:syntax}.
 %Section \ref{sec:collaboration} shows how to synchronize concurrent modifications architecture model and XSeparation-generated code.
-The development of a case study is presented in Section \ref{sec:evaluation} to evaluate XSeparation. 
-Section \ref{sec:relatedwork} discusses related work. 
+Section \ref{sec:evaluationplan} presents our plan to evaluate the proposed approach. 
+We discuss related work in Section \ref{sec:relatedwork}. 
 The conclusion and future work are presented in Section \ref{sec:conclusion}.
 

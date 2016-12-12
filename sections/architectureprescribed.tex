@@ -5,6 +5,10 @@ XSeparation generates \tb{Component structure-prescribed code} and \tb{Component
 These concepts are not directly mapped to the object-oriented code.
 XSeparation customizes an object-oriented language by adding more specific constructs to it in order to be able to establish a bidirectional traceability between the architecture and the code.
 
+\begin{minipage}{\columnwidth}
+	\lstinputlisting[language=C++, caption=Architecture-prescribed code generated from the architecture model in Fig. \ref{fig:cbseexample} (left), label=lst:architectureprescribed,frame=f]{code/systemparts.cpp}
+\end{minipage}
+
 Listing \ref{lst:architectureprescribed} shows the C++ code generated from the architecture model of \ttt{System} by using XSeparation.
 A UML component is mapped to a class while additional constructs: part and port, reflect UML parts and ports, respectively.
 A UML connector is mapped to an invocation to the \ttt{bindPorts} method, which takes as input two declared ports of the sub-components of the parent.
@@ -24,9 +28,7 @@ In AP-U Agreement mentioned in Section \ref{sec:butshell}, \tb{Component structu
 
 A connector between two ports can be assemble, if the two parts containing the ports are in the same parent component, or delegate, if one of the parts is itself a part of the other.
 
-\begin{minipage}{\columnwidth}
-	\lstinputlisting[language=C++, caption=Architecture-prescribed code generated from the architecture model in Fig. \ref{fig:cbseexample} (left), label=lst:architectureprescribed,frame=f]{code/systemparts.cpp}
-\end{minipage}
+
 
 
 The UML \ttt{FIFO} component also contains some UML properties and operations.
@@ -84,42 +86,7 @@ In implementation, the producer provides data items to the fifo via the port \tt
 In case that the behavior of the component is described by a state machine, the \ttt{sendSignal} method will fire a signal event in order for the state machine to handle it.
 
 
-\vskip 0.1cm
-\noindent
-\tb{Discussion:}
-Compared to other code generation approaches, the philosophy of XSeparation is different.
-Usually, a code generation approach refines the architecture model at high level of abstraction to the code through a chain of transformations.
-Although the latter help to modularize the code generation process, hence make it easy to implement, the traceability from the code back to the model becomes very hard because the abstraction gap degree increases at each transformation.
 
-Fig. \ref{fig:transformationchain} shows how different XSeparation is from the other approaches.
-We argue that synchronization of architecture model and executable code is a very hard problem, even impossible because component concepts such as part, port, and connectors are not directly mapped to object-oriented code. 
-To deal with it, XSeparation generates code at an intermediate abstraction level. 
-We propose to preserve the abstraction level of these concepts by representing and introducing additional equivalent classes/constructs to object-oriented code as shown in the example in Listing \ref{lst:architectureprescribed}.
-Other modeling concepts such as properties and operations are generated to code using a trivial mapping used by many industrial code generation tools such as Rhapsody.
-
-Although introducing additional constructs is not really new when compared to Archface \cite{ubayashi2010archface} and ArchJava \cite{aldrich2002archjava}, these approaches are very language-specific.
-XSeparation is, on the other hand, purely object-oriented, hence better suitable to object-oriented programmers. 
-Furthermore, the programmers can write interaction code between components (Listing \ref{lst:producerinteraction}) by the way, which fully profits advantages such as auto-completion of familiar integrated development environments such as Eclipse without having to install any additional tools/plug-ins. 
-XSeparation also enables full integration with legacy code and interaction with existing frameworks. 
-
-%should be moved to related work???
-XSeparation and the \ttt{1.x-way mapping deep separation} approach are similar in the philosophy of separating completely \tb{Component structure-prescribed code} and \tb{User-filled skeleton code} in different constructs, the two approaches are fundamentally not the same. 
-\ttt{Deep separation} ignores modifications made to the architecture at the code level, hence much assumes that the programmers are not interested in modifying architecture.
-It, however, contradicts with the need pointed out by R. N. Taylor et al. \cite{Taylor:2007:SDA:1253532.1254721} as previously discussed. 
-
-XSeparation, 
-%on the other hand, puts the architecture information in code at the right abstraction level with appropriate additional constructs.
-%By this way, XSeparation, 
-%compared to \ttt{deep separation}, 
-gives programmers the ability for not only understanding but also modifying the architecture at the code level.
-Because the abstraction level of component modeling concepts are preserved, XSeparation enables the reflection of modifications made in code to the model.
-
-\begin{figure}
-	\centering
-	\includegraphics[clip, trim=0cm 11.3cm 17.6cm 0cm, width=\columnwidth]{figures/transformationchain.pdf}
-	\caption{Comparison of XSeparation with other code generation approaches} 
-	\label{fig:transformationchain}
-\end{figure}
 
 
 
