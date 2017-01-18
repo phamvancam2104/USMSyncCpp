@@ -1,8 +1,8 @@
-\section{Comparison and Related work}
+\section{Related work}
 \label{sec:relatedwork}
-The goal of proposing a bidirectional mapping is to synchronize model-code to preserve modifications made in the artifacts and keep them consistent.
-Hence our work is related to following tools and approaches. 
-
+%The goal of proposing a bidirectional mapping is to synchronize model-code to preserve modifications made in the artifacts and keep them consistent.
+%Hence our work is related to following tools and approaches. 
+Our work is related to following tools and approaches.
 %\subsection{Model-code synchronization}
 %Several commercial and open-source tools \cite{EA, ibm_rational_2016, Magicdraw, umlgen} support round-trip engineering between UML models and code.
 %Systematic reviews of some of these tools are available in \cite{Cutting2015}.
@@ -27,22 +27,22 @@ Hence our work is related to following tools and approaches.
 %\subsection{Round-trip engineering and co-evolution}
 \noindent
 \tb{Reverse engineering tools:} 
-Several tools \cite{ibm_rhapsody, Magicdraw} support code generation from UML models and reverse engineering using a bidirectional mapping between UML class diagrams and object-oriented code.
+Several tools \cite{ibm_rhapsody} create code from UML models using a bidirectional mapping between UML class concepts and object-oriented code.
 However, when it comes to UML composite structure and state machines, no tools support a bidirectional mapping and synchronization. 
 
 \noindent
 \tb{Separation:}
 %Some RTE techniques restrict the development artifact to avoid synchronization problems.
-Separation \cite{steinberg2008emf} uses specialized comments such as \textsf{@generated NOT} to preserve code modified by programmers by separating the programmer-modified code from generated areas. 
+Specialized comments \cite{steinberg2008emf} such as \textsf{@generated NOT} are used to preserve code modified by programmers by separating the modified code from generated code. 
 %EMF implements these techniques to allow users to replace the default generated code with user-code.
 However, this approach does not intend to synchronize model-code using a bidirectional mapping as ours.
 Furthermore, if accidental changes happen to the comments, modified code cannot be preserved \cite{zheng2012enhancing}.
 %Yu et al. \cite{yu2012maintaining} propose to synchronize user-code and generated code through bidirectional transformation.
 %This latter does not, however, allow modifications in regions beyond the marked ones. 
 % and thus prohibits the programmers from changing USMs' topology.
-\ttt{xMapper} \cite{zheng2012enhancing} overcomes limitations of the separation by separating generated and modified code in different programming constructs.
+\ttt{xMapper} \cite{zheng2012enhancing} overcomes limitations of the separation by separating generated and modified code in different classes.
 However, %as the authors state that, 
-it does not allow to map code elements back to architecture elements.  
+it does not allow to reverse code elements back to architecture elements.  
 %Furthermore, as discussed in Section \ref{sec:intro}, there is still a possibility for the programmers to produce accidental changes, which cannot be reflected to the model.  
 
 
@@ -166,10 +166,11 @@ transformations, necessary for synchronization.
 
 %\subsection{Language engineering}
 \noindent
-\tb{Text-based modeling languages (TMLs):} TMLs such as Umple \cite{lethbridge2010umplification} and Earl Grey (EG) \cite{mazanec2012general} can have bidirectional mapping to UML elements, then reduce the perception gap between diagram-based and textual languages.
-The difference to our approach is that we extend an existing programming language to connect to architecture while the TMLs are simply textual descriptions of UML models.
-To efficiently use the TMLs, programmers are forced to change their working environment while our approach does not impose that.
-Furthermore, the TMLs do not support full features of the aforementioned UML diagrams.
+\tb{Textual modeling (TMLs) and architecture description (ADLs) languages:} TMLs such as Umple \cite{lethbridge2010umplification} and textual ADLs can have bidirectional mapping to UML elements.
+The difference is that the extended code in our approach is syntactically valid and compilable by standard compilers such as GCC for C++ while the TMLs and ADLs are not.
+In ours, programmers can use the familiar combination of a standard language and IDE \cite{foster2016} while the programmers are forced to change their working environment to efficiently use the TMLs.
+%Furthermore, the TMLs do not support full features of the aforementioned UML diagrams.
+
 %Furthermore, 
 %they do not allow the programmers to reuse the existing syntax of object-oriented languages but redefine it in their own language and IDE, which is different with the idea of considering OOL as a hosting language and additional constructs as an internal language. 
 %Textual MLs require a lot of engineering tasks to develop a tooling support such as compiler and editor. 
@@ -195,24 +196,24 @@ Furthermore, the TMLs do not support full features of the aforementioned UML dia
 
 \noindent
 \tb{Language extension:}
-BSML-mbeddr \cite{Luo:2016:BIS:2997364.2997372} is an state machine-based programming language integrated into the C language.
-It introduces the "big and small steps" semantics, which deviates the UML standard's.
+%BSML-mbeddr \cite{Luo:2016:BIS:2997364.2997372} is an state machine-based programming language integrated into the C language.
+%It introduces the "big and small steps" semantics, which deviates the UML standard's.
 %However, the latter is not UML-compliant. 
-BSML-mbeddr only specifies state and region concepts. 
-The Boost library \cite{boost} also tries to build a bidirectional mapping between C++ and UML State Machine.
+%BSML-mbeddr only specifies state and region concepts. 
+The Boost library \cite{boost} tries to build a bidirectional mapping between C++ and UML State Machine.
 However, Boost does not support different UML events and component-based concepts.
 %The idea of adding more constructs for object-oriented languages to contain architecture information in XSeparation is similar to ArchJava \cite{aldrich2002archjava} and Archface \cite{ubayashi2010archface}.
 %This latter utilizes Java annotations to preserve architecture intention in the source code.
 %These approaches try to embed architectural information into the code, specifically Java while RAOES integrates the behavior represented by USMs into C++ to ease the RTE problem. 
-Our approach is inspired of ArchJava \cite{aldrich2002archjava}, which adds structural concepts such as part and port to Java. %to support the co-evolution of architecture structure and Java implementation. 
+ArchJava \cite{aldrich2002archjava} adds structural concepts such as part and port to Java. %to support the co-evolution of architecture structure and Java implementation. 
 %The Archface \cite{ubayashi2010archface} contract description language supports components and connectors, between design and implementation using concepts such as \ttt{pointcut} in Aspect programming to reason about the design and code correctness.
 %The latter can also be realized with XSeparation because we generated code can be used to reconstruct component models.
 However, ArchJava does not provide a mapping between of architecture behavior and code.
 %The user-code and generated code are not separated as in XSeparation and \ttt{1.x-way mapping} to allow modifications made in both architecture and code.
 %They also do not have a synchronization mechanism in case of concurrent development.
-The communication between two ports uses method calls instead of interfaces as in UML and our approach.
-ArchJava makes it not Java anymore and facilities of IDEs such as auto-completion are not aware.%, XSeparation-generated code can use these facilities as discussed in \ref{sec:xseparationarchitecture}.
-Finally, BSML-mbeddr, Boost, and ArchJava are a code-centric approach whereas our mapping is to enable the model-code synchronization.  
+%The communication between two ports uses method calls instead of interfaces as in UML and our approach.
+Furthermore, ArchJava it not standard Java and facilities of IDEs such as auto-completion are not compatible.%, XSeparation-generated code can use these facilities as discussed in \ref{sec:xseparationarchitecture}.
+%Finally, BSML-mbeddr, Boost, and ArchJava are a code-centric approach whereas our mapping is to enable the model-code synchronization.  
 
 %FXU \cite{Pilitowski2007} is the most complete tool but generated code is heavily dependent on their own library and C\# is generated.
 

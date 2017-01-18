@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.1)  12 DEC 2016 12:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.1)  17 JAN 2017 11:20
 entering extended mode
 **USMSyncCpp.tex
 (USMSyncCpp.tex
@@ -1115,66 +1115,66 @@ Package: alltt 1997/06/16 v2.0g defines alltt environment
 (C:\Users\VP242103\Downloads\tex\latex\listings\lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 ) (USMSyncCpp.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 196.
-LaTeX Font Info:    ... okay on input line 196.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 196.
-LaTeX Font Info:    ... okay on input line 196.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 196.
-LaTeX Font Info:    ... okay on input line 196.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 196.
-LaTeX Font Info:    ... okay on input line 196.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 196.
-LaTeX Font Info:    ... okay on input line 196.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 196.
-LaTeX Font Info:    ... okay on input line 196.
-LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 196.
-LaTeX Font Info:    Try loading font information for OT4+cmr on input line 196.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 195.
+LaTeX Font Info:    Try loading font information for OT4+cmr on input line 195.
 
 
 (C:\Users\VP242103\Downloads\tex\latex\polski\ot4cmr.fd
 File: ot4cmr.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-LaTeX Font Info:    ... okay on input line 196.
+LaTeX Font Info:    ... okay on input line 195.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 196.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 195.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <5> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 196.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 195.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 196.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 195.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <7> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 196.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 195.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 196.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 195.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <8> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 196.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 195.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 196.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 195.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <9> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 196.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 195.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 196.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 195.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <10> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 196.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 195.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <11> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 196.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 195.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <11> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 196.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 195.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 196.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 195.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 196.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 195.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 196.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 195.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <17> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 196.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 195.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 196.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 195.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <20> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 196.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 195.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 196.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 195.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <24> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 196.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 195.
 
 -- Lines per column: 56 (exact).
 (C:\Users\VP242103\Downloads\tex\context\base\supp-pdf.mkii
@@ -1194,14 +1194,9 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <24> not available
 \c@lstlisting=\count216
  ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box110
- (sections/abstract.tex
-Underfull \hbox (badness 1466) in paragraph at lines 1--20
-[]\T1/ptm/b/it/9 Abstract\T1/ptm/b/n/9 ---UML State Ma-chines and com-pos-ite s
-truc-ture
- []
-
-) (sections/introduction.tex) (sections/xseparationoverview.tex [1{C:/Users/VP2
-42103/Downloads/pdftex/config/pdftex.map}
+ (sections/abstract.tex)
+(sections/introduction.tex) (sections/xseparationoverview.tex [1{C:/Users/VP242
+103/Downloads/pdftex/config/pdftex.map}
 
 
 ]
@@ -1209,63 +1204,67 @@ truc-ture
 File: figures/mappingoverview.pdf Graphic file (type pdf)
 
 <use figures/mappingoverview.pdf>
-Package pdftex.def Info: figures/mappingoverview.pdf used on input line 25.
+Package pdftex.def Info: figures/mappingoverview.pdf used on input line 29.
 (pdftex.def)             Requested size: 252.0pt x 41.20802pt.
  (sections/mapping.tex
+(sections/mappingtable.tex
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 29.
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 33.
+(C:\Users\VP242103\Downloads\tex\latex\amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 33.
+
+(C:\Users\VP242103\Downloads\tex\latex\amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+))
 <figures/approachexample.pdf, id=14, 963.6pt x 542.025pt>
 File: figures/approachexample.pdf Graphic file (type pdf)
 
 <use figures/approachexample.pdf>
-Package pdftex.def Info: figures/approachexample.pdf used on input line 39.
+Package pdftex.def Info: figures/approachexample.pdf used on input line 60.
 (pdftex.def)             Requested size: 516.0pt x 210.2898pt.
+ [2 <./figures/mappingoverview.pdf>])
+(sections/compilation.tex
+(C:\Users\VP242103\Downloads\tex\latex\listings\lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+(C:\Users\VP242103\Downloads\tex\latex\listings\lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+(C:\Users\VP242103\Downloads\tex\latex\listings\lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+)
+(code/executabletransformation.cpp
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 3.
 
-Underfull \hbox (badness 1701) in paragraph at lines 73--77
-\T1/ptm/b/n/10 Events: \T1/ptm/m/n/10 We sup-port dif-fer-ent con-structs for f
-our UML
- []
+(C:\Users\VP242103\Downloads\tex\latex\psnfss\omsptm.fd
+File: omsptm.fd 
+)
 
-) [2 <./figures/mappingoverview.pdf>] (sections/compilation.tex
-<figures/compilerarchitecture-code.pdf, id=28, 963.6pt x 542.025pt>
-File: figures/compilerarchitecture-code.pdf Graphic file (type pdf)
+LaTeX Font Warning: Font shape `OMS/ptm/bx/n' undefined
+(Font)              using `OMS/ptm/m/n' instead
+(Font)              for symbol `textasteriskcentered' on input line 3.
 
-<use figures/compilerarchitecture-code.pdf>
-Package pdftex.def Info: figures/compilerarchitecture-code.pdf used on input li
-ne 10.
-(pdftex.def)             Requested size: 252.0pt x 70.1612pt.
-)) (sections/evaluationplan.tex
-[3 <./figures/approachexample.pdf> <./figures/compilerarchitecture-code.pdf>])
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <7> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 3.
+LaTeX Font Info:    Font shape `OMS/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 14.
+))) (sections/evaluationplan.tex [3 <./figures/approachexample.pdf>])
 (sections/relatedwork.tex
 LaTeX Font Info:    Try loading font information for T1+phv on input line 36.
 
 (C:\Users\VP242103\Downloads\tex\latex\psnfss\t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
-)
-
-LaTeX Warning: Citation `boost' on page 4 undefined on input line 202.
-
-) (sections/conclusion.tex) (USMSyncCpp.bbl
+))
+(sections/conclusion.tex) (USMSyncCpp.bbl
 ** WARNING: IEEEtran.bst: No hyphenation pattern has been
 ** loaded for the language `en'. Using the pattern for
 ** the default language instead.
-LaTeX Font Info:    Try loading font information for U+msa on input line 49.
-(C:\Users\VP242103\Downloads\tex\latex\amsfonts\umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 49.
-
-(C:\Users\VP242103\Downloads\tex\latex\amsfonts\umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Underfull \hbox (badness 10000) in paragraph at lines 90--93
-[]\T1/ptm/m/n/8 N. Magic, ``Magic Draw,'' $https : / / www . nomagic . com / pr
-oducts /$
- []
-
-
-Package balance Warning: You have called \balance in second column
-(balance)                Columns might not be balanced.
-
-[4])
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -1278,30 +1277,31 @@ Before submitting the final camera ready copy, remember to:
  process uses the appropriate paper size.
 
 
-Overfull \vbox (0.86597pt too high) has occurred while \output is active []
+Package balance Warning: You have called \balance in second column
+(balance)                Columns might not be balanced.
 
+[4] (USMSyncCpp.aux)
 
-[5] (USMSyncCpp.aux)
-
-LaTeX Warning: There were undefined references.
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 27843 strings out of 493673
- 551811 string characters out of 3144029
- 754470 words of memory out of 3000000
- 30715 multiletter control sequences out of 15000+200000
- 112723 words of font info for 122 fonts, out of 3000000 for 9000
+ 28078 strings out of 493673
+ 554710 string characters out of 3144029
+ 808470 words of memory out of 3000000
+ 30930 multiletter control sequences out of 15000+200000
+ 122256 words of font info for 132 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 55i,8n,85p,10423b,552s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,16n,85p,10423b,1455s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/VP242103/Downloads/fonts/enc/dvips/fontname/8r.enc}<C:/Users/VP2421
-03/Downloads/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/VP242103/Downloads/f
-onts/type1/urw/times/utmb8a.pfb><C:/Users/VP242103/Downloads/fonts/type1/urw/ti
-mes/utmbi8a.pfb><C:/Users/VP242103/Downloads/fonts/type1/urw/times/utmr8a.pfb><
-C:/Users/VP242103/Downloads/fonts/type1/urw/times/utmri8a.pfb>
-Output written on USMSyncCpp.pdf (5 pages, 570262 bytes).
+03/Downloads/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/VP242103/Downlo
+ads/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/VP242103/Downloads/fonts/type
+1/urw/times/utmb8a.pfb><C:/Users/VP242103/Downloads/fonts/type1/urw/times/utmbi
+8a.pfb><C:/Users/VP242103/Downloads/fonts/type1/urw/times/utmr8a.pfb><C:/Users/
+VP242103/Downloads/fonts/type1/urw/times/utmri8a.pfb>
+Output written on USMSyncCpp.pdf (4 pages, 422107 bytes).
 PDF statistics:
- 108 PDF objects out of 1000 (max. 8388607)
+ 90 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 35 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,78 +1,98 @@
 \subsection{Bidirectional mapping through an example}
+\label{subsec:bimapping}
 We present our additional constructs through a producer-consumer example, whose architecture is specified by Fig. \ref{fig:approachexample} \encircle{a}, \encircle{b}, and \encircle{c}.
 The \ttt{p} producer sends data items to a first-in first-out component \ttt{FIFO} storing data for the consumer to pull it.
-The data items are saved in a sized queue attribute, \ttt{queue}.
-The latter is associated with the number of currently stored items (\ttt{numberOfItems}), the capacity (\ttt{MAX\_SIZE}), and other attributes and operations used for validating incoming items and the availability of the queue.
+The \ti{FIFO} queue has a limited size, an attribute for the number of currently stored items (\ttt{numberOfItems}) and the \ttt{isQueueFull} operation for validating its availability.
 The \ti{pPush} port of the producer with \ttt{IPush} as required interface is connected to the \ti{pPush} port of \ti{FIFO} with \ttt{IPush} as provided interface. %so that the producer and FIFO can interact with each other through their respective port.
 \ttt{FIFO} also provides the \ti{IPull} interface for the consumer to pull data items.
 FIFO implements the two interfaces in Fig. \ref{fig:approachexample} \encircle{b}.
 
-The behavior of \ttt{FIFO} is described by using a UML State Machine as in Fig. \ref{fig:approachexample} \encircle{c}.
+The behavior of \ttt{FIFO} is described by using a UML State Machine as shown in Fig. \ref{fig:approachexample} \encircle{c}.
 Initially, the \ttt{Idle} state is active.
-The state machine then waits for an item to come to the \ttt{fifo} component (through the \ttt{pPush} port).
-The item is then checked for its validity.
-The \ttt{DataQueuing} state verifies the availability of the queue to decide to either add the item to the queue or discard it.
+The state machine then waits for an item to arrive at the \ttt{fifo} component (through the \ttt{pPush} port).
+The item is then checked for its validity before verifying the availability of the queue to decide to either add the item to the queue or discard it.
 
-Our additional constructs added to the existing programming language are categorized into structural and behavioral constructs.
+Table \ref{table:mapping} shows some of the UML meta-classes and the equivalent constructs in the extended language.
+The constructs are categorized into \ti{structural} (three upper rows) and \ti{behavioral constructs} (seven lower rows).
+%We explain these constructs in the followings.
 
+\input{sections/mappingtable}
 
 \subsubsection{Structural constructs:}
-Three constructs, \ti{Part}, \ti{Port}, and \ti{binding}, are introduced to represent UML \ti{part}, \ti{port}, and \ti{connector}, respectively, because these UML concepts do not have correspondences in the existing programming language.
-Fig. \ref{fig:approachexample} \encircle{d} shows the intermediate code containing our additional constructs for the producer-consumer example.
+We explain the constructs used for representing the architecture structure.
 
-In the intermediate code, the \ti{Part}s and \ti{Port}s constructs are template classes.
-The template parameters of the latter specify the types of \ti{Part}s or required/provided interfaces of \ti{Port}s.
-For example, lines 3-5 show the three parts corresponding to the ones defined in the model.
-Lines 21 and 25 show ports with required interfaces and lines 29-30 show ports with provided interfaces.
+%\noindent
+%\tb{Part:}
+%In the extended language, we introduce the \ti{Part<T>} template class.
+%A UML part is typed by a UML class and mapped to a standard class attribute typing the template class with the \ti{T} template parameter replaced by the class equivalent to the UML class typing the UML part. 
+%For example, at line 3, the \ti{p} attribute is equivalent to the \ti{p} part in the model.
 
-UML connectors for communicating UML parts through UML ports are mapped to method calls (bindings) in the intermediate code.
-Lines 7-8 shows two invocations to the \ti{bindPorts} function, which takes as input two ports (the two ports of the producer and fifo, for example).
-Each class associated with a UML component contains a single configuration (as a method in lines 6-9) for port bindings.
+\noindent
+\tb{Port:}
+Template-based constructs are proposed in the extended language to map with the architecture structure specified by UML ports.
+\ti{RequiredPort<T>} and \ti{ProvidedPort<T>} (see Table \ref{table:mapping}) are equivalent to UML uni-directional ports, which have only one required or provided interface.
+The \ti{T} template parameter is an interface in code (e.g. \ti{interface} in Java or class with \ti{pure virtual} methods in C++) equivalent to the interface required/provided by a UML port. 
+\ti{BidirectionalPort<R,P>} (not shown) is also proposed to map to UML bidirectional ports, which have one required and one provided interface.
 
-Other model elements defined in the class diagram are mapped to the corresponding elements in the intermediate code.
-For example, the UML operations and properties are mapped to the class methods and attributes (not shown in the paper), respectively; the UML interfaces (\ti{IPush} and \ti{IPull}) mapped to the classes with pure virtual methods (lines 11-18) (in C++). 
+%Three constructs, \ti{Part}, \ti{Port}, and \ti{Binding}, are introduced to represent UML \ti{part}, \ti{port}, and \ti{connector}, respectively, because these UML concepts do not have equivalences in the existing programming language.
+%Fig. \ref{fig:approachexample} \encircle{d} shows the extended code containing our additional constructs for the producer-consumer example.
+
+%In the extended code, the \ti{Part}s and \ti{Port}s constructs are template classes.
+%The template parameters of the latter specify the types of \ti{Part}s or required/provided interfaces of \ti{Port}s.
+%For example, lines 3-5 show the three parts corresponding to the ones defined in the model.
+Lines 21 and 25 show ports with a required interface and lines 29-30 show ports with a provided interface of the \ti{Producer}, \ti{Consumer}, and \ti{FIFO} classes.
+
+\noindent
+\tb{Binding:}
+A binding (see Table \ref{table:mapping}, row 3) connects two ports equivalently to a UML connector connecting two UML ports.
+A binding is a method call to our predefined method \ti{bindPorts.}
+%UML connectors for communicating UML parts through UML ports are mapped to method calls (bindings) in the extended code.
+Lines 7-8 shows two invocations of \ti{bindPorts}, which takes as input two ports (the two ports of the producer and fifo, for example).
+Each class associated with a UML component contains a single configuration (as a method in lines 6-9) containing bindings.
+
+Other model elements defined in the class diagram are mapped to the corresponding elements in the extended code.
+For example, the \ti{p, fifo, c} UML parts are mapped to the composite attributes of the \ti{System} class; the UML operations and properties are mapped to the class methods and attributes (not shown in the paper), respectively; the UML interfaces (\ti{IPush} and \ti{IPull}) mapped to classes with pure virtual methods (lines 11-18) (in C++). 
 
   
 
 \begin{figure*}
 	\centering
 	\includegraphics[clip, trim=0cm 5.9cm 1.6cm 0cm, width=\textwidth]{figures/approachexample.pdf}
-	\caption{Architecture model and generated intermediate code} 
+	\caption{Architecture model and generated extended code} 
 	\label{fig:approachexample}
 \end{figure*}
 
 
 \subsubsection{Behavioral constructs:}
 %Applying XSeparation to UML State Machines, XSeparation-generated code contains our syntactic sugar of additional constructs for explicitly representing domain-specific concepts of state machines such as states and transitions.
-These constructs are used to map to UML State Machine concepts.
-The latter are divided into three sub-categories: vertex, event, and transition, which are specified into three parts: topology, events, and transition table in the intermediate code.
+These constructs map to UML State Machine concepts. They are categorized into three parts: topology, events, and transition table in the extended code.
 
 
 \noindent
 \tb{Topology:}
-A topology contains the constructs associated with UML vertexes to describe the state machine hierarchy.
-In Fig. \ref{fig:approachexample}, the root of the topology is specified via the \ttt{StateMachine} keyword.
-Other elements such as \ttt{region}, \ttt{state}, and \ttt{pseudo state} are hierarchically defined as sub-elements.
+A topology contains the constructs to describe the state machine hierarchy.
+The root of the topology is specified via the \ttt{StateMachine} as in Fig. \ref{fig:approachexample}.
+Other elements such as \ttt{region}, \ttt{state}, and \ttt{pseudo state} are hierarchically defined as its sub-elements.
 %Each element has a unique name.
 
-State actions such as state entry/exit/doActivity are declared as attributes of the state.
-These actions must be implemented in the owning class and has no parameter.
+State actions such as \ti{entry/exit/doActivity}s are declared within the corresponding state in the extended code as its attributes.
+These actions must be implemented in the owning class and have no parameter.
 For example, \ttt{Idle} is an initial state. 
-The \ttt{SignalChecking} state (lines 36-39) is declared with state actions, \ti{entryCheck} and \ti{exitCheck}. 
+The \ttt{SignalChecking} state (lines 36-39) is declared with the state actions, \ti{entryCheck} and \ti{exitCheck}. 
 %The latter is specified as following: the entry/exit/doActivity action of a state, if declared within the topology, must be implemented as a method of the component/class. 
 The \ti{FIFO} class implements the methods \ttt{entryCheck} and \ttt{exitCheck} (lines 60-61) for the state actions.
 %The followings give the syntax of some elements in the generated code and the semantics mapped to the well-defined semantics in the UML specification \cite{OMG2015}.
 
 
-Concurrent states with orthogonal regions in the intermediate code are not shown here due to space limitation. 
-A State machine, state, or region in the intermediate code can declare pseudo states having similar syntax as attribute declarations of a class.
-The type of pseudo state attributes is one of \ttt{\{PseudoEntryPoint, PseudoExitPoint, PseudoInitial, PseudJoin, PseudoFork, PseudoChoice, PseudoJunction, PseudoShallowHistory, PseudoDeepHistory, PseudoTerminate\}}, which correspond to the pseudo states defined in UML State Machine. 
-%For example, \ttt{PseudoChoice dataChoice} and \ttt{PseudoChoice queueChoice} in Listing \ref{lst:fifostatemachine} represent the generated code for two \ttt{choice} pseudo states in the FIFO UML State Machine example.  
+Concurrent states with orthogonal regions in the extended code are not shown here due to space limitation. 
+Pseudo states can be declared within \ti{Statemachine/states/regions} in the extended code, which have syntax similar to class attribute declarations.
+%The type of pseudo state attributes is one of \ttt{\{PseudoEntryPoint, PseudoExitPoint, PseudoInitial, PseudJoin, PseudoFork, PseudoChoice, PseudoJunction, PseudoShallowHistory, PseudoDeepHistory, PseudoTerminate\}}, which correspond to the pseudo states defined in UML State Machine. 
+For example, line 49 in Fig. \ref{fig:approachexample} declares the \ti{dataChoice} choice pseudo state mapping to the corresponding pseudo state in the \ti{FIFOMachine} model.   
 
 %\vskip 0.1cm
 \noindent
 \tb{Events:}
-We support different constructs for four UML event types including \ttt{CallEvent}, \ttt{TimeEvent}, \ttt{SignalEvent}, and \ttt{ChangeEvent}.
+Events defined in UML are mapped to our constructs, which support four UML event types including \ttt{CallEvent}, \ttt{TimeEvent}, \ttt{SignalEvent}, and \ttt{ChangeEvent}.
 The semantics of these events are clearly defined in the UML specification and beyond the paper's scope.
 
 \begin{comment}
@@ -142,14 +162,14 @@ This signal type must be declared as required data of one of ports of the compon
 %\vskip 0.1cm
 \noindent
 \tb{Transition table:}
-It describes the transitions associated with UML transitions specified in the UM state machine at the model level. 
+It describes the mapping of our syntactical constructs to UML transitions at the model level. 
 Three kinds of UML transitions, \ttt{external}, \ttt{local}, and \ttt{internal}, are supported but this paper only presents external transitions.
-The difference between these kinds is clearly stated in UML and beyond the scope of this paper.
+%The difference between these kinds is clearly stated in UML and beyond the scope of this paper.
 
 %For example, \ttt{CallEvent(DataPushEvent, push)} at line 23 in Listing \ref{lst:fifostatemachine} specifies that an event is fired whenever the \ttt{push} method, which is implemented by \ttt{FIFO} for the \ttt{IPush} interface provided by the \ttt{pPush} port, is invoked.
-For example, line 50 shows a call event, which is emitted whenever there is an invocation the \ti{push} method if the FIFO class. 
-The processing of the emitted event transitions from \ttt{Idle} to \ttt{SignalChecking} and executes the \ttt{signalCheckingEffect} transition method method associated with the transition if the current active state is \ttt{Idle}.
-If so, the data item brought by the invocation will be checked for validity and further put to the queue or discarded.
+For example, line 50 shows a call event, which is emitted whenever there is an invocation of the \ti{push} method of the \ti{FIFO} class. 
+The processing of the emitted event fires the transition from \ttt{Idle} to \ttt{SignalChecking}, and executes the \ttt{signalCheckingEffect} method, which is the effect of the transition.
+The data item brought by the invocation will be checked for validity and further put to the queue or discarded.
 Note that \ttt{signalCheckingEffect} has the same formal parameters with the \ttt{push} method.
 
 %Code generated for a signal event has syntax as \tb{SignalEvent}\ttt{<sig> name}, in which \ttt{sig} is the name of the associated signal class (a UML signal is transformed into an object-oriented class).
@@ -165,9 +185,9 @@ Note that \ttt{signalCheckingEffect} has the same formal parameters with the \tt
  
 
 %\vskip 0.1cm
-\noindent
-\tb{Deferred event:}
-A state can declare \ttt{deferred events} using our additional construct \ttt{DeferredEvent}.
-The deferred events are used for state machine execution to delay the processing of low-priority events when a certain state is active.
+%\noindent
+%\tb{Deferred event:}
+%A state can declare \ttt{deferred events} using our additional construct \ttt{DeferredEvent}.
+%The deferred events are used for state machine execution to delay the processing of low-priority events when a certain state is active.
 %The execution semantics of deferred events is that: given a current active state with declared deferred events and an event queue, the deferred events, if in front of the queue, will be moved to a deferred set and pushed back to the front of the queue once a non-deferred event is processed.
 %In other words, the deferred events will not be processed while the state remains active.

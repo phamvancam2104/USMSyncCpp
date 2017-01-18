@@ -1,38 +1,65 @@
 \subsection{Transformation}
 \label{subsec:compilation}
 %XSeparation generates object-oriented code containing additional constructs for bidirectional traceability. Hence, a compilation process is needed to transform the XSeparation-generated code into machine code.
-The transformation transforms the intermediate code into the \tb{Standard code}. %to transform the XSeparation-generated code into machine code.
-Fig. \ref{fig:compilerarchitecture} shows the transformation process.
-The latter consists of two grayed sub-transformations: \tb{Structure code transformation} (SCT) and \tb{Behavior code transformation} (BCT). 
+%The transformation transforms the extended code into the executable \tb{Standard code}. %to transform the XSeparation-generated code into machine code.
+%The extended code shows the architecture as well as the code for fine-grained behavior.
+The transformation creates \tb{Standard code} combined with the extended code to form executable code that programmers can compile, debug, and execute. 
+%In the transformation, the extended code should be kept intact because the programmers are unlikely to see the extended code much changed after the transformation. 
+%At the same time, the latter is able to map back to the model.  
 
-\begin{figure}
-	\centering
-	\includegraphics[clip, trim=0cm 12.6cm 10.7cm 0cm, width=\columnwidth]{figures/compilerarchitecture-code.pdf}
-	\caption{XSeparation compiler's architecture} 
-	\label{fig:compilerarchitecture}
-\end{figure}
+
+
+ 
+
+In the transformation, we generate a \ti{controller} class for each class containing bindings or state machine elements and create connections between parts through ports (see lines 15-19 and 5-10 in Listing \ref{lst:executabletransformation}).
+The fine-grained code in the extended code will be called by the controlling (standard) code or the controller classes.
+Listing \ref{lst:executabletransformation} shows the generated standard code.
+\ti{SystemController} is associated with \ti{System} by referring to the system object through a pointer \ti{pSys}. 
+It also declares a \ti{controller} attribute typed by \ti{FIFOController} associated with \ti{FIFO}.
+During code execution, the required and provided interface of the \ti{pPush} ports of \ti{Producer} and \ti{FIFO}, respectively, refer to the controller of \ti{FIFO}.
+The \ti{required} and \ti{provided} attributes are actually declared within the port constructs as described in \ref{subsec:bimapping} in order for programmers to write fine-grained code.
+In this case, when a programmer wants to call the \ti{push} method provided by \ti{FIFO}, she/he only needs to write \ti{pPush.required->push(data)}, which will call the \ti{push} method implemented by the FIFO controller.
+The \ti{pPush} ports refer to \ti{controller} because a call event associated with \ti{push} is declared within \ti{FIFOStateMachine}. 
+In order to process the event emitted by calling the \ti{push} method of \ti{FIFO} through its \ti{pPush} port, an appropriate method for event processing is called before the call to \ti{push} of \ti{FIFO} through a reference to \ti{FIFO} (lines 20-23).
+
+\begin{minipage}{0.95\columnwidth}
+	\lstinputlisting[language=C++, caption={Generated controller classes}, label=lst:executabletransformation,frame=f]{code/executabletransformation.cpp}
+\end{minipage}
+
+The interfaces of the \ti{pPull} ports are simply referred to the fifo (lines 8-9) because no event should be emitted and processed in case of an invocation to the \ti{pull} method.  
+%Fig. \ref{fig:compilerarchitecture} shows the transformation process consisting of \tb{Structure code transformation} (SCT) and \tb{Behavior code transformation} (BCT). 
+
+By this transformation, the programmers can execute and debug the extended code and modify the architecture at the code level while keeping the mapping between the model and the code bidirectional.
+
+%\begin{figure}
+%	\centering
+%	\includegraphics[clip, trim=0cm 10.1cm 11.2cm 0cm, width=\columnwidth]{figures/executabletransformation.pdf}
+%	\caption{XSeparation compiler's architecture} 
+%	\label{fig:compilerarchitecture}
+%\end{figure}
+
 
 %\vskip 0.1cm
-\noindent
-\tb{Structure code transformation:}
+%\noindent
+%\tb{Structure code transformation:}
 %A verification is firstly executed to check the well-formedness of components and ports.
 %We basically verify three port rules: (1) every port with a required interface or provided data must be bound to another port; (2) if two ports are connected by a assemble connector, the provided interface/data of one port must identical to or an extension of the required interface/data of the other port; and (3) if the connector is delegate, the provided interface/data of one port must identical to or an extension of the provided interface/port of the other port; 
 %Once the rules are verified, executable code can be generated. 
-SCT transforms the additional structural constructs into standard code.
-Fig. \ref{fig:compilerarchitecture} shows a segment of standard code generated from the producer-consumer example.
-Each port with required interface is transformed into a pointer attribute (lines 12 and 15) while each part into an object attribute (lines 3-5).
+%SCT transforms the additional structural constructs into standard code.
+%Fig. \ref{fig:compilerarchitecture} shows a segment of standard code generated from the producer-consumer example.
+%Each port with required interface is transformed into a pointer attribute (lines 12 and 15) while each part into an object attribute (lines 3-5).
 %A configuration method is transformed into a method \ttt{configuration}.
-A binding (bindPorts) in the configuration is transformed into an assignment which refers the pointer associated with a port with provided interface to the corresponding implementation.
-For example, the \ti{pPush} pointer of \ti{Producer} is referred to the fifo, which implements the \ti{IPush} interface (line 7). 
-When a method is called through a port, for example \ttt{push} through the \ttt{pPush} port, the corresponding method implemented in FIFO is invoked. 
+%A binding (bindPorts) in the configuration is transformed into an assignment which refers the pointer associated with a port with provided interface to the corresponding implementation.
+%For example, the \ti{pPush} pointer of \ti{Producer} is referred to the fifo, which implements the \ti{IPush} interface (line 7). 
+%When a method is called through a port, for example \ttt{push} through the \ttt{pPush} port, the corresponding method implemented in FIFO is invoked. 
 
 
 %\vskip 0.1cm
-\noindent
-\tb{Behavior code transformation:}
-It transforms the behavioral constructs for state machines into standard code similarly to code generation approaches from UML State Machines in MDE tools such as Rhapsody.
-Our goal is to support all of the features of state machines.
-However, the existing tools only support a subset of state machine concepts, e.g. Rhapsody does not support junctions, truly concurrent execution of orthogonal regions \cite{ibmdiff}, and all of the UML event types.
+%\noindent
+%\tb{Behavior code transformation:}
+%It transforms the behavioral constructs for state machines into standard code similarly to code generation approaches from UML State Machines in MDE tools such as Rhapsody.
+%Our goal is to support all of the features of state machines.
+%However, the existing tools only support a subset of state machine concepts, e.g. Rhapsody does not support junctions, truly concurrent execution of orthogonal regions \cite{ibmdiff}, and all of the UML event types.
 %UML events are not supported 
 %The concurrency of the orthogonal regions is often implemented sequentially \cite{Badreddin2014}. 
 %In addition, there are other issues such as event processing speed, executable file size, and UML semantic-conformance defined by a recent work on the Precise Semantics of State Machine (PSSM) \cite{OMG2015}.
@@ -40,12 +67,12 @@ However, the existing tools only support a subset of state machine concepts, e.g
 %XSeparation compiler has following features.
 
 %\begin{itemize}[\footnotesize]
-We extend an existing code generation pattern with the use of IF/ELSE to support all of the state machine features. 	
+%We extend an existing code generation pattern with the use of IF/ELSE to support all of the state machine features. 	
 %We currently evaluate the semantic-conformance of  A recent specification formalizing the precise semantics of UML State Machine is under standardization of OMG.
 %It defines a test suite with 66 test cases for certifying the conformance of runtime execution of code generated from UML State Machines.
 %We have experimented XSeparation compiler with the test suite.
 %The traced execution results of 62/66 test cases comply with the standard and are a good hint that the execution is semantically correct.
-Due to space limitation, the details of pattern and evaluation for state machine runtime execution semantics are not presented in this paper.
+%Due to space limitation, the details of pattern and evaluation for state machine runtime execution semantics are not presented in this paper.
 
 %\vskip 0.1cm
 %\noindent	

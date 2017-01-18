@@ -1,15 +1,11 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: USMSyncCpp.aux
 The style file: IEEEtran.bst
 Database file #1: refs.bib
-Repeated entry---line 2924 of file refs.bib
- : @inproceedings{mazanec2012general
- :                                  ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 2958 of file refs.bib
+Repeated entry---line 2967 of file refs.bib
  : @inproceedings{ubayashi2010archface
  :                                    ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 3573 of file refs.bib
+Repeated entry---line 3582 of file refs.bib
  : @book{steinberg2008emf
  :                       ,
 I'm skipping whatever remains of this entry
@@ -22,7 +18,6 @@ Warning--I didn't find a database entry for "DBLP:conf/iceccs/2016"
 Warning--empty journal in possepapyrusrt
 Warning--empty year in possepapyrusrt
 Warning--empty journal in PSSM
-Warning--empty booktitle in mazanec2012general
 
 Done.
-(There were 4 error messages)
+(There were 3 error messages)
