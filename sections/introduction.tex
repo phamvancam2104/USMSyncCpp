@@ -19,7 +19,7 @@ Unified Modeling Language (UML) has been widely used in Model-Driven Engineering
 An event-driven architecture is useful for designing 
 %UML state machines (USMs) and their visual representations are efficient to modeling high level logic behaviors of event-driven embedded software architecture. % for designing memory-constrained 
 embedded systems \cite{Dunkels:2006:PSE:1182807.1182811}.
-UML class, composite structure, and State Machine diagrams prove to well capture such architecture \cite{possepapyrusrt}.    
+UML class, composite structure, and State Machine diagrams prove to well capture such an architecture \cite{possepapyrusrt}.    
 %UML State Machines efficiently describe such architecture behavior \cite{possepapyrusrt,Ringert2013}.
 Approaches have been proposed in the context of Model-Driven Engineering (MDE) to automatically translate the architecture represented by the UML diagrams into an implementation \cite{possepapyrusrt}.
 %\cite{possepapyrusrt, Douglass1999,Shalyto2006, ibm_rhapsody}.  
@@ -40,7 +40,7 @@ The modifications of generated code might violate the architecture correctness.
 In such a case, the modifications in the code must be reflected back to the model. 
 To deal with it, several approaches such as separation \cite{steinberg2008emf} and reverse engineering \cite{ibm_rhapsody} use specialized comments to separate user-modified code and generated code.
 However, these approaches only work for modifications within the user area.
-One of the reasons, that makes the reflection of the modifications in the code back to the model hard, is the lack of a bidirectional mapping between the architecture model specified by the aforementioned diagrams and code \cite{ubayashi2010archface}.
+One of the reasons, that makes the reflection of the modifications in the code back to the model hard, is the lack of a bidirectional mapping between the architecture model specified by the aforementioned models and code \cite{ubayashi2010archface}.
 
 %On the other hand, in continuous development, the architects might also change the architecture for new functionalities or requirements while the programmers might still tailor the current architecture. This results that the architecture model and code are concurrently modified. 
 
@@ -89,7 +89,7 @@ This paper describes an approach which enables the bidirectional mapping between
 %, which consists of structure and behavior models
 We argue that current programming language elements are at lower level of abstraction than software architectures.
 To establish a bidirectional mapping, our approach leverages the abstraction level of an object-oriented language by creating additional constructs for expressing architectural information.
-The established mapping is then combined with our synchronization methodological pattern presented in \cite{foster2016}.
+The established mapping is then combined with our synchronization mechanism presented in \cite{foster2016}.
 
 %XSeparation provides an adequate support for programmers to control both structure and behavior of a component at the code level. %by making changes in generated architecture-prescribed and state machine-based behavior-prescribed code, respectively.
 %XSeparation increases the bidirectional traceability to keep the model and the code consistent. 

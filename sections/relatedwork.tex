@@ -36,13 +36,13 @@ However, when it comes to UML composite structure and state machines, no tools s
 Specialized comments \cite{steinberg2008emf} such as \textsf{@generated NOT} are used to preserve code modified by programmers by separating the modified code from generated code. 
 %EMF implements these techniques to allow users to replace the default generated code with user-code.
 However, this approach does not intend to synchronize model-code using a bidirectional mapping as ours.
-Furthermore, if accidental changes happen to the comments, modified code cannot be preserved \cite{zheng2012enhancing}.
+Furthermore, if accidental changes happen to the special comments, modified code cannot be preserved \cite{zheng2012enhancing}.
 %Yu et al. \cite{yu2012maintaining} propose to synchronize user-code and generated code through bidirectional transformation.
 %This latter does not, however, allow modifications in regions beyond the marked ones. 
 % and thus prohibits the programmers from changing USMs' topology.
 \ttt{xMapper} \cite{zheng2012enhancing} overcomes limitations of the separation by separating generated and modified code in different classes.
 However, %as the authors state that, 
-it does not allow to reverse code elements back to architecture elements.  
+it does not allow reverse engineering code elements back to architecture elements.  
 %Furthermore, as discussed in Section \ref{sec:intro}, there is still a possibility for the programmers to produce accidental changes, which cannot be reflected to the model.  
 
 
@@ -167,8 +167,8 @@ transformations, necessary for synchronization.
 %\subsection{Language engineering}
 \noindent
 \tb{Textual modeling (TMLs) and architecture description (ADLs) languages:} TMLs such as Umple \cite{lethbridge2010umplification} and textual ADLs can have bidirectional mapping to UML elements.
-The difference is that the extended code in our approach is syntactically valid and compilable by standard compilers such as GCC for C++ while the TMLs and ADLs are not.
-In ours, programmers can use the familiar combination of a standard language and IDE \cite{foster2016} while the programmers are forced to change their working environment to efficiently use the TMLs.
+The difference is that the extended code in our approach is syntactically valid and processed by standard compilers such as GCC for C++ while the TMLs and ADLs are not.
+%In our approach, programmers can use favorite IDEs while the programmers are forced to change their working environment to efficiently use the TMLs.
 %Furthermore, the TMLs do not support full features of the aforementioned UML diagrams.
 
 %Furthermore, 

@@ -3,7 +3,7 @@
 %XSeparation generates object-oriented code containing additional constructs for bidirectional traceability. Hence, a compilation process is needed to transform the XSeparation-generated code into machine code.
 %The transformation transforms the extended code into the executable \tb{Standard code}. %to transform the XSeparation-generated code into machine code.
 %The extended code shows the architecture as well as the code for fine-grained behavior.
-The transformation creates \tb{Standard code} combined with the extended code to form executable code that programmers can compile, debug, and execute. 
+The transformation creates \tb{Standard code} combining with the extended code to execute in order for programmers to compile, debug, and execute. 
 %In the transformation, the extended code should be kept intact because the programmers are unlikely to see the extended code much changed after the transformation. 
 %At the same time, the latter is able to map back to the model.  
 
@@ -15,10 +15,10 @@ In the transformation, we generate a \ti{controller} class for each class contai
 The fine-grained code in the extended code will be called by the controlling (standard) code or the controller classes.
 Listing \ref{lst:executabletransformation} shows the generated standard code.
 \ti{SystemController} is associated with \ti{System} by referring to the system object through a pointer \ti{pSys}. 
-It also declares a \ti{controller} attribute typed by \ti{FIFOController} associated with \ti{FIFO}.
+This class also declares a \ti{controller} attribute typed by \ti{FIFOController} associated with \ti{FIFO}.
 During code execution, the required and provided interface of the \ti{pPush} ports of \ti{Producer} and \ti{FIFO}, respectively, refer to the controller of \ti{FIFO}.
-The \ti{required} and \ti{provided} attributes are actually declared within the port constructs as described in \ref{subsec:bimapping} in order for programmers to write fine-grained code.
-In this case, when a programmer wants to call the \ti{push} method provided by \ti{FIFO}, she/he only needs to write \ti{pPush.required->push(data)}, which will call the \ti{push} method implemented by the FIFO controller.
+The \ti{required} and \ti{provided} attributes are actually declared within the port constructs as described in \ref{subsec:bimapping}.
+If a programmer wants to call the \ti{push} method provided by \ti{FIFO}, she/he only needs to write \ti{pPush.required->push(data)}, which will call the \ti{push} method implemented by the FIFO controller.
 The \ti{pPush} ports refer to \ti{controller} because a call event associated with \ti{push} is declared within \ti{FIFOStateMachine}. 
 In order to process the event emitted by calling the \ti{push} method of \ti{FIFO} through its \ti{pPush} port, an appropriate method for event processing is called before the call to \ti{push} of \ti{FIFO} through a reference to \ti{FIFO} (lines 20-23).
 
@@ -26,7 +26,7 @@ In order to process the event emitted by calling the \ti{push} method of \ti{FIF
 	\lstinputlisting[language=C++, caption={Generated controller classes}, label=lst:executabletransformation,frame=f]{code/executabletransformation.cpp}
 \end{minipage}
 
-The interfaces of the \ti{pPull} ports are simply referred to the fifo (lines 8-9) because no event should be emitted and processed in case of an invocation to the \ti{pull} method.  
+The interfaces of the \ti{pPull} ports refer to the fifo (lines 8-9) because no event should be emitted and processed in case of an invocation to the \ti{pull} method.  
 %Fig. \ref{fig:compilerarchitecture} shows the transformation process consisting of \tb{Structure code transformation} (SCT) and \tb{Behavior code transformation} (BCT). 
 
 By this transformation, the programmers can execute and debug the extended code and modify the architecture at the code level while keeping the mapping between the model and the code bidirectional.

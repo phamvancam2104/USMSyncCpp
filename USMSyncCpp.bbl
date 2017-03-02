@@ -35,7 +35,10 @@ A.~Dunkels, O.~Schmidt, T.~Voigt, and M.~Ali, ``Protothreads: Simplifying
   York, NY, USA: ACM, 2006, pp. 29--42.
 
 \bibitem{possepapyrusrt}
-E.~Posse, ``Papyrusrt: Modelling and code generation.''
+E.~Posse, ``Papyrusrt: Modelling and code generation (invited presentation),''
+  in \emph{Proceedings of the International Workshop on Open Source Software
+  for Model Driven Engineering, Ottawa, Canada, September 29, 2015.}, 2015, pp.
+  54--63.
 
 \bibitem{zheng2013classification}
 Y.~Zheng and R.~N. Taylor, ``A classification and rationalization of
@@ -71,10 +74,11 @@ L.~{De Silva} and D.~Balasubramaniam, ``{Controlling software architecture
   pp. 132--151, 2012.
 
 \bibitem{gerard201019}
-S.~G{\'e}rard, C.~Dumoulin, P.~Tessier, and B.~Selic, ``19 papyrus: A uml2 tool
-  for domain-specific language modeling,'' in \emph{Model-Based Engineering of
-  Embedded Real-Time Systems}.\hskip 1em plus 0.5em minus 0.4em\relax Springer,
-  2010, pp. 361--368.
+S.~G{\'e}rard, C.~Dumoulin, P.~Tessier, and B.~Selic, ``Papyrus: A uml2 tool
+  for domain-specific language modeling,'' in \emph{Proceedings of the 2007
+  International Dagstuhl Conference on Model-based Engineering of Embedded
+  Real-time Systems}, ser. MBEERTS'07.\hskip 1em plus 0.5em minus 0.4em\relax
+  Berlin, Heidelberg: Springer-Verlag, 2010, pp. 361--368.
 
 \bibitem{fullusm}
 V.~C. Pham, A.~Radermacher, S.~G\'{e}rard, and S.~Li, ``Complete code
