@@ -1,11 +1,9 @@
-\section{Synchronization}
+\section{Synchronization mechanism}
 \label{sec:collaboration}
 
 \begin{comment}
 %\subsection{Synchronization in case of concurrent modifications}
-In our previous work \cite{foster2016}, a model-code synchronization methodological pattern in case of concurrent modifications is proposed.
-This section extends the pattern to maximize automation and minimize user intervention in synchronization of architecture model and intermediate code.
-In order to keep the paper focused, we abstractly present the synchronization as below.
+
 
 Given a modified model \tb{ModM}, its previous/ancestor version \tb{PrevM}, and the modified intermediate code \tb{ModCode}, our synchronization consists of five steps as in Fig. \ref{fig:syncextended}. 
 
@@ -48,30 +46,36 @@ We therefore use a three-way merger.
 \end{figure}
 
 \end{comment}
-
-The pattern especially requires the availability of several use-cases as followings:
+In our previous work \cite{foster2016}, a model-code synchronization mechanism in case of concurrent modifications is proposed.
+%This section extends the pattern to maximize automation and minimize user intervention in synchronization of architecture model and intermediate code.
+%In order to keep the paper focused, we abstractly present the synchronization as below.
+The mechanism especially requires the availability of several use-cases as followings:
 
 \begin{itemize}[\footnotesize]
-	\itemsep0em
+	\itemsep0em 
 	\item \tb{Batch code generation}: generates and overwrites any existing code from model.
+	
 	\item \tb{Incremental code generation}: updates the code by propagating changes from the model to the code.
+	
 	\item \tb{Batch reverse engineering}: creates and overwrites any existing model from code.
+	
 	\item \tb{Incremental reverse engineering}: updates the model by propagating changes from the code to the model.
 \end{itemize}
 
 
-The batch code generation and reverse engineering are straightforwardly supported by using the bidirectional traceability between the architecture model and code created by XSeparation. The incremental code generation (ICG) and incremental reverse engineering (IRE) needs a classification and management of modifications made in the model and code.
+The batch code generation and reverse engineering are straightforwardly supported by using the proposed bidirectional mapping between the architecture model and code. 
+The incremental code generation (ICG) and incremental reverse engineering (IRE) needs a classification and management of modifications made in the model and code.
 
-\vskip 0.2cm
+%\vskip 0.2cm
 \noindent
-\tb{Model modification classification and management:}
-Table \ref{table:modelchangeclassification} shows our classification and management of actions for propagating modifications, detected by a model listener, in model to code.
+\tb{Incremental code generation:}
+Table \ref{table:modelchangeclassification} shows our management of actions for propagating modifications in model to code.
 %The modifications can be detected by a model listener.
 We make a distinction between structural and behavioral modifications, which result in creating/removing/regenerating the corresponding code part.
-Although only add/remove/update are detected, the moving of a model element can be combined as a removal following by an addition.  
-Some particular modifications requires the corresponding actions to respect and preserve the user code.
-For example, if the \ttt{sendDataToFifo} method in Listing \ref{lst:producerinteraction} is renamed to \ttt{sendDataFromProducerToFifo} at the model level, the corresponding action consists of several steps: (1) identify the method, at the code level, associated with the operation, at the model level, using the old name \ttt{sendDataToFifo}, which is recorded by the model listener;
-(2) rename the method to \ttt{sendDataFromProducerToFifo} while keeping its parameters and body intact. 
+Although only add/remove/update are detected, the moving of a model element can be detected as a combination of a removal followed by an addition.  
+%Some particular modifications requires the corresponding actions to respect and preserve the user code.
+%For example, if the \ttt{sendDataToFifo} method in Listing \ref{lst:producerinteraction} is renamed to \ttt{sendDataFromProducerToFifo} at the model level, the corresponding action consists of several steps: (1) identify the method, at the code level, associated with the operation, at the model level, using the old name \ttt{sendDataToFifo}, which is recorded by the model listener;
+%(2) rename the method to \ttt{sendDataFromProducerToFifo} while keeping its parameters and body intact. 
 
 
 
@@ -95,23 +99,69 @@ If not, a compilation error is raised.
 	\begin{tabular}{|l|p{3cm}|l|p{9.5cm}|}
 		\hline
 		\multicolumn{2}{|c|}{Element type}                              & \multicolumn{1}{c|}{Modification type} & \multicolumn{1}{c|}{Action}                                                                              \\ \hline
-		\multirow{3}{*}{Structure} & Part/Port/Connector                & Add/Remove/Update                      & Regenerate Component structure-prescribed code                                                           \\ \cline{2-4} 
-		& Class/Component/Interface          & Add/Remove/Update                      & Create/Remove/Update the corresponding code                                                              \\ \cline{2-4} 
-		& Property                           & Add/Remove/Update                      & Create/Remove/Regenerate the corresponding class attribute                                               \\ \hline
-		\multirow{4}{*}{Behavior}  & Operation                          & Add/Remove/Update                      & Create/Remove/Regenerate the corresponding method with keeping its method body                           \\ \cline{2-4} 
-		& \multirow{3}{*}{UML State Machine} & Create                                 & Generate Behavior-prescribed code and State machine action code                                          \\ \cline{3-4} 
-		&                                    & Remove                                 & Remove Behavior-prescribed code and State machine action code from the corresponding component           \\ \cline{3-4} 
-		&                                    & Update                                 & Regenerate Behavior-prescribed code and State machine action code with respect to the existing user-code \\
-		\hline
+		\multirow{3}{*}{Structure} & Part/Port/Connector                & Add/Remove/Update                      & Regenerate and re-transform code for the component containing the modified model element.                                                           \\ \cline{2-4} 
+		& Class/Component/Interface          & Add/Remove/Update                      & Create/Remove/Update the corresponding code file(s). If the modification is remove or rename (update), regenerate the classes/components/interfaces that depend on the removed/renamed element. 
+		For example, regenerate the classes containing attributes typed by the deleted types to avoid unknown type problems during compilation.                                                              \\ \cline{2-4} 
+		& Property                           & Add/Remove/Update                      & Regenerate the corresponding class                                               \\ \hline
+		Behavior  & Operation                          & Add/Remove/Update                      & Regenerate the corresponding class                           \\ \cline{2-4} 
+		& UML State Machine & Add/Remove/Update                                 & Regenerate and transform code for the component containing the state machine                                           \\ \hline
 	\end{tabular}
 \end{table*}
 
 %Using these use-cases and the bidirectional traceability facilitated by XSeparation during code generation, the concurrent modifications in model and code can be synchronized by our previous methodological pattern.
 
-After synchronization, to be executable, the XSeparation-generated code needs to be compiled.
-In the next section, we will present the architecture of our XSeparation compiler for compilation. 
+%\vspace{0.1cm}
+\noindent
+\tb{Incremental reverse engineering:}
+Our IRE, with specificity in text, is similar to change-driven transformation (CDT) \cite{rath2009change}.
+The latter listens to changes made in a model and uses predefined rules to propagate the changes back to another model.
+However, CDT cannot be applied directly to propagate changes in code back to model because detection of changes in code is non-trivial.
+The approach in \cite{kramer2015change} records every developer operation by creating a specific code editor.
+However, this approach is not reliable because it is hard to monitor all of developer modifications if the developer uses different editors to modify the code.
 
-\input{sections/mappingtable}
+In our approach, we do not record all of modifications made to code elements.
+We use a \ti{File Tracker} to detect which files are changed by developers.
+This kind of tracking is much easier to realize and more realistic than the above approaches. 
+It is also supported by several tools such as Git.
+The details of our approach are shown in Fig. \ref{fig:incrementalreverse}.
 
-\input{sections/oldsynchronization}
-\input{sections/synchronizationexample}
+The file tracker monitors all of the code files generated from the architecture model.
+The tracker does not listen to specific changes to programming language elements such as renaming an attribute or adding a method.
+After all of modifications made in the code, the tracker returns a list of files which were changed during modification.
+We do not allow renaming or deleting a class because doing these modifications at the code level requires doing some additional re-factorings.
+For example, deleting a class requires re-typing class attributes typed by this deleted class.  
+We believe that working at the model level is more suitable to these modifications because the re-factorings can be done through code re-generation from the modified model.
+Furthermore, the IRE then needs to propagate modifications in the code within the class scope (attributes, methods, state machines) back to the model. 
+ 
+The modified files and the model are then used as input for reverse engineering.
+For each modified file, the IRE for each code element in the file follows a \tb{Update-Create-Delete} strategy as followings: 
+
+\begin{itemize}
+	\item Update: Finding a model element matching with the code element by using the name and type of the code element to look for the corresponding model element. 
+	If exists, using the information of the code element to update the model element.
+	For example, if we modify the \ti{entryCheck} method body in Fig. \ref{fig:approachexample} \encircle{d}, the IRE will automatically propagate the changed body to the architecture model as a block of text.
+	
+	\item Create: If do not find a matching model element, creating a model element corresponding to the code element. 
+	For example, if a programmer adds a state to the state machine example in Fig. \ref{fig:approachexample} \encircle{d}, a UML state will be created in the model.
+	
+	\item Delete: UML elements (attributes, ports, connectors, methods, state machines, and events), which are not touched during the IRE, are deleted because these elements are implicitly removed by programmers during code modification.
+\end{itemize}
+
+It is worth noting that a renaming in code will be considered as an addition followed by a deletion at the model level.
+
+%We do not allow to rename/delete a class at the code level.
+
+\begin{figure}
+	\centering
+	\includegraphics[clip, trim=0cm 10.1cm 7.0cm 0cm, width=0.9\columnwidth]{figures/incrementalreverse.pdf}
+	\caption{Incremental reverse engineering with file tracker} 
+	\label{fig:incrementalreverse}
+\end{figure}
+
+In the next section, we describe our experiments to evaluate our approach.
+
+
+%\input{sections/mappingtable}
+
+%\input{sections/oldsynchronization}
+%\input{sections/synchronizationexample}

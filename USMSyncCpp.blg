@@ -1,24 +1,15 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: USMSyncCpp.aux
 The style file: IEEEtran.bst
 Database file #1: refs.bib
-Repeated entry---line 3002 of file refs.bib
- : @inproceedings{ubayashi2010archface
- :                                    ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 3617 of file refs.bib
- : @book{steinberg2008emf
- :                       ,
-I'm skipping whatever remains of this entry
-A bad cross reference---entry "possepapyrusrt"
-refers to entry "DBLP:conf/models/2015oss4mde", which doesn't exist
-A bad cross reference---entry "foster2016"
-refers to entry "DBLP:conf/iceccs/2016", which doesn't exist
-Warning--I didn't find a database entry for "DBLP:conf/iceccs/2016"
-Warning--I didn't find a database entry for "DBLP:conf/models/2015oss4mde"
+A bad cross reference---entry "DBLP:conf/date/CharfiMGTB10"
+refers to entry "DBLP:conf/date/2010", which doesn't exist
+Warning--I didn't find a database entry for "DBLP:conf/date/2010"
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
-Warning--empty journal in PSSM
+Warning--empty journal in alfspecification
+Warning--empty journal in marte
+Warning--empty booktitle in mazanec2012general
 
 Done.
-(There were 4 error messages)
+(There was 1 error message)

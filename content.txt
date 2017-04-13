@@ -1,15 +1,20 @@
 1. Introduction
-	a. prb definition
+	a. prb definition: synchronization of uml architecture design model and code.
 	b. why is it a problem
 	c. contribution
-2. Approach in a nutshell
-	Instead of synchronizing the architecture directly with the code, we propose to synchronize the model with an intermediate representation
-	At which abstraction level for the intermediate representation? requirements for the representation?
-3. Motivational example
-4. Application of approach in C++ => RTE4COMP
-5. A synchronization mechanism
-6. Discussion: how the problem is solved?
-(Experiments??)
+2. Approach overview
+	-Process: Model <-> extended code through mapping
+	-Extended code -> executable: in-place text-to-text transformation
+3. Mapping
+4. In-place transformation
+5. Synchronization and guiding for developers
+	-how to development process is applied to each kind of developer
+	-to architects: change model -> generate code -> compile, execute
+	-to programmers: change architecture at the code level/user code because programmers might be more efficient in textual environemtn or favourite IDEs than graphical enviroments preferred by architects
+		-> in-place transformation-> compile, debug, execute -> update model from code modifications
+6. Experiments
+	-model random generation and reverse + update model from code (round-trip laws
+	-Case study: lego
 7. Related work
 	Archface: 
 		-a contract description language between design and implementation ==> the focus is on design and code correctness verification

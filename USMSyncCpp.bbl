@@ -21,11 +21,32 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
+\bibitem{Selic2012}
+B.~Selic, ``What will it take? a view on adoption of model-based methods in
+  practice,'' \emph{Software {\&} Systems Modeling}, vol.~11, no.~4, pp.
+  513--526, 2012.
+
+\bibitem{hilliard1999using}
+R.~Hilliard, ``Using the uml for architectural description,'' in
+  \emph{International Conference on the Unified Modeling Language}.\hskip 1em
+  plus 0.5em minus 0.4em\relax Springer, 1999, pp. 32--48.
+
 \bibitem{HUTCHINSON2014144}
 J.~Hutchinson, J.~Whittle, and M.~Rouncefield, ``Model-driven engineering
   practices in industry: Social, organizational and managerial factors that
   lead to success or failure,'' \emph{Science of Computer Programming},
   vol.~89, pp. 144 -- 161, 2014.
+
+\bibitem{pandey2010architectural}
+R.~Pandey, ``Architectural description languages (adls) vs uml: a review,''
+  \emph{ACM SIGSOFT Software Engineering Notes}, vol.~35, no.~3, pp. 1--5,
+  2010.
+
+\bibitem{possepapyrusrt}
+E.~Posse, ``Papyrusrt: Modelling and code generation (invited presentation),''
+  in \emph{Proceedings of the International Workshop on Open Source Software
+  for Model Driven Engineering, Ottawa, Canada, September 29, 2015.}, 2015, pp.
+  54--63.
 
 \bibitem{Dunkels:2006:PSE:1182807.1182811}
 A.~Dunkels, O.~Schmidt, T.~Voigt, and M.~Ali, ``Protothreads: Simplifying
@@ -34,21 +55,26 @@ A.~Dunkels, O.~Schmidt, T.~Voigt, and M.~Ali, ``Protothreads: Simplifying
   Sensor Systems}, ser. SenSys '06.\hskip 1em plus 0.5em minus 0.4em\relax New
   York, NY, USA: ACM, 2006, pp. 29--42.
 
-\bibitem{possepapyrusrt}
-E.~Posse, ``Papyrusrt: Modelling and code generation (invited presentation),''
-  in \emph{Proceedings of the International Workshop on Open Source Software
-  for Model Driven Engineering, Ottawa, Canada, September 29, 2015.}, 2015, pp.
-  54--63.
+\bibitem{reactivemanifesto}
+``{Reactive Manifesto},'' \url{http://www.reactivemanifesto.org/}, [Online
+  available 10/4/2017].
 
-\bibitem{zheng2013classification}
-Y.~Zheng and R.~N. Taylor, ``A classification and rationalization of
-  model-based software development,'' \emph{Software \& Systems Modeling},
-  vol.~12, no.~4, pp. 669--678, 2013.
+\bibitem{ciccozzi2013towards}
+F.~Ciccozzi, A.~Cicchetti, and M.~Sj{\"o}din, ``Towards translational execution
+  of action language for foundational uml,'' in \emph{Software Engineering and
+  Advanced Applications (SEAA), 2013 39th EUROMICRO Conference on}.\hskip 1em
+  plus 0.5em minus 0.4em\relax IEEE, 2013, pp. 153--160.
 
-\bibitem{steinberg2008emf}
-D.~Steinberg, F.~Budinsky, E.~Merks, and M.~Paternostro, \emph{EMF: eclipse
-  modeling framework}.\hskip 1em plus 0.5em minus 0.4em\relax Pearson
-  Education, 2008.
+\bibitem{alfspecification}
+OMG, ``{Action Language for Foundational UML (Alf): Concrete Syntax for a UML
+  Action Language},'' 2013, {version 1.1, OMG Document Number:
+  formal/2013-09-01}.
+
+\bibitem{DBLP:conf/date/CharfiMGTB10}
+A.~Charfi, C.~Mraidha, S.~G{\'{e}}rard, F.~Terrier, and P.~Boulet, ``Toward
+  optimized code generation through model-based optimization,'' in
+  \emph{Design, Automation and Test in Europe, {DATE} 2010, Dresden, Germany,
+  March 8-12, 2010}, 2010, pp. 1313--1316.
 
 \bibitem{ibm_rhapsody}
 \BIBentryALTinterwordspacing
@@ -56,11 +82,61 @@ IBM, ``\BIBforeignlanguage{en}{Ibm {Rhapsody}}.'' [Online]. Available:
   \url{http://www.ibm.com/developerworks/downloads/r/rhapsodydeveloper/}
 \BIBentrySTDinterwordspacing
 
+\bibitem{steinberg2008emf}
+D.~Steinberg, F.~Budinsky, E.~Merks, and M.~Paternostro, \emph{EMF: eclipse
+  modeling framework}.\hskip 1em plus 0.5em minus 0.4em\relax Pearson
+  Education, 2008.
+
 \bibitem{ubayashi2010archface}
 N.~Ubayashi, J.~Nomura, and T.~Tamai, ``Archface: a contract place where
   architectural design and code meet together,'' in \emph{Proceedings of the
   32nd ACM/IEEE International Conference on Software Engineering-Volume
   1}.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2010, pp. 75--84.
+
+\bibitem{Brambilla:2012:MSE:2432361}
+M.~Brambilla, J.~Cabot, and M.~Wimmer, \emph{Model-Driven Software Engineering
+  in Practice}, 1st~ed.\hskip 1em plus 0.5em minus 0.4em\relax Morgan \&
+  Claypool Publishers, 2012.
+
+\bibitem{DeSilva2012}
+L.~{De Silva} and D.~Balasubramaniam, ``{Controlling software architecture
+  erosion: A survey},'' \emph{Journal of Systems and Software}, vol.~85, no.~1,
+  pp. 132--151, 2012.
+
+\bibitem{Allen:1997:FBA:258077.258078}
+\BIBentryALTinterwordspacing
+R.~Allen and D.~Garlan, ``A formal basis for architectural connection,''
+  \emph{ACM Trans. Softw. Eng. Methodol.}, vol.~6, no.~3, pp. 213--249, Jul.
+  1997. [Online]. Available: \url{http://doi.acm.org/10.1145/258077.258078}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Zhai:2016:AMG:2884781.2884881}
+J.~Zhai, J.~Huang, S.~Ma, X.~Zhang, L.~Tan, J.~Zhao, and F.~Qin, ``Automatic
+  model generation from documentation for java api functions,'' in
+  \emph{Proceedings of the 38th International Conference on Software
+  Engineering}, ser. ICSE '16.\hskip 1em plus 0.5em minus 0.4em\relax New York,
+  NY, USA: ACM, 2016, pp. 380--391.
+
+\bibitem{marte}
+OMG, ``{A UML Profile for MARTE: Modeling and Analysis of Real- Time Embedded
+  systems},'' 2011, version 1.1 formal/2011-06-02.
+
+\bibitem{gamma1995design}
+E.~Gamma, \emph{Design patterns: elements of reusable object-oriented
+  software}.\hskip 1em plus 0.5em minus 0.4em\relax Pearson Education India,
+  1995.
+
+\bibitem{sparxsystems_enterprise_2014}
+\BIBentryALTinterwordspacing
+SparxSystems, ``\BIBforeignlanguage{en}{Enterprise {Architect}},'' Sep. 2016.
+  [Online]. Available: \url{http://www.sparxsystems.eu/start/home/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{fullusm}
+V.~C. Pham, A.~Radermacher, S.~G\'{e}rard, and S.~Li, ``Complete code
+  generation from uml state machine,'' in \emph{5th International Conference on
+  Model-Driven Engineering and Software Development, {MODELSWARD} 2017, Porto,
+  Portugal, February 19-21, 2017}, 2017.
 
 \bibitem{foster2016}
 V.~C. Pham, S.~Li, A.~Radermacher, and S.~G\'{e}rard, ``Foster software
@@ -68,10 +144,18 @@ V.~C. Pham, S.~Li, A.~Radermacher, and S.~G\'{e}rard, ``Foster software
   Conference on Engineering of Complex Computer Systems, {ICECCS} 2016, Dubai,
   United Arab Emirates, November 6-8, 2016}, 2016, pp. 1--10.
 
-\bibitem{DeSilva2012}
-L.~{De Silva} and D.~Balasubramaniam, ``{Controlling software architecture
-  erosion: A survey},'' \emph{Journal of Systems and Software}, vol.~85, no.~1,
-  pp. 132--151, 2012.
+\bibitem{rath2009change}
+I.~R{\'a}th, G.~Varr{\'o}, and D.~Varr{\'o}, ``Change-driven model
+  transformations,'' in \emph{International Conference on Model Driven
+  Engineering Languages and Systems}.\hskip 1em plus 0.5em minus 0.4em\relax
+  Springer, 2009, pp. 342--356.
+
+\bibitem{kramer2015change}
+M.~E. Kramer, M.~Langhammer, D.~Messinger, S.~Seifermann, and E.~Burger,
+  ``Change-driven consistency for component code, architectural models, and
+  contracts,'' in \emph{Proceedings of the 18th International ACM SIGSOFT
+  Symposium on Component-Based Software Engineering}.\hskip 1em plus 0.5em
+  minus 0.4em\relax ACM, 2015, pp. 21--26.
 
 \bibitem{gerard201019}
 S.~G{\'e}rard, C.~Dumoulin, P.~Tessier, and B.~Selic, ``Papyrus: A uml2 tool
@@ -80,15 +164,89 @@ S.~G{\'e}rard, C.~Dumoulin, P.~Tessier, and B.~Selic, ``Papyrus: A uml2 tool
   Real-time Systems}, ser. MBEERTS'07.\hskip 1em plus 0.5em minus 0.4em\relax
   Berlin, Heidelberg: Springer-Verlag, 2010, pp. 361--368.
 
-\bibitem{fullusm}
-V.~C. Pham, A.~Radermacher, S.~G\'{e}rard, and S.~Li, ``Complete code
-  generation from uml state machine,'' in \emph{5th International Conference on
-  Model-Driven Engineering and Software Development, {MODELSWARD} 2017, Porto,
-  Portugal, February 19-21, 2017}, 2017.
+\bibitem{lego}
+``Lego {Car} {Factory},''
+  \url{http://robotics.benedettelli.com/lego-car-factory/}, [Online avalable:
+  22/3/2017].
 
-\bibitem{PSSM}
-OMG, ``{Precise Semantics of UML State Machines (PSSM) Revised Submission},''
-  2016, [Revised Submission, ad/16-11-01].
+\bibitem{medvidovic2000classification}
+N.~Medvidovic and R.~N. Taylor, ``A classification and comparison framework for
+  software architecture description languages,'' \emph{IEEE transactions on
+  Software Engineering}, vol.~26, no.~1, pp. 70--93, 2000.
+
+\bibitem{robbins1998integrating}
+J.~E. Robbins, N.~Medvidovic, D.~F. Redmiles, and D.~S. Rosenblum,
+  ``Integrating architecture description languages with a standard design
+  method,'' in \emph{Proceedings of the 20th international conference on
+  Software engineering}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE Computer
+  Society, 1998, pp. 209--218.
+
+\bibitem{fabresse2006scl}
+L.~Fabresse, C.~Dony, and M.~Huchard, ``Scl: a simple, uniform and operational
+  language for component-oriented programming in smalltalk,'' in
+  \emph{International Smalltalk Conference}.\hskip 1em plus 0.5em minus
+  0.4em\relax Springer, 2006, pp. 91--110.
+
+\bibitem{Pham2014}
+V.~C. Pham, {\"{O}}.~G{\"{u}}rcan, and A.~Radermacher, ``{Interaction
+  Components Between Components based on a Middleware},'' in \emph{1st
+  International Workshop on Model-Driven Engineering for Component-based
+  Software Systems (ModComp'14)}, 2014.
+
+\bibitem{ciccozzi2015generation}
+F.~Ciccozzi, A.~Cicchetti, and M.~Sj{\"o}din, ``On the generation of
+  full-fledged code from uml profiles and alf for complex systems,'' in
+  \emph{Information Technology-New Generations (ITNG), 2015 12th International
+  Conference on}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2015, pp.
+  81--88.
+
+\bibitem{Ciccozzi2016}
+F.~Ciccozzi, ``On the automated translational execution of the action language
+  for foundational uml,'' \emph{Software {\&} Systems Modeling}, pp. 1--27,
+  2016.
+
+\bibitem{macropy}
+Macropy, ``{{Macros in Python}},'' \url{https://github.com/lihaoyi/macropy},
+  2017, [Online; accessed 24-March-2017].
+
+\bibitem{EA}
+SparxSysemx, ``{Enterprise} {Architect},''
+  \url{http://www.sparxsystems.com/products/ea/}, 2016, [Online; accessed
+  14-Mar-2016].
+
+\bibitem{Cutting2015}
+D.~Cutting and J.~Noppen, ``{An Extensible Benchmark and Tooling for Comparing
+  Reverse Engineering Approaches},'' \emph{International Journal on Advances in
+  Software}, vol.~8, no.~1, pp. 115--124, 2015.
+
+\bibitem{chardigny2008extraction}
+S.~Chardigny, A.~Seriai, M.~Oussalah, and D.~Tamzalit, ``Extraction of
+  component-based architecture from object-oriented systems,'' in
+  \emph{Software Architecture, 2008. WICSA 2008. Seventh Working IEEE/IFIP
+  Conference on}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2008, pp.
+  285--288.
+
+\bibitem{favre2001g}
+J.-M. Favre, ``G/sup see: a generic software exploration environment,'' in
+  \emph{Program Comprehension, 2001. IWPC 2001. Proceedings. 9th International
+  Workshop on}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2001, pp.
+  233--244.
+
+\bibitem{von2014reengineering}
+M.~von Detten, M.~C. Platenius, and S.~Becker, ``Reengineering component-based
+  software systems with archimetrix,'' \emph{Software \& Systems Modeling},
+  vol.~13, no.~4, pp. 1239--1268, 2014.
+
+\bibitem{abadi2012automatic}
+M.~Abadi and Y.~A. Feldman, ``Automatic recovery of statecharts from procedural
+  code,'' in \emph{Proceedings of the 27th IEEE/ACM International Conference on
+  Automated Software Engineering}.\hskip 1em plus 0.5em minus 0.4em\relax ACM,
+  2012, pp. 238--241.
+
+\bibitem{Sen:2016:EFS:2931814.2931843}
+T.~Sen and R.~Mall, ``Extracting finite state representation of java
+  programs,'' \emph{Softw. Syst. Model.}, vol.~15, no.~2, pp. 497--511, May
+  2016.
 
 \bibitem{zheng2012enhancing}
 Y.~Zheng and R.~N. Taylor, ``Enhancing architecture-implementation conformance
@@ -97,15 +255,40 @@ Y.~Zheng and R.~N. Taylor, ``Enhancing architecture-implementation conformance
   Engineering}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE Press, 2012, pp.
   628--638.
 
+\bibitem{angyal_synchronizing_2008}
+L.~Angyal, L.~Lengyel, and H.~Charaf, ``A {Synchronizing} {Technique} for
+  {Syntactic} {Model}-{Code} {Round}-{Trip} {Engineering},'' in
+  \emph{Engineering of {Computer} {Based} {Systems}, 2008. {ECBS} 2008. 15th
+  {Annual} {IEEE} {International} {Conference} and {Workshop} on the}, Mar.
+  2008, pp. 463--472.
+
+\bibitem{mazanec2012general}
+M.~Mazanec and O.~Macek, ``On general-purpose textual modeling
+  languages.''\hskip 1em plus 0.5em minus 0.4em\relax Citeseer, 2012.
+
 \bibitem{lethbridge2010umplification}
 T.~C. Lethbridge, A.~Forward, and O.~Badreddin, ``Umplification: Refactoring to
   incrementally add abstraction to a program,'' in \emph{2010 17th Working
   Conference on Reverse Engineering}.\hskip 1em plus 0.5em minus 0.4em\relax
   IEEE, 2010.
 
-\bibitem{boost}
-boost, ``{Boost} {C++},'' \url{http://www.boost.org/}, 2016, [Online; accessed
-  04-July-2016].
+\bibitem{Maro:2015:IGT:2814251.2814253}
+S.~Maro, J.-P. Stegh\"{o}fer, A.~Anjorin, M.~Tichy, and L.~Gelin, ``On
+  integrating graphical and textual editors for a uml profile based domain
+  specific language: An industrial experience,'' in \emph{Proceedings of the
+  2015 ACM SIGPLAN International Conference on Software Language Engineering},
+  ser. SLE 2015.\hskip 1em plus 0.5em minus 0.4em\relax New York, NY, USA: ACM,
+  2015.
+
+\bibitem{desai2013p}
+A.~Desai, V.~Gupta, E.~Jackson, S.~Qadeer, S.~Rajamani, and D.~Zufferey, ``P:
+  safe asynchronous event-driven programming,'' \emph{ACM SIGPLAN Notices},
+  vol.~48, no.~6, pp. 321--332, 2013.
+
+\bibitem{Deligiannis:2015:APA:2813885.2737996}
+P.~Deligiannis, A.~F. Donaldson, J.~Ketema, A.~Lal, and P.~Thomson,
+  ``Asynchronous programming, analysis and testing with state machines,''
+  \emph{SIGPLAN Not.}, vol.~50, no.~6, pp. 154--164, Jun. 2015.
 
 \bibitem{aldrich2002archjava}
 J.~Aldrich, C.~Chambers, and D.~Notkin, ``Archjava: connecting software

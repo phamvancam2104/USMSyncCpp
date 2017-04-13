@@ -67,15 +67,7 @@
           <trigger xmi:type="uml:Trigger" xmi:id="_wmvdMJVQEeaACLvclm2O-A" event="_xPofgKzFEeaDkriV8w0lmA"/>
         </transition>
         <transition xmi:type="uml:Transition" xmi:id="_2FrLEJVQEeaACLvclm2O-A" source="_i3_OMJVQEeaACLvclm2O-A" target="_ysK4oJVQEeaACLvclm2O-A"/>
-        <transition xmi:type="uml:Transition" xmi:id="_KSJEYJVREeaACLvclm2O-A" guard="_NqCNQJVREeaACLvclm2O-A" source="_ysK4oJVQEeaACLvclm2O-A" target="_dGNnaZVREeaACLvclm2O-A">
-          <ownedRule xmi:type="uml:Constraint" xmi:id="_NqCNQJVREeaACLvclm2O-A">
-            <specification xmi:type="uml:OpaqueExpression" xmi:id="_NqCNQZVREeaACLvclm2O-A">
-              <language>C++</language>
-              <body>isDataValid</body>
-            </specification>
-          </ownedRule>
-        </transition>
-        <transition xmi:type="uml:Transition" xmi:id="_WYbgwJVREeaACLvclm2O-A" guard="_HKapAJVSEeaACLvclm2O-A" source="_ysK4oJVQEeaACLvclm2O-A" target="_SosfoJVREeaACLvclm2O-A">
+        <transition xmi:type="uml:Transition" xmi:id="_WYbgwJVREeaACLvclm2O-A" guard="_HKapAJVSEeaACLvclm2O-A" source="_ysK4oJVQEeaACLvclm2O-A" target="_52q7AJVREeaACLvclm2O-A">
           <ownedRule xmi:type="uml:Constraint" xmi:id="_HKapAJVSEeaACLvclm2O-A">
             <specification xmi:type="uml:OpaqueExpression" xmi:id="_HKapAZVSEeaACLvclm2O-A">
               <language>C++</language>
@@ -83,7 +75,6 @@
             </specification>
           </ownedRule>
         </transition>
-        <transition xmi:type="uml:Transition" xmi:id="_ZmhNYJVREeaACLvclm2O-A" source="_SosfoJVREeaACLvclm2O-A" target="_cz6L4JVQEeaACLvclm2O-A"/>
         <transition xmi:type="uml:Transition" xmi:id="_IYrL4JVSEeaACLvclm2O-A" source="_52q7AJVREeaACLvclm2O-A" target="_cz6L4JVQEeaACLvclm2O-A"/>
         <subvertex xmi:type="uml:Pseudostate" xmi:id="_cXTvcJVQEeaACLvclm2O-A" name="Initial1"/>
         <subvertex xmi:type="uml:State" xmi:id="_cz6L4JVQEeaACLvclm2O-A" name="Idle"/>
@@ -91,7 +82,7 @@
         <subvertex xmi:type="uml:Pseudostate" xmi:id="_ysK4oJVQEeaACLvclm2O-A" name="dataChoice" kind="choice"/>
         <subvertex xmi:type="uml:State" xmi:id="_72CnMJVQEeaACLvclm2O-A" name="DataQueuing">
           <region xmi:type="uml:Region" xmi:id="_dGNnYpVREeaACLvclm2O-A" name="Region1">
-            <transition xmi:type="uml:Transition" xmi:id="_oifdcJVREeaACLvclm2O-A" guard="_sFnl8JVREeaACLvclm2O-A" source="_dGNnaZVREeaACLvclm2O-A" target="_ndI-8JVREeaACLvclm2O-A">
+            <transition xmi:type="uml:Transition" xmi:id="_oifdcJVREeaACLvclm2O-A" guard="_sFnl8JVREeaACLvclm2O-A" source="_ysK4oJVQEeaACLvclm2O-A" target="_ndI-8JVREeaACLvclm2O-A">
               <ownedRule xmi:type="uml:Constraint" xmi:id="_sFnl8JVREeaACLvclm2O-A">
                 <specification xmi:type="uml:OpaqueExpression" xmi:id="_sFnl8ZVREeaACLvclm2O-A">
                   <language>C++</language>
@@ -100,19 +91,9 @@
               </ownedRule>
             </transition>
             <transition xmi:type="uml:Transition" xmi:id="_zGSzYJVREeaACLvclm2O-A" source="_ndI-8JVREeaACLvclm2O-A" target="_cz6L4JVQEeaACLvclm2O-A"/>
-            <transition xmi:type="uml:Transition" xmi:id="_7j8VIJVREeaACLvclm2O-A" guard="_EJP-EJVSEeaACLvclm2O-A" source="_dGNnaZVREeaACLvclm2O-A" target="_52q7AJVREeaACLvclm2O-A">
-              <ownedRule xmi:type="uml:Constraint" xmi:id="_EJP-EJVSEeaACLvclm2O-A">
-                <specification xmi:type="uml:OpaqueExpression" xmi:id="_EJP-EZVSEeaACLvclm2O-A">
-                  <language>C++</language>
-                  <body>else</body>
-                </specification>
-              </ownedRule>
-            </transition>
-            <subvertex xmi:type="uml:Pseudostate" xmi:id="_dGNnaZVREeaACLvclm2O-A" name="queueChoice" kind="choice"/>
             <subvertex xmi:type="uml:State" xmi:id="_ndI-8JVREeaACLvclm2O-A" name="Queuing"/>
           </region>
         </subvertex>
-        <subvertex xmi:type="uml:State" xmi:id="_SosfoJVREeaACLvclm2O-A" name="ErrorNotification"/>
         <subvertex xmi:type="uml:State" xmi:id="_52q7AJVREeaACLvclm2O-A" name="Discarding"/>
       </region>
     </ownedBehavior>
@@ -173,8 +154,8 @@
     </ownedAttribute>
     <ownedAttribute xmi:type="uml:Port" xmi:id="_2etRJ78IEea0p_3boqPHYw" name="pPush" type="_Bp7kQJh5EeacAOQBGlt3ig" aggregation="composite"/>
     <ownedAttribute xmi:type="uml:Port" xmi:id="_2etRKL8IEea0p_3boqPHYw" name="Port1" type="_Ev5PoJh5EeacAOQBGlt3ig" aggregation="composite"/>
-    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_2etRKb8IEea0p_3boqPHYw" client="_2etRIL8IEea0p_3boqPHYw _2etRIL8IEea0p_3boqPHYw _2etRIL8IEea0p_3boqPHYw _2etRIL8IEea0p_3boqPHYw _2etRIL8IEea0p_3boqPHYw _2etRIL8IEea0p_3boqPHYw _2etRIL8IEea0p_3boqPHYw" supplier="_Bp7kQJh5EeacAOQBGlt3ig _Bp7kQJh5EeacAOQBGlt3ig _Bp7kQJh5EeacAOQBGlt3ig _Bp7kQJh5EeacAOQBGlt3ig" contract="_Bp7kQJh5EeacAOQBGlt3ig"/>
-    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_2etRKr8IEea0p_3boqPHYw" name="" client="_2etRIL8IEea0p_3boqPHYw _2etRIL8IEea0p_3boqPHYw _2etRIL8IEea0p_3boqPHYw _2etRIL8IEea0p_3boqPHYw _2etRIL8IEea0p_3boqPHYw _2etRIL8IEea0p_3boqPHYw _2etRIL8IEea0p_3boqPHYw" supplier="_Ev5PoJh5EeacAOQBGlt3ig _Ev5PoJh5EeacAOQBGlt3ig _Ev5PoJh5EeacAOQBGlt3ig _Ev5PoJh5EeacAOQBGlt3ig" contract="_Ev5PoJh5EeacAOQBGlt3ig"/>
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_2etRKb8IEea0p_3boqPHYw" client="_2etRIL8IEea0p_3boqPHYw" supplier="_Bp7kQJh5EeacAOQBGlt3ig" contract="_Bp7kQJh5EeacAOQBGlt3ig"/>
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_2etRKr8IEea0p_3boqPHYw" name="" client="_2etRIL8IEea0p_3boqPHYw" supplier="_Ev5PoJh5EeacAOQBGlt3ig" contract="_Ev5PoJh5EeacAOQBGlt3ig"/>
     <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_7qojcL8IEea0p_3boqPHYw" name="FIFOMachine">
       <region xmi:type="uml:Region" xmi:id="_8Ix4AL8IEea0p_3boqPHYw" name="Region1">
         <transition xmi:type="uml:Transition" xmi:id="_SsTvUL8JEea0p_3boqPHYw" source="_AQTHAL8JEea0p_3boqPHYw" target="_BjsokL8JEea0p_3boqPHYw"/>

@@ -1,23 +1,30 @@
 \section{Conclusion}
 \label{sec:conclusion}
-We have presented a bidirectional mapping between code and architecture model specified by UML class, composite structure, and state machine diagrams.
+We have presented an approach for synchronization of object-oriented programming code and architecture model specified in using UML Class, Composite Structure and State Machine concepts, notable components, ports, connectors, and state machine elements.
+The approach is based on extending an existing object-oriented programming language by introducing additional ad-hoc programming constructs for modeling concepts that have no representation in common programming languages such as Java and C++.
+The extended code written with the additional constructs is used as input of an in-place text-to-text transformation to generate other code files to be executable.
+The synchronization mechanism synchronizes the extended code with the model in case of concurrent modifications.
+
+%bidirectional mapping between code and architecture model specified by UML class, composite structure, and state machine diagrams.
 %a round-trip engineering approach for effective collaboration between software architects and programmers in developing and maintaining reactive embedded systems using UML State Machines for describing behaviors. 
 %The design for concurrency of generated code is based on multi-thread.
 %The code generation pattern set extends the IF-ELSE/SWITCH patterns and the state pattern extension. 
 %The hierarchy of USM is kept by our simple state structure.
-%XSeparation code generation improves the bidirectional traceability between architecture model and code by proposing to generate code at an appropriate level of abstraction. 
-The idea is to raise the abstraction level of an existing programming language in order to reduce the abstraction gap between modeling and coding.
-The mapping is used as input in our model-code synchronization mechanism presented in \cite{foster2016}.
-%An XSeparation compiler was developed to compile the XSeparation-generated code.
-%XSeparation is implemented as an extension of the Papyrus modeling tool for the case of UML and C++. 
+
 
 %We successfully applied XSeparation to the development of a case study.
 %The latter is an software application for LEGO.
   
+To evaluate the correctness, the practicality, and the feasibility of the synchronization, we used the approach to develop an embedded software case study - Lego Car factory.
+Our approach can synchronize concurrent modifications in model and code.
+Furthermore, the quality of generated code is also preserved in the synchronization approach, in compared to the approach without synchronization.
+We also discuss the applicability and scalability of our approach in applying it to distributed architectures, synchronization of ALF and programming languages for profiting advantages of both of the modeling and programming world.  
 
-For the moment, the approach is implemented for UML and C++.
-In the future, we will extensively evaluate the approach for different aspects: synchronization correctness, feasibility, and scalability. 
-Furthermore, we will apply our approach to other programming languages such as Java and C\# and investigate how this work may scale on modern architectures. 
+The main limitation of our approach is the applicability to the synchronization of architecture model with different programming languages.
+For the moment, the approach is applicable to C++ and Java.
+In future, we will investigate other programming languages. 
+The discussed perspectives will also be further detailed for elaborating our approach.  
+%Furthermore, we will apply our approach to other programming languages such as Java and C\# and investigate how this work may scale on modern architectures. 
 %\lipsum[1-2] 
 %RAOES introduces a C++ front-end code lying between models and actual executable code.
 %RAOES proposes a framework for synchronizing the models and the front-end code, and generating executable code from the front-end.

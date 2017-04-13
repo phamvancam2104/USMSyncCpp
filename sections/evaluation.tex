@@ -1,11 +1,12 @@
 \section{Evaluation}
 \label{sec:evaluation}
-This section presents our implementation prototype and experiments with a case study of developing a software application for LEGO to evaluate the feasibility and usability of XSeparation.
+This section presents our implementation prototype and experiments with a case study of developing a software application for LEGO to evaluate the feasibility and usability of our approach.
 
 \subsection{Implementation}
-XSeparation is implemented as an extension of the Papyrus modeling tool, which is based on Eclipse.
-Intermediate C++ code is generated from architecture models in UML.
-Our XSeparation compiler supports executable code executed within POSIX systems, in which pthreads are used for concurrency in UML State Machines such as doActivity, parallel regions, and infinite loop for event dispatching.
+Our approach is implemented as an extension of the Papyrus modeling tool, which is based on Eclipse.
+C++ code is generated from architecture models in UML.
+The generated code is executed within POSIX systems.
+\begin{comment}
 %The usage of C++11 standard threads can be easily integrated in the future.
 %For incremental code generation in XSeparation, a model listener based on IncQuery is hooked to the modeling tool to detect model modifications.
 The additional constructs added to C++ are engineered in a way that allows programmers to use facilities such as auto-completion of any C++ IDE to write fine-grained code without installing additional tools.
@@ -69,6 +70,7 @@ Currently, our implementation does not support removal of C++ classes because it
 For example, if the FIFO class is removed in the code, the \ttt{fifo} in \ttt{System} in Listing \ref{lst:architectureprescribed} must be retyped or removed.
 If not, a compilation error is raised.
 Furthermore, for state machines, we only synchronize modifications in \tb{State machine action code} back to the model.  
+\end{comment}
 %Modifications types in code are similar to that of model consisting of structural and behavioral modifications.
 %However, we do not support the removal of classes in code because this kind of modification causes conflicts and syntax errors, which require the code to be manually re-factored for reconciliation. 
 %We believe that an automatic mechanism brought by the regeneration of code caused by the removal can better handle the refactoring.
@@ -102,6 +104,8 @@ Furthermore, for state machines, we only synchronize modifications in \tb{State 
 After implementation, we then use the prototype with its use-cases to develop a software application for LEGO in order to evaluate XSeparation through the tooling prototype.
 The followings present the case study development for the applicability evaluation and a manual evaluation of the usability.
 %\subsection{Implementation}
+
+Expressibility evaluation???
 
 \subsection{Case study-based evaluation}
 

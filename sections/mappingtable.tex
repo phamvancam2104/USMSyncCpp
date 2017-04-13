@@ -28,20 +28,24 @@
 
 \begin{table}[]
 	\centering
-	\caption{Mapping between UML and Examples of Extended Language}
+	\caption{Mapping between UML and Examples of Extended Language (1)}
 	\label{table:mapping}
-	\begin{tabular}{lll}
+	\begin{tabular}{p{1.6cm}p{2.5cm}p{3.7cm}}
 		UML                                                                      & Extended Language                                                                                & Code example in Fig. \ref{fig:approachexample}                                                                               \\ \hline
-		\begin{tabular}[c]{@{}l@{}}Port requiring \\ an interface \ti{I}\end{tabular} & \begin{tabular}[c]{@{}l@{}}Attribute typed \\ by \ti{RequiredPort}\textless I\textgreater\end{tabular} & \begin{tabular}[c]{@{}l@{}}Ports \ti{pPush} and \ti{pPull} at lines\\ 21 and 25\end{tabular}         \\ \hline
-		\begin{tabular}[c]{@{}l@{}}Port providing \\ an interface \ti{I}\end{tabular} & \begin{tabular}[c]{@{}l@{}}Attribute typed\\ by \ti{ProvidedPort}\textless I\textgreater\end{tabular}  & \begin{tabular}[c]{@{}l@{}}Ports \ti{pPush} and \ti{pPull} at \\ lines 29-30\end{tabular}            \\ \hline
+		\begin{tabular}[c]{@{}l@{}}Port requiring \\ an interface \ti{I}\end{tabular} & \begin{tabular}[c]{@{}l@{}}Attribute typed \\ by \ti{RequiredPort}\textless I\textgreater\end{tabular} & \begin{tabular}[c]{@{}l@{}}Ports \ti{pPush} and \ti{pPull} at lines\\ 19 and 22\end{tabular}         \\ \hline
+		\begin{tabular}[c]{@{}l@{}}Port providing \\ an interface \ti{I}\end{tabular} & \begin{tabular}[c]{@{}l@{}}Attribute typed\\ by \ti{ProvidedPort}\textless I\textgreater\end{tabular}  & \begin{tabular}[c]{@{}l@{}}Ports \ti{pPush} and \ti{pPull} at \\ lines 26-27\end{tabular}            \\ \hline
+		\begin{tabular}[c]{@{}l@{}}Bidirectional \\ port providing \\ \ti{R} and \ti{P} \end{tabular} & \ti{BidirectionalPort<R,P>} & Not shown in this paper
+		\\ \hline
 		Connector                                                                & Binding                                                                                        & Lines 7-8                                                                                  \\ \hline
-		State Machine                                                            & \ti{StateMachine}                                                                                     & \begin{tabular}[c]{@{}l@{}}The FIFO state machine at \\ lines 34-59\end{tabular}           \\ \hline
-		State                                                                    & \ti{State/InitialState}                                                                               & \begin{tabular}[c]{@{}l@{}}State \ti{SignalChecking} at \\ lines 36-39\end{tabular}             \\ \hline
+		State Machine                                                            & \ti{StateMachine}                                                                                     & \begin{tabular}[c]{@{}l@{}}The FIFO state machine at \\ lines 31-51\end{tabular}           \\ \hline
+		State                                                                    & \ti{State/InitialState}                                                                               & \begin{tabular}[c]{@{}l@{}}State \ti{SignalChecking} at \\ lines 33-36\end{tabular}             \\ \hline
 		Region                                                                   & \ti{Region}                                                                                           & Not shown in this paper                                                                                 \\ \hline
-		Pseudo state                                                             & \begin{tabular}[c]{@{}l@{}}Attribute typed \\ by pseudo type\end{tabular}                        & \begin{tabular}[c]{@{}l@{}}The \ti{dataChoice} pseudo state \\ at line 49\end{tabular}          \\ \hline
-		Action/Effect                                                            & Method                                                                                           & Methods at lines 60-65       \\ \hline
-		Transitions                                                           & Transition table                                                                                           & Transition table at lines 51-58	\\ \hline
-		Event                                                            & Event                                                                                           & The call event at line 50                                                             
+		Pseudo state                                                             & \begin{tabular}[c]{@{}l@{}}Attribute typed \\ by pseudo type\end{tabular}                        & \begin{tabular}[c]{@{}l@{}}The \ti{dataChoice} pseudo state \\ at line 42\end{tabular}          \\ \hline
+		Action/Effect                                                            & Method                                                                                           & Methods at lines 52-57       \\ \hline
+		Transitions                                                           & Transition table                                                                                           & Transition table at lines 44-50	\\ \hline
+		Event                                                            & Event                                                                                           & The call event at line 43       \\ \hline           
+		Deferred Event	& \begin{tabular}[c]{@{}l@{}}State attribute typed \\ by deferred event type\end{tabular}        & Not shown in this paper        \\ \hline
+		Transition guard                                                            & Method returning a boolean                                                                                           & The valid method at lines 58-59 as the transition guard at line 49                              
 	\end{tabular}
 \end{table}
 

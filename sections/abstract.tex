@@ -1,20 +1,27 @@
 \begin{abstract}
 %Event-driven architecture is an useful way to design memory-constrained embedded systems.
-UML state machines and composite structure models are efficient to design the behavior and structure of architectures.
+Architecting a software system has become one of the most important tasks during development.
+UML State Machine and Composite Structure are efficient to design reactive system architectures.
 %A UML State Machine and its visualizations are efficient to model the logical behavior of event-driven embedded systems.   
 In Model Driven Engineering (MDE), code can be automatically generated from the models. 
 %To achieve it, models must contain very detailed information.
-Nevertheless, %current MDE tools and approaches are not sufficient to describe and generate the fine-grained behavior from models described as UML composite structures with UML state machines. 
-%Current MDE tools therefore allow to manually put action code directly within the architecture model by limited editors, in which code errors might be produced during generated code compilation.
-%In this case, the programmers tend to directly modify the code in familiar integrated development environments.
-current UML tools only produce skeleton code which is then fine-tuned by programmers.
+
+However, current UML tools and approaches are not sufficient to describe and generate the fine-grained behavior. 
+Hence, these tools allow manually putting programming code as blocks of text embedded within the model for the fine-grained behavior.%Current MDE tools therefore allow to manually put action code directly within the architecture model by limited editors,
+This manual coding practice in a limited editor loses programming flexibility and might produce errors during compilation of the generated code.
+In this case, programmers tend to directly modify the code using familiar integrated development environments.
+%current UML tools are hardly to generate fully operational code but produce only skeleton code which is then fine-tuned by programmers.
 The modifications in code, which may violate the architecture correctness, must be synchronized with the model to make architecture and code consistent.
-However, current approaches cannot handle the synchronization when there is a significant abstraction gap between architecture and code.
-This paper proposes to ease synchronization between model and code, through a bidirectional mapping between code and architecture 
-specified by UML composite structure and state machine.
-The proposed mapping is a means for a synchronization mechanism proposed in our previous work, which allows concurrent modifications made in model and code, and keeps them synchronized. 
+Current approaches cannot handle the synchronization of model and code in case of UML State Machine and Composite Structure elements because there is a significant abstraction gap between architecture and code.
+
+This paper proposes an approach to enable this synchronization. %the architecture model in UML State Machine and Composite Structure elements, and the code.
+The approach consists of a bidirectional mapping between code and the architecture model, and a synchronization mechanism, which allows to synchronize concurrent modifications made in model and code.
+%The proposed mapping is a means for a synchronization mechanism proposed in our previous work, which allows concurrent modifications made in model and code, and keeps them synchronized. 
 %for the co-evolution of these artifacts.
 %We propose XSeparation - a set of utilities for enabling the bidirectional traceability and synchronization between architecture model and code.
 %To do it, RAOES proposes to generate an intermediate representation, which acts as a bridge to connect the code to the model.
-We propose an evaluation plan for the approach and expose preliminary experimental results.
+The approach is then evaluated through the development of an embedded software case study - a Lego Car factory.
+The evaluation shows that our approach can automatically synchronize model and code, and eventually improve collaboration between software architects and programmers.  
+%Furthermore, the quality of generated code is also preserved within our approach.
+%We propose an evaluation plan for the approach and expose preliminary experimental results.
 \end{abstract}

@@ -1,14 +1,13 @@
 class Producer {
 public:
-	ProvidedDataPort<Data>* pProvideData;
-	
+	OutFlowPort<Data> pOutData;
 	void sendToFifo(Data& item) {
-		pProvideData->sendSignal(item);
+		pOutData.intf->push(item);
 	}
 }
 class FIFO : public IPush, IPull {
 public:
-	RequiredDataPort<Data>* pRequireData;
-	ProvidedPort<IPull>* pPull;
+	InFlowPort<Data> pInData;
+	OutFlowPort<IPull> pOutData;
 }
 

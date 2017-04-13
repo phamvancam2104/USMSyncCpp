@@ -9,16 +9,3 @@ public:
     pSys->fifo.pPull.provided=pSys->fifo;
   }
 }
-class FIFOController: public IPush {
-public:
-  FIFO* pFifo;
-  void processDataPushEvent(Data& sig) {
-    //check the Idle state active
-    //call the transition effect pFifo->signalCkeck(sig)
-    //set the SignalChecking state active
-  }
-  void push(Data& data) {
-    processDataPushEvent(data);
-    pFifo->push(data);
-  }
-}

@@ -1,25 +1,31 @@
+\section{Bidirectional Mapping mechanism}
+\label{sec:mappingmechanism}
+In this section, we describe the mapping mechanism, which consists of a bidirectional mapping (see \ref{subsec:bimapping}) and a text-to-text transformation (see \ref{subsec:compilation}).
+
 \subsection{Bidirectional mapping through an example}
 \label{subsec:bimapping}
-We present our additional constructs through a producer-consumer example, whose architecture is specified by Fig. \ref{fig:approachexample} \encircle{a}, \encircle{b}, and \encircle{c}.
+We present here our bidirectional mapping between UML-based architecture models and code through a producer-consumer example, whose architecture is specified by Fig. \ref{fig:approachexample} \encircle{a}, \encircle{b}, and \encircle{c}.
 The \ttt{p} producer sends data items to a first-in first-out component \ttt{FIFO} storing data.
-The \ti{FIFO} queue has a limited size, an attribute for the number of currently stored items (\ttt{numberOfItems}) and the \ttt{isQueueFull} operation for validating its availability.
-The \ti{pPush} port of the producer with \ttt{IPush} as required interface is connected to the \ti{pPush} port of \ti{FIFO} with \ttt{IPush} as provided interface. %so that the producer and FIFO can interact with each other through their respective port.
-\ttt{FIFO} also provides the \ti{IPull} interface for the consumer to pull data items.
-FIFO implements the two interfaces in Fig. \ref{fig:approachexample} \encircle{b}.
+The \ti{FIFO} queue has a limited size, the number of currently stored items (\ttt{numberOfItems}) and the \ttt{isQueueFull} operation for validating its availability.
+The \ti{pPush} port of the producer with \ttt{IPush} as required interface is connected to the \ti{pPush} port of \ti{FIFO} with \ttt{IPush} as provided interface. 
+The producer and \ti{FIFO} can interact with each other through their respective port.
+\ttt{FIFO} also provides the \ti{IPull} interface for the consumer to get data items.
+\ti{FIFO} implements the two interfaces as in Fig. \ref{fig:approachexample} \encircle{b}, lines 28-29.
 
 The behavior of \ttt{FIFO} is described by using a UML State Machine as shown in Fig. \ref{fig:approachexample} \encircle{c}.
 Initially, the \ttt{Idle} state is active.
 The state machine then waits for an item to arrive at the \ttt{fifo} component (through the \ttt{pPush} port).
-The item is then checked for its validity before verifying the fullness of the queue to decide to either add the item to the queue or discard it.
+The item is then checked for its validity before verifying the fullness of the queue to decide to either add to the queue or discard it.
 
-Table \ref{table:mapping} shows some of the UML meta-classes and the equivalent constructs in the extended language.
-The constructs are categorized into \ti{structural} (three upper rows) and \ti{behavioral constructs} (seven lower rows).
-%We explain these constructs in the followings.
+
+Table \ref{table:mapping} and \ref{table:mapping2} show some of the UML meta-classes and our ad-hoc equivalent constructs in the extended language.
+The constructs are categorized into \ti{structural} (four upper rows in Table \ref{table:mapping2} and \ref{table:mapping2}) and \ti{behavioral constructs} (nine lower rows in Table \ref{table:mapping2}).
+We explain these constructs in the followings.
 
 \input{sections/mappingtable}
 
 \subsubsection{Structural constructs}
-We explain the constructs used for representing the architecture structure.
+This section explains the programming constructs in the bidirectional mapping corresponding to the modeling concepts used for modeling the architecture structure, including \ti{Port} and \ti{Binding}.
 
 %\noindent
 %\tb{Part:}
@@ -27,12 +33,19 @@ We explain the constructs used for representing the architecture structure.
 %A UML part is typed by a UML class and mapped to a standard class attribute typing the template class with the \ti{T} template parameter replaced by the class equivalent to the UML class typing the UML part. 
 %For example, at line 3, the \ti{p} attribute is equivalent to the \ti{p} part in the model.
 
+\begin{figure*}
+	\centering
+	\includegraphics[clip, trim=0cm 7cm 1.0cm 0cm, width=\textwidth]{figures/approachexample.pdf}
+	\caption{Architecture model and generated extended code} 
+	\label{fig:approachexample}
+\end{figure*}
+
 \noindent
 \tb{Port:}
-Template-based constructs proposed in the extended language correspond to architecture component interaction points specified by UML ports.
+Template-based programming constructs proposed in the extended language correspond to architecture component interaction points specified by UML ports.
 \ti{RequiredPort<T>} and \ti{ProvidedPort<T>} (see Table \ref{table:mapping}) are equivalent to UML uni-directional ports, which have only one required or provided interface.
 The \ti{T} template parameter is an interface in code (e.g. \ti{interface} in Java or class with \ti{pure virtual} methods in C++) equivalent to the interface required/provided by a UML port. 
-\ti{BidirectionalPort<R,P>} (not shown) is also proposed to map to UML bidirectional ports, which have one required and one provided interface.
+\ti{BidirectionalPort<R,P>} (not shown) is also proposed to map to UML bidirectional ports, which have one required \ti{R} and one provided \ti{P} interface.
 
 %Three constructs, \ti{Part}, \ti{Port}, and \ti{Binding}, are introduced to represent UML \ti{part}, \ti{port}, and \ti{connector}, respectively, because these UML concepts do not have equivalences in the existing programming language.
 %Fig. \ref{fig:approachexample} \encircle{d} shows the extended code containing our additional constructs for the producer-consumer example.
@@ -40,33 +53,105 @@ The \ti{T} template parameter is an interface in code (e.g. \ti{interface} in Ja
 %In the extended code, the \ti{Part}s and \ti{Port}s constructs are template classes.
 %The template parameters of the latter specify the types of \ti{Part}s or required/provided interfaces of \ti{Port}s.
 %For example, lines 3-5 show the three parts corresponding to the ones defined in the model.
-Lines 21 and 25 show ports with a required interface and lines 29-30 show ports with a provided interface of the \ti{Producer}, \ti{Consumer}, and \ti{FIFO} classes.
+Lines 19 and 22 show ports with a required interface and lines 26-37 show ports with a provided interface of the \ti{Producer}, \ti{Consumer}, and \ti{FIFO} classes respectively.
+
+
 
 \noindent
 \tb{Binding:}
-A binding (see Table \ref{table:mapping}, row 3) connects two ports equivalently to a UML connector connecting two UML ports.
+A binding (see Table \ref{table:mapping}, row 4) connects two ports. 
+It is equivalent to a UML connector connecting two UML ports.
 A binding is a method call to our predefined method \ti{bindPorts.}
 %UML connectors for communicating UML parts through UML ports are mapped to method calls (bindings) in the extended code.
-Lines 7-8 shows two invocations of \ti{bindPorts}, which takes as input two ports (the two ports of the producer and fifo, for example).
-Each class associated with a UML component contains a single configuration (as a method in lines 6-9) containing bindings.
+Lines 7-8 show two invocations of \ti{bindPorts}, which takes as input two ports (the two ports of the producer and fifo, for example).
+Each code class associated with a UML component contains a single configuration (as a method in lines 6-9) containing bindings.
 The configuration method is restricted to contain only invocations to \ti{bindPorts} for synchronization ease.
 
-Other model elements in the class diagram are mapped to the corresponding elements as in industrial tools such as IBM Rhapsody and Enterprise Architect.
-For example, the \ti{p, fifo, c} UML parts are mapped to the composite attributes of the \ti{System} class; the UML operations and properties are mapped to the class methods and attributes (not shown in the paper), respectively; the UML interfaces (\ti{IPush} and \ti{IPull}) mapped to classes with pure virtual methods (lines 11-18) (in C++). 
+Other elements in the UML class diagram are mapped to the corresponding elements as in industrial tools such as IBM Rhapsody and Enterprise Architect.
+For example, the \ti{p, fifo, c} UML parts are mapped to the composite attributes of the \ti{System} class; the UML operations and properties are mapped to the class methods and attributes (not shown in the paper), respectively; the UML interfaces (\ti{IPush} and \ti{IPull}) mapped to classes with pure virtual methods (lines 11-17) (in C++). 
 
+From a programming perspective, in order to call the services/methods provided by the interface of a provided or bidirectional port from a required or bidirectional port, we provide attribute interfaces as members of the port additional constructs as followings: a \ti{requiredIntf} attribute (a class attribute in Java or a pointer attribute in C++, e.g.) typed by the required interface of the required or bidirectional port. 
+For example, for calling the \ti{push} method implemented by the fifo from the producer, a programmer can write \ti{pPush.requiredIntf->push(data)} in fine-grained code of the producer.
+ 
+%\vskip 0.1cm
+\noindent
+\tb{Flow port:} 
+UML only provides service ports having provided and/or required interfaces.
+Some UML extensions/profiles such as MARTE \cite{marte} define \ti{flow ports} to support both client-server like and data-flow like communication schemas.
+Flow ports enable message-driven and data flow oriented communication between components, where messages flowing across ports represent data items. 
+A flow port can be \ti{in/out/inout} and the flow of data items through the port can be from outside to inside/from inside to outside/bidirectional, respectively. 
+The data items exchanged between components through flow ports are modeled in terms of UML signals.
+Our mapping mechanism also contains programming constructs corresponding to these flow ports.
+Table \ref{table:mapping2} shows our mapping and examples for flow ports.
+
+\begin{table}[]
+	\centering
+	\caption{Mapping between UML and Examples of Extended Language (2)}
+	\label{table:mapping2}
+	\begin{tabular}{lll}
+		UML and MARTE   & Extended Language                                                                                       & Example in Listing \ref{lst:dataport}                                      \\ \hline
+		In flow port    & \begin{tabular}[c]{@{}l@{}}Attribute typed by \\ \ti{InFlowPort\textless Sig\textgreater}\end{tabular} & Ports \ti{pInData} at line 10                                                   \\ \hline
+		Out flow port   & \begin{tabular}[c]{@{}l@{}}Attribute typed by \\ \ti{OutFlowPort\textless Sig\textgreater}\end{tabular}                        & \begin{tabular}[c]{@{}l@{}}Ports \ti{pOutData} at lines\\ 3 and 11\end{tabular} \\ \hline
+		Bidirectional flow port & \begin{tabular}[c]{@{}l@{}}Attribute typed by \\ \ti{InOutFlowPort\textless Sig\textgreater}\end{tabular}                      & Not shown in this paper                                                           \\ \hline
+		UML Signal & A class & Not shown in this paper
+	\end{tabular}
+\end{table}
+
+Let's redesign the producer-consumer example using flow ports.
+The data items flow from the producer/the fifo to the fifo/the consumer through the connectors between the producer and the fifo, and the fifo and the consumer, respectively.
+The changes made to the design in Fig. \ref{fig:approachexample} \encircle{a} are as follows:
+
+\begin{itemize}
+	\item \ti{pPush} and \ti{pPull} of the producer and the fifo become \ti{OutFlowPort} ports, namely, \ti{pOutData} in the respective class.
+	
+	\item \ti{pPush} and \ti{pPull} of the fifo and the consumer become \ti{InFlowPort} ports, namely, \ti{pInData} in the respective class.
+\end{itemize} 
+
+
+
+%A flow port is useful when being used with UML State Machine signal events, which will be detailed in Section \ref{sec:xseparationbehavior}.
+%In the examples, data ports can be used instead of ports with interfaces.
+%Data ports are defined to support the explicit understanding of "physical" system data flow. 
+
+%Fig \ref{fig:dataportexample} shows the component diagram of the example in using data ports.
+%For example, let's replace the bound ports with interfaces of the producer and fifo with data ports, in which the producer's port provides and that of the \ttt{fifo} receives data items.
+%The other ports of the \ttt{fifo} and the consumer are not changed.
+%The code generated by XSeparation for the data ports is shown in Listing \ref{lst:dataport}.
+%The \ttt{p} producer provides data items to \ttt{fifo} through their respective ports \ttt{pProvideData} and \ttt{pRequireData}.
+
+
+\begin{comment}
+\centering
+\includegraphics[clip, trim=0cm 16.3cm 17.6cm 0cm, width=\columnwidth]{figures/dataportexample.pdf}
+\caption{Component-based architecture example with data port} 
+\label{fig:dataportexample}
+\end{comment}
+
+
+
+
+Listing \ref{lst:dataport} shows the generated code for the flow port-based producer-consumer example.
+The constructs \ti{OutFlowPort} and \ti{InFlowPort} are used.
+From an implementation perspective, the producer sends data items to the fifo via the port \ttt{pOutData} by calling \ttt{pOutData.intf->push(item)} (lines 4-6).
+Similarly to the service ports, flow ports also have an interface attribute \ti{intf} for writing code to send signals from a component to another component. 
+In case the behavior of the receiving component (the fifo, for example) is described by a state machine, the \ttt{push} method will fire a signal event in order for the state machine to handle it. 
+The details of signal events are discussed in sub-section \ref{subsec:behavioralconstructs}. 
   
 
-\begin{figure*}
-	\centering
-	\includegraphics[angle=-90,clip, trim=2cm 0cm 7.0cm 1cm, width=\textwidth]{figures/approachexample3.pdf}
-	\caption{Architecture model and generated extended code} 
-	\label{fig:approachexample}
-\end{figure*}
+\begin{minipage}{\columnwidth}
+	\lstinputlisting[language=C++, caption={Producer-consumer using flow ports}, label=lst:dataport,frame=f]{
+		code/dataport.cpp
+	}
+\end{minipage} 
 
+In the next sub-section, we present our proposed additional programming constructs corresponding to the modeling concepts for the architecture behavior, in particular UML state machine elements.
 
 \subsubsection{Behavioral constructs}
+\label{subsec:behavioralconstructs}
 %Applying XSeparation to UML State Machines, XSeparation-generated code contains our syntactic sugar of additional constructs for explicitly representing domain-specific concepts of state machines such as states and transitions.
-These constructs correspond to UML State Machine concepts. They are categorized into three parts: topology, events, and transition table in the extended code.
+In our approach, UML State Machines are used for modeling the behavior of components. 
+Our behavioral programming constructs correspond to UML State Machine concepts at the modeling level. 
+These behavioral constructs are grouped into three parts: topology, events, and transition table in the extended code.
 
 
 \noindent
@@ -77,12 +162,13 @@ Other elements such as \ttt{region}, \ttt{state}, and \ttt{pseudo state} are hie
 %Each element has a unique name.
 
 State actions such as \ti{entry/exit/doActivity}s are declared within the corresponding state in the extended code as state attributes.
-These actions must be implemented in the owning class and have no parameter.
+These actions must be implemented as methods in the owning class and have no parameter.
 For example, \ttt{Idle} is an initial state. 
 The \ttt{SignalChecking} state (lines 36-39) is declared with the state actions, \ti{entryCheck} and \ti{exitCheck}. 
 %The latter is specified as following: the entry/exit/doActivity action of a state, if declared within the topology, must be implemented as a method of the component/class. 
 The \ti{FIFO} class implements the methods \ttt{entryCheck} and \ttt{exitCheck} (lines 60-61) for the state actions.
 %The followings give the syntax of some elements in the generated code and the semantics mapped to the well-defined semantics in the UML specification \cite{OMG2015}.
+Programmers can write fine-grained code for these action methods.
 
 
 Concurrent states with orthogonal regions in the extended code are not shown here due to space limitation. 
@@ -93,25 +179,29 @@ For example, line 49 in Fig. \ref{fig:approachexample} declares the \ti{dataChoi
 %\vskip 0.1cm
 \noindent
 \tb{Events:}
-Events defined in UML are mapped to our constructs, which support four UML event types including \ttt{CallEvent}, \ttt{TimeEvent}, \ttt{SignalEvent}, and \ttt{ChangeEvent}.
-The semantics of these events are clearly defined in the UML specification and beyond the paper's scope.
+In UML, four event types including \ttt{CallEvent}, \ttt{TimeEvent}, \ttt{SignalEvent}, and \ttt{ChangeEvent} are defined for modeling reactive systems using UML State Machines. 
+The semantics of these events are clearly defined in the UML specification and briefly described in the below list.
 
-\begin{comment}
 \begin{itemize}[\footnotesize]
 	\itemsep0em
-	\item A \ttt{SignalEvent} is associated with a signal type \ttt{sig}, whose data are described by attributes, and occurs if an instance of \ttt{sig} is received by a component through its data port by invoking \ttt{sendSignal} as previously discussed. 
+	\item A call event is associated with an operation/method and emitted if the operation is invoked.
 	
-	\item A \ttt{CallEvent} is associated with an operation \ttt{op} of the component class containing the state machine. 
-	\ttt{CallEvent} is emitted if there is an invocation to \ttt{op}.
+	\item A signal event is associated with a UML signal type containing data.
+	%It is emitted if the class receives an instance of the signal type.
+	When a component, whose behavior is described by a UML State Machine, receives a message/signal through its in/inout flow ports, a signal event is automatically emitted and stored in an event queue to be processed by the state machine later.
 	
-	\item A \ttt{TimeEvent} specifies the time of occurrence \ttt{dur} relative to a starting time. 
-	The latter is specified as the time when a state, which accepts the time event, is entered.
-	In other words, the state, which is the source vertex of a transition triggered by a time event, will remain active for a maximal amount of time specified by the time event.
+	\item A time event specifies the time of occurrence relative to a starting time, defined as the time when a state with an outgoing transition triggered by the time event is entered.
+	The time event is emitted if the state remains active longer than the time of occurrence to trigger the transition.
+	%In other words, the state, which is the source vertex of a transition triggered by a time event, will remain active for a maximal amount of time specified by the time event.	
+
 	
-	\item A \ttt{ChangeEvent} is associated with a boolean expression \ttt{expr}. 
-	\ttt{ChangeEvent} is emitted if the value of \ttt{expr} changes from false to true.
+	\item A change event has a boolean expression and is fired if the expression's value changes from false to true. 
+	%unlike call and signal events, time and change events are automatically fired inside the class.
 \end{itemize}
-\end{comment}
+
+The processing of call events is synchronous meaning that it runs within the thread of the operation caller.
+The processing of other events is asynchronous meaning that these events received by a component are stored in an event queue, which is maintained by the component for later processing.
+We support all of these events with the same semantics. 
 
 %The code generated by XSeparation for these events has syntax as followings:
 \begin{comment}
@@ -165,13 +255,25 @@ This signal type must be declared as required data of one of ports of the compon
 \tb{Transition table:}
 It describes the mapping of our syntactical constructs to UML transitions at the model level. 
 Three kinds of UML transitions, \ttt{external}, \ttt{local}, and \ttt{internal}, are supported but this paper only presents external transitions.
-%The difference between these kinds is clearly stated in UML and beyond the scope of this paper.
+The difference between these kinds is clearly stated in UML and beyond the scope of this paper.
+Lines 45-46 in Fig. \ref{fig:approachexample} shows an external transition, which is from \ti{Idle} ti \ti{SignalChecking}, triggered by the \ti{DataPushEvent} call event declared with the state machine, and has \ti{signalCheck} as transition effect.
+The \ti{signalCheck} method is implemented within the \ti{FIFO} class owning the state machine, and has the same formal parameters as the \ttt{push} method associated with the call event.
 
 %For example, \ttt{CallEvent(DataPushEvent, push)} at line 23 in Listing \ref{lst:fifostatemachine} specifies that an event is fired whenever the \ttt{push} method, which is implemented by \ttt{FIFO} for the \ttt{IPush} interface provided by the \ttt{pPush} port, is invoked.
 For example, line 50 shows a call event, which is emitted whenever there is an invocation of the \ti{push} method of the \ti{FIFO} class. 
-The processing of the emitted event fires the transition from \ttt{Idle} to \ttt{SignalChecking}, and executes the \ttt{signalCheckingEffect} transition effect method.
+The processing of the emitted event activates the transition from \ttt{Idle} to \ttt{SignalChecking}, and executes the \ttt{signalChecking} transition effect method.
 The data item returned by the invocation will be checked for validity and further put to the queue or discarded.
-Note that \ttt{signalCheckingEffect} has the same formal parameters as the \ttt{push} method.
+
+%\vskip 0.1cm
+\noindent
+\tb{Deferred event:}
+A state can declare \ttt{deferred events} by introducing attributes typed by our class-like additional construct \ttt{DeferredEvent} and named as event names to be deferred.
+A deferred event will not be processed while the state remains active.
+The deference of events is used to postpone the processing of some low-priority events while the state machine is in a certain state.
+%The deferred events are used for state machine execution to delay the processing of low-priority events.
+%The execution semantics of deferred events is that: given a current active state with declared deferred events and an event queue, the deferred events, if in front of the queue, will be moved to a deferred set and pushed back to the front of the queue once a non-deferred event is processed.
+%In other words, the deferred events will not be processed while the state remains active.
+
 
 %Code generated for a signal event has syntax as \tb{SignalEvent}\ttt{<sig> name}, in which \ttt{sig} is the name of the associated signal class (a UML signal is transformed into an object-oriented class).
 %The signal type must be declared as required data of one of data ports of the component in \tb{Component structure-prescribed code}.
@@ -192,3 +294,6 @@ Note that \ttt{signalCheckingEffect} has the same formal parameters as the \ttt{
 %The deferred events are used for state machine execution to delay the processing of low-priority events when a certain state is active.
 %The execution semantics of deferred events is that: given a current active state with declared deferred events and an event queue, the deferred events, if in front of the queue, will be moved to a deferred set and pushed back to the front of the queue once a non-deferred event is processed.
 %In other words, the deferred events will not be processed while the state remains active.
+
+
+\input{sections/compilation}
